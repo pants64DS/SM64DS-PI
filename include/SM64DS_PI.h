@@ -247,6 +247,8 @@ extern Fix12i CRAZED_CRATE_VERT_SPEEDS[3];
 extern Fix12i CRAZED_CRATE_HORZ_SPEEDS[3];
 extern u32 DASH_VOICES[4];
 extern Fix12i RISE_TO_SURFACE_SPEED_CHAR_MULTIPLIERS[4];
+extern Fix12i PLAYER_SCALE_STEPS[4]; // first two are for being jumped on, last two for being squished
+extern Fix12i PLAYER_SCALE_VALUES[12]; // first six are for being jumped on, last six for being squished
 extern u32 STUCK_IN_GROUND_INIT_ANIMS[3];
 extern u32 STUCK_IN_GROUND_WAIT_ANIMS[3];
 extern u32 STUCK_IN_GROUND_END_ANIMS[3];

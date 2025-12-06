@@ -244,8 +244,8 @@ namespace Sound
 	void StopLoadedMusic_Layer2();
 	void LoadAndSetMusic_Layer3(u32 musicID);
 	void StopLoadedMusic_Layer3();
-	void SetMusic(u32 arg0, u32 musicID);
-	void EndMusic(u32 arg0, u32 musicID);
+	void SetMusic(u32 playerID, u32 musicID);
+	void EndMusic(u32 playerID, u32 musicID);
 	void PauseMusic();
 	void UnpauseMusic();
 

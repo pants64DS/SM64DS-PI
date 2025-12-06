@@ -82,7 +82,7 @@ struct Camera : View // internal name: dCamera
 		STATE_LOCKED       = 1 << 4,
 		ROTATING_LEFT      = 1 << 5,
 		ROTATING_RIGHT     = 1 << 6,
-
+		MEGA_CHARACTER     = 1 << 7,
 
 
 		UNK_10             = 1 << 10,
@@ -178,6 +178,8 @@ struct Camera : View // internal name: dCamera
 
 	void SaveCameraStateBeforeTalk(); // Saves the current camera state
 	void SetFlag_3();
+	void SetFirstPerson(u32 playerID);
+	bool TryZoomOut(u32 playerID);
 	void SetLookAt(const Vector3& lookAt);
 	void SetPos(const Vector3& pos);
 	bool IsUnderwater() const;
