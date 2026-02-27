@@ -102,12 +102,12 @@ struct SphereClsn : BgCh
 {
 	enum ResultFlags
 	{
-		COLLISION_EXISTS = 1 << 0,
-
-		ON_GROUND        = 1 << 2,
-		ON_WALL          = 1 << 3,
-
-		MOVING_UP        = 1 << 5
+		COLLISION_EXISTS  = 1 << 0,
+		UNK_1			  = 1 << 1,
+		ON_GROUND         = 1 << 2,
+		ON_WALL           = 1 << 3,
+		ON_CEILING_CORNER = 1 << 4,
+		ON_CEILING        = 1 << 5
 	};
 
 	u32* sphVTable;         // 0x38
@@ -192,6 +192,7 @@ struct WithMeshClsn
 	void ClearAllGroundFlags();
 	void StartDetectingWater();
 	void StopDetectingWater();
+	void SetActorPosAndPrevPos(Vector3& newPos);
 	void Unk_0203589c();
 	s32  TouchesWater() const;
 	s32 GetResultFlag1() const;
