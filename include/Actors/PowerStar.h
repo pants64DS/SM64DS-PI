@@ -61,6 +61,7 @@ struct PowerStar : Enemy
 	u32 unk4c0;
 
 	void AddStarMarker();
+	void InitBouncingStar(Player* player, bool spawnNumber, bool isSilver); // isSilver is overwritten in the function
 };
 
 static_assert(sizeof(PowerStar) == 0x4c4, "sizeof(PowerStar) is incorrect!");
