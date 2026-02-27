@@ -6,8 +6,7 @@ AreCannonsActivatedForCurrentLevel                                              
 SetCannonsToActivatedForCurrentLevel                                              = 0x0202A67C;
 Player_WasLastAction                                                              = 0x020BEECC;
 Player_DoesStateEqual                                                             = 0x020E308C;
-OBJ_UpdateObjectXYZSpeedBasedOnForwardSpeedAndDirection                           = 0x02010C5C;
-ObjectMessageIDToActualMessageID                                                  = 0x0201FC10;  */
+OBJ_UpdateObjectXYZSpeedBasedOnForwardSpeedAndDirection                           = 0x02010C5C; */
 
 __itcm_start = 0x01ff8000;
 __dtcm_start = 0x023c0000;
@@ -246,6 +245,9 @@ DOOR_KEY_HOLE_MODEL_PTR                                                         
 
 STAR_DOOR_MODEL_PTR                                                               = 0x02148934;
 
+STAR_SPHERE_MODEL_PTR                                                             = 0x0211092C;
+STAR_BASE_MODEL_PTR                                                               = 0x0211093C;
+
 /* SM64DS_PI.h */
 OBJ_TO_ACTOR_ID_TABLE_VANILLA                                                     = 0x0210cbf4;
 OBJ_TO_ACTOR_ID_TABLE_AFTER_DL_PATCH                                              = 0x02004b00;
@@ -269,6 +271,15 @@ DL_PTR_ARR_PTR                                                                  
 
 LEVEL_PART_TABLE                                                                  = 0x02075264;
 SUBLEVEL_LEVEL_TABLE                                                              = 0x02075298;
+
+WIPE_IDS_GENERAL                                                                  = 0x020755e0;
+WIPE_IDS_CASTLE_F2                                                                = 0x020755f0;
+WIPE_IDS_VS                                                                       = 0x02075600;
+SKYBOX_MODEL_IDS                                                                  = 0x02075620;
+STANDARD_MODE_BUTTON_MAP                                                          = 0x02075650;
+TOUCH_MODE_BUTTON_MAP                                                             = 0x02075670;
+DUAL_HAND_MODE_BUTTON_MAP                                                         = 0x02075690;
+COMMON_STAGE_FILE_PTRS                                                            = 0x020756f0;
 
 ACTOR_BANK_OVL_MAP                                                                = 0x02075804;
 LEVEL_OVL_MAP                                                                     = 0x020758c8;
@@ -295,6 +306,7 @@ ROT_AT_SPAWN                                                                    
 POS_AT_SPAWN                                                                      = 0x0209b460;
 FIRST_ACTOR_LIST_NODE                                                             = 0x0209b468;
 
+UNK_0209F0D4                                                                      = 0x0209f0d4;
 IMMUNE_TO_DAMAGE                                                                  = 0x0209f0d8;
 
 LEVEL_OVERLAY_PTR                                                                 = 0x0209f340;
@@ -327,8 +339,8 @@ CAPS                                                                            
 MINIMAP_STARS_AND_RED_COINS                                                       = 0x0209f40c;
 
 WATER_HEIGHT                                                                      = 0x0209f32c;
-STAR_CAP_MAX_POS_Y                                                                = 0x0209212c;
-STAR_CAP_MIN_POS_Y                                                                = 0x02092138;
+MAX_OBJECT_HEIGHT                                                                 = 0x0209212c;
+MIN_OBJECT_HEIGHT                                                                 = 0x02092138;
 EVENT_FIELD                                                                       = 0x0209f34c;
 NEXT_DEATH_TABLE_ID                                                               = 0x0211118c;
 ACTOR_DEATH_TABLE_ARR                                                             = 0x0209f4f8;
@@ -342,11 +354,41 @@ HEALTH_ARR                                                                      
 NUM_LIVES                                                                         = 0x0209f2f4;
 RENDERED_HEALTH                                                                   = 0x0211117c;
 
-HORZ_SPEED_CHAR_MULTIPLIERS                                                       = 0x020ff170;
+STUCK_IN_GROUND_LEAVE_FRAMES                                                      = 0x020ff0ec;
+DIVE_VOICES                                                                       = 0x020ff100;
+SLIDE_KICK_VOICES                                                                 = 0x020ff130;
 JUMP_SPEED_CHAR_MULTIPLIERS                                                       = 0x020ff140;
+SWIM_SPEED_CHAR_MULTIPLIERS                                                       = 0x020ff158;
+ON_WALL_ANIMS                                                                     = 0x020ff164;
+HORZ_SPEED_CHAR_MULTIPLIERS                                                       = 0x020ff170;
+CRAZED_CRATE_VERT_SPEEDS                                                          = 0x020ff17c;
+CRAZED_CRATE_HORZ_SPEEDS                                                          = 0x020ff188;
+PUNCH_KICK_SEQUENCE_VOICES                                                        = 0x020ff194;
+DASH_VOICES                                                                       = 0x020ff1b0;
+CARRY_LIGHT_HORZ_SPEEDS                                                           = 0x020ff1c0;
+CARRY_HEAVY_HORZ_SPEEDS                                                           = 0x020ff1d0;
+WATER_RISE_SINK_SPEED_CHAR_MULTIPLIERS                                            = 0x020ff1e0;
+PLAYER_SCALE_STEPS                                                                = 0x020ff230;
+HOLD_HEAVY_ANIMS                                                                  = 0x020ff254;
+PLAYER_KNOCKBACK_SPEEDS                                                           = 0x020ff29c;
+PLAYER_SCALE_VALUES                                                               = 0x020ff2c0;
+PUNCH_KICK_SEQUENCE_DELAYS                                                        = 0x02109dbc;
+HURT_START_GET_UP_FRAMES                                                          = 0x02109dc4;
+FALL_DURING_HURT_START_FRAMES                                                     = 0x02109dcc;
+HURT_WATER_ANIMS                                                                  = 0x02109fe4;
+STUCK_IN_GROUND_INIT_ANIMS                                                        = 0x0210a560;
+STUCK_IN_GROUND_WAIT_ANIMS                                                        = 0x0210a578;
+STUCK_IN_GROUND_END_ANIMS                                                         = 0x0210a584;
 JUMP_SEQUENCE_SPEEDS                                                              = 0x0210a59c;
 JUMP_SEQUENCE_ANIMS                                                               = 0x0210a5a8;
+JUMP_LAND_ANIMS                                                                   = 0x0210a5b4;
+PUNCH_KICK_SEQUENCE_ANIMS                                                         = 0x0210a5c0;
+PUNCH_KICK_HITBOX_FRAMES                                                          = 0x0210a5cc;
+PUNCH_KICK_ACTIVE_FRAMES                                                          = 0x0210a5dc;
 CEILING_GRATE_ANIMS                                                               = 0x0210a60c;
+HURT_ANIMS                                                                        = 0x0210a6d4;
+FALL_DURING_HURT_ANIMS                                                            = 0x0210a6ec;
+PLAYER_CYLCLSN_OFFSET                                                             = 0x0210f92c;
 
 NEXT_HAT_CHARACTER                                                                = 0x02092114;
 UNK_YOSHI_EGG_RELATED                                                             = 0x0209f254;
@@ -460,7 +502,6 @@ UnloadBlueCoinModel                                                             
 LoadBlueCoinModel                                                                 = 0x0200fe9c;
 UnloadSilverStarAndNumber                                                         = 0x020e717c;
 LoadSilverStarAndNumber                                                           = 0x020e71a8;
-LinkSilverStarAndStarMarker                                                       = 0x020e71d4;
 
 ReadUnalignedShort                                                                = 0x0200e768;
 ReadUnalignedUshort                                                               = 0x0200e780;
@@ -484,9 +525,9 @@ UpdateMinimap                                                                   
 StartEntranceFaderWipe                                                            = 0x020298a0;
 StartExitCharacterWipe                                                            = 0x020298d8;
 StartExitFaderWipe                                                                = 0x020298fc;
-FUN_02029934                                                                      = 0x02029934;
-FUN_02029980                                                                      = 0x02029980;
-FUN_020299f4                                                                      = 0x020299f4;
+CleanupRespawnWipe                                                                = 0x02029934;
+RespawnWipe                                                                       = 0x02029980;
+RespawnPlaneWipe                                                                  = 0x020299f4;
 FUN_02029a68                                                                      = 0x02029a68;
 FUN_02029ab0                                                                      = 0x02029ab0;
 EnterBigBoosHaunt                                                                 = 0x02029b04;
@@ -760,7 +801,7 @@ _ZN9ModelBaseD0Ev                                                               
 _ZN9ModelBaseD1Ev                                                                 = 0x02017120;
 _ZN9ModelBaseD2Ev                                                                 = 0x020170B8;
 _ZN9ModelBase7SetFileER8BMD_Filebi                                                = 0x02016fd4;
-_ZN9ModelBase12ApplyOpacityEj                                                     = 0x02016a9c;
+_ZN9ModelBase12ApplyOpacityEjb                                                    = 0x02016a9c;
 
 _ZTV5Model                                                                        = 0x0208e904;
 _ZN5ModelC1Ev                                                                     = 0x02016d58;
@@ -775,6 +816,8 @@ _ZN5Model6RenderEPK7Vector3                                                     
 _ZN5Model14LoadAndSetFileEtii                                                     = 0x02016f9c;
 _ZN5Model12SetPolygonIDEi                                                         = 0x02016abc;
 _ZN5Model14SetPolygonModeEi                                                       = 0x02016a8c;
+_ZN5Model16ClearPolygonAttrEj                                                     = 0x02016acc;
+_ZN5Model14SetPolygonAttrEj                                                       = 0x02016b24;
 _ZN5Model12ShowMaterialEii                                                        = 0x02016a24;
 _ZN5Model12HideMaterialEii                                                        = 0x02016a58;
 _ZN13SharedFilePtr7LoadBMDEv                                                      = 0x02017a3c;
@@ -806,7 +849,9 @@ _ZN10ModelAnim2C1Ev                                                             
 _ZN10ModelAnim2D0Ev                                                               = 0x02016320;
 _ZN10ModelAnim2D1Ev                                                               = 0x02016364;
 _ZN10ModelAnim24CopyERKS_R8BCA_Filej                                              = 0x02016254;
-_ZN10ModelAnim213Func_020162C4Eji5Fix12IiEt                                       = 0x020162C4;
+_ZN10ModelAnim213Func_0201628CEj                                                  = 0x0201628c;
+_ZN10ModelAnim213Func_020162A4Ej                                                  = 0x020162a4;
+_ZN10ModelAnim213Func_020162C4ER8BCA_Filei5Fix12IiEt                              = 0x020162C4;
 
 _ZTV11ShadowModel                                                                 = 0x0208e860;
 _ZN11ShadowModelC1Ev                                                              = 0x02016068;
@@ -1044,6 +1089,7 @@ _ZN12WithMeshClsn22ClearJustHitGroundFlagEv                                     
 _ZN12WithMeshClsn19ClearAllGroundFlagsEv                                          = 0x02035750;
 _ZN12WithMeshClsn19StartDetectingWaterEv                                          = 0x02035840;
 _ZN12WithMeshClsn18StopDetectingWaterEv                                           = 0x02035820;
+_ZN12WithMeshClsn21SetActorPosAndPrevPosER7Vector3                                = 0x02035860;
 _ZN12WithMeshClsn12Unk_0203589cEv                                                 = 0x0203589c;
 _ZNK12WithMeshClsn12TouchesWaterEv                                                = 0x02035610;
 _ZNK12WithMeshClsn14GetResultFlag1Ev                                              = 0x02035620;
@@ -1092,6 +1138,10 @@ _ZN7Message12UpdateWindowEv                                                     
 _ZN7Message6UpdateEv                                                              = 0x0201c0b8;
 _ZN7Message15ResetAllGlobalsEv                                                    = 0x0201fcac;
 
+_ZN7Message18UpdateShownMessageEj                                                 = 0x0201f32c;
+_ZN7Message20PerCharIDToMessageIDEt                                               = 0x0201fc10;
+_ZN7Message12BeginMessageEj                                                       = 0x0201fc88;
+
 MSG_LINE_HEIGHT                                                                   = 0x0209d6a8;
 MSG_BOX_CENTER_X                                                                  = 0x0209d6d0;
 MSG_BOX_CENTER_Y                                                                  = 0x0209d6c8;
@@ -1114,6 +1164,7 @@ BOUNCING_MSG_ARROWS_VISIBLE                                                     
 IS_SAVING_MESSAGE_DISPLAYED                                                       = 0x0209d654;
 SAVE_MESSAGE_TIMER                                                                = 0x0209d67c;
 IS_MESSAGE_DISAPPEARING                                                           = 0x0209d670;
+UNK_0209D6BC                                                                      = 0x0209d6bc;
 
 /* Actor/ActorBase.h */
 _ZTV9ActorBase                                                                    = 0x02099ed4;
@@ -1171,7 +1222,7 @@ _ZN5Actor11AfterRenderEj                                                        
 _ZN5Actor13OnYoshiTryEatEv                                                        = 0x02010160;
 _ZN5Actor13OnTurnIntoEggER6Player                                                 = 0x02010154;
 _ZN5Actor9Virtual50Ev                                                             = 0x0201014c;
-_ZN5Actor15OnGroundPoundedERS_                                                    = 0x02010148;
+_ZN5Actor13OnHipAttackedERS_                                                    = 0x02010148;
 _ZN5Actor11OnAttacked1ERS_                                                        = 0x02010144;
 _ZN5Actor11OnAttacked2ERS_                                                        = 0x02010140;
 _ZN5Actor8OnKickedERS_                                                            = 0x0201013c;
@@ -1193,6 +1244,7 @@ _ZN5Actor16BigLandingDustAtER7Vector3b                                          
 _ZN5Actor11LandingDustEb                                                          = 0x0200fc0c;
 _ZN5Actor13LandingDustAtER7Vector3b                                               = 0x0200fac4;
 _ZN5Actor14TinyPoofDustAtER7Vector3b                                              = 0x0200fc44;
+_ZN5Actor12TinyPoofDustEb                                                         = 0x0200fccc;
 _ZN5Actor19DisappearPoofDustAtERK7Vector3                                         = 0x0200fd04;
 _ZN5Actor13SmallPoofDustEv                                                        = 0x0200fd40;
 _ZN5Actor10PoofDustAtERK7Vector3                                                  = 0x0200fdfc;
@@ -1229,6 +1281,7 @@ _ZN5Actor8TryCarryER12CylinderClsn                                              
 _ZN5Actor9SetRangesE5Fix12IiES1_S1_S1_                                            = 0x02010e08;
 _ZN5Actor14GetSubtractionEss                                                      = 0x020103f4;
 _ZN5Actor17GetWaterHeightWDWEv                                                    = 0x0200fec8;
+_ZN5Actor13GetGroundTiltERK7Vector3Es                                             = 0x02010844;
 _ZN5Actor10SpawnCoinsERK7Vector3j5Fix12IiEs                                       = 0x02010714;
 _ZN5Actor11SpawnNumberERK7Vector3jbtPS_                                           = 0x02010044;
 _ZN5Actor13SpawnFireballERK7Vector3PK10Vector3_165Fix12IiES7_j                    = 0x020102b0;
@@ -1277,6 +1330,7 @@ ENEMY_KILL_FUNCS                                                                
 
 /* Actor/CapEnemy.h */
 _ZN7CapIcon17InitializeGlobalsEv                                                  = 0x020ab2e4;
+_ZN7CapIcon9UpdateAllEv                                                           = 0x020aaf40;
 
 _ZN8CapEnemyC2Ev                                                                  = 0x02006554;
 _ZN8CapEnemyD0Ev                                                                  = 0x020aedf4;
@@ -1339,16 +1393,36 @@ _ZN6Camera6RenderEv                                                             
 _ZN6Camera16OnPendingDestroyEv                                                    = 0x0200DA00;
 _ZN6Camera25SaveCameraStateBeforeTalkEv                                           = 0x0200CC5C;
 _ZN6Camera9SetFlag_3Ev                                                            = 0x0200d048;
+_ZN6Camera14SetFirstPersonEj                                                      = 0x0200d064;
+_ZN6Camera10TryZoomOutEj                                                          = 0x0200d0ac;
+_ZN6Camera12SetCameraDefEh                                                        = 0x0200cb58;
 _ZN6Camera9SetLookAtERK7Vector3                                                   = 0x0200ccc8;
 _ZN6Camera6SetPosERK7Vector3                                                      = 0x0200ccac;
+_ZN6Camera24SetCamFromNearestViewObjEv                                            = 0x0200cce4;
+_ZN6Camera11SetDefaultsEv                                                         = 0x0200cf40;
 _ZNK6Camera12IsUnderwaterEv                                                       = 0x0200d890;
+_ZN6Camera18SetHurtZShakeAngleEv                                                  = 0x0200d89c;
 _ZN6Camera11ChangeStateEPNS_5StateE                                               = 0x0200cb70;
+_ZN6Camera16SetBowserSpinCamEj                                                    = 0x0200d10c;
 _ZN6Camera10LookAtExitER5Actor                                                    = 0x0200d184;
 _ZN6Camera14GoBehindPlayerEj                                                      = 0x0200d304;
 _ZN6Camera26CallKuppaScriptInstructionEPcss                                       = 0x02008550;
-_ZN6Camera13SetSwimCameraEj                                                       = 0x0200d768;
+_ZN6Camera15SetFixedTalkCamEjRK7Vector3                                           = 0x0200d3f8;
+_ZN6Camera11SetSlideCamEj                                                         = 0x0200d544;
+_ZN6Camera15SetHeadstandCamEj                                                     = 0x0200d580;
+_ZN6Camera16SetClimbCamNoDefEj                                                    = 0x0200d5c0;
+_ZN6Camera18SetClimbCamWithDefEj                                                  = 0x0200d5fc;
+_ZN6Camera15SetSpinTwirlCamEj                                                     = 0x0200d678;
+_ZN6Camera17SetSurfaceSwimCamEj                                                   = 0x0200d72c;
+_ZN6Camera10SetSwimCamEj                                                          = 0x0200d768;
+_ZN6Camera10SetTalkCamEj                                                          = 0x0200d7a4;
+_ZN6Camera17SetCeilingHangCamEjj                                                  = 0x0200ca14;
+_ZN6Camera12SetNormalCamEj                                                        = 0x0200d81c;
+_ZN6Camera13CameraShakeAtERK7Vector35Fix12IiE                                     = 0x0200d8c8;
+_ZN6Camera6SetFOVEs                                                               = 0x0200d954;
 
 GLOBAL_CLIPPER                                                                    = 0x0209F43C;
+UNK_0208715C                                                                      = 0x0208715C;
 
 /* Actors/HUD.h */
 _ZTV3HUD                                                                          = 0x0210c2c0;
@@ -1461,12 +1535,12 @@ _ZN6Player18ST_OPENING_WAKE_UPE                                                 
 _ZN6Player12ST_LONG_JUMPE                                                         = 0x0211055c;
 _ZN6Player13ST_PUNCH_KICKE                                                        = 0x02110574;
 _ZN6Player13ST_ENDING_FLYE                                                        = 0x0211058c;
-_ZN6Player15ST_GROUND_POUNDE                                                      = 0x021105a4;
+_ZN6Player13ST_HIP_ATTACKE                                                        = 0x021105a4;
 _ZN6Player7ST_DIVEE                                                               = 0x021105bc;
 _ZN6Player8ST_THROWE                                                              = 0x021105d4;
-_ZN6Player14ST_BOWSER_SPINE                                                       = 0x021105ec;
+_ZN6Player14ST_SPIN_BOWSERE                                                       = 0x021105ec;
 _ZN6Player15ST_SWING_PLAYERE                                                      = 0x02110604;
-_ZN6Player13ST_SWEEP_KICKE                                                        = 0x0211061c;
+_ZN6Player12ST_ROLL_KICKE                                                         = 0x0211061c;
 _ZN6Player13ST_SLIDE_KICKE                                                        = 0x02110634;
 _ZN6Player15ST_FIRST_PERSONE                                                      = 0x0211064c;
 _ZN6Player7ST_NULLE                                                               = 0x02110664;
@@ -1492,35 +1566,58 @@ _ZN6Player16CleanupResourcesEv                                                  
 _ZN6Player8BehaviorEv                                                             = 0x020e4d24;
 _ZN6Player6RenderEv                                                               = 0x020e3a08;
 _ZN6Player16OnPendingDestroyEv                                                    = 0x020e3a04;
+_ZN6Player17InitPlayerCylClsnEv                                                   = 0x020e63a4;
 _ZN6Player13OnYoshiTryEatEv                                                       = 0x020e69b8;
 _ZN6Player16IncMegaKillCountEv                                                    = 0x020bdc58;
 _ZN6Player18SetNewHatCharacterEjjb                                                = 0x020be0f8;
 _ZN6Player16SetRealCharacterEj                                                    = 0x020be1e0;
 _ZN6Player18TurnOffToonShadingEj                                                  = 0x020be324;
+_ZN6Player15HandleToonStateEv                                                     = 0x020be3b0;
 _ZN6Player9IsInStateERKNS_5StateE                                                 = 0x020e308c;
 _ZN6Player16WasPreviousStateERKNS_5StateE                                         = 0x020e3078;
+_ZN6Player17WarioLandCamShakeEv                                                   = 0x020e301c;
 _ZN6Player15UpdateBeingHeldEv                                                     = 0x020e3f90;
 _ZN6Player8IsDivingEv                                                             = 0x020dd240;
 _ZN6Player16IsInsideOfCannonEv                                                    = 0x020df288;
+_ZN6Player15ToonStateActiveEv                                                     = 0x020bea7c;
 _ZN6Player15IsCollectingCapEv                                                     = 0x020bea94;
 _ZN6Player8HasNoCapEv                                                             = 0x020bda98;
+_ZN6Player24ReturnWithCapToonEffectsEv                                            = 0x020beabc;
 _ZN6Player12Unk_020c6a10Ej                                                        = 0x020c6a10;
 _ZN6Player12Unk_020c4f40Et                                                        = 0x020c4f40;
 _ZN6Player12Unk_020ca8f8Ev                                                        = 0x020ca8f8;
+_ZN6Player27ResetPlayerClsnAndClimbClsnEv                                         = 0x020caf68;
 _ZN6Player12Unk_020c9e5cEh                                                        = 0x020c9e5c;
 _ZN6Player12Unk_020ca488Ev                                                        = 0x020ca488;
 _ZN6Player12Unk_020ca150Eh                                                        = 0x020ca150;
 _ZN6Player28HandleReturnLevelAndEntranceEv                                        = 0x020c94a4;
 _ZNK6Player14GetBodyModelIDEjb                                                    = 0x020becc8;
+_ZNK6Player14GetHeadModelIDEjb                                                    = 0x020becf4;
+_ZN6Player12RenderPlayerEv                                                        = 0x020e444c;
+_ZN6Player20UpdateModelTransformEv                                                = 0x020e4768;
 _ZN6Player12GetBodyModelEv                                                        = 0x020e496c;
+_ZN6Player24HandleArmsCarryTransformEv                                            = 0x020e4990;
 _ZN6Player7SetAnimEji5Fix12IiEj                                                   = 0x020bef2c;
 _ZN6Player11ShowMessageER9ActorBasejPK7Vector3jj                                  = 0x020c4ec0;
 _ZN6Player12ShowMessage2ER9ActorBasejPK7Vector3jj                                 = 0x020c4c60;
 _ZN6Player9StartTalkER9ActorBaseb                                                 = 0x020c4fa0;
+_ZN6Player12Unk_020c5244Ev                                                        = 0x020c5244;
 _ZN6Player12GetTalkStateEv                                                        = 0x020c524c;
+_ZN6Player26PlayStuckInGroundParticlesEv                                          = 0x020c5444;
 _ZN6Player18HasFinishedTalkingEv                                                  = 0x020c4efc;
 _ZN6Player24HurtNoOverrideCheckDeathEjb                                           = 0x020d91e0;
+_ZN6Player16UpdateDizzyStarsEv                                                    = 0x020d98b4;
+_ZN6Player23SetFallHurtAnimIfMidairEv                                             = 0x020d99a4;
+_ZN6Player26SetGetUpFlagIfWillHitFrameEv                                          = 0x020d9a4c;
+_ZN6Player24HandleHurtGroundMovementEv                                            = 0x020d9aac;
 _ZN6Player12GetHurtStateEv                                                        = 0x020d9c44;
+_ZN6Player19TryWarioPlayerSwingEv                                                 = 0x020d9dcc;
+_ZN6Player18HandleClimbUpSoundEv                                                  = 0x020cb354;
+_ZN6Player20HandleClimbDownSoundEv                                                = 0x020cb400;
+_ZN6Player24HandleTreeClimbParticlesEv                                            = 0x020cb474;
+_ZN6Player29CheckHitByPlayerWhileClimbingEv                                       = 0x020cbea8;
+_ZN6Player17FallIfSwimHealingEv                                                   = 0x020cc01c;
+_ZN6Player14HandleClimbYawEv                                                      = 0x020cc05c;
 _ZN6Player9IsOnShellEv                                                            = 0x020cc140;
 _ZN6Player15IsEnteringLevelEv                                                     = 0x020c7e84;
 _ZN6Player22IsBeingShotOutOfCannonEv                                              = 0x020df2c4;
@@ -1528,12 +1625,18 @@ _ZN6Player8CanPauseEv                                                           
 _ZN6Player4BurnEv                                                                 = 0x020d57d8;
 _ZN6Player5ShockEj                                                                = 0x020d5a1c;
 _ZN6Player18CheckSpitOutPlayerEv                                                  = 0x020d5c6c;
+_ZN6Player22TrySpitPlayerFromMouthEv                                              = 0x020d5cec;
 _ZN6Player15IsInYoshisMouthEv                                                     = 0x020d600c;
 _ZN6Player20RegisterEggCoinCountEjbb                                              = 0x020d6708;
+_ZN6Player20SpawnAttackParticlesER7Vector3                                        = 0x020d8d10;
 _ZN6Player4HurtERK7Vector3j5Fix12IiEjjj                                           = 0x020d8e70;
 _ZN6Player4HealEi                                                                 = 0x020bf4e4;
 _ZN6Player9GetHealthEv                                                            = 0x020bf548;
+_ZN6Player20PlayMegaStompEffectsEv                                                = 0x020bf5e0;
+_ZN6Player18TryBounceOffPlayerEv                                                  = 0x020d9298;
 _ZN6Player6BounceE5Fix12IiE                                                       = 0x020d932c;
+_ZN6Player15LoseCapIfHasCapEv                                                     = 0x020d93ac;
+_ZN6Player26DropSilverOrVSStarIfHasAnyEv                                          = 0x020d94cc;
 _ZN6Player10SpinBounceE5Fix12IiE                                                  = 0x020e1020;
 _ZN6Player22HandleYoshiFlutterJumpEv                                              = 0x020e1c20;
 _ZN6Player22HandleLuigiFlutterJumpEv                                              = 0x020e1e70;
@@ -1542,8 +1645,9 @@ _ZN6Player11ChangeStateERNS_5StateE                                             
 _ZN6Player15JumpIntoBooCageER7Vector3                                             = 0x020ca2ac;
 _ZN6Player14EnterWhirlpoolEv                                                      = 0x020c5cc8;
 _ZN6Player13SetDeathStateEh                                                       = 0x020c5dec;
+_ZN6Player15HandleWalkOrRunEv                                                     = 0x020d4748;
 _ZN6Player8BlowAwayEs                                                             = 0x020d4fe4;
-_ZN6Player16IsInAirAndAirishEv                                                    = 0x020c2f3c;
+_ZN6Player16IsInAirAndAirIshEv                                                    = 0x020c2f3c;
 _ZN6Player7CanWarpEv                                                              = 0x020c2ef0;
 _ZN6Player20IsStateEnteringLevelEv                                                = 0x020c7ed4;
 _ZN6Player17SetNoControlStateEhih                                                 = 0x020ca1b8;
@@ -1557,7 +1661,9 @@ _ZN6Player21IsOpeningDoorWithStarEv                                             
 _ZN6Player16TryEnterStarDoorER7Vector3s                                           = 0x020ca498;
 _ZN6Player17PlayMammaMiaSoundEv                                                   = 0x020ca708;
 _ZN6Player16TryDropHeldActorEv                                                    = 0x020da9d4;
+_ZN6Player17TryThrowHeldActorEv                                                   = 0x020daa74;
 _ZN6Player7TryGrabER5Actor                                                        = 0x020daba0;
+_ZN6Player12GrabHandlingER5Actor                                                  = 0x020dacb4;
 _ZN6Player9DropActorEv                                                            = 0x020da7f4;
 _ZN6Player12FinishedAnimEv                                                        = 0x020bed98;
 _ZN6Player17GetBreakFreeBonusEv                                                   = 0x020beb38;
@@ -1565,9 +1671,15 @@ _ZN6Player10UpdateAnimEv                                                        
 _ZN6Player17GetBreakFreeBonusEv                                                   = 0x020beb38;
 _ZN6Player8IsInAnimEj                                                             = 0x020beecc;
 _ZN6Player14InitKoopaShellEv                                                      = 0x020cc16c;
+_ZN6Player15HandleShellLeanEs                                                     = 0x020cc660;
 _ZN6Player14IsFrontSlidingEv                                                      = 0x020dd2b0;
+_ZN6Player12Unk_020de3d0Evss                                                      = 0x020de3d0;
+_ZN6Player21PlayBalloonBoundSoundEv                                               = 0x020de428;
 _ZN6Player17LostGrabbedObjectEv                                                   = 0x020dd26c;
-_ZN6Player13InitFireYoshiEv                                                       = 0x020d8228;
+_ZN6Player13InitFireYoshiEv                                                       = 0x020d8118;
+_ZN6Player28ForceSwallowStartFlowerPowerEv                                        = 0x020d8228;
+_ZN6Player18HandleAttackPlayerERS_j                                               = 0x020d8360;
+_ZN6Player17InitSuperMushroomEv                                                   = 0x020bdf8c;
 _ZN6Player14InitMetalWarioEv                                                      = 0x020bde14;
 _ZN6Player15InitVanishLuigiEv                                                     = 0x020bdf4c;
 _ZN6Player16InitBalloonMarioEv                                                    = 0x020dea00;
@@ -1575,25 +1687,39 @@ _ZN6Player16InitWingFeathersEb                                                  
 _ZN6Player26CallKuppaScriptInstructionEPcss                                       = 0x020bd664;
 _ZN6Player11EndSubMusicEj                                                         = 0x020bd8c0;
 _ZN6Player12PlaySubMusicEj                                                        = 0x020bd928;
+_ZN6Player16PlayPowerupMusicEj                                                    = 0x020bd9ec;
+_ZN6Player15EndPowerupMusicEj                                                     = 0x020bd984;
 _ZN6Player12Unk_020bf13cEv                                                        = 0x020bf13c;
 _ZN6Player19ScaleHorzSpeedByMagE5Fix12IiES1_                                      = 0x020bf224;
 _ZN6Player20ScaleVertAccelByCharE5Fix12IiE                                        = 0x020bf27c;
 _ZN6Player15SetSpeedYByCharE5Fix12IiE                                             = 0x020bf2d8;
 _ZN6Player20ScaleHorzSpeedByCharE5Fix12IiE                                        = 0x020bf30c;
+_ZN6Player23ApproachLinearMagnitudeER5Fix12IiES1_S1_                              = 0x020bf340;
 _ZN6Player18UpdateSwimmingClsnER12CylinderClsn                                    = 0x020bf36c;
-_ZN6Player29ScaleHorzSpeedByFloorTractionE5Fix12IiE                               = 0x020bf56c;
+_ZN6Player29ScaleHorzAccelByFloorTractionE5Fix12IiE                               = 0x020bf56c;
 _ZN6Player11RunningDustEv                                                         = 0x020bf88c;
 _ZN6Player11SlidingDustEv                                                         = 0x020bf90c;
 _ZN6Player17PlayerLandingDustEv                                                   = 0x020bf9d4;
+_ZN6Player26UpdateQuicksandReturnDeathEv                                          = 0x020bfec0;
+_ZN6Player12Unk_020c0108Eb                                                        = 0x020c0108;
 _ZN6Player18GetFloorTractionIDEv                                                  = 0x020c031c;
+_ZN6Player24GetHangableCeilingHeightEv                                            = 0x020cf20c;
+_ZN6Player17UpdateCeilingHangEv                                                   = 0x020cf2f8;
+_ZN6Player14CheckCanPullUpEv                                                      = 0x020cfaf0;
+_ZN6Player26RaycastActorClsnNoWarpPipeERK7Vector3S1_                              = 0x020cfd84;
+_ZN6Player16CheckForcePullUpEv                                                    = 0x020cfea4;
 _ZN6Player21SetStomachOrButtSlideEh                                               = 0x020c0364;
 _ZN6Player28ZeroVertAccelYSpeedHorzSpeedEv                                        = 0x020cf384;
 _ZN6Player11ShouldSlideEv                                                         = 0x020c0434;
 _ZN6Player19CheckGroundNotSteepEv                                                 = 0x020c04ac;
+_ZN6Player15ApplySlopeAccelEv                                                     = 0x020c04e0;
 _ZN6Player24TrySnapToGroundFromSlideEv                                            = 0x020c0688;
 _ZN6Player15DecelerateSlideE5Fix12IiE                                             = 0x020c06fc;
-_ZN6Player16CheckShouldSlideEv                                                    = 0x020c0cbc;
-_ZN6Player20DetectRaycastFromPosEhh                                               = 0x020c19d0;
+_ZN6Player17IsSurfaceSlipperyEv                                                   = 0x020c0cbc;
+_ZN6Player22UpdateFloorSurfaceInfoER10ClsnResult                                  = 0x020c16ec;
+_ZN6Player13GetFloorAngleEs                                                       = 0x020c179c;
+_ZN6Player10HandleTiltEb                                                          = 0x020c18b0;
+_ZN6Player14RaycastFromPosEhh                                                     = 0x020c19d0;
 _ZN6Player13CheckSideStepEs                                                       = 0x020c1ad8;
 _ZN6Player24SetWallSlideOrBounceBackEs                                            = 0x020c1c84;
 _ZN6Player19ApplySlopeTransformEv                                                 = 0x020c1e44;
@@ -1602,64 +1728,109 @@ _ZN6Player10ShouldBonkEs                                                        
 _ZN6Player20CheckBonkOrWallSlideEv                                                = 0x020c2138;
 _ZN6Player20UpdateFloorCollisionEv                                                = 0x020c2db8;
 _ZN6Player17PlayJumpLandSoundEv                                                   = 0x020c2f64;
-_ZN6Player16FirstTimeMessageEh                                                    = 0x020c43c4;
+_ZN6Player16IntroducePowerupEh                                                    = 0x020c43c4;
+_ZN6Player13FaceLookAtPosEv                                                       = 0x020c47f4;
+_ZN6Player18RiseToWaterSurfaceEv                                                  = 0x020c9718;
 _ZN6Player22MakePlayerInvulnerableEv                                              = 0x020c9e40;
 _ZN6Player14SetFirstPersonEv                                                      = 0x020cabe0;
+_ZN6Player12TryWaterJumpEv                                                        = 0x020ce324;
+_ZN6Player30CheckExitWaterAndUpdateEffectsEv                                      = 0x020ce5f8;
 _ZN6Player13WadingRipplesE5Fix12IiE                                               = 0x020ce8bc;
+_ZN6Player29ScaleRiseToSurfaceSpeedByCharEv                                       = 0x020ceaf4;
 _ZN6Player16UpdateCameraZoomEv                                                    = 0x020ca940;
-_ZN6Player16IsOnWaterSurfaceEv                                                    = 0x020ceb54;
-_ZN6Player29HandleSwimHealthAndCheckDeathEv                                       = 0x020cec2c;
+_ZN6Player19SetSwimVelFromPitchE5Fix12IiERS1_S2_                                  = 0x020cd218;
+_ZN6Player14BeginSwimCarryEv                                                      = 0x020cd28c;
+_ZN6Player14BeginPaddleEndEv                                                      = 0x020cd2c4;
+_ZN6Player15BeginSwimAttackEv                                                     = 0x020cd308;
+_ZN6Player20InitSwimAttackHitboxEv                                                = 0x020cd364;
+_ZN6Player11BeginPaddleEv                                                         = 0x020cd39c;
+_ZN6Player17BeginBreastStrokeEv                                                   = 0x020cd3e0;
+_ZN6Player22HandleSwimPitchAndRollEv                                              = 0x020cd448;
+_ZN6Player21HandleSwimMotionPitchEv                                               = 0x020cd550;
+_ZN6Player13HandleSwimYawEv                                                       = 0x020cd71c;
+_ZN6Player17NotOnWaterSurfaceEv                                                   = 0x020ceb54;
+_ZN6Player13HandleSwimCamEv                                                       = 0x020ceb7c;
+_ZN6Player26HandleSwimHealthCheckDeathEv                                          = 0x020cec2c;
+_ZN6Player20ScaleSwimSpeedByCharE5Fix12IiE                                        = 0x020cedb0;
+_ZN6Player12IsWaterCrossEv                                                        = 0x020cede0;
 _ZN6Player20IsHangingFromCeilingEv                                                = 0x020cf700;
-_ZN6Player12TryLedgeHangE5Fix12IiEb                                               = 0x020d0178;
+_ZN6Player14CheckLedgeGrabE5Fix12IiEb                                             = 0x020d0178;
 _ZN6Player15ShouldLedgeHangEv                                                     = 0x020d0580;
+_ZN6Player23ShouldLedgeHangOffLedgeEv                                             = 0x020d06c0;
+_ZN6Player25AdjustLedgeHangPosAndFallEv                                           = 0x020d0948;
 _ZN6Player17HandleRunningDustEv                                                   = 0x020d45c0;
+_ZN6Player15HandleFootstepsEv                                                     = 0x020d4c30;
+_ZN6Player27ApproachHorzSpeedCheckSlopeE5Fix12IiES1_                              = 0x020d4d88;
 _ZN6Player17ClearActorInMouthEv                                                   = 0x020d718c;
 _ZN6Player18SetPunchKickAttackEh                                                  = 0x020d8a50;
-_ZN6Player20CheckLedgeHangOrGrabEv                                                = 0x020d0d2c;
-_ZN6Player13NotAboveFloorEv                                                       = 0x020d1164;
+_ZN6Player29IsLedgeHangingOrLedgeGrabbingEv                                       = 0x020d0d2c;
+_ZN6Player17CheckCeilingAboveEv                                                   = 0x020d1164;
 _ZN6Player19SetCrouchJumpActionEv                                                 = 0x020d1204;
 _ZN6Player21SetCrouchAttackActionEv                                               = 0x020d12b0;
+_ZN6Player22HandleCarryMoveEffectsEj                                              = 0x020d1f78;
 _ZN6Player19ChangeStateFromWaitE5Fix12IiE                                         = 0x020d22ec;
+_ZN6Player14CancelWaitAnimEv                                                      = 0x020d2da0;
 _ZN6Player14HandleWaitAnimEv                                                      = 0x020d2fdc;
 _ZN6Player13CheckTeleportEv                                                       = 0x020d245c;
-_ZN6Player15SetLandingStateEh                                                     = 0x020d36d8;
+_ZN6Player19FlipHorzSpeedAndYawEv                                                 = 0x020d3498;
+_ZN6Player21UpdateStateFromGroundEb                                               = 0x020d36d8;
+_ZN6Player31HandleWalkAndRunCheckTurnAroundEv                                     = 0x020d3b9c;
 _ZN6Player11StopBrakingEv                                                         = 0x020d4540;
 _ZN6Player17CheckYoshiMakeEggEv                                                   = 0x020d674c;
 _ZN6Player17CheckYoshiSwallowEv                                                   = 0x020d6790;
 _ZN6Player17HandleYoshiAttackEv                                                   = 0x020d8158;
-_ZN6Player17CheckJumpOnPlayerEv                                                   = 0x020d869c;
-_ZN6Player17CheckHoldingActorEv                                                   = 0x020dab14;
+_ZN6Player14CheckHitPlayerERS_                                                    = 0x020d853c;
+_ZN6Player23HandlePlayerInteractionEv                                             = 0x020d869c;
+_ZN6Player14HandleHitActorEv                                                      = 0x020d8854;
+_ZN6Player23SpawnHitPlayerParticlesERS_S_                                         = 0x020d8944;
+_ZN6Player13DropHeldActorEv                                                       = 0x020dab14;
 _ZN6Player17UpdateAirWithTurnEv                                                   = 0x020dc560;
 _ZN6Player14InitDiveHitboxEv                                                      = 0x020dba0c;
+_ZN6Player19InitSlideKickHitboxEv                                                 = 0x020dbaec;
 _ZN6Player20UpdateAirWithoutTurnE5Fix12IiES1_                                     = 0x020e28d4;
 _ZN6Player13HandleRunLeanEs                                                       = 0x020d413c;
 _ZN6Player15TrySetBrakeAnimEv                                                     = 0x020d454c;
+_ZN6Player9GetThrownE5Fix12IiES1_s                                                = 0x020db54c;
+_ZN6Player21TryGetGrabbedByPlayerERS_j                                            = 0x020d85fc;
+_ZN6Player18GetGrabbedByPlayerER5Actor                                            = 0x020db5f4;
 _ZN6Player17UpdatePlayerScaleEv                                                   = 0x020db704;
-_ZN6Player23InitGroundPoundCylClsn2Ev                                             = 0x020dbc94;
-_ZN6Player21InitPunchKickCylClsn2Ev                                               = 0x020dc020;
+_ZN6Player15ApplyScaleStateEh                                                     = 0x020db8bc;
+_ZN6Player18InitRollKickHitboxEv                                                  = 0x020dbbc0;
+_ZN6Player19InitHipAttackHitboxEv                                                 = 0x020dbc94;
+_ZN6Player14InitKickHitboxEv                                                      = 0x020dbd94;
+_ZN6Player21InitSecondPunchHitboxEv                                               = 0x020dbe70;
+_ZN6Player20InitFirstPunchHitboxEv                                                = 0x020dbf4c;
+_ZN6Player14InitGrabHitboxEv                                                      = 0x020dc020;
+_ZN6Player10InitHitboxERK7Vector35Fix12IiES4_jj                                   = 0x020dc174;
 _ZN6Player16AdjustSlideAngleEv                                                    = 0x020dd2f4;
-_ZN6Player22CheckGroundPoundPlayerEv                                              = 0x020dd908;
+_ZN6Player9CanBeHurtEv                                                            = 0x020d82f0;
+_ZN6Player21HandlePunchKickActionEv                                               = 0x020dd5ec;
+_ZN6Player12TryMakeDizzyEv                                                        = 0x020dd824;
+_ZN6Player18TryHipAttackPlayerEv                                                  = 0x020dd908;
 _ZN6Player13SetDiveOrKickEv                                                       = 0x020dde74;
 _ZN6Player8IsFlyingEv                                                             = 0x020e0478;
-_ZN6Player18GetJumpLandingAnimEv                                                  = 0x020e0a64;
+_ZN6Player23TryRunningDustAfterLandEv                                             = 0x020e04a4;
+_ZN6Player15GetJumpLandAnimEv                                                     = 0x020e0a64;
 _ZN6Player20ShouldUseCrazedCrateEP5Actor                                          = 0x020e0ccc;
-_ZN6Player21PlayBackflipLandVoiceEv                                               = 0x020e25d4;
+_ZN6Player23HandleCrazedCrateBounceEh                                             = 0x020e0f38;
+_ZN6Player20PlayLandSuccessVoiceEv                                                = 0x020e25d4;
 _ZN6Player13PlayJumpVoiceEh                                                       = 0x020e25f0;
 _ZN6Player15SetMidairActionEv                                                     = 0x020e2664;
-_ZN6Player18UpdateSlowsandJumpEv                                                  = 0x020e2ad0;
-_ZN6Player18CheckQuicksandJumpEv                                                  = 0x020e2b6c;
+_ZN6Player18HandleSlowsandJumpEv                                                  = 0x020e2ad0;
+_ZN6Player24ForceQuicksandJumpIfSunkEv                                            = 0x020e2b6c;
+_ZN6Player15ForceJumpIfMegaEv                                                     = 0x020e2ba8;
 _ZN6Player20CheckShouldSlopeJumpEv                                                = 0x020e2be4;
 _ZN6Player14GetLandingTypeEv                                                      = 0x020e2c84;
 _ZN6Player22ShouldGetStuckInGroundEv                                              = 0x020e2ea0;
 _ZN6Player17UpdatePlayerModelEv                                                   = 0x020e4bb8;
-_ZN6Player18CheckJumpIntoActorER12WithMeshClsnR5Actor                             = 0x020eeca8;
+_ZN6Player25CheckCornerCorrectOnActorER12WithMeshClsnR5Actor                      = 0x020eeca8;
 _ZN6Player33CheckMegaPlayerCollisionWithActorER12WithMeshClsnR5Actor              = 0x020eed24;
 _ZN6Player18CheckShotIntoActorER12WithMeshClsnR5Actor                             = 0x020eedc0;
 _ZN6Player14CheckPushActorER12WithMeshClsnR5Actor                                 = 0x020eee3c;
-_ZN6Player25CheckKickOrSweepKickActorER12WithMeshClsnR5Actor                      = 0x020eeeb8;
+_ZN6Player24CheckKickOrRollKickActorER12WithMeshClsnR5Actor                       = 0x020eeeb8;
 _ZN6Player15CheckPunchActorER12WithMeshClsnR5Actor                                = 0x020ef070;
 _ZN6Player18CheckOnWallOnActorER12WithMeshClsnR5Actor                             = 0x020ef228;
-_ZN6Player23CheckGroundPoundOnActorER12WithMeshClsnR5Actor                        = 0x020ef2a4;
+_ZN6Player21CheckHipAttackOnActorER12WithMeshClsnR5Actor                          = 0x020ef2a4;
 _ZN6Player12Unk_020f030cEj                                                        = 0x020f030c;
 _ZN6Player14OnSlopedGroundEj5Fix12IiE                                             = 0x020f035c;
 _ZN6Player18CleanupAllPowerupsEv                                                  = 0x020bda48;
@@ -1669,7 +1840,7 @@ _ZN6Player18CleanupVanishLuigiEv                                                
 _ZN6Player17CleanupKoopaShellEv                                                   = 0x020cc1f4;
 _ZN6Player16CleanupFireYoshiEv                                                    = 0x020d80d0;
 _ZN6Player19CleanupBalloonMarioEv                                                 = 0x020de968;
-_ZN6Player17CleanupFeatherCapEv                                                   = 0x020e032c;
+_ZN6Player19CleanupWingFeathersEv                                                 = 0x020e032c;
 
 _ZN6Player17St_LedgeHang_InitEv                                                   = 0x020d0c54;
 _ZN6Player17St_LedgeHang_MainEv                                                   = 0x020d0a44;
@@ -1812,9 +1983,9 @@ _ZN6Player17St_PunchKick_InitEv                                                 
 _ZN6Player17St_PunchKick_MainEv                                                   = 0x020dd3c4;
 _ZN6Player17St_EndingFly_InitEv                                                   = 0x020c3d6c;
 _ZN6Player17St_EndingFly_MainEv                                                   = 0x020c3d1c;
-_ZN6Player19St_GroundPound_InitEv                                                 = 0x020dddf0;
-_ZN6Player19St_GroundPound_MainEv                                                 = 0x020dd9f8;
-_ZN6Player22St_GroundPound_CleanupEv                                              = 0x020dd9e0;
+_ZN6Player17St_HipAttack_InitEv                                                   = 0x020dddf0;
+_ZN6Player17St_HipAttack_MainEv                                                   = 0x020dd9f8;
+_ZN6Player20St_HipAttack_CleanupEv                                                = 0x020dd9e0;
 _ZN6Player12St_Dive_InitEv                                                        = 0x020dd17c;
 _ZN6Player12St_Dive_MainEv                                                        = 0x020dcc28;
 _ZN6Player13St_Throw_InitEv                                                       = 0x020dafd4;
@@ -1825,8 +1996,8 @@ _ZN6Player21St_BowserSpin_CleanupEv                                             
 _ZN6Player19St_SwingPlayer_InitEv                                                 = 0x020da3b0;
 _ZN6Player19St_SwingPlayer_MainEv                                                 = 0x020d9fec;
 _ZN6Player22St_SwingPlayer_CleanupEv                                              = 0x020d9fc4;
-_ZN6Player17St_SweepKick_InitEv                                                   = 0x020dc510;
-_ZN6Player17St_SweepKick_MainEv                                                   = 0x020dc48c;
+_ZN6Player16St_RollKick_InitEv                                                    = 0x020dc510;
+_ZN6Player16St_RollKick_MainEv                                                    = 0x020dc48c;
 _ZN6Player17St_SlideKick_InitEv                                                   = 0x020dc3e0;
 _ZN6Player17St_SlideKick_MainEv                                                   = 0x020dc1d0;
 _ZN6Player18St_CameraZoom_InitEv                                                  = 0x020caef4;
@@ -1858,16 +2029,63 @@ _ZN6Player21St_HeadstandJump_InitEv                                             
 _ZN6Player21St_HeadstandJump_MainEv                                               = 0x020e13c0;
 
 /* Actors/PowerStar.h */
+_ZN9PowerStar16InitBouncingStarEP6Playerbb                                        = 0x020e7218;
 _ZN9PowerStar13AddStarMarkerEv                                                    = 0x020e8ca0;
 
 /* Actors/StarMarker.h */
+_ZN10StarMarker13InitResourcesEv                                                  = 0x020eb204;
+_ZN10StarMarker16CleanupResourcesEv                                               = 0x020eabcc;
+_ZN10StarMarker8BehaviorEv                                                        = 0x020ead90;
+_ZN10StarMarker7RenderEv                                                          = 0x020eacb8;
+_ZN10StarMarker16OnPendingDestroyEv                                               = 0x020eab8c;
+_ZN10StarMarker27LinkSilverStarAndStarMarkerEP9PowerStar                          = 0x020e71d4;
 _ZN10StarMarker27SpawnRedCoinStarIfNecessaryEv                                    = 0x020e72d8;
+_ZN10StarMarker17ShatterStarSphereEv                                              = 0x020e7d84;
 
 /* Actors/Bowser.h */
 _ZN6Bowser18CheckSpikeBombClsnEv                                                  = 0x02113d20;
 
+/* Actors/Coin.h */
+_ZN4Coin15spawnDataYellowE                                                        = 0x02108790;
+_ZN4Coin12spawnDataRedE                                                           = 0x021087ac;
+_ZN4Coin13spawnDataBlueE                                                          = 0x021087c8;
+
+_ZN4Coin13InitResourcesEv                                                         = 0x020b2508;
+_ZN4Coin16CleanupResourcesEv                                                      = 0x020b2198;
+_ZN4Coin8BehaviorEv                                                               = 0x020b2324;
+_ZN4Coin6RenderEv                                                                 = 0x020b2284;
+_ZN4Coin13OnYoshiTryEatEv                                                         = 0x020b2a90;
+_ZN4Coin13OnTurnIntoEggER6Player                                                  = 0x020b2a34;
+
+_ZN4Coin13GetStarMarkerEv                                                         = 0x020b1328;
+_ZN4Coin10DropShadowEv                                                            = 0x020b14d8;
+_ZN4Coin15CollectBlueCoinER6Player                                                = 0x020b1674;
+_ZN4Coin14CollectRedCoinER6Player                                                 = 0x020b16c4;
+_ZN4Coin17CollectYellowCoinER6Player                                              = 0x020b1884;
+_ZN4Coin19CheckClsnWithPlayerEv                                                   = 0x020b19dc;
+_ZN4Coin18KillIfInDeathTableEv                                                    = 0x020b10a0;
+_ZN4Coin14IsInYoshiMouthEv                                                        = 0x020b12ec;
+_ZN4Coin14UpdateFloorPosEv                                                        = 0x020b10e4;
+_ZN4Coin18UpdatePosAndWmClsnEv                                                    = 0x020b13e0;
+_ZN4Coin14FindBrickBlockEv                                                        = 0x020b1008;
+_ZN4Coin20ReflectAngleFromWallEv                                                  = 0x020b1384;
+
+_ZN4Coin11Bh_FallDownEv                                                           = 0x020b2150;
+_ZN4Coin18Bh_StaticPermanentEv                                                    = 0x020b20b4;
+_ZN4Coin7Bh_MoveEv                                                                = 0x020b1cc0;
+_ZN4Coin19Bh_BounceFromPlayerEv                                                   = 0x020b1bfc;
+_ZN4Coin9Bh_StaticEv                                                              = 0x020b2070;
+_ZN4Coin8Bh_SlideEv                                                               = 0x020b1ad4;
+_ZN4Coin24Bh_IntangibleAbovePlayerEv                                              = 0x020b1a60;
+
+_ZN4Coin27Spawn100CoinStarIfNecessaryEP6Player                                    = 0x020b18f0;
+
 /* Actors/SpikeBomb.h */
 _ZN9SpikeBomb7RecoverEv                                                           = 0x021186d8;
+
+/* Actors/Door.h */
+_ZN4Door22StopBowserMessageSoundEv                                                = 0x02144fcc;
+_ZN4Door26ContinueBowserMessageSoundEv                                            = 0x02145014;
 
 /* Particle.h */
 _ZN8Particle12Acceleration4FuncERNS_10EffectDataEPcR7Vector3                      = 0x0204d8b0;
@@ -1925,10 +2143,15 @@ _ZN8Particle16FitWaterCallback8OnUpdateERNS_6SystemEb                           
 _ZTVN8Particle21CleanParticleCallbackE                                            = 0x0208f45c;
 _ZN8Particle21CleanParticleCallback8OnUpdateERNS_6SystemEb                        = 0x02021e40;
 
+_ZN8Particle6System8NewNoDirEjj5Fix12IiES2_S2_PNS_8CallbackE                      = 0x02022cbc;
+_ZN8Particle6System22NewNoDirUnkCallback7F4Ejj5Fix12IiES2_S2_PNS_8CallbackE       = 0x02022d00;
+_ZN8Particle6System22NewNoDirUnkCallback7F0Ejj5Fix12IiES2_S2_PNS_8CallbackE       = 0x02022d44;
 _ZN8Particle6System3NewEjj5Fix12IiES2_S2_PK11Vector3_16fPNS_8CallbackE            = 0x02022d80;
 _ZN8Particle6System9NewSimpleEj5Fix12IiES2_S2_                                    = 0x02022e98;
 _ZN8Particle6System10NewWeatherEjj5Fix12IiES2_S2_PK11Vector3_16fj                 = 0x02022bf8;
 _ZN8Particle6System9NewRippleE5Fix12IiES2_S2_                                     = 0x02022998;
+_ZN8Particle6System10NewBubblesE5Fix12IiES2_S2_                                   = 0x020229f0;
+_ZN8Particle6System14NewSmallSplashE5Fix12IiES2_S2_                               = 0x02022a4c;
 _ZN8Particle6System12NewBigSplashE5Fix12IiES2_S2_                                 = 0x02022aa8;
 _ZN8Particle6System17NewUnkCallback818Ejj5Fix12IiES2_S2_PK11Vector3_16f           = 0x02022bb4;
 _ZN8Particle6System12FromUniqueIDEj                                               = 0x02022e68;
@@ -1942,7 +2165,7 @@ _ZN8Particle10SysTracker6UpdateEv                                               
 
 _ZNK8Particle10SysTracker8Contents8FindDataEj                                     = 0x02021b58;
 
-_ZN8Particle23BigRunningSlidingDustAtE5Fix12IiES1_S1_                            = 0x02022b04;
+_ZN8Particle23BigRunningSlidingDustAtE5Fix12IiES1_S1_                             = 0x02022b04;
 _ZN8Particle20RunningSlidingDustAtE5Fix12IiES1_S1_                                = 0x02022b58;
 _ZN8Particle19SetSelfDestructFlagEj                                               = 0x020226d4;
 _ZN8Particle9RenderAllEv                                                          = 0x02022ee0;
@@ -1968,13 +2191,17 @@ _ZN5Sound8PlayLongEjjjRK7Vector3j                                               
 _ZN5Sound10PlayLong2DEjjjj                                                        = 0x020124c4;
 _ZN5Sound17PlayLongCharVoiceEjjjRK7Vector3j                                       = 0x02012120;
 _ZN5Sound13PlayCharVoiceEjjRK7Vector3                                             = 0x02012154;
+_ZN5Sound17PlayLongWithPitchEjjjjiRK7Vector3j                                     = 0x02012194;
+_ZN5Sound25PlayLongStopIfSpeedTooLowEjjjRK7Vector35Fix12IiEj                      = 0x0201226c;
+_ZN5Sound13PlayFootstepsEjjRK7Vector35Fix12IiE                                    = 0x0201251c;
 _ZN5Sound4PlayEjjRK7Vector3                                                       = 0x02012590;
 _ZN5Sound6Play2DEjj                                                               = 0x02012840;
 _ZN5Sound12PlayArchive0EjRK7Vector3                                               = 0x0201264c;
 _ZN5Sound12PlayArchive3EjRK7Vector3                                               = 0x02012664;
 _ZN5Sound15PlayArchive2_2DEj                                                      = 0x02012754;
 _ZN5Sound15PlayArchive3_2DEj                                                      = 0x02012768;
-_ZN5Sound16UnkPlaySoundFuncEj                                                     = 0x02012790;
+_ZN5Sound16PlayArchive3_AltEjRK7Vector3                                           = 0x0201267c;
+_ZN5Sound19PlayArchive2_2D_AltEj                                                  = 0x02012790;
 _ZN5Sound7PlaySubEjjj5Fix12IiEb                                                   = 0x02012be0;
 _ZN5Sound20PlaySmallSecretSoundEP5ActorPt                                         = 0x0200f874;
 _ZN5Sound15PlaySecretSoundEP5ActorPt                                              = 0x0200f8f8;
@@ -2000,10 +2227,12 @@ _ZN5Sound13Func_02048ec4Ev                                                      
 _ZN5Sound13Func_02048ee4Ev                                                        = 0x02048ee4;
 
 /* are these part of the same struct? */
+MUSIC_ID_LSL_12                                                                   = 0x0209b430;
 MUSIC_VOLUME_LSL_12                                                               = 0x0209b490;
 _ZN6Memory24soundHeapAllocatorPtrPtrE                                             = 0x0209b498;
 MESSAGE_SOUND_VOLUME_LSL_12                                                       = 0x0209b49c;
 
+FOOTSTEP_SOUND_SPECIFICS                                                          = 0x0208e434;
 JRB_SOUND_SPECIFICS                                                               = 0x0208e434;
 SOUND_SPECIFICS                                                                   = 0x0208e438;
 
@@ -2025,12 +2254,16 @@ _ZN8SaveData26CountStarsCollectedInLevelEj                                      
 _ZN8SaveData19IsCharacterUnlockedEj                                               = 0x0201392c;
 _ZN8SaveData13GetCoinRecordEj                                                     = 0x0201366c;
 _ZN8SaveData21SetCoinRecordIfHigherEah                                            = 0x02013650;
+_ZN8SaveData25HasRabbitKeyBeenCollectedEjj                                        = 0x02013890;
+_ZN8SaveData20NumMinigameKeysFoundEv                                              = 0x020138dc;
+_ZN8SaveData31SetNumGlowingRabbitsAndWhiteKeyEv                                   = 0x02013944;
 _ZN8SaveData22NumGlowingRabbitsFoundEv                                            = 0x02013984;
 _ZN8SaveData17SetCharacterIntroEi                                                 = 0x02013910;
 
+_ZN8SaveData21CheckFloor1ToadHasCapEv                                             = 0x02013a44;
+_ZN8SaveData13PlayerLoseCapEv                                                     = 0x02013ad4;
 _ZN8SaveData16CanPlayerHaveCapEv                                                  = 0x02013b5c;
 _ZN8SaveData16HasPlayerLostCapEv                                                  = 0x02013b18;
-_ZN8SaveData13PlayerLoseCapEv                                                     = 0x02013ad4;
 
 SAVE_DATA                                                                         = 0x0209caa0;
 

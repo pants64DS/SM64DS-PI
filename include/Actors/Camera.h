@@ -82,7 +82,7 @@ struct Camera : View // internal name: dCamera
 		STATE_LOCKED       = 1 << 4,
 		ROTATING_LEFT      = 1 << 5,
 		ROTATING_RIGHT     = 1 << 6,
-
+		MEGA_CHARACTER     = 1 << 7,
 
 
 		UNK_10             = 1 << 10,
@@ -91,8 +91,8 @@ struct Camera : View // internal name: dCamera
 		SLEEP_COLD_ZOOM_IN = 1 << 13,
 		TALK               = 1 << 14,
 		ZOOM_OUT_FROM_TALK = 1 << 15,
-
-
+		CEILING_HANG_ABOVE = 1 << 16,
+		CEILING_HANG_BELOW = 1 << 17,
 
 		ZOOMED_IN          = 1 << 19
 	};
@@ -114,8 +114,8 @@ struct Camera : View // internal name: dCamera
 	Vector3 unk0e0;         // Raycast result save (when the player becomes invisible to the camera)
 	Vector3 unk0ec;         // Raycast result save (when the player becomes invisible to the camera)
 	Fix12i aspectRatio;     // Aspect ratio, default = 1.33 (4:3)
-	u32 unk0fc;        // Clipper related (near+far)
-	u32 unk100;        // Clipper related
+	Fix12i unk0fc;        // Clipper related (near+far)
+	Fix12i unk100;        // Clipper related
 	u32 unk104;        // Clipper related
 	u32 unk108;        // Clipper related
 	u8 viewportLeft;   // Viewport x for left border
@@ -178,18 +178,37 @@ struct Camera : View // internal name: dCamera
 
 	void SaveCameraStateBeforeTalk(); // Saves the current camera state
 	void SetFlag_3();
+	void SetFirstPerson(u32 playerID);
+	bool TryZoomOut(u32 playerID);
+	void SetCameraDef(u8 type);
 	void SetLookAt(const Vector3& lookAt);
 	void SetPos(const Vector3& pos);
+	void SetCamFromNearestViewObj();
+	void SetDefaults();
 	bool IsUnderwater() const;
+	void SetHurtZShakeAngle();
 	s32 ChangeState(State* newState);
+	void SetBowserSpinCam(u32 playerID);
 	void LookAtExit(Actor& exit);
 	void GoBehindPlayer(u32 playerID);
 	s32 CallKuppaScriptInstruction(char* instruction, s16 minFrame, s16 maxFrame);
-	void SetSwimCamera(u32 playerID);
+	void SetFixedTalkCam(u32 playerID, const Vector3& lookAtPos);
+	void SetSlideCam(u32 playerID);
+	void SetHeadstandCam(u32 playerID);
+	void SetClimbCamNoDef(u32 playerID);
+	void SetClimbCamWithDef(u32 playerID);
+	void SetSpinTwirlCam(u32 playerID);
+	void SetSurfaceSwimCam(u32 playerID);
+	void SetSwimCam(u32 playerID);
+	void SetTalkCam(u32 playerID);
+	void SetCeilingHangCam(u32 playerID, u32 clpsCamBehavID);
+	void SetNormalCam(u32 playerID);
+	void CameraShakeAt(const Vector3& source, Fix12i magnitude);
+	void SetFOV(s16 fov);
 
 	// Func_0200D954
-	// Func_0200D8C8
 	// All funcs between Camera() and ~Camera() should belong to this object, but I couldn't prove it since they're never really called.
 };
 
 extern Clipper GLOBAL_CLIPPER;
+extern CameraDef* UNK_0208715C;

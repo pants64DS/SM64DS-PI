@@ -96,7 +96,7 @@ struct Actor : ActorDerived // internal name: dActor
 	virtual u32 OnYoshiTryEat();
 	virtual void OnTurnIntoEgg(Player& player);
 	virtual bool Virtual50();
-	virtual void OnGroundPounded(Actor& groundPounder);
+	virtual void OnHipAttacked(Actor& HipAttacker);
 	virtual void OnAttacked1(Actor& attacker);
 	virtual void OnAttacked2(Actor& attacker);
 	virtual void OnKicked(Actor& kicker);
@@ -109,7 +109,7 @@ struct Actor : ActorDerived // internal name: dActor
 
 	bool IsTooFarAwayFromPlayer(Fix12i tooFar);
 	void MakeVanishLuigiWork(CylinderClsn& cylClsn);
-	void SpawnSoundObj(u32 soundObjParam);
+	Actor* SpawnSoundObj(u32 soundObjParam);
 	void PlayHitSound(u32 hitFlags); //NCS_SE_PT_HIT_S if HIT_BY_PUNCH, NCS_SE_PT_HIT_H if HIT_BY_KICK, HIT_BY_BREAKDANCE or HIT_BY_SLIDE_KICK
 
 	void KillAndTrackInDeathTable();
@@ -122,6 +122,7 @@ struct Actor : ActorDerived // internal name: dActor
 	void LandingDust(bool doRaycast);
 	void LandingDustAt(Vector3& vec, bool doRaycast);
 	void TinyPoofDustAt(Vector3& vec, bool doRaycast);
+	void TinyPoofDust(bool isPowerFlower);
 	void DisappearPoofDustAt(const Vector3& vec);
 	void SmallPoofDust();
 	void PoofDustAt(const Vector3& vec);
@@ -168,6 +169,7 @@ struct Actor : ActorDerived // internal name: dActor
 
 	s16 GetSubtraction(s16 arg1, s16 arg2); // returns arg2 - arg1 without overflow
 	Fix12i GetWaterHeightWDW(); // if in WDW, returns the height of the water, else it returns pos.y
+	s16 GetGroundTilt(const Vector3& normal, s16 angY);
 
 	void SpawnCoins(const Vector3& coinPos, u32 numCoins, Fix12i prevSpeed, s16 baseAng);
 	Number* SpawnNumber(const Vector3& pos, u32 number, bool isSilver, u16 unk14c, Actor* unkActor = nullptr);

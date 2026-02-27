@@ -237,7 +237,7 @@ struct Player : Actor
 		NUM_ANIMS,
 	};
 
-	enum TalkStates
+	enum TalkStates : s8
 	{
 		TK_NOT         = -1,
 		TK_START       =  0,
@@ -246,20 +246,21 @@ struct Player : Actor
 		TK_UNK3        =  3  // +0x6e3 == 5 or 7
 	};
 
-	enum HurtStates
+	enum SwimStates : s8
 	{
-		HT_NOT     = -1,
-		HT_START   =  0,
-		HT_TALKING =  1,
-		HT_UNK2    =  2,
-		HT_UNK3    =  3,
-		HT_UNK4    =  4,
-		HT_UNK5    =  5,
-		HT_UNK6    =  6,
-		HT_UNK7    =  7,
+		SW_INIT  		  = 0,
+		SW_WAIT 		  = 1,
+		SW_STROKE_START   = 2,
+		SW_STROKE_HOLD    = 3,
+		SW_RECOVER 		  = 4,
+		SW_ATTACK_START   = 5,
+		SW_ATTACK_ACTIVE  = 6,
+		SW_SHELL_GRAB     = 7,
+		SW_SHELL_CARRY    = 8,
+		SW_SHELL_THROW    = 9,
 	};
 
-	enum DeathStates
+	enum DeathStates : s8
 	{
 		DH_UNK0   	   =  0,
 		DH_DEATH_PLANE =  1,
@@ -267,10 +268,59 @@ struct Player : Actor
 		DH_QUICKSAND   =  3,
 		DH_ELECTROCUTE =  4,
 		DH_TOXIC_GAS   =  5,
-		DH_UNK6    	   =  6,
+		DH_WHIRLPOOL   =  6,
 		DH_DROWN   	   =  7,
 		DH_WATER       =  8,
 		DH_UNK9    	   =  9,
+	};
+
+	enum ClimbStates : s8
+	{
+		CL_HOLD_INIT 	  	 = 0,
+		CL_HOLD_MAIN	  	 = 1,
+		CL_HEADSTAND_INIT 	 = 2,
+		CL_HEADSTAND_MAIN 	 = 3,
+		CL_HEADSTAND_TO_HOLD = 4,
+	};
+
+	enum CrouchStates : s8
+	{
+		CR_CROUCH_INIT 	   = 0,
+		CR_CROUCH_MAIN	   = 1,
+		CR_CROUCH_END 	   = 2,
+		CR_CRAWL_INIT 	   = 3,
+		CR_CRAWL_MAIN 	   = 4,
+		CR_CRAWL_TO_CROUCH = 5,
+	};
+
+	enum ScaleStates : u8
+	{
+		SC_JUMPED_ON   =  0,
+		SC_SQUISHED    =  1,
+		SC_MEGA_GROW   =  2,
+		SC_MEGA_SHRINK =  3,
+	};
+
+	enum OnWallStates : s8
+	{
+		OW_LEFT  = 0,
+		OW_RIGHT = 1,
+		OW_PUSH  = 2,
+	};
+
+	enum StuckInGroundStates : u8
+	{
+		SG_INIT = 0,
+		SG_MAIN = 1,
+		SG_END  = 2,
+	};
+
+	enum ClsnStateFlags
+	{
+		CS_ON_GROUND  		 = 1 << 0,
+		CS_ON_WALL   		 = 1 << 1,
+		CS_ON_CEILING_CORNER = 1 << 2,
+		CS_ON_CEILING 		 = 1 << 3,
 	};
 
 	enum Flags2
@@ -358,12 +408,12 @@ struct Player : Actor
 		ST_LONG_JUMP,
 		ST_PUNCH_KICK,
 		ST_ENDING_FLY,
-		ST_GROUND_POUND,
+		ST_HIP_ATTACK,
 		ST_DIVE,
 		ST_THROW,
 		ST_SPIN_BOWSER,
 		ST_SWING_PLAYER,
-		ST_SWEEP_KICK,
+		ST_ROLL_KICK,
 		ST_SLIDE_KICK,
 		ST_FIRST_PERSON,
 		ST_NULL, // all its functions are "return 1,"
@@ -402,7 +452,7 @@ struct Player : Actor
 	Actor* actorInHands;
 	Actor* holdingActor;
 	Actor* actorInMouth;
-	u32 unk364;
+	Actor* unk364;
 	ActorBase* speaker;
 	u32 unk36c;
 	State* currState;
@@ -442,10 +492,10 @@ struct Player : Actor
 	u32 unk628;
 	u32 unk62c;
 	u32 unk630;
-	u32 unk634;
-	u32 unk638;
+	u32 wadeParticleStationaryID;
+	u32 wadeParticleMovingID;
 	u32 animID;
-	Fix12i unk640;
+	Fix12i velocity;
 	Fix12i floorY;
 	u32 unk648;
 	Fix12i unk64c;
@@ -459,21 +509,21 @@ struct Player : Actor
 	u32 floorTexID;
 	u32 floorWindID;
 	u32 unk674;
-	u32 previousMusicID;
-	u32 unk67c;
-	u32 currentMusicID;
+	u32 prevMusicID;
+	u32 nextMusicID;
+	u32 currMusicID;
 	Fix12i jumpPeakHeight; // 0x684
 	union { s32 msgID; Fix12i yPosOnPole; /* zero at the bottom of the pole */ };
-	Fix12i yVisualOffset;
+	Fix12i quicksandDepth;
 	Fix12i unk690;
 	Fix12i unk694;
 	s16 spawnAngY;
-	s16 unk69a;
+	s16 floorNormalYaw;
 	s16 spinningAngularVelY; // used for at least turning on poles and spinning Bowser
 	s16 unk69e;
 	u16 visibilityCounter; // the player is visible when this is even (except when the player is electrocuted the second bit is checked instead)
 	u16 unk6a2;
-	u16 stateTimer; // sleep, run charge, etc.
+	s16 stateTimer; // sleep, run charge, etc.
 	u16 noControlTimer;
 	union { u16 unk6a8; u16 jumpSequenceTimer;}; // underwater splash bubbles, tree particles, jump related, etc.
 	u16 nextPunchKickDelay;
@@ -484,7 +534,7 @@ struct Player : Actor
 	u16 unk6b4;
 	u16 unk6b6; // climbing related
 	u16 swimHealTimer;
-	u16 unk6ba;
+	u16 waterRunTimer;
 	u16 unk6bc;
 	u16 powerupTimer;
 	u16 balloonTimer;
@@ -508,20 +558,36 @@ struct Player : Actor
 	bool isInAir;
 	bool landingSoundPlayed;
 	bool isBraking;
-	u8 currJumpNumber; // 0x6E1: 0 - first, 1 - second, 2 - triple jump
-	u8 currPunchKickNumber; // 0x6E2: 0 - first, 1 - second, 2 - kick, 3 - sweepkick
+	u8 currJumpNumber; // 0x6E1: 0 - first, 1 - second, 2 - triple jump   (also used for the Crazed Crate)
+	u8 currPunchKickNumber; // 0x6E2: 0 - first, 1 - second, 2 - kick, 3 - rollkick
 	s8 stateState; // 0x6E3: the current state of the current state. How meta.
 	bool isInSlidingState;
-	union { u8 unk6e5; bool noControl; bool canFlutterJump; bool landedUnderwater; u8 runUpAnimCounter; u8 burnCounter; u8 buttSlideCounter;};
-	u8 slidingState;
+	union
+	{
+		u8 unk6e5;
+		bool noControl;
+		bool canFlutterJump;
+		bool landedUnderwater;
+		u8 runUpAnimCounter;
+		u8 burnCounter;
+		u8 buttSlideCounter;
+		bool ceilingHangingLeft;
+		bool slideKickBounced;
+		u8 stuckInGroundState;
+		bool canHeadstand;
+	};
+	union { u8 unk6e6; u8 slidingState; u8 hurtState;};
 	u8 unk6e7;
 	u8 unk6e8;
 	u8 currClsnState; // 0x06E9: 0 - not colliding, 1 - standing on ground, 2 - colliding with wall in water, 3 - colliding with wall on land
-	s16 unk6ea;
+	bool canRunOnWater;
+	u8 unk6eb;
 	u8 unk6ec;
 	u8 runUpCounter;
 	u16 unk6ee; // related to eating; not sure if 0x6EE and 0x6EF are shared
-	u32 unk6f0;
+	u16 unk6f0;
+	u8 scaleIndex;
+	u8 scaleState; // 0x6f3: 0 - jumped on, 1 - squished, 2 - mega grow, 3 - mega shrink
 	bool hasFireInMouth;
 	u8 opacity;
 	bool powerupTimersFrozen;
@@ -542,7 +608,7 @@ struct Player : Actor
 	u8 unk705;
 	bool isUnderwater;
 	bool standingInPuddle;
-	u8 isBeingHurt;
+	bool isBeingHurt;
 	bool isInvulnerable;
 	u8 noControlState; // 0x70a
 	u8 unk70b;
@@ -550,7 +616,8 @@ struct Player : Actor
 	bool isLongFalling;
 	u8 onSlopedSurface;
 	u8 unk70f;
-	s16 unk710;
+	bool isWalking;
+	bool unk711;
 	bool isInAirIsh; // 0x712
 	bool isTangible;
 	bool unk714;
@@ -558,11 +625,19 @@ struct Player : Actor
 	bool isIntangibleToMesh;
 	u8 unk717;
 	u16 unkFlags;
-	bool hasNoCap;
+	bool justLostCap;
 	bool quickSandJump;
-	u32 unk71c;
-	u32 unk720;
-	u32 unk724;
+	u8 unk71c;
+	u8 unk71d;
+	u8 unk71e;
+	u8 unk71f;
+	u16 unk720;
+	bool unk722;
+	bool unk723;
+	u8 unk724;
+	u8 unk725;
+	bool pvpHitActive;
+	u8 unk727;
 	u32 unk728;
 	u32 unk72c;
 	u32 unk730;
@@ -570,17 +645,19 @@ struct Player : Actor
 	u32 unk738;
 	s16 toonStateAndFlag; //8 possible states, 0x8000 is the invincible-and-can't-collect-caps flag
 	s16 unk73e;
-	Fix12i toonIntensity;
-	Vector3 unk744;
+	s16 toonIntensity;
+	u8 unk742;
+	u8 unk743;
+	Vector3 lookAtPos;
 	u32 unk750;
 	u32 unk754;
 	u32 unk758;
 	s16 unk75c;
 	s16 spineAngleOffsY; // is added to bodyModels[GetBodyModelID(param1 & 0xff, false)]->data.bones[8].rot.y
 	s16 spineAngleOffsZ; // is added to bodyModels[GetBodyModelID(param1 & 0xff, false)]->data.bones[8].rot.z
-	u8 unk762;
-	u8 unk763;
-	u32 unk764;
+	s16 unk762;
+	s16 unk764;
+	s16 unk766;
 	
 	static SharedFilePtr* ANIM_PTRS[s32{NUM_ANIMS} * NUM_CHARACTERS];
 	static_assert(s32{NUM_ANIMS} * NUM_CHARACTERS == 0x308);
@@ -599,31 +676,53 @@ struct Player : Actor
 	void SetNewHatCharacter(u32 character, u32 arg1, bool makeSfx);
 	void SetRealCharacter(u32 character);
 	void TurnOffToonShading(u32 character);
+	void HandleToonState();
+	void InitPlayerCylClsn();
 	
 	bool IsInState(const State& state);
 	bool WasPreviousState(const State& state);
+	void WarioLandCamShake();
 	bool IsDiving();
 	bool IsInsideOfCannon();
+	bool ToonStateActive();
 	bool IsCollectingCap();
+	void ReturnWithCapToonEffects();
 	bool HasNoCap();
 	void Unk_020c6a10(u32 arg0);
 	bool Unk_020c4f40(u16 newUnk6a6);
 	s32 Unk_020ca8f8();
+	void ResetPlayerClsnAndClimbClsn();
 	bool Unk_020c9e5c(u8 arg0);
 	bool Unk_020ca488(); // calls Unk_020c9e5c(0xb);
 	bool Unk_020ca150(u8 arg0);
 	u32 GetBodyModelID(u32 character, bool checkMetalStateInsteadOfMetalModel) const;
+	u32 GetHeadModelID(u32 character, bool checkMetalStateInsteadOfMetalModel) const;
+	void RenderPlayer();
+	void UpdateModelTransform();
 	void HandleReturnLevelAndEntrance();
 	ModelAnim2* GetBodyModel();
+	bool HandleArmsCarryTransform();
 	void SetAnim(u32 animID, s32 flags, Fix12i animSpeed = 1._f, u32 startFrame = 0);
 	void UpdateAnim();
 	bool ShowMessage(ActorBase& speaker, u32 msgIndex, const Vector3* lookAt, u32 arg3, u32 arg4);
 	bool ShowMessage2(ActorBase& speaker, u32 msgIndex, const Vector3* lookAt, u32 arg3, u32 arg4);
 	bool StartTalk(ActorBase& speaker, bool noButtonNeeded); //true iff the talk actually started.
+	bool Unk_020c5244(); // always returns false
 	s32 GetTalkState();
+	void PlayStuckInGroundParticles();
 	bool HasFinishedTalking();
 	bool HurtNoOverrideCheckDeath(u32 damage, bool dropHeldActor);
+	void SetFallHurtAnimIfMidair();
+	void SetGetUpFlagIfWillHitFrame();
+	void HandleHurtGroundMovement();
 	s32 GetHurtState();
+	bool TryWarioPlayerSwing();
+	void HandleClimbUpSound();
+	void HandleClimbDownSound();
+	void HandleTreeClimbParticles();
+	bool CheckHitByPlayerWhileClimbing();
+	bool FallIfSwimHealing();
+	void HandleClimbYaw();
 	bool IsOnShell(); // if not on shell, reset shell ptr
 	bool IsEnteringLevel(); // entering entrance, not entering exit
 	bool IsBeingShotOutOfCannon();
@@ -631,13 +730,19 @@ struct Player : Actor
 	void Burn();
 	void Shock(u32 damage);
 	bool CheckSpitOutPlayer();
+	bool TrySpitPlayerFromMouth();
 	bool IsInYoshisMouth();
 	void RegisterEggCoinCount(u32 numCoins, bool includeSilverStar, bool includeBlueCoin);
+	void SpawnAttackParticles(Vector3& particlePos);
 	//speed is multiplied by constant at 0x020ff128+charID*2 and divided by 50 (? could be 25, could be 100).
-	void Hurt(const Vector3& source, u32 damage, Fix12i speed, u32 arg4, u32 presetHurt, u32 spawnOuchParticles); // speed is multiplied by constant at 0x020ff128+charID*2 and divided by 50 (? could be 25, could be 100).
+	bool Hurt(const Vector3& source, u32 damage, Fix12i speed, u32 arg4, u32 presetHurt, u32 spawnOuchParticles); // speed is multiplied by constant at 0x020ff128+charID*2 and divided by 50 (? could be 25, could be 100).
 	void Heal(s32 health);
 	s32 GetHealth();
+	void PlayMegaStompEffects();
+	bool TryBounceOffPlayer();
 	void Bounce(Fix12i bounceInitVel);
+	bool LoseCapIfHasCap();
+	bool DropSilverOrVSStarIfHasAny();
 	void SpinBounce(Fix12i bounceInitVel);
 	void HandleYoshiFlutterJump();
 	void HandleLuigiFlutterJump();
@@ -646,6 +751,7 @@ struct Player : Actor
 	bool JumpIntoBooCage(Vector3& cagePos);
 	bool EnterWhirlpool();
 	bool SetDeathState(u8 deathState);
+	void HandleWalkOrRun();
 	void BlowAway(s16 dir);
 	bool IsInAirAndAirIsh();
 	bool CanWarp();
@@ -661,10 +767,14 @@ struct Player : Actor
 	bool TryEnterStarDoor(Vector3& doorPos, s16 doorAng);
 	void PlayMammaMiaSound();
 	bool TryDropHeldActor();
+	bool TryThrowHeldActor();
 	bool TryGrab(Actor& actor);
+	bool GrabHandling(Actor& actor);
 	bool DropActor();
 	bool FinishedAnim();
 	void HandleRunningDust();
+	void HandleFootsteps();
+	bool ApproachHorzSpeedCheckSlope(Fix12i dest, Fix12i step);
 
 	void Unk_020bf13c();
 	bool UpdateBeingHeld(); // returns whether being held
@@ -672,20 +782,32 @@ struct Player : Actor
 	Fix12i ScaleVertAccelByChar(Fix12i baseAccel);
 	void SetSpeedYByChar(Fix12i baseSpeed);
 	Fix12i ScaleHorzSpeedByChar(Fix12i baseSpeed);
+	void ApproachLinearMagnitude(Fix12i& counter, Fix12i delta, Fix12i dest);
 	void UpdateSwimmingClsn(CylinderClsn& cylClsn);
-	Fix12i ScaleHorzSpeedByFloorTraction(Fix12i baseSpeed);
+	Fix12i ScaleHorzAccelByFloorTraction(Fix12i baseAccel);
 	void RunningDust();
 	void SlidingDust();
 	void PlayerLandingDust();
+	bool UpdateQuicksandReturnDeath();
+	bool Unk_020c0108(bool arg0);
 	u32 GetFloorTractionID();
+	Fix12i GetHangableCeilingHeight();
+	void UpdateCeilingHang();
+	bool CheckCanPullUp();
+	bool RaycastActorClsnNoWarpPipe(const Vector3& pos0, const Vector3& pos1);
+	bool CheckForcePullUp();
 	void SetStomachOrButtSlide(u8 slideCondition);
 	void ZeroVertAccelYSpeedHorzSpeed();
 	bool ShouldSlide();
 	bool CheckGroundNotSteep();
+	void ApplySlopeAccel();
 	bool DecelerateSlide(Fix12i minSlideSpeed);
 	bool TrySnapToGroundFromSlide(); // Responsible for up/downwarps
-	bool CheckShouldSlide();
-	bool DetectRaycastFromPos(u8 horzOffset, u8 vertOffset);
+	bool IsSurfaceSlippery();
+	void UpdateFloorSurfaceInfo(ClsnResult& wmClsnResult);
+	s16 GetFloorAngle(s16 offset);
+	void HandleTilt(bool scaleByHorzSpeed);
+	bool RaycastFromPos(u8 horzOffset, u8 vertOffset);
 	bool CheckSideStep(s16 wallAngle);
 	bool SetWallSlideOrBounceBack(s16 wallAngle);
 	s32 ApplySlopeTransform();
@@ -694,62 +816,108 @@ struct Player : Actor
 	bool CheckBonkOrWallSlide();
 	void UpdateFloorCollision();
 	void PlayJumpLandSound();
-	void FirstTimeMessage(u8 firstTimeType);
+	void IntroducePowerup(u8 powerupType);
+	bool FaceLookAtPos();
+	void RiseToWaterSurface();
+	void HandleSwimCam();
+	Fix12i ScaleRiseToSurfaceSpeedByChar();
 	void MakePlayerInvulnerable();
 	void SetFirstPerson();
+	bool TryWaterJump();
+	bool CheckExitWaterAndUpdateEffects();
 	void WadingRipples(Fix12i speedToCompare);
 	void UpdateCameraZoom();
-	bool IsOnWaterSurface();
-	bool HandleSwimHealthAndCheckDeath();
+	void SetSwimVelFromPitch(Fix12i vel, Fix12i& hSpeed, Fix12i& ySpeed);
+	void BeginSwimCarry();
+	void BeginSwimAttack();
+	void BeginPaddleEnd();
+	void InitSwimAttackHitbox();
+	void BeginPaddle();
+	void BeginBreastStroke();
+	void HandleSwimPitchAndRoll();
+	void HandleSwimMotionPitch();
+	void HandleSwimYaw();
+	bool NotOnWaterSurface();
+	bool HandleSwimHealthCheckDeath();
+	bool IsWaterCross();
+	Fix12i ScaleSwimSpeedByChar(Fix12i baseSpeed);
 	bool IsHangingFromCeiling();
-	bool TryLedgeHang(Fix12i maxGrabHeight, bool facingAway);
+	bool CheckLedgeGrab(Fix12i grabHeight, bool facingAway);
 	bool ShouldLedgeHang();
+	bool ShouldLedgeHangOffLedge();
+	void AdjustLedgeHangPosAndFall();
 	void SetPunchKickAttack(u8 punchKickNumber);
 	void ClearActorInMouth();
 	bool CheckLedgeHangOrGrab();
-	bool NotAboveFloor();
+	bool CheckCeilingAbove();
 	bool SetCrouchJumpAction();
 	bool SetCrouchAttackAction();
+	void HandleCarryMoveEffects(u32 moveAnimID);
 	bool ChangeStateFromWait(Fix12i minMagForWalk);
+	u8 CancelWaitAnim();
 	bool HandleWaitAnim();
 	bool CheckTeleport();
-	bool SetLandingState(u8 stateCondition);
-	void Stopbreaking();
-	bool CheckHoldingActor();
+	void FlipHorzSpeedAndYaw();
+	bool UpdateStateFromGround(bool disallowCrouchAction);
+	bool HandleWalkAndRunCheckTurnAround();
+	void StopBraking();
+	void HandleHitActor();
+	bool SpawnHitPlayerParticles(Player& attacker, Player& victim);
+	bool DropHeldActor();
 	void UpdateAirWithTurn();
 	void InitDiveHitbox();
+	void InitSlideKickHitbox();
 	void UpdateAirWithoutTurn(Fix12i horzAccelInput, Fix12i horzAccelNeutral);
 	bool CheckYoshiMakeEgg();
 	bool CheckYoshiSwallow();
 	void HandleYoshiAttack();
-	bool CheckJumpOnPlayer();
+	bool CheckHitPlayer(Player& victim);
+	bool HandlePlayerInteraction();
 	void HandleRunLean(s16 playerMotionAngY);
 	void TrySetBrakeAnim();
+	void GetThrown(Fix12i horizontalSpeed, Fix12i verticalSpeed, s16 angle);
+	bool TryGetGrabbedByPlayer(Player& grabber, u32 attackerHitFlags);
+	bool GetGrabbedByPlayer(Actor& actor);
 	void UpdatePlayerScale();
-	void InitGroundPoundCylClsn2();
-	void InitPunchKickCylClsn2();
+	void ApplyScaleState(u8 newScaleState);
+	void InitRollKickHitbox();
+	void InitHipAttackHitbox();
+	void InitKickHitbox();
+	void InitSecondPunchHitbox();
+	void InitFirstPunchHitbox();
+	void InitGrabHitbox();
+	void InitHitbox(const Vector3& offset, Fix12i radius, Fix12i height, u32 flags, u32 vulnFlags);
 	void AdjustSlideAngle();
-	bool CheckGroundPoundPlayer(); //Multiplayer only
-	s32 SetDiveOrKick();
+	void Unk_020de3d0(s16 ang0, s16 ang1);
+	void PlayBalloonBoundSound();
+	bool CanBeHurt();
+	void HandlePunchKickAction();
+	bool TryMakeDizzy();
+	void TryHipAttackPlayer(); //Multiplayer only
+	bool SetDiveOrKick();
 	bool IsFlying();
-	void GetJumpLandingAnim();
+	void TryRunningDustAfterLand();
+	u32 GetJumpLandAnim();
 	bool ShouldUseCrazedCrate(Actor* actor);
-	void PlayBackflipLandVoice();
+	void HandleCrazedCrateBounce(u8 bounceNumber);
+	void PlayLandSuccessVoice();
 	void PlayJumpVoice(u8 jumpNumber);
 	bool SetMidairAction();
-	void UpdateSlowsandJump();
-	bool CheckQuicksandJump();
+	void HandleSlowsandJump();
+	bool ForceQuicksandJumpIfSunk();
+	bool ForceJumpIfMega();
 	bool CheckShouldSlopeJump();
 	bool ShouldGetStuckInGround();
 	u8 GetLandingType();
 	void UpdatePlayerModel();
-	static bool CheckJumpIntoActor(WithMeshClsn& wmClsn, Actor& jumper);
+	void HandleAttackPlayer(Player& victim, u32 attackerHitFlags);
+	static bool CheckCornerCorrectOnActor(WithMeshClsn& wmClsn, Actor& jumper);
 	static bool CheckMegaPlayerCollisionWithActor(WithMeshClsn& wmClsn, Actor& megaPlayer);
 	static bool CheckShotIntoActor(WithMeshClsn& wmClsn, Actor& shooter);
 	static bool CheckPushActor(WithMeshClsn& wmClsn, Actor& pusher);
-	static bool CheckKickOrSweepKickActor(WithMeshClsn& wmClsn, Actor& kicker);
+	static bool CheckKickOrRollKickActor(WithMeshClsn& wmClsn, Actor& kicker);
 	static bool CheckPunchActor(WithMeshClsn& wmClsn, Actor& puncher);
-	static bool CheckGroundPoundOnActor(WithMeshClsn& wmClsn, Actor& groundpounder);
+	static bool CheckHipAttackOnActor(WithMeshClsn& wmClsn, Actor& HipAttacker);
 	static bool CheckOnWallOnActor(WithMeshClsn& wmClsn, Actor& actor);
 	Fix12i Unk_020f030c(u32 floorTraction);
 	static bool OnSlopedGround(u32 floorTraction, Fix12i floorNormalY);
@@ -757,22 +925,27 @@ struct Player : Actor
 	u16 GetBreakFreeBonus();
 	
 	bool IsInAnim(u32 animID);
+	void HandleShellLean(s16 maxTilt);
 	bool IsFrontSliding();
 	bool LostGrabbedObject();
-
-	u16 GetBreakFreeBonus();
 
 	s32 CallKuppaScriptInstruction(char* instruction, s16 minFrame, s16 maxFrame);
 
 	void PlaySubMusic(u32 musicID);
 	void EndSubMusic(u32 musicID);
 
+	void EndPowerupMusic(u32 musicID);
+	void PlayPowerupMusic(u32 musicID);
+
 	bool InitKoopaShell();
-	void InitWingFeathers(bool setPowerUpFlag);
+	void InitSuperMushroom();
+	void InitWingFeathers(bool shouldIntroduceWings);
 	void InitBalloonMario();
 	void InitVanishLuigi();
 	void InitMetalWario();
 	void InitFireYoshi();
+
+	void ForceSwallowStartFlowerPower(); 
 
 	void CleanupAllPowerups();
 	void CleanupSuperMushroom();
@@ -781,7 +954,7 @@ struct Player : Actor
 	void CleanupKoopaShell();
 	void CleanupFireYoshi();
 	void CleanupBalloonMario();
-	void CleanupFeatherCap();
+	void CleanupWingFeathers();
 
 	bool St_LedgeHang_Init();
 	bool St_LedgeHang_Main();
@@ -924,9 +1097,9 @@ struct Player : Actor
 	bool St_PunchKick_Main();
 	bool St_EndingFly_Init();
 	bool St_EndingFly_Main();
-	bool St_GroundPound_Init();
-	bool St_GroundPound_Main();
-	bool St_GroundPound_Cleanup();
+	bool St_HipAttack_Init();
+	bool St_HipAttack_Main();
+	bool St_HipAttack_Cleanup();
 	bool St_Dive_Init();
 	bool St_Dive_Main();
 	bool St_Throw_Init();
@@ -937,8 +1110,8 @@ struct Player : Actor
 	bool St_SwingPlayer_Init();
 	bool St_SwingPlayer_Main();
 	bool St_SwingPlayer_Cleanup();
-	bool St_SweepKick_Init();
-	bool St_SweepKick_Main();
+	bool St_RollKick_Init();
+	bool St_RollKick_Main();
 	bool St_SlideKick_Init();
 	bool St_SlideKick_Main();
 	bool St_FirstPerson_Init();

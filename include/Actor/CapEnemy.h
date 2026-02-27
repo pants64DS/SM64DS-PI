@@ -13,7 +13,8 @@ struct CapIcon
 	u8 unk1a;       // 0x1a
 	u8 unk1b;       // 0x1b
 
-	void InitializeGlobals();
+	static void InitializeGlobals();
+	static void UpdateAll();
 };
 
 struct CapEnemy : Enemy

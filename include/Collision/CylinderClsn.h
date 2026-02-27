@@ -11,10 +11,10 @@ struct CylinderClsn
 		VERTICAL_PUSHBACK_ONLY = 1 << 2,
 		CLIMBABLE              = 1 << 3,
 		GIANT                  = 1 << 4,
-		SPIN_OR_GROUND_POUND   = 1 << 5,
+		SPIN_OR_HIP_ATTACK     = 1 << 5,
 		PUNCH                  = 1 << 6,
 		KICK                   = 1 << 7,
-		ROUNDHOUSE_KICK        = 1 << 8,
+		ROLL_KICK        	   = 1 << 8,
 		SLIDE_KICK             = 1 << 9,
 		DIVE                   = 1 << 10,
 		UNK_11                 = 1 << 11,
@@ -44,7 +44,7 @@ struct CylinderClsn
 		HIT_BY_CHAR_PROJ            = 1 << 2, // VERTICAL_PUSHBACK_ONLY
 		HIT_BY_CHAR_BODY            = 1 << 3, // CLIMBABLE
 		HIT_BY_MEGA_CHAR            = 1 << 4,
-		HIT_BY_SPIN_OR_GROUND_POUND = 1 << 5,
+		HIT_BY_SPIN_OR_HIP_ATTACK   = 1 << 5,
 		HIT_BY_PUNCH                = 1 << 6,
 		HIT_BY_KICK                 = 1 << 7,
 		HIT_BY_BREAKDANCE           = 1 << 8,

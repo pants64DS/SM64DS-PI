@@ -107,3 +107,6 @@ extern SharedFilePtr DOOR_STAR_8_MODEL_PTR;
 extern SharedFilePtr DOOR_KEY_HOLE_MODEL_PTR;
 
 extern SharedFilePtr STAR_DOOR_MODEL_PTR;
+
+extern SharedFilePtr STAR_SPHERE_MODEL_PTR;
+extern SharedFilePtr STAR_BASE_MODEL_PTR;
