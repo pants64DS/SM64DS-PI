@@ -218,9 +218,9 @@ namespace Particle
 		PTL_THIN_LONG_WHITE_ELLIPSOID = 0xd0, //???
 		PTL_DUST_FLYING = 0xd1,
 		PTS_SPARKLES_LIGHT_YELLOW = 0xd2, //for a collected coin
-		PTS_GROUND_POUND_STARS = 0xd3,
-		PTS_GROUND_POUND_DUST = 0xd4,
-		PTS_GROUND_POUND_IMPACT_STAR = 0xd5,
+		PTS_HIP_ATTACK_STARS = 0xd3,
+		PTS_HIP_ATTACK_DUST = 0xd4,
+		PTS_HIP_ATTACK_IMPACT_STAR = 0xd5,
 		PTL_STARS_DIZZY = 0xd6,
 		PTS_DUST_LANDING_SOFT_3 = 0xd7,
 		PTS_SPLASH_2 = 0xd8,
@@ -802,11 +802,16 @@ namespace Particle
 		u32 unk70;
 		u32 unk74;
 
+		static u32 NewNoDir(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, Callback* callback);
+		static u32 NewNoDirUnkCallback7F4(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, Callback* callback);
+		static u32 NewNoDirUnkCallback7F0(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, Callback* callback);
 		static u32 New(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, const Vector3_16f* dir, Callback* callback);
 		static void NewSimple(u32 effectID, Fix12i x, Fix12i y, Fix12i z);
 
 		static u32 NewWeather(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, const Vector3_16f* dir, u32 numWeatherEffectsNow);
 		static u32 NewRipple(Fix12i x, Fix12i y, Fix12i z);
+		static void NewBubbles(Fix12i x, Fix12i y, Fix12i z);
+		static void NewSmallSplash(Fix12i x, Fix12i y, Fix12i z);
 		static void NewBigSplash(Fix12i x, Fix12i y, Fix12i z);
 		static u32 NewUnkCallback818(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, const Vector3_16f* dir); // uses CleanParticleCallback
 
@@ -816,6 +821,12 @@ namespace Particle
 		static u32 New(u32 uniqueID, u32 effectID, const Vector3& pos, const Vector3_16f* dir, Callback* callback)
 		{
 			return New(uniqueID, effectID, pos.x, pos.y, pos.z, dir, callback);
+		}
+
+		[[gnu::always_inline]]
+		static u32 NewNoDir(u32 uniqueID, u32 effectID, const Vector3& pos, Callback* callback)
+		{
+			return NewNoDir(uniqueID, effectID, pos.x, pos.y, pos.z, callback);
 		}
 
 		[[gnu::always_inline]]
