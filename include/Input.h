@@ -42,6 +42,16 @@ struct Input
 	u8 unk15;                  // 0x15
 	u8 controllerMode;         // 0x16
 	u8 unk17;                  // 0x17
+
+	inline bool ButtonsHeld(u16 buttons)
+	{
+		return buttonsHeld & buttons;
+	}
+
+	inline bool ButtonsPressed(u16 buttons)
+	{
+		return buttonsPressed & buttons;
+	}
 };
 
 struct InputRelated
