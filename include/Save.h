@@ -6,6 +6,7 @@ constexpr s32 NUM_LEVELS = 52;
 constexpr s32 NUM_MAIN_LEVELS = 15;
 constexpr s32 NUM_SECRET_LEVELS = 15;
 constexpr s32 NUM_MINIGAMES = 36;
+constexpr s32 NUM_MINIGAME_KEYS = 28;
 
 extern s8 SUBLEVEL_LEVEL_TABLE[NUM_LEVELS];
 
@@ -77,7 +78,9 @@ struct FileSaveData
 		MARIO_CAP_LOST             = 1u << 24,
 		LUIGI_CAP_LOST             = 1u << 25,
 		WARIO_CAP_LOST             = 1u << 26,
-		// Bits 27-29 may be unused
+		MARIO_CAP_ON_FLOOR1_TOAD   = 1u << 27,
+		LUIGI_CAP_ON_FLOOR1_TOAD   = 1u << 28,
+		WARIO_CAP_ON_FLOOR1_TOAD   = 1u << 29,
 		MINIGAMES_ACTIVATED        = 1u << 30, // talked to minigame toad
 		RED_SWITCH_ACTIVATED       = 1u << 31, // if not set, the shine in main hall is rendered
 	};
@@ -250,12 +253,16 @@ struct SaveData : FileSaveData, MinigameSaveData
 	static bool IsCharacterUnlocked(u32 characterID);
 	static u8   GetCoinRecord(u32 courseID);
 	static void SetCoinRecordIfHigher(s8 courseID, u8 coinCount);
+	static bool HasRabbitKeyBeenCollected(u32 keyID, u32 characterID);
+	static u32  NumMinigameKeysFound();
+	static void SetNumGlowingRabbitsAndWhiteKey();
 	static u32  NumGlowingRabbitsFound();
 	static void SetCharacterIntro(s32 keyID);
 
+	static bool CheckFloor1ToadHasCap();
+	static void PlayerLoseCap();
 	static s32  CanPlayerHaveCap();
 	static s32  HasPlayerLostCap();
-	static void PlayerLoseCap();
 };
 
 extern SaveData SAVE_DATA;
