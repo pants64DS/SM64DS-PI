@@ -212,6 +212,9 @@ namespace Sound
 
 	u32 PlayLong(u32 uniqueID, u32 archiveID, u32 soundID, const Vector3& camSpacePos, u32 arg4 = 0); // first arg = guess
 	u32 PlayLong2D(u32 uniqueID, u32 archiveID, u32 soundID, u32 arg4 = 0);
+
+	u32 PlayLongStopIfSpeedTooLow(u32 uniqueID, u32 archiveID, u32 soundID, u32 pitch, const Vector3& camSpacePos, Fix12i speedToCompare, u32 arg4 = 0);
+	u32 PlayLongWithPitch(u32 uniqueID, u32 archiveID, u32 soundID, u32 pitch, const Vector3& camSpacePos, u32 arg4 = 0);
 	
 	u32 PlayLongCharVoice(u32 uniqueID, u32 charID, u32 soundID, const Vector3& camSpacePos, u32 arg4 = 0);
 	void PlayCharVoice(u32 charID, u32 soundID, const Vector3& camSpacePos);
