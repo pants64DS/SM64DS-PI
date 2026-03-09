@@ -2183,7 +2183,7 @@ _ZN5Sound8PlayLongEjjjRK7Vector3j                                               
 _ZN5Sound10PlayLong2DEjjjj                                                        = 0x020124c4;
 _ZN5Sound17PlayLongCharVoiceEjjjRK7Vector3j                                       = 0x02012120;
 _ZN5Sound13PlayCharVoiceEjjRK7Vector3                                             = 0x02012154;
-_ZN5Sound17PlayLongWithPitchEjjjiRK7Vector3j                                      = 0x02012194;
+_ZN5Sound17PlayLongWithPitchEjjjjiRK7Vector3j                                     = 0x02012194;
 _ZN5Sound25PlayLongStopIfSpeedTooLowEjjjRK7Vector35Fix12IiEj                      = 0x0201226c;
 _ZN5Sound13PlayFootstepsEjjRK7Vector35Fix12IiE                                    = 0x0201251c;
 _ZN5Sound4PlayEjjRK7Vector3                                                       = 0x02012590;
