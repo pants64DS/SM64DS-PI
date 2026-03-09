@@ -1794,7 +1794,7 @@ _ZN6Player14InitKickHitboxEv                                                    
 _ZN6Player21InitSecondPunchHitboxEv                                               = 0x020dbe70;
 _ZN6Player20InitFirstPunchHitboxEv                                                = 0x020dbf4c;
 _ZN6Player14InitGrabHitboxEv                                                      = 0x020dc020;
-_ZN6Player10InitHitBoxERK7Vector35Fix12IiES4_jj                                   = 0x020dc174;
+_ZN6Player10InitHitboxERK7Vector35Fix12IiES3_jj                                   = 0x020dc174;
 _ZN6Player20UpdateAirWithoutTurnE5Fix12IiES1_                                     = 0x020e28d4;
 _ZN6Player13HandleRunLeanEs                                                       = 0x020d413c;
 _ZN6Player15TrySetBrakeAnimEv                                                     = 0x020d454c;
