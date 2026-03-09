@@ -1,13 +1,6 @@
 /* leftover from v1
-showDebugScreen                                                                   = 0x02014244;
 OS_GetInitArenaLo                                                                 = 0x02058D80;
-Player_PlaySoundEffect                                                            = 0x02011E28;
-AreCannonsActivatedForCurrentLevel                                                = 0x0202A694;
-SetCannonsToActivatedForCurrentLevel                                              = 0x0202A67C;
-Player_WasLastAction                                                              = 0x020BEECC;
-Player_DoesStateEqual                                                             = 0x020E308C;
-OBJ_UpdateObjectXYZSpeedBasedOnForwardSpeedAndDirection                           = 0x02010C5C;
-ObjectMessageIDToActualMessageID                                                  = 0x0201FC10;  */
+Player_PlaySoundEffect                                                            = 0x02011E28; */
 
 __itcm_start = 0x01ff8000;
 __dtcm_start = 0x023c0000;

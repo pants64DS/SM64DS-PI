@@ -61,6 +61,20 @@ enum Gamemodes
     GAMEMODE_ENDING,
 };
 
+enum StarIDs
+{
+    STAR_100_COINS = 0,
+	STAR_1		   = 1,
+	STAR_2		   = 2,
+	STAR_3		   = 3,
+	STAR_4		   = 4,
+	STAR_5		   = 5,
+	STAR_6		   = 6,
+	STAR_7		   = 7,
+
+	NUM_STARS,
+};
+
 enum PauseStates
 {
     PAUSE_NOT,
