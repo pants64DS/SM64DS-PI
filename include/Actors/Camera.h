@@ -205,7 +205,6 @@ struct Camera : View // internal name: dCamera
 	void SetNormalCam(u32 playerID);
 	void CameraShakeAt(const Vector3& source, Fix12i magnitude);
 	void SetFOV(s16 fov);
-	void SetCamFromNearestViewObj();
 
 	// Func_0200D954
 	// Func_0200D8C8

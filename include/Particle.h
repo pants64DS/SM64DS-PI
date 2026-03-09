@@ -830,12 +830,6 @@ namespace Particle
 		}
 
 		[[gnu::always_inline]]
-		static u32 NewNoDir(u32 uniqueID, u32 effectID, const Vector3& pos, Callback* callback)
-		{
-			return NewNoDir(uniqueID, effectID, pos.x, pos.y, pos.z, callback);
-		}
-
-		[[gnu::always_inline]]
 		static void NewSimple(u32 effectID, const Vector3& pos)
 		{
 			NewSimple(effectID, pos.x, pos.y, pos.z);
