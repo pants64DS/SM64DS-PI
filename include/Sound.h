@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Math.h"
-#include "MusicIDs.h"
 
 struct ROM_Info;
 struct Actor;
