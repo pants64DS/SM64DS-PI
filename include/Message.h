@@ -60,6 +60,7 @@ struct Message
 	static void DisplayCourseNameForStarSelect(u32 courseID);
 	static void DisplayStarNameForStarSelect(u32 starID);
 
+	static u16 PerCharIDToMessageID(u16 perCharID);
 	static void BeginMessage(u32 msgID);
 	static void UpdateShownMessage(u32 msgID);
 
@@ -102,5 +103,6 @@ extern bool BOUNCING_MSG_ARROWS_VISIBLE;
 extern bool IS_SAVING_MESSAGE_DISPLAYED;
 extern u8 SAVE_MESSAGE_TIMER;
 extern bool IS_MESSAGE_DISAPPEARING;
+extern u8 UNK_0209D6BC;
 
 using MsgGenTextFunc = void(*)();

@@ -13,7 +13,7 @@ struct ModelBase // internal: Model; done
 	ModelBase(ModelBase&&) = delete;
 
 	bool SetFile(BMD_File& file, bool enableFog = false, s32 polygonID = -1);
-	void ApplyOpacity(u32 opacity);
+	void ApplyOpacity(u32 opacity, bool unkBool);
 };
 
 struct Model : ModelBase // internal: SimpleModel
@@ -35,6 +35,8 @@ struct Model : ModelBase // internal: SimpleModel
 	void LoadAndSetFile(u16 ov0ID, s32 arg1, s32 arg2);
 	void SetPolygonID(s32 polygonID);
 	void SetPolygonMode(s32 polygonAttr);
+	void ClearPolygonAttr(u32 polygonAttr);
+	void SetPolygonAttr(u32 polygonAttr);
 	void ShowMaterial(s32 boneID, s32 materialID);
 	void HideMaterial(s32 boneID, s32 materialID);
 	
@@ -68,7 +70,9 @@ struct ModelAnim2 : ModelAnim // internal: ModelAnm2
 
 	// 2 funcs missing before
 	void Copy(const ModelAnim2& anim, BCA_File& newFile, u32 newUnk64); // copies anim to *this, otherAnim is set to anim's Animation base class
-	void Func_020162C4(u32 newUnk64, s32 animFlags, Fix12i speed, u16 startFrame); // always calls on otherAnim
+	void Func_0201628C(u32 arg0);
+	void Func_020162A4(u32 arg0);
+	void Func_020162C4(BCA_File& animFile, s32 animFlags, Fix12i speed, u16 startFrame); // always calls on otherAnim
 };
 
 struct ShadowModel : ModelBase // internal: ShadowModel; done

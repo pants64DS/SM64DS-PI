@@ -14,7 +14,7 @@ struct CylinderClsn
 		SPIN_OR_GROUND_POUND   = 1 << 5,
 		PUNCH                  = 1 << 6,
 		KICK                   = 1 << 7,
-		ROUNDHOUSE_KICK        = 1 << 8,
+		SWEEP_KICK        	   = 1 << 8,
 		SLIDE_KICK             = 1 << 9,
 		DIVE                   = 1 << 10,
 		UNK_11                 = 1 << 11,

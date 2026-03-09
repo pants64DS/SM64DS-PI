@@ -23,3 +23,4 @@ struct Number;
 #include "Actors/PowerStar.h"
 #include "Actors/StarMarker.h"
 #include "Actors/Door.h"
+#include "Actors/SoundObj.h"

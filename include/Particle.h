@@ -802,15 +802,26 @@ namespace Particle
 		u32 unk70;
 		u32 unk74;
 
+		static u32 NewNoDir(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, Callback* callback);
+		static u32 NewNoDirUnkCallback7F4(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, Callback* callback);
+		static u32 NewNoDirUnkCallback7F0(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, Callback* callback);
 		static u32 New(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, const Vector3_16f* dir, Callback* callback);
 		static void NewSimple(u32 effectID, Fix12i x, Fix12i y, Fix12i z);
 
 		static u32 NewWeather(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, const Vector3_16f* dir, u32 numWeatherEffectsNow);
 		static u32 NewRipple(Fix12i x, Fix12i y, Fix12i z);
+		static void NewBubbles(Fix12i x, Fix12i y, Fix12i z);
+		static void NewSmallSplash(Fix12i x, Fix12i y, Fix12i z);
 		static void NewBigSplash(Fix12i x, Fix12i y, Fix12i z);
 		static u32 NewUnkCallback818(u32 uniqueID, u32 effectID, Fix12i x, Fix12i y, Fix12i z, const Vector3_16f* dir); // uses CleanParticleCallback
 
 		static System* FromUniqueID(u32 uniqueID);
+
+		[[gnu::always_inline]]
+		static u32 NewNoDir(u32 uniqueID, u32 effectID, const Vector3& pos, Callback* callback)
+		{
+			return NewNoDir(uniqueID, effectID, pos.x, pos.y, pos.z, callback);
+		}
 
 		[[gnu::always_inline]]
 		static u32 New(u32 uniqueID, u32 effectID, const Vector3& pos, const Vector3_16f* dir, Callback* callback)

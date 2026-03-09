@@ -96,20 +96,20 @@ struct Actor : ActorDerived // internal name: dActor
 	virtual u32 OnYoshiTryEat();
 	virtual void OnTurnIntoEgg(Player& player);
 	virtual bool Virtual50();
-	virtual void OnGroundPounded(Actor& groundPounder);
-	virtual void OnAttacked1(Actor& attacker);
-	virtual void OnAttacked2(Actor& attacker);
-	virtual void OnKicked(Actor& kicker);
-	virtual void OnPushed(Actor& pusher);
-	virtual void OnHitByCannonBlastedChar(Actor& blaster);
+	virtual void OnGroundPounded(Player& groundPounder);
+	virtual void OnAttacked1(Player& attacker);
+	virtual void OnAttacked2(Player& attacker);
+	virtual void OnKicked(Player& kicker);
+	virtual void OnPushed(Player& pusher);
+	virtual void OnHitByCannonBlastedChar(Player& blaster);
 	virtual void OnHitByMegaChar(Player& megaChar);
-	virtual void OnHitFromUnderneath(Actor& attacker);
+	virtual void OnHitFromUnderneath(Player& hitter);
 	virtual Fix12i OnAimedAtWithEgg();
 	virtual Vector3 OnAimedAtWithEggReturnVec();
 
 	bool IsTooFarAwayFromPlayer(Fix12i tooFar);
 	void MakeVanishLuigiWork(CylinderClsn& cylClsn);
-	void SpawnSoundObj(u32 soundObjParam);
+	Actor* SpawnSoundObj(u32 soundObjParam);
 	void PlayHitSound(u32 hitFlags); //NCS_SE_PT_HIT_S if HIT_BY_PUNCH, NCS_SE_PT_HIT_H if HIT_BY_KICK, HIT_BY_BREAKDANCE or HIT_BY_SLIDE_KICK
 
 	void KillAndTrackInDeathTable();
@@ -122,6 +122,7 @@ struct Actor : ActorDerived // internal name: dActor
 	void LandingDust(bool doRaycast);
 	void LandingDustAt(Vector3& vec, bool doRaycast);
 	void TinyPoofDustAt(Vector3& vec, bool doRaycast);
+	void TinyPoofDust(bool isPowerFlower);
 	void DisappearPoofDustAt(const Vector3& vec);
 	void SmallPoofDust();
 	void PoofDustAt(const Vector3& vec);

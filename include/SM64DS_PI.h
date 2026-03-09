@@ -54,6 +54,20 @@ enum Events : u32
 	EV_100_COIN_STAR_SPAWNED    = 0x1f,
 };
 
+enum Gamemodes
+{
+    GAMEMODE_ADVENTURE,
+    GAMEMODE_VS,
+    GAMEMODE_ENDING,
+};
+
+enum PauseStates
+{
+    PAUSE_NOT,
+    PAUSE_PAUSED,
+    PAUSE_UNPAUSING,
+};
+
 enum TTC_Speeds : s8
 {
 	SLOW   = 0,
@@ -166,6 +180,15 @@ extern bool DISPLAY_TIMER;
 extern char** DL_PTR_ARR_PTR;
 #endif
 
+extern u16 WIPE_IDS_GENERAL[7];
+extern u16 WIPE_IDS_CASTLE_F2[7];
+extern u16 WIPE_IDS_VS[7];
+extern u16 SKYBOX_MODEL_IDS[12];
+extern u16 STANDARD_MODE_BUTTON_MAP[16];
+extern u16 TOUCH_MODE_BUTTON_MAP[16];
+extern u16 DUAL_HAND_MODE_BUTTON_MAP[16];
+extern SharedFilePtr* COMMON_STAGE_FILE_PTRS[12];
+
 extern s32 ACTOR_BANK_OVL_MAP[7][7];
 extern s32 LEVEL_OVL_MAP[NUM_LEVELS];
 extern s8 LEVEL_PART_TABLE[NUM_LEVELS];
@@ -193,6 +216,7 @@ extern Vector3_16* ROT_AT_SPAWN;
 extern Vector3* POS_AT_SPAWN;
 extern Actor::ListNode* FIRST_ACTOR_LIST_NODE;
 
+extern Fix12i UNK_0209F0D4;
 extern bool IMMUNE_TO_DAMAGE;
 
 extern s32 LOADED_LEVEL_OVL_ID;
@@ -222,8 +246,8 @@ extern Actor* CAPS[9];
 extern Actor* MINIMAP_STARS_AND_RED_COINS[12]; // may contain red coins, stars, silver stars and enemies that have them
 
 extern Fix12i WATER_HEIGHT;
-extern Fix12i STAR_CAP_MAX_POS_Y;
-extern Fix12i STAR_CAP_MIN_POS_Y;
+extern Fix12i MAX_OBJECT_HEIGHT;
+extern Fix12i MIN_OBJECT_HEIGHT;
 extern s32 EVENT_FIELD;
 extern s16 NEXT_DEATH_TABLE_ID;
 extern ActorDeathTable ACTOR_DEATH_TABLE_ARR[3]; // maximum three parts per level.
@@ -238,6 +262,7 @@ extern s8 NUM_LIVES;
 extern u8 RENDERED_HEALTH;
 
 extern u8 STUCK_IN_GROUND_LEAVE_FRAMES[3];
+extern u32 DIVE_VOICES[2];
 extern u32 SLIDE_KICK_VOICES[2];
 extern Fix12s JUMP_SPEED_CHAR_MULTIPLIERS[4];
 extern Fix12s SWIM_SPEED_CHAR_MULTIPLIERS[4];
@@ -246,16 +271,30 @@ extern Fix12s HORZ_SPEED_CHAR_MULTIPLIERS[4];
 extern Fix12i CRAZED_CRATE_VERT_SPEEDS[3];
 extern Fix12i CRAZED_CRATE_HORZ_SPEEDS[3];
 extern u32 DASH_VOICES[4];
-extern Fix12i RISE_TO_SURFACE_SPEED_CHAR_MULTIPLIERS[4];
+extern Fix12i CARRY_LIGHT_HORZ_SPEEDS[4];
+extern Fix12i CARRY_HEAVY_HORZ_SPEEDS[4];
+extern Fix12i WATER_RISE_SINK_SPEED_CHAR_MULTIPLIERS[4];
+extern u32 PUNCH_KICK_SEQUENCE_VOICES[3];
+extern Fix12i PLAYER_SCALE_STEPS[4];
+extern u32 HOLD_HEAVY_ANIMS[6];
+extern Fix12s PLAYER_KNOCKBACK_SPEEDS[17];
+extern Fix12i PLAYER_SCALE_VALUES[12];
+extern u16 PUNCH_KICK_SEQUENCE_DELAYS[3];
+extern u8 HURT_START_GET_UP_FRAMES[6];
+extern u8 FALL_DURING_HURT_START_FRAMES[2];
+extern u32 HURT_WATER_ANIMS[2];
 extern u32 STUCK_IN_GROUND_INIT_ANIMS[3];
 extern u32 STUCK_IN_GROUND_WAIT_ANIMS[3];
 extern u32 STUCK_IN_GROUND_END_ANIMS[3];
-extern u32 PUNCH_KICK_SEQUENCE_VOICES[3];
 extern Fix12i JUMP_SEQUENCE_SPEEDS[3];
 extern u32 JUMP_SEQUENCE_ANIMS[3];
 extern u32 JUMP_LAND_ANIMS[3];
 extern u32 PUNCH_KICK_SEQUENCE_ANIMS[3];
+extern u16 PUNCH_KICK_HITBOX_FRAMES[8];
+extern u16 PUNCH_KICK_ACTIVE_FRAMES[6];
 extern u32 CEILING_GRATE_ANIMS[4];
+extern u32 HURT_ANIMS[6];
+extern u32 FALL_DURING_HURT_ANIMS[2];
 extern Vector3 PLAYER_CYLCLSN_OFFSET;
 
 extern u8 NEXT_HAT_CHARACTER;
@@ -288,7 +327,7 @@ extern u8 GAME_PAUSED; // 0 = not paused, 1 = paused, 2 = unpausing
 extern bool PAUSED_WITH_SELECT;
 extern bool PAUSED_DURING_TIMER;
 extern u8 PAUSE_MENU_ID;
-extern u8 PAUSE_LEVEL_CLEAR_SAVE_MENU_ACTIVE;
+extern bool PAUSE_LEVEL_CLEAR_SAVE_MENU_ACTIVE;
 extern u8 LEVEL_CLEAR_SCREEN_STATE;
 extern u8 NUM_BIG_BUTTONS;
 extern u8 SELECTED_BUTTON;
@@ -419,7 +458,6 @@ extern "C"
 	void LoadBlueCoinModel();
 	void UnloadSilverStarAndNumber();
 	void LoadSilverStarAndNumber();
-	void LinkSilverStarAndStarMarker(Actor* starMarker, Actor* silverStar);
 
 	s16 ReadUnalignedShort(const char* from);
 	u16 ReadUnalignedUshort(const char* from);
@@ -443,9 +481,9 @@ extern "C"
 	void StartEntranceFaderWipe(s32 wipeID);
 	void StartExitCharacterWipe();
 	void StartExitFaderWipe(s32 wipeID);
-	void FUN_02029934();
-	void FUN_02029980();
-	void RespawnPlaneFader();
+	void CleanupRespawnWipe(); // reenables pausing and some ui elements
+	void RespawnWipe(); // open wipe when respawning
+	void RespawnPlaneWipe(); // when hitting a deathplane in VS
 	void FUN_02029a68();
 	void FUN_02029ab0();
 	void EnterBigBoosHaunt();
