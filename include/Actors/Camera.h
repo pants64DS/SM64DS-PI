@@ -114,14 +114,14 @@ struct Camera : View // internal name: dCamera
 	Vector3 unk0e0;         // Raycast result save (when the player becomes invisible to the camera)
 	Vector3 unk0ec;         // Raycast result save (when the player becomes invisible to the camera)
 	Fix12i aspectRatio;     // Aspect ratio, default = 1.33 (4:3)
-	Fix12i unk0fc;        // Clipper related (near+far)
-	Fix12i unk100;        // Clipper related
-	u32 unk104;        // Clipper related
-	u32 unk108;        // Clipper related
-	u8 viewportLeft;   // Viewport x for left border
-	u8 viewportBottom; // Viewport y for bottom border
-	u8 viewportRight;  // Viewport x for right border
-	u8 viewportTop;    // Viewport y for top border
+	Fix12i unk0fc;          // Clipper related (near+far)
+	Fix12i unk100;          // Clipper related
+	u32 unk104;             // Clipper related
+	u32 unk108;             // Clipper related
+	u8 viewportLeft;        // Viewport x for left border
+	u8 viewportBottom;      // Viewport y for bottom border
+	u8 viewportRight;       // Viewport x for right border
+	u8 viewportTop;         // Viewport y for top border
 	Actor* owner;           // The player stalked by the camera
 	Actor* unk114;          // Set at special camera scene? Set to King Bomb-Omb for example
 	Actor* unk118;          // Another unknown actor
