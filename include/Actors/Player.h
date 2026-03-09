@@ -930,7 +930,7 @@ struct Player : Actor
 	static bool CheckPushActor(WithMeshClsn& wmClsn, Actor& pusher);
 	static bool CheckKickOrSweepKickActor(WithMeshClsn& wmClsn, Actor& kicker);
 	static bool CheckPunchActor(WithMeshClsn& wmClsn, Actor& puncher);
-	static bool CheckGroundPoundOnActor(WithMeshClsn& wmClsn, Actor& GroundPounder);
+	static bool CheckGroundPoundOnActor(WithMeshClsn& wmClsn, Actor& groundPounder);
 	static bool CheckOnWallOnActor(WithMeshClsn& wmClsn, Actor& actor);
 	Fix12i Unk_020f030c(u32 floorTraction);
 	static bool OnSlopedGround(u32 floorTraction, Fix12i floorNormalY);
