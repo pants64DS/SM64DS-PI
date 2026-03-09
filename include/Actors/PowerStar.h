@@ -60,6 +60,7 @@ struct PowerStar : Enemy
 	u32 unk4bc;
 	u32 unk4c0;
 
+	void InitBouncingStar(Player* player, bool noSpawnNumber, bool isSilver); // isSilver is overwritten in the function
 	void AddStarMarker();
 	void InitBouncingStar(Player* player, bool spawnNumber, bool isSilver); // isSilver is overwritten in the function
 };

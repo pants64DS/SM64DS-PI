@@ -22,7 +22,5 @@ struct Number;
 #include "Actors/Number.h"
 #include "Actors/PowerStar.h"
 #include "Actors/StarMarker.h"
-#include "Actors/Coin.h"
-#include "Actors/BowserPuzzleManager.h"
 #include "Actors/Door.h"
 #include "Actors/SoundObj.h"

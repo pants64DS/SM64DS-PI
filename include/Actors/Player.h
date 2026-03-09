@@ -127,7 +127,7 @@ struct Player : Actor
 		ANIM_PUSH,
 		ANIM_SLIDING_KICK_END,
 		ANIM_SLIDING_KICK,
-		ANIM_ROLL_KICK,
+		ANIM_SWEEP_KICK,
 		ANIM_SFBDN,
 		ANIM_SFFDN,
 		ANIM_PUTON_CAP,
@@ -244,6 +244,19 @@ struct Player : Actor
 		TK_TALKING     =  1, // +0x6e3 == anything but 3, 5, or 7
 		TK_POST_CHOICE =  2, // +0x6e3 == 3; After selecting a dialog option
 		TK_UNK3        =  3  // +0x6e3 == 5 or 7
+	};
+
+	enum HurtStates
+	{
+		HT_NOT     = -1,
+		HT_START   =  0,
+		HT_TALKING =  1,
+		HT_UNK2    =  2,
+		HT_UNK3    =  3,
+		HT_UNK4    =  4,
+		HT_UNK5    =  5,
+		HT_UNK6    =  6,
+		HT_UNK7    =  7,
 	};
 
 	enum SwimStates : s8
@@ -408,12 +421,12 @@ struct Player : Actor
 		ST_LONG_JUMP,
 		ST_PUNCH_KICK,
 		ST_ENDING_FLY,
-		ST_HIP_ATTACK,
+		ST_GROUND_POUND,
 		ST_DIVE,
 		ST_THROW,
 		ST_SPIN_BOWSER,
 		ST_SWING_PLAYER,
-		ST_ROLL_KICK,
+		ST_SWEEP_KICK,
 		ST_SLIDE_KICK,
 		ST_FIRST_PERSON,
 		ST_NULL, // all its functions are "return 1,"
@@ -495,7 +508,7 @@ struct Player : Actor
 	u32 wadeParticleStationaryID;
 	u32 wadeParticleMovingID;
 	u32 animID;
-	Fix12i velocity;
+	Fix12i verticalSpeed;
 	Fix12i floorY;
 	u32 unk648;
 	Fix12i unk64c;
@@ -559,7 +572,7 @@ struct Player : Actor
 	bool landingSoundPlayed;
 	bool isBraking;
 	u8 currJumpNumber; // 0x6E1: 0 - first, 1 - second, 2 - triple jump   (also used for the Crazed Crate)
-	u8 currPunchKickNumber; // 0x6E2: 0 - first, 1 - second, 2 - kick, 3 - rollkick
+	u8 currPunchKickNumber; // 0x6E2: 0 - first, 1 - second, 2 - kick, 3 - sweepkick
 	s8 stateState; // 0x6E3: the current state of the current state. How meta.
 	bool isInSlidingState;
 	union
@@ -880,8 +893,8 @@ struct Player : Actor
 	bool GetGrabbedByPlayer(Actor& actor);
 	void UpdatePlayerScale();
 	void ApplyScaleState(u8 newScaleState);
-	void InitRollKickHitbox();
-	void InitHipAttackHitbox();
+	void InitSweepKickHitbox();
+	void InitGroundPoundHitbox();
 	void InitKickHitbox();
 	void InitSecondPunchHitbox();
 	void InitFirstPunchHitbox();
@@ -893,7 +906,7 @@ struct Player : Actor
 	bool CanBeHurt();
 	void HandlePunchKickAction();
 	bool TryMakeDizzy();
-	void TryHipAttackPlayer(); //Multiplayer only
+	void TryGroundPoundPlayer(); //Multiplayer only
 	bool SetDiveOrKick();
 	bool IsFlying();
 	void TryRunningDustAfterLand();
@@ -915,9 +928,9 @@ struct Player : Actor
 	static bool CheckMegaPlayerCollisionWithActor(WithMeshClsn& wmClsn, Actor& megaPlayer);
 	static bool CheckShotIntoActor(WithMeshClsn& wmClsn, Actor& shooter);
 	static bool CheckPushActor(WithMeshClsn& wmClsn, Actor& pusher);
-	static bool CheckKickOrRollKickActor(WithMeshClsn& wmClsn, Actor& kicker);
+	static bool CheckKickOrSweepKickActor(WithMeshClsn& wmClsn, Actor& kicker);
 	static bool CheckPunchActor(WithMeshClsn& wmClsn, Actor& puncher);
-	static bool CheckHipAttackOnActor(WithMeshClsn& wmClsn, Actor& HipAttacker);
+	static bool CheckGroundPoundOnActor(WithMeshClsn& wmClsn, Actor& GroundPounder);
 	static bool CheckOnWallOnActor(WithMeshClsn& wmClsn, Actor& actor);
 	Fix12i Unk_020f030c(u32 floorTraction);
 	static bool OnSlopedGround(u32 floorTraction, Fix12i floorNormalY);
@@ -1097,9 +1110,9 @@ struct Player : Actor
 	bool St_PunchKick_Main();
 	bool St_EndingFly_Init();
 	bool St_EndingFly_Main();
-	bool St_HipAttack_Init();
-	bool St_HipAttack_Main();
-	bool St_HipAttack_Cleanup();
+	bool St_GroundPound_Init();
+	bool St_GroundPound_Main();
+	bool St_GroundPound_Cleanup();
 	bool St_Dive_Init();
 	bool St_Dive_Main();
 	bool St_Throw_Init();
@@ -1110,8 +1123,8 @@ struct Player : Actor
 	bool St_SwingPlayer_Init();
 	bool St_SwingPlayer_Main();
 	bool St_SwingPlayer_Cleanup();
-	bool St_RollKick_Init();
-	bool St_RollKick_Main();
+	bool St_SweepKick_Init();
+	bool St_SweepKick_Main();
 	bool St_SlideKick_Init();
 	bool St_SlideKick_Main();
 	bool St_FirstPerson_Init();

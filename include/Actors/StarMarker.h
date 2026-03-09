@@ -4,7 +4,7 @@ struct StarMarker : Actor
 {
 	static constexpr u16 staticActorID = 0xb4;
 
-	enum Types
+	enum Types : u8
 	{
 		TYPE_STAR_BASE_RED_COIN        = 0,
 		TYPE_STAR_SPHERE_VS 		   = 1,
@@ -27,7 +27,7 @@ struct StarMarker : Actor
 		NUM_MODEL_TYPES = 4,
 	};
 
-	enum Flags2
+	enum Flags2 : u8
 	{
 		F2_NO_COLLISION 		 = 1 << 0,
 		F2_VISIBLE 				 = 1 << 1,
@@ -40,27 +40,19 @@ struct StarMarker : Actor
 	ShadowModel shadowModel; // 0x164
 	Matrix4x3 shadowMat; // 0x18c
 	Vector3 spawnPos; // unused?
-	Fix12i floorPosY;
-	u32 silverStarID;
-	Player* shatterer;
+	Fix12i floorPosY; // 0x1c0
+	u32 silverStarID; // 0x1cc
+	Player* shatterer; // 0x1d0
 	s16 nextVSStarSphereSpawnDelay; // 0x1d4
 	s16 silverStarDeathTableID; // 0x1d6
-	ModelTypes modelType; // 0x1d8
+	u8 modelType; // 0x1d8
 	s8 starID; // 0x1d9
-	u8 silverStarState;
-	u8 flags2;
+	u8 silverStarState; // 0x1da
+	u8 flags2; // 0x1db
 
-	StarMarker();
-	virtual s32 InitResources() override;
-	virtual s32 CleanupResources() override;
-	virtual s32 Behavior() override;
-	virtual s32 Render() override;
-	virtual void OnPendingDestroy() override;
-	virtual ~StarMarker() override;
-
-	void ShatterStarSphere();
-	void SpawnRedCoinStarIfNecessary();
 	void LinkSilverStarAndStarMarker(PowerStar* silverStar);
+	void SpawnRedCoinStarIfNecessary();
+	void ShatterStarSphere();
 };
 
 static_assert(sizeof(StarMarker) == 0x1dc, "sizeof(StarMarker) is incorrect!");

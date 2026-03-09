@@ -818,6 +818,12 @@ namespace Particle
 		static System* FromUniqueID(u32 uniqueID);
 
 		[[gnu::always_inline]]
+		static u32 NewNoDir(u32 uniqueID, u32 effectID, const Vector3& pos, Callback* callback)
+		{
+			return NewNoDir(uniqueID, effectID, pos.x, pos.y, pos.z, callback);
+		}
+
+		[[gnu::always_inline]]
 		static u32 New(u32 uniqueID, u32 effectID, const Vector3& pos, const Vector3_16f* dir, Callback* callback)
 		{
 			return New(uniqueID, effectID, pos.x, pos.y, pos.z, dir, callback);
