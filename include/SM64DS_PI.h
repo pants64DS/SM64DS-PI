@@ -72,7 +72,7 @@ enum StarIDs
 	STAR_6		   = 6,
 	STAR_7		   = 7,
 
-	NUM_STARS,
+	NUM_STAR_IDS,
 };
 
 enum PauseStates

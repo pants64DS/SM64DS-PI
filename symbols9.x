@@ -1778,7 +1778,7 @@ _ZN6Player23HandlePlayerInteractionEv                                           
 _ZN6Player14HandleHitActorEv                                                      = 0x020d8854;
 _ZN6Player23SpawnHitPlayerParticlesERS_S_                                         = 0x020d8944;
 _ZN6Player13DropHeldActorEv                                                       = 0x020dab14;
-_ZN6Player17UpdateAirWithTurnEv                                                   = 0x020dc560;
+_ZN6Player18UpdateAirFromSlideEv                                                  = 0x020dc560;
 _ZN6Player14InitDiveHitboxEv                                                      = 0x020dba0c;
 _ZN6Player19InitSlideKickHitboxEv                                                 = 0x020dbbc0;
 _ZN6Player19InitSweepKickHitboxEv                                                 = 0x020dbc94;

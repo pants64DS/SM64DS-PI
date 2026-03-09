@@ -877,7 +877,7 @@ struct Player : Actor
 	void HandleHitActor();
 	bool SpawnHitPlayerParticles(Player& attacker, Player& victim);
 	bool DropHeldActor();
-	void UpdateAirWithTurn();
+	void UpdateAirFromSlide();
 	void InitDiveHitbox();
 	void InitSlideKickHitbox();
 	void UpdateAirWithoutTurn(Fix12i horzAccelInput, Fix12i horzAccelNeutral);
