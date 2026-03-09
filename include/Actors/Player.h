@@ -906,7 +906,7 @@ struct Player : Actor
 	bool CanBeHurt();
 	void HandlePunchKickAction();
 	bool TryMakeDizzy();
-	void TryGroundPoundPlayer(); //Multiplayer only
+	void CheckGroundPoundPlayer(); //Multiplayer only
 	bool SetDiveOrKick();
 	bool IsFlying();
 	void TryRunningDustAfterLand();
