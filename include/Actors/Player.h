@@ -508,7 +508,7 @@ struct Player : Actor
 	u32 wadeParticleStationaryID;
 	u32 wadeParticleMovingID;
 	u32 animID;
-	Fix12i verticalSpeed;
+	Fix12i storedVerticalSpeed;
 	Fix12i floorY;
 	u32 unk648;
 	Fix12i unk64c;
