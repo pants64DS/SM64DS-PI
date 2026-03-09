@@ -246,6 +246,19 @@ struct Player : Actor
 		TK_UNK3        =  3  // +0x6e3 == 5 or 7
 	};
 
+	enum HurtStates
+	{
+		HT_NOT     = -1,
+		HT_START   =  0,
+		HT_TALKING =  1,
+		HT_UNK2    =  2,
+		HT_UNK3    =  3,
+		HT_UNK4    =  4,
+		HT_UNK5    =  5,
+		HT_UNK6    =  6,
+		HT_UNK7    =  7,
+	};
+
 	enum SwimStates : s8
 	{
 		SW_INIT  		  = 0,
@@ -495,7 +508,7 @@ struct Player : Actor
 	u32 wadeParticleStationaryID;
 	u32 wadeParticleMovingID;
 	u32 animID;
-	Fix12i velocity;
+	Fix12i verticalSpeed;
 	Fix12i floorY;
 	u32 unk648;
 	Fix12i unk64c;
