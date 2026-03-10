@@ -48,9 +48,9 @@ struct Message
 
 	// for menus
 	static void DisplaySaveStatusText(u16 msgID);
-	static void DisplayLevelClearText(u16 firstButtonMsgID, s8 clearedLevelID);
+	static void DisplayLevelClearText(u16 firstButtonMsgID, s8 clearedStageID);
 	static void DisplayVsExitText(u16 vsMsgID);
-	static void DisplayPauseText(u16 firstButtonMsgID, u8 levelID);
+	static void DisplayPauseText(u16 firstButtonMsgID, u8 stageID);
 	static void DisplayPauseTextVS(u16 vsMsgID);
 	static void DisplayControllerModeText(u16 firstButtonMsgID);
 	static void DisplayOptionsMenuText(u16 firstButtonMsgID);

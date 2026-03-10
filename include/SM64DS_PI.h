@@ -462,8 +462,8 @@ extern "C"
 
 	s16 GetAngleToCamera(u32 playerID = 0);
 
-	s8 GetCourseID(s8 levelID);
-	s8 GetLevelPart(s8 levelID);
+	s8 GetCourseID(s8 stageID);
+	s8 GetLevelPart(s8 stageID);
 	u8 NumStars();
 
 	void LoadKeyModels(u32 keyID);
@@ -515,15 +515,15 @@ extern "C"
 
 	void OpenCannon(s8 courseID);
 	bool IsCannonOpen(s8 courseID);
-	void OpenCannonInLevel(s8 levelID);
-	bool IsCannonOpenInLevel(s8 levelID);
+	void OpenCannonInLevel(s8 stageID);
+	bool IsCannonOpenInLevel(s8 stageID);
 	void OpenCannonInCurLevel();
 	bool IsCannonOpenInCurLevel();
 
 	void CollectStar(s8 courseID, s32 starID);
 	bool IsStarCollected(s8 courseID, s32 starID);
-	void CollectStarInLevel(s8 levelID, s32 starID);
-	bool IsStarCollectedInLevel(s8 levelID, s32 starID);
+	void CollectStarInLevel(s8 stageID, s32 starID);
+	bool IsStarCollectedInLevel(s8 stageID, s32 starID);
 	void CollectStarInCurLevel(s32 starID);
 	bool IsStarCollectedInCurLevel(s32 starID);
 
@@ -544,13 +544,13 @@ extern "C"
 
 	void GiveLives(s8 amount);
 
-	void LoadLevel(s8 levelID, u8 entranceID, s8 starID, u8 returnState, s8 returnEntranceID);
-	void LoadLevelNoReturn(s8 levelID, u8 entranceID, s8 starID, u8 returnState);
+	void LoadLevel(s8 stageID, u8 entranceID, s8 starID, u8 returnState, s8 returnEntranceID);
+	void LoadLevelNoReturn(s8 stageID, u8 entranceID, s8 starID, u8 returnState);
 
 	void SetPlayerGlobals();
 	void ExitMinigameMenu();
 	void PrepareVsMode();
-	void StartFile(s8 levelID, u8 entranceID);
+	void StartFile(s8 stageID, u8 entranceID);
 
 	bool StartWithFarCamera();
 	u8 GetStarCameraSetting(s32 index);
@@ -566,9 +566,9 @@ extern "C"
 	void SetTouchScreenDelay();
 	void ResetInput();
 
-	bool IsLevelTinyHugeIslandOutside(s8 levelID);
-	bool IsLevelInsideCastle(s8 levelID);
-	u8 GetSoundGroupID(s8 levelID, s8 starID);
+	bool IsLevelTinyHugeIslandOutside(s8 stageID);
+	bool IsLevelInsideCastle(s8 stageID);
+	u8 GetSoundGroupID(s8 stageID, s8 starID);
 
 	void DeathTable_ClearBit(s8 bit);
 	void DeathTable_SetBit(s8 bit);
@@ -585,7 +585,7 @@ extern "C"
 	void LoadFont3D();
 	void LoadDebugFont();
 	void LoadControllerModeText(u16 firstMsgID);
-	u32 CountStarsCollectedInLevelToDisplay(u32 courseID);
+	u32 CountStarsCollectedInCourseToDisplay(u32 courseID);
 
 	void SetBg0Offset(s32 x, s32 y);
 	void SetBg1Offset(s32 x, s32 y);
