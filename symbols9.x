@@ -1790,7 +1790,7 @@ _ZN6Player14InitGrabHitboxEv                                                    
 _ZN6Player10InitHitboxERK7Vector35Fix12IiES4_jj                                   = 0x020dc174;
 _ZN6Player20UpdateAirWithoutTurnE5Fix12IiES1_                                     = 0x020e28d4;
 _ZN6Player13HandleRunLeanEs                                                       = 0x020d413c;
-_ZN6Player15TrySetBrakeAnimEv                                                     = 0x020d454c;
+_ZN6Player10TryToBrakeEv                                                          = 0x020d454c;
 _ZN6Player9GetThrownE5Fix12IiES1_s                                                = 0x020db54c;
 _ZN6Player21TryGetGrabbedByPlayerERS_j                                            = 0x020d85fc;
 _ZN6Player18GetGrabbedByPlayerER5Actor                                            = 0x020db5f4;

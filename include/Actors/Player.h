@@ -887,7 +887,7 @@ struct Player : Actor
 	bool CheckHitPlayer(Player& victim);
 	bool HandlePlayerInteraction();
 	void HandleRunLean(s16 playerMotionAngY);
-	void TrySetBrakeAnim();
+	void TryToBrake();
 	void GetThrown(Fix12i horizontalSpeed, Fix12i verticalSpeed, s16 angle);
 	bool TryGetGrabbedByPlayer(Player& grabber, u32 attackerHitFlags);
 	bool GetGrabbedByPlayer(Actor& actor);
