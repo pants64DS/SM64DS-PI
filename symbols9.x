@@ -2223,7 +2223,7 @@ MUSIC_VOLUME_LSL_12                                                             
 _ZN6Memory24soundHeapAllocatorPtrPtrE                                             = 0x0209b498;
 MESSAGE_SOUND_VOLUME_LSL_12                                                       = 0x0209b49c;
 
-FOOTSTEP_SOUND_SPECIFICS                                                          = 0x0208e434;
+FOOTSTEP_SOUND_SPECIFICS                                                          = 0x0208e430;
 JRB_SOUND_SPECIFICS                                                               = 0x0208e434;
 SOUND_SPECIFICS                                                                   = 0x0208e438;
 
