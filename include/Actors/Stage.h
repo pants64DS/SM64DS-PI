@@ -106,7 +106,7 @@ struct Stage : Scene
 	static void SetVramBanks();
 	static void ResetMeshColliders(); // identical function at 0x02039218
 	static void LoadClsnAndObjects(LevelOverlay& levelOverlay, u32 entranceID, MeshCollider& clsn);
-	static void LoadGraphics2D(bool vsMode, s32 stageID);
+	static void LoadGraphics2D(bool vsMode, s32 levelID);
 
 	static u32 GetSkyboxID();
 	static bool CanPause();
@@ -193,9 +193,9 @@ void LoadStarCameraObjects(LevelOverlay::ObjSubTable& objSubTable, s32 areaID, u
 void LoadMinimapChangeObject(s32 areaID, Fix12i posY, u8 param1);
 
 using LevelOverlayFunc = void(*)(s32);
-void LoadLevelOverlays(s32 stageID);
-void UnloadLevelOverlays(s32 stageID);
-void LoadOrUnloadObjectOverlays(LevelOverlayFunc func, s32 stageID); // modified by the DL patch to load / unload DLs
+void LoadLevelOverlays(s32 levelID);
+void UnloadLevelOverlays(s32 levelID);
+void LoadOrUnloadObjectOverlays(LevelOverlayFunc func, s32 levelID); // modified by the DL patch to load / unload DLs
 
 // inserted by the DL patch
 using DLFunc = void(*)();

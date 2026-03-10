@@ -188,7 +188,7 @@ struct FileSaveData
 	u8 unk43;
 
 	[[gnu::always_inline]]
-	void CollectStar(s32 stageID, s32 starID)
+	void CollectStar(s32 levelID, s32 starID)
 	{
 		s32 courseID = COURSE_ID_TABLE[levelID];
 		stars[courseID] |= 1u << starID;
