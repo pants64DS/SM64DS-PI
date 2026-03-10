@@ -462,7 +462,7 @@ extern "C"
 
 	s16 GetAngleToCamera(u32 playerID = 0);
 
-	s8 SublevelToLevel(s8 levelID);
+	s8 GetCourseID(s8 levelID);
 	s8 GetLevelPart(s8 levelID);
 	u8 NumStars();
 
