@@ -610,7 +610,7 @@ LoadFont                                                                        
 LoadFont3D                                                                        = 0x02034954;
 LoadDebugFont                                                                     = 0x0202341c;
 LoadControllerModeText                                                            = 0x0201d0f8;
-CountStarsCollectedInLevelToDisplay                                               = 0x02013714;
+CountStarsCollectedInCourseToDisplay                                              = 0x02013714;
 
 SetBg0Offset                                                                      = 0x02018ffc;
 SetBg1Offset                                                                      = 0x02018fe0;
