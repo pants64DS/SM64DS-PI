@@ -486,7 +486,7 @@ IsButtonInputValid                                                              
 
 GetAngleToCamera                                                                  = 0x0203db24;
 
-SublevelToLevel                                                                   = 0x02013558;
+GetCourseID                                                                       = 0x02013558;
 GetLevelPart                                                                      = 0x02013548;
 NumStars                                                                          = 0x0201367c;
 
