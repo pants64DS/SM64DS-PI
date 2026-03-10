@@ -215,7 +215,7 @@ namespace Particle
 		PTS_BUBBLES_WHITE = 0xcd,
 		PTS_INIT_SPLASH = 0xce,
 		PTS_RIPPLE = 0xcf,
-		PTL_THIN_LONG_WHITE_ELLIPSOID = 0xd0, //???
+		PTL_FLYING_TRAIL = 0xd0, //???
 		PTL_DUST_FLYING = 0xd1,
 		PTS_SPARKLES_LIGHT_YELLOW = 0xd2, //for a collected coin
 		PTS_GROUND_POUND_STARS = 0xd3,
