@@ -264,7 +264,7 @@ DISPLAY_TIMER                                                                   
 DL_PTR_ARR_PTR                                                                    = 0x02004ffc;
 
 LEVEL_PART_TABLE                                                                  = 0x02075264;
-SUBLEVEL_LEVEL_TABLE                                                              = 0x02075298;
+COURSE_ID_TABLE                                                                   = 0x02075298;
 
 WIPE_IDS_GENERAL                                                                  = 0x020755e0;
 WIPE_IDS_CASTLE_F2                                                                = 0x020755f0;

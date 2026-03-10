@@ -8,7 +8,7 @@ constexpr s32 NUM_SECRET_LEVELS = 15;
 constexpr s32 NUM_MINIGAMES = 36;
 constexpr s32 NUM_MINIGAME_KEYS = 28;
 
-extern s8 SUBLEVEL_LEVEL_TABLE[NUM_LEVELS];
+extern s8 COURSE_ID_TABLE[NUM_LEVELS];
 
 namespace CourseIDs // aka act selector IDs
 {
@@ -190,7 +190,7 @@ struct FileSaveData
 	[[gnu::always_inline]]
 	void CollectStar(s32 levelID, s32 starID)
 	{
-		s32 courseID = SUBLEVEL_LEVEL_TABLE[levelID];
+		s32 courseID = COURSE_ID_TABLE[levelID];
 		stars[courseID] |= 1u << starID;
 	}
 
