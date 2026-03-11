@@ -275,6 +275,7 @@ extern s16 HEALTH_ARR[4];
 extern s8 NUM_LIVES;
 extern u8 RENDERED_HEALTH;
 
+extern u8 CHAR_SEQ_ID_OFFSET[5]; // 5 is for Metal Wario
 extern u8 STUCK_IN_GROUND_LEAVE_FRAMES[3];
 extern u32 DIVE_VOICES[2];
 extern u32 SLIDE_KICK_VOICES[2];

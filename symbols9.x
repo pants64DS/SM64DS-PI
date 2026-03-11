@@ -263,6 +263,7 @@ DISPLAY_TIMER                                                                   
 
 DL_PTR_ARR_PTR                                                                    = 0x02004ffc;
 
+CHAR_SEQ_ID_OFFSET                                                                = 0x02075250;
 LEVEL_PART_TABLE                                                                  = 0x02075264;
 COURSE_ID_TABLE                                                                   = 0x02075298;
 
