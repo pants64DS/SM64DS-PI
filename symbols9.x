@@ -1563,6 +1563,7 @@ _ZN6Player6RenderEv                                                             
 _ZN6Player16OnPendingDestroyEv                                                    = 0x020e3a04;
 _ZN6Player17InitPlayerCylClsnEv                                                   = 0x020e63a4;
 _ZN6Player13OnYoshiTryEatEv                                                       = 0x020e69b8;
+_ZN6Player14ClearEggPtrArrEv                                                      = 0x020bdc18;
 _ZN6Player16IncMegaKillCountEv                                                    = 0x020bdc58;
 _ZN6Player18SetNewHatCharacterEjjb                                                = 0x020be0f8;
 _ZN6Player16SetRealCharacterEj                                                    = 0x020be1e0;

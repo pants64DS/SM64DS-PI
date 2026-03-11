@@ -685,6 +685,7 @@ struct Player : Actor
 	virtual ~Player() override;
 	virtual u32 OnYoshiTryEat() override;
 	
+	void ClearEggPtrArr();
 	void IncMegaKillCount();
 	void SetNewHatCharacter(u32 character, u32 arg1, bool makeSfx);
 	void SetRealCharacter(u32 character);
