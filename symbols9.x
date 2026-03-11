@@ -1269,6 +1269,7 @@ _ZN5Actor19DropShadowRadHeightER11ShadowModelR9Matrix4x35Fix12IiES5_j           
 _ZN5Actor9UpdatePosEP12CylinderClsn                                               = 0x02010c30;
 _ZN5Actor22UpdatePosWithOnlySpeedEP12CylinderClsn                                 = 0x02010d40;
 _ZN5Actor28UpdatePosWithHorzSpeedAndAngEv                                         = 0x02010c5c;
+_ZN5Actor8ClampPosEv                                                              = 0x02010da4;
 _ZN5Actor17DetectRaycastClsnER7Vector3S1_b                                        = 0x0200f658;
 _ZN5Actor11UpdateCarryER6PlayerRK7Vector3                                         = 0x02010180;
 _ZN5Actor8TryCarryER12CylinderClsn                                                = 0x02010304;

@@ -160,6 +160,7 @@ struct Actor : ActorDerived // internal name: dActor
 	void UpdatePos(CylinderClsn* clsn); // applies motion direction, vertical acceleration, and terminal velocity.
 	void UpdatePosWithOnlySpeed(CylinderClsn* clsn);
 	void UpdatePosWithHorzSpeedAndAng();
+	void ClampPos();
 	bool DetectRaycastClsn(Vector3& raycastPos, Vector3& pos, bool updatePos);
 
 	Matrix4x3& UpdateCarry(Player& player, const Vector3& offset); // returns a reference to the transform mat (MATRIX_SCRATCH_PAPER)
