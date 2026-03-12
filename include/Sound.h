@@ -230,7 +230,7 @@ namespace Sound
 	void PlayArchive2_2D_Alt(u32 soundID);
 
 	//volume goes up to 0x7f
-	bool PlaySub(u32 soundID, u32 musicVolume, u32 volume, Fix12i timeInv, bool starting); // return value: did it finish?
+	bool PlaySub(u32 musicID, u32 musicVolume, u32 volume, Fix12i timeInv, bool starting); // return value: did it finish?
 
 	bool PlaySmallSecretSound(Actor* actor, u16* timer); // returns whether finished playing sound
 	bool PlaySecretSound(Actor* actor, u16* timer); // returns whether finished playing sound

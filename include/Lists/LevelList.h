@@ -84,7 +84,7 @@ enum CourseIDs
     COURSE_PSS   = 21,
     COURSE_SA    = 22,
     COURSE_QS    = 23,
-    COURSE_SUtM  = 24,
+    COURSE_SutM  = 24,
     COURSE_BtW   = 25,
     COURSE_OtR   = 26,
     COURSE_SI    = 27,
