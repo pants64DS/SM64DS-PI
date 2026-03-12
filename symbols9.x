@@ -1619,6 +1619,7 @@ _ZN6Player9IsOnShellEv                                                          
 _ZN6Player15IsEnteringLevelEv                                                     = 0x020c7e84;
 _ZN6Player22IsBeingShotOutOfCannonEv                                              = 0x020df2c4;
 _ZN6Player8CanPauseEv                                                             = 0x020bd828;
+_ZN6Player11TryLavaBurnEv                                                         = 0x020d5338;
 _ZN6Player4BurnEv                                                                 = 0x020d57d8;
 _ZN6Player5ShockEj                                                                = 0x020d5a1c;
 _ZN6Player18CheckSpitOutPlayerEv                                                  = 0x020d5c6c;
@@ -1641,6 +1642,7 @@ _ZN6Player24HandleVariableJumpHeightEv                                          
 _ZN6Player11ChangeStateERNS_5StateE                                               = 0x020e30a0;
 _ZN6Player15JumpIntoBooCageER7Vector3                                             = 0x020ca2ac;
 _ZN6Player14EnterWhirlpoolEv                                                      = 0x020c5cc8;
+_ZN6Player19VoidOutIfFellTooFarEv                                                 = 0x020c5d0c;
 _ZN6Player13SetDeathStateEh                                                       = 0x020c5dec;
 _ZN6Player15HandleWalkOrRunEv                                                     = 0x020d4748;
 _ZN6Player8BlowAwayEs                                                             = 0x020d4fe4;

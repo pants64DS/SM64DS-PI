@@ -731,6 +731,7 @@ struct Player : Actor
 	bool IsEnteringLevel(); // entering entrance, not entering exit
 	bool IsBeingShotOutOfCannon();
 	bool CanPause();
+	bool TryLavaBurn();
 	void Burn();
 	void Shock(u32 damage);
 	bool CheckSpitOutPlayer();
@@ -754,6 +755,7 @@ struct Player : Actor
 	bool ChangeState(Player::State& state);
 	bool JumpIntoBooCage(Vector3& cagePos);
 	bool EnterWhirlpool();
+	bool VoidOutIfFellTooFar();
 	bool SetDeathState(u8 deathState);
 	void HandleWalkOrRun();
 	void BlowAway(s16 dir);
