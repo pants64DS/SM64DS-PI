@@ -54,7 +54,7 @@ enum Events : u32
 	EV_100_COIN_STAR_SPAWNED    = 0x1f,
 };
 
-enum Gamemodes
+enum Gamemodes : u8
 {
     GAMEMODE_ADVENTURE,
     GAMEMODE_VS,
