@@ -1712,6 +1712,7 @@ _ZN6Player15ApplySlopeAccelEv                                                   
 _ZN6Player24TrySnapToGroundFromSlideEv                                            = 0x020c0688;
 _ZN6Player15DecelerateSlideE5Fix12IiE                                             = 0x020c06fc;
 _ZN6Player17IsSurfaceSlipperyEv                                                   = 0x020c0cbc;
+_ZN6Player23HandleMerryGoRoundMusicEv                                             = 0x020c1234;
 _ZN6Player22UpdateFloorSurfaceInfoER10ClsnResult                                  = 0x020c16ec;
 _ZN6Player13GetFloorAngleEs                                                       = 0x020c179c;
 _ZN6Player10HandleTiltEb                                                          = 0x020c18b0;

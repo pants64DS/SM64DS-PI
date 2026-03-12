@@ -808,6 +808,7 @@ struct Player : Actor
 	bool DecelerateSlide(Fix12i minSlideSpeed);
 	bool TrySnapToGroundFromSlide(); // Responsible for up/downwarps
 	bool IsSurfaceSlippery();
+	void HandleMerryGoRoundMusic();
 	void UpdateFloorSurfaceInfo(ClsnResult& wmClsnResult);
 	s16 GetFloorAngle(s16 offset);
 	void HandleTilt(bool scaleByHorzSpeed);
