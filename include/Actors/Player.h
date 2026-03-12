@@ -8,16 +8,6 @@ struct Player : Actor
 {
 	static constexpr u16 staticActorID = 0xbf;
 
-	enum Characters : u8
-	{
-		CH_MARIO,
-		CH_LUIGI,
-		CH_WARIO,
-		CH_YOSHI,
-
-		NUM_CHARACTERS,
-	};
-
 	enum Animations : u32
 	{
 		ANIM_ED_KISS_WAIT,
@@ -443,8 +433,8 @@ struct Player : Actor
 	u32 unk0d8;
 	ModelAnim2* bodyModels[5]; //the fifth one is the Metal Wario model
 	ModelAnim balloonModel;
-	Model* headModels[4]; //Yoshi's is a ModelAnim
-	Model* headNoCapModels[4]; //Yoshi's is the mouth-is-full model
+	Model* headModels[NUM_CHARACTERS]; //Yoshi's is a ModelAnim
+	Model* headNoCapModels[NUM_CHARACTERS]; //Yoshi's is the mouth-is-full model
 	ModelAnim wings;
 	u32 unk1d8;
 	TextureSequence texSeq1dc;
@@ -1173,4 +1163,3 @@ struct Player : Actor
 
 static_assert(sizeof(Player) == 0x768, "sizeof(Player) is incorrect!");
 static_assert(Player::NUM_ANIMS == 194, "Player::NUM_ANIMS is incorrect!");
-static_assert(Player::NUM_CHARACTERS == 4, "Player::NUM_CHARACTERS is incorrect!");
