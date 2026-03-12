@@ -10,43 +10,6 @@ constexpr s32 NUM_MINIGAME_KEYS = 28;
 
 extern s8 COURSE_ID_TABLE[NUM_LEVELS];
 
-namespace CourseIDs // aka act selector IDs
-{
-	enum
-	{
-		BoB   = 0,
-		WF    = 1,
-		JRB   = 2,
-		CCM   = 3,
-		BBH   = 4,
-		HMC   = 5,
-		LLL   = 6,
-		SSL   = 7,
-		DDD   = 8,
-		SL    = 9,
-		WDW   = 10,
-		TTM   = 11,
-		THI   = 12,
-		TTC   = 13,
-		RR    = 14,
-		BitDW = 15,
-		BitFS = 16,
-		BitS  = 17,
-		GB    = 18,
-		BBB   = 19,
-		CCC   = 20,
-		PSS   = 21,
-		SA    = 22,
-		WMotR = 23,
-		SutM  = 24,
-		BtW   = 25,
-		OtR   = 26,
-		SI    = 27,
-		BF    = 28,
-		HUB   = 29,
-	};
-};
-
 struct FileSaveData
 {
 	enum Flags1 : u32

@@ -54,4 +54,42 @@ enum LevelIDs
 	LEVEL_EX_WARIO		  = 49,
 	LEVEL_PLAYROOM		  = 50,
 	LEVEL_VS_MAIN		  = 51,
+
+	NUM_LEVEL_IDS,
+};
+
+enum CourseIDs
+{
+    COURSE_BoB   = 0,
+    COURSE_WF    = 1,
+    COURSE_JRB   = 2,
+    COURSE_CCM   = 3,
+    COURSE_BBH   = 4,
+    COURSE_HMC   = 5,
+    COURSE_LLL   = 6,
+    COURSE_SSL   = 7,
+    COURSE_DDD   = 8,
+    COURSE_SL    = 9,
+    COURSE_WDW   = 10,
+    COURSE_TTM   = 11,
+    COURSE_THI   = 12,
+    COURSE_TTC   = 13,
+    COURSE_RR    = 14,
+    COURSE_BitDW = 15,
+    COURSE_BitFS = 16,
+    COURSE_BitTS = 17,
+    COURSE_GB    = 18,
+    COURSE_BBB   = 19,
+    COURSE_CCC   = 20,
+    COURSE_PSS   = 21,
+    COURSE_SA    = 22,
+    COURSE_WMotR = 23,
+    COURSE_QS    = 24,
+    COURSE_BtW   = 25,
+    COURSE_OtR   = 26,
+    COURSE_SI    = 27,
+    COURSE_SoBF  = 28,
+    COURSE_HUB   = 29,
+
+    NUM_COURSE_IDS,
 };
