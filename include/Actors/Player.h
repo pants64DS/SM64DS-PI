@@ -741,6 +741,7 @@ struct Player : Actor
 	void SpawnAttackParticles(Vector3& particlePos);
 	//speed is multiplied by constant at 0x020ff128+charID*2 and divided by 50 (? could be 25, could be 100).
 	bool Hurt(const Vector3& source, u32 damage, Fix12i speed, u32 arg4, u32 presetHurt, u32 spawnOuchParticles); // speed is multiplied by constant at 0x020ff128+charID*2 and divided by 50 (? could be 25, could be 100).
+	bool TryEndlessStairsWarp();
 	void Heal(s32 health);
 	s32 GetHealth();
 	void PlayMegaStompEffects();

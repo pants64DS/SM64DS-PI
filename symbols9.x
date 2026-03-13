@@ -1629,6 +1629,7 @@ _ZN6Player15IsInYoshisMouthEv                                                   
 _ZN6Player20RegisterEggCoinCountEjbb                                              = 0x020d6708;
 _ZN6Player20SpawnAttackParticlesER7Vector3                                        = 0x020d8d10;
 _ZN6Player4HurtERK7Vector3j5Fix12IiEjjj                                           = 0x020d8e70;
+_ZN6Player20TryEndlessStairsWarpEv                                                = 0x020bf40c;
 _ZN6Player4HealEi                                                                 = 0x020bf4e4;
 _ZN6Player9GetHealthEv                                                            = 0x020bf548;
 _ZN6Player20PlayMegaStompEffectsEv                                                = 0x020bf5e0;
