@@ -1644,7 +1644,8 @@ _ZN6Player24HandleVariableJumpHeightEv                                          
 _ZN6Player11ChangeStateERNS_5StateE                                               = 0x020e30a0;
 _ZN6Player15JumpIntoBooCageER7Vector3                                             = 0x020ca2ac;
 _ZN6Player14EnterWhirlpoolEv                                                      = 0x020c5cc8;
-_ZN6Player19VoidOutIfFellTooFarEv                                                 = 0x020c5d0c;
+_ZN6Player22CheckDeathPlaneVoidOutEv                                              = 0x020c5d0c;
+_ZN6Player16CheckYMinVoidOutEv                                                    = 0x020c5d60;
 _ZN6Player13SetDeathStateEh                                                       = 0x020c5dec;
 _ZN6Player15HandleWalkOrRunEv                                                     = 0x020d4748;
 _ZN6Player8BlowAwayEs                                                             = 0x020d4fe4;

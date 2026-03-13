@@ -756,7 +756,8 @@ struct Player : Actor
 	bool ChangeState(Player::State& state);
 	bool JumpIntoBooCage(Vector3& cagePos);
 	bool EnterWhirlpool();
-	bool VoidOutIfFellTooFar();
+	bool CheckDeathPlaneVoidOut();
+	bool CheckYMinVoidOut();
 	bool SetDeathState(u8 deathState);
 	void HandleWalkOrRun();
 	void BlowAway(s16 dir);
