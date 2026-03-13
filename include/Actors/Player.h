@@ -457,7 +457,7 @@ struct Player : Actor
 	Actor* actorInMouth;
 	Actor* unk364;
 	ActorBase* speaker;
-	u32 unk36c;
+	Actor* squisher;
 	State* currState;
 	State* prevState;
 	State* nextState;
