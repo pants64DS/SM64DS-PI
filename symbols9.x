@@ -374,6 +374,7 @@ HURT_WATER_ANIMS                                                                
 STUCK_IN_GROUND_INIT_ANIMS                                                        = 0x0210a560;
 STUCK_IN_GROUND_WAIT_ANIMS                                                        = 0x0210a578;
 STUCK_IN_GROUND_END_ANIMS                                                         = 0x0210a584;
+ENDLESS_STAIRS_WARP_OFFSET                                                        = 0x0210a590;
 JUMP_SEQUENCE_SPEEDS                                                              = 0x0210a59c;
 JUMP_SEQUENCE_ANIMS                                                               = 0x0210a5a8;
 JUMP_LAND_ANIMS                                                                   = 0x0210a5b4;
