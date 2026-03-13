@@ -691,6 +691,7 @@ struct Player : Actor
 	bool ToonStateActive();
 	bool IsCollectingCap();
 	void ReturnWithCapToonEffects();
+	bool CheckSquish(Fix12i yStart, Fix12i yEnd, Fix12i& squishPosY);
 	bool HasNoCap();
 	void Unk_020c6a10(u32 arg0);
 	bool Unk_020c4f40(u16 newUnk6a6);

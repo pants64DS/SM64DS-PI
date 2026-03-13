@@ -1581,6 +1581,7 @@ _ZN6Player15ToonStateActiveEv                                                   
 _ZN6Player15IsCollectingCapEv                                                     = 0x020bea94;
 _ZN6Player8HasNoCapEv                                                             = 0x020bda98;
 _ZN6Player24ReturnWithCapToonEffectsEv                                            = 0x020beabc;
+_ZN6Player11CheckSquishE5Fix12IiES1_RS2_                                          = 0x020c607c;
 _ZN6Player12Unk_020c6a10Ej                                                        = 0x020c6a10;
 _ZN6Player12Unk_020c4f40Et                                                        = 0x020c4f40;
 _ZN6Player12Unk_020ca8f8Ev                                                        = 0x020ca8f8;
