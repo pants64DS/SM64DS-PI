@@ -691,7 +691,8 @@ struct Player : Actor
 	bool ToonStateActive();
 	bool IsCollectingCap();
 	void ReturnWithCapToonEffects();
-	bool CheckSquish(Fix12i yStart, Fix12i yEnd, Fix12i& squishPosY);
+	bool CheckSquishedByActor(Fix12i yStart, Fix12i yEnd, Fix12i& squishPosY);
+	bool UpdateSquished();
 	bool HasNoCap();
 	void Unk_020c6a10(u32 arg0);
 	bool Unk_020c4f40(u16 newUnk6a6);
@@ -758,7 +759,7 @@ struct Player : Actor
 	bool JumpIntoBooCage(Vector3& cagePos);
 	bool EnterWhirlpool();
 	bool CheckDeathPlaneVoidOut();
-	bool CheckYMinVoidOut();
+	void VoidOutIfAtYMin();
 	bool SetDeathState(u8 deathState);
 	void HandleWalkOrRun();
 	void BlowAway(s16 dir);

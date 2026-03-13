@@ -1581,7 +1581,8 @@ _ZN6Player15ToonStateActiveEv                                                   
 _ZN6Player15IsCollectingCapEv                                                     = 0x020bea94;
 _ZN6Player8HasNoCapEv                                                             = 0x020bda98;
 _ZN6Player24ReturnWithCapToonEffectsEv                                            = 0x020beabc;
-_ZN6Player11CheckSquishE5Fix12IiES1_RS2_                                          = 0x020c607c;
+_ZN6Player20CheckSquishedByActorE5Fix12IiES1_RS2_                                 = 0x020c607c;
+_ZN6Player14UpdateSquishedEv                                                      = 0x020c61ac;
 _ZN6Player12Unk_020c6a10Ej                                                        = 0x020c6a10;
 _ZN6Player12Unk_020c4f40Et                                                        = 0x020c4f40;
 _ZN6Player12Unk_020ca8f8Ev                                                        = 0x020ca8f8;
@@ -1646,7 +1647,7 @@ _ZN6Player11ChangeStateERNS_5StateE                                             
 _ZN6Player15JumpIntoBooCageER7Vector3                                             = 0x020ca2ac;
 _ZN6Player14EnterWhirlpoolEv                                                      = 0x020c5cc8;
 _ZN6Player22CheckDeathPlaneVoidOutEv                                              = 0x020c5d0c;
-_ZN6Player16CheckYMinVoidOutEv                                                    = 0x020c5d60;
+_ZN6Player15VoidOutIfAtYMinEv                                                     = 0x020c5d60;
 _ZN6Player13SetDeathStateEh                                                       = 0x020c5dec;
 _ZN6Player15HandleWalkOrRunEv                                                     = 0x020d4748;
 _ZN6Player8BlowAwayEs                                                             = 0x020d4fe4;
