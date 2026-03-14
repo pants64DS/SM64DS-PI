@@ -19,6 +19,7 @@ extern "C"
 	Fix12i Vec3_HorzDist(const Vector3& v0, const Vector3& v1) __attribute__((pure));
 	Fix12i Vec3_HorzLen(const Vector3& v0) __attribute__((pure));
 	Fix12i Vec3_Dist(const Vector3& v0, const Vector3& v1) __attribute__((pure));
+	bool Vec3_NotEqual(const Vector3& v0, const Vector3& v1) __attribute__((pure));
 	bool Vec3_Equal(const Vector3& v0, const Vector3& v1) __attribute__((pure));
 	void Vec3_LslInPlace(Vector3& v, s32 shift);
 	void Vec3_Lsl(Vector3& res, const Vector3& v, s32 shift);
@@ -354,6 +355,19 @@ struct Vector3
 
 	template<class T>
 	Vector3& operator*=(T&& m) & { return *this = std::forward<T>(m) * *this; }
+
+	[[gnu::always_inline]]
+	constexpr bool operator!=(const Vector3& other) const&
+	{
+		if consteval
+		{
+			return !(this->x == other.x && this->y == other.y && this->z == other.z);
+		}
+		else
+		{
+			return Vec3_NotEqual(*this, other);
+		}
+	}
 
 	[[gnu::always_inline]]
 	constexpr bool operator==(const Vector3& other) const&
