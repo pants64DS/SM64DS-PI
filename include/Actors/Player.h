@@ -487,7 +487,7 @@ struct Player : Actor
 	u32 unk5b0;
 	u32 unk5b4;
 	u32 unk5b8;
-	Matrix4x3 unkMat5bc;
+	Matrix4x3 shadowMat;
 	Matrix4x3 eatMatrix;
 	u32 unk61c;
 	u32 uniqueSoundID; // play with unique ID
