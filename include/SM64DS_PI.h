@@ -518,7 +518,7 @@ extern "C"
 	void ExitLevel();
 	void SetNextLevel(u8 returnState);
 	void SetNextStar();
-	void FUN_0202a130();
+	void ResetVsStarTimer();
 	s8 NumVsStarsObtained();
 	void GiveVsStars(s32 playerID, s8 amount);
 	void ClearSpikeBomb(s32 spikeBombID);

@@ -532,7 +532,7 @@ HitDeathPlane                                                                   
 ExitLevel                                                                         = 0x02029bd4;
 SetNextLevel                                                                      = 0x02029bf4;
 SetNextStar                                                                       = 0x02029d1c;
-FUN_0202a130                                                                      = 0x0202a130;
+ResetVsStarTimer                                                                  = 0x0202a130;
 NumVsStarsObtained                                                                = 0x0202a55c;
 GiveVsStars                                                                       = 0x0202a5ac;
 ClearSpikeBomb                                                                    = 0x0202a608;
