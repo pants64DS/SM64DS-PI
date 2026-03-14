@@ -357,19 +357,6 @@ struct Vector3
 	Vector3& operator*=(T&& m) & { return *this = std::forward<T>(m) * *this; }
 
 	[[gnu::always_inline]]
-	constexpr bool operator!=(const Vector3& other) const&
-	{
-		if consteval
-		{
-			return !(this->x == other.x && this->y == other.y && this->z == other.z);
-		}
-		else
-		{
-			return Vec3_NotEqual(*this, other);
-		}
-	}
-
-	[[gnu::always_inline]]
 	constexpr bool operator==(const Vector3& other) const&
 	{
 		if consteval
