@@ -2033,6 +2033,8 @@ _ZN6Player21St_HeadstandJump_MainEv                                             
 _ZN9PowerStar16InitBouncingStarEP6Playerbb                                        = 0x020e7218;
 _ZN9PowerStar13AddStarMarkerEv                                                    = 0x020e8ca0;
 
+POWER_STAR_CYL_CLSN_OFFSET                                                        = 0x0210aa0c;
+
 /* Actors/StarMarker.h */
 _ZN10StarMarker13InitResourcesEv                                                  = 0x020eb204;
 _ZN10StarMarker16CleanupResourcesEv                                               = 0x020eabcc;

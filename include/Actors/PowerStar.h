@@ -9,33 +9,18 @@ struct PowerStar : Enemy
 	ModelAnim modelAnim1;
 	ModelAnim modelAnim2;
 	ShadowModel shadowModel;
-	u32 unk3fc;
-	u32 unk400;
-	u32 unk404;
-	u32 unk408;
-	u32 unk40c;
-	u32 unk410;
-	u32 unk414;
-	u32 unk418;
-	u32 unk41c;
-	u32 unk420;
-	u32 unk424;
-	u32 unk428;
+	Matrix4x3 shadowMat;
 	u32 unk42c;
 	u32 unk430;
-	u32 unk434;
+	u32 starMarkerUniqueID;
 	u32 unk438;
-	u32 unk43c;
+	u32 type;
 	u32 unk440;
 	u32 unk444;
-	u32 unk448;
-	u32 unk44c;
-	u32 unk450;
-	u32 unk454;
-	u32 unk458;
-	u32 unk45c;
-	Vector3 unkVec460;
-	Vector3 unkVec46c;
+	Vector3 unkVec448; // 0x448
+	Vector3 unkVec454; // 0x454
+	Vector3 unkVec460; // 0x460
+	Vector3 unkVec46c; // 0x46c
 	u32 unk478;
 	u32 unk47c;
 	u32 unk480;
@@ -45,12 +30,14 @@ struct PowerStar : Enemy
 	u32 unk490;
 	u16 unk494;
 	s16 spawnFrameCounter;
-	u32 unk498;
+	u32 starMarkerType;
 	u8 unk49c;
 	u8 starID;
-	u16 unk49e;
-	u16 unk4a0;
-	u16 unk4a2;
+	u8 unk49e;
+	bool inIceBlock; // 0x49f
+	bool searchedForIceBlock; // 0x4a0
+	u8 unk4a1; // 0x4a1
+	u16 unk4a2; // 0x4a2
 	u32 unk4a4;
 	u32 unk4a8;
 	u32 unk4ac;
@@ -65,3 +52,5 @@ struct PowerStar : Enemy
 };
 
 static_assert(sizeof(PowerStar) == 0x4c4, "sizeof(PowerStar) is incorrect!");
+
+extern Vector3 POWER_STAR_CYL_CLSN_OFFSET; // { 0._f, -50._f, 0._f }
