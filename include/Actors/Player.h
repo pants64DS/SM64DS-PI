@@ -887,8 +887,8 @@ struct Player : Actor
 	void HandleRunLean(s16 playerMotionAngY);
 	void TryToBrake();
 	void GetThrown(Fix12i horizontalSpeed, Fix12i verticalSpeed, s16 angle);
-	bool TryGetGrabbedByPlayer(Player& grabber, u32 attackerHitFlags);
-	bool GetGrabbedByPlayer(Actor& actor);
+	bool CheckHitByWarioGrab(Player& grabber, u32 grabberHitFlags);
+	bool TryApplyPlayerGrab(Player& grabber);
 	void UpdatePlayerScale();
 	void ApplyScaleState(u8 newScaleState);
 	void InitSweepKickHitbox();

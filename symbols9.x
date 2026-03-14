@@ -1802,8 +1802,8 @@ _ZN6Player20UpdateAirWithoutTurnE5Fix12IiES1_                                   
 _ZN6Player13HandleRunLeanEs                                                       = 0x020d413c;
 _ZN6Player10TryToBrakeEv                                                          = 0x020d454c;
 _ZN6Player9GetThrownE5Fix12IiES1_s                                                = 0x020db54c;
-_ZN6Player21TryGetGrabbedByPlayerERS_j                                            = 0x020d85fc;
-_ZN6Player18GetGrabbedByPlayerER5Actor                                            = 0x020db5f4;
+_ZN6Player19CheckHitByWarioGrabERS_j                                              = 0x020d85fc;
+_ZN6Player18TryApplyPlayerGrabERS_                                                = 0x020db5f4;
 _ZN6Player17UpdatePlayerScaleEv                                                   = 0x020db704;
 _ZN6Player15ApplyScaleStateEh                                                     = 0x020db8bc;
 _ZN6Player16AdjustSlideAngleEv                                                    = 0x020dd2f4;
