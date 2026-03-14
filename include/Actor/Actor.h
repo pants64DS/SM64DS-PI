@@ -154,8 +154,8 @@ struct Actor : ActorDerived // internal name: dActor
 	bool IsPlayerInRange(Fix12i posX, Fix12i posY, Fix12i posZ, s32 maxDist) const; // uses params instead of this->pos
 
 	// opacity is from 0 to 30
-	void DropShadowScaleXYZ (ShadowModel& shadow, Matrix4x3& matrix, Fix12i scaleX, Fix12i scaleY, Fix12i scaleZ, u32 opacity);
-	void DropShadowRadHeight(ShadowModel& shadow, Matrix4x3& matrix, Fix12i radius, Fix12i depth, u32 opacity);
+	void DropShadowScaleXYZ (ShadowModel& shadow, Matrix4x3& matrix, Fix12i scaleX, Fix12i scaleY, Fix12i scaleZ, u8 opacity);
+	void DropShadowRadHeight(ShadowModel& shadow, Matrix4x3& matrix, Fix12i radius, Fix12i depth, u8 opacity);
 
 	void UpdatePos(CylinderClsn* clsn); // applies motion direction, vertical acceleration, and terminal velocity.
 	void UpdatePosWithOnlySpeed(CylinderClsn* clsn);

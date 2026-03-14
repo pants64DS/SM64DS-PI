@@ -856,7 +856,7 @@ _ZN11ShadowModelD1Ev                                                            
 _ZN11ShadowModel9DoSetFileER8BMD_Filebi                                           = 0x02015ef4;
 _ZN11ShadowModel12InitCylinderEv                                                  = 0x02015ebc;
 _ZN11ShadowModel10InitCuboidEv                                                    = 0x02015ed8;
-_ZN11ShadowModel9InitModelEP9Matrix4x35Fix12IiES3_S3_j                            = 0x02015e64;
+_ZN11ShadowModel9InitModelEP9Matrix4x35Fix12IiES3_S3_h                            = 0x02015e64;
 _ZN11ShadowModel9RenderAllEv                                                      = 0x02015d38;
 _ZN11ShadowModel8CleanAllEv                                                       = 0x02015e14;
 
@@ -1266,8 +1266,8 @@ _ZNK5Actor18HorzAngleToFPlayerEv                                                
 _ZNK5Actor15IsPlayerInRangeEi                                                     = 0x020104dc;
 _ZNK5Actor15IsPlayerInRangeERK7Vector3i                                           = 0x0201045c;
 _ZNK5Actor15IsPlayerInRangeE5Fix12IiES1_S1_i                                      = 0x02010498;
-_ZN5Actor18DropShadowScaleXYZER11ShadowModelR9Matrix4x35Fix12IiES5_S5_j           = 0x02010b9c;
-_ZN5Actor19DropShadowRadHeightER11ShadowModelR9Matrix4x35Fix12IiES5_j             = 0x02010be8;
+_ZN5Actor18DropShadowScaleXYZER11ShadowModelR9Matrix4x35Fix12IiES5_S5_h           = 0x02010b9c;
+_ZN5Actor19DropShadowRadHeightER11ShadowModelR9Matrix4x35Fix12IiES5_h             = 0x02010be8;
 _ZN5Actor9UpdatePosEP12CylinderClsn                                               = 0x02010c30;
 _ZN5Actor22UpdatePosWithOnlySpeedEP12CylinderClsn                                 = 0x02010d40;
 _ZN5Actor28UpdatePosWithHorzSpeedAndAngEv                                         = 0x02010c5c;

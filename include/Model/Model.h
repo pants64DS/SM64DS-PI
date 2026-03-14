@@ -93,7 +93,7 @@ struct ShadowModel : ModelBase // internal: ShadowModel; done
 
 	bool InitCylinder();
 	bool InitCuboid();
-	void InitModel(Matrix4x3* transform, Fix12i scaleX, Fix12i scaleY, Fix12i scaleZ, u32 opacity); // opacity is from 0 to 30
+	void InitModel(Matrix4x3* transform, Fix12i scaleX, Fix12i scaleY, Fix12i scaleZ, u8 opacity); // opacity is from 0 to 30
 
 	static void RenderAll();
 	static void CleanAll();
