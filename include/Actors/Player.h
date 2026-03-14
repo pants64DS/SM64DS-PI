@@ -453,7 +453,7 @@ struct Player : Actor
 	MovingCylinderClsnWithPos cylClsn2;
 	Actor* shellPtr;
 	Actor* actorInHands;
-	Actor* holdingActor;
+	Actor* carrier;
 	Actor* actorInMouth;
 	Actor* unk364;
 	ActorBase* speaker;
