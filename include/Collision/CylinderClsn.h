@@ -47,7 +47,7 @@ struct CylinderClsn
 		HIT_BY_SPIN_OR_GROUND_POUND = 1 << 5,
 		HIT_BY_PUNCH                = 1 << 6,
 		HIT_BY_KICK                 = 1 << 7,
-		HIT_BY_BREAKDANCE           = 1 << 8,
+		HIT_BY_SWEEP_KICK           = 1 << 8,
 		HIT_BY_SLIDE_KICK           = 1 << 9,
 		HIT_BY_DIVE                 = 1 << 10,
 		HIT_BY_UNK_11               = 1 << 11,
