@@ -216,12 +216,8 @@ COIN_RED_POLY4_MODEL_PTR                                                        
 FEATHER_MODEL_PTR                                                                 = 0x0210da58;
 YOSHI_EGG_MODEL_PTR                                                               = 0x0210e7d8;
 YOSHI_CUBE_EGG_MODEL_PTR                                                          = 0x0210e3a0;
-POWER_STAR_MODEL_PTR                                                              = 0x0211094c;
-TRANSPARENT_STAR_MODEL_PTR                                                        = 0x0211095c;
-
 COIN_POLY4_MODEL_PTRS                                                             = 0x020ff060;
 COIN_POLY32_MODEL_PTRS                                                            = 0x020ff06c;
-
 BOWSER_KEY_MODEL_PTR                                                              = 0x02132c50;
 KEY_MODEL_PTRS                                                                    = 0x02132894;
 
@@ -237,11 +233,14 @@ DOOR_STAR_1_MODEL_PTR                                                           
 DOOR_STAR_3_MODEL_PTR                                                             = 0x0214872c;
 DOOR_STAR_8_MODEL_PTR                                                             = 0x02148764;
 DOOR_KEY_HOLE_MODEL_PTR                                                           = 0x0214877c;
-
 STAR_DOOR_MODEL_PTR                                                               = 0x02148934;
 
-STAR_SPHERE_MODEL_PTR                                                             = 0x0211092C;
-STAR_BASE_MODEL_PTR                                                               = 0x0211093C;
+STAR_SPHERE_MODEL_PTR                                                             = 0x0211092c;
+STAR_BASE_MODEL_PTR                                                               = 0x0211093c;
+POWER_STAR_MODEL_PTR                                                              = 0x0211094c;
+SILVER_STAR_MODEL_PTR                                                             = 0x02110954;
+TRANSPARENT_STAR_MODEL_PTR                                                        = 0x0211095c;
+BIG_1UP_NUMBER_MODEL_PTR                                                          = 0x02110aa4;
 
 /* SM64DS_PI.h */
 OBJ_TO_ACTOR_ID_TABLE_VANILLA                                                     = 0x0210cbf4;

@@ -84,8 +84,6 @@ extern SharedFilePtr COIN_RED_POLY4_MODEL_PTR;
 extern SharedFilePtr FEATHER_MODEL_PTR;
 extern SharedFilePtr YOSHI_EGG_MODEL_PTR;
 extern SharedFilePtr YOSHI_CUBE_EGG_MODEL_PTR;
-extern SharedFilePtr POWER_STAR_MODEL_PTR;
-extern SharedFilePtr TRANSPARENT_STAR_MODEL_PTR;
 
 extern SharedFilePtr* COIN_POLY4_MODEL_PTRS[3];
 extern SharedFilePtr* COIN_POLY32_MODEL_PTRS[3];
@@ -105,8 +103,11 @@ extern SharedFilePtr DOOR_STAR_1_MODEL_PTR;
 extern SharedFilePtr DOOR_STAR_3_MODEL_PTR;
 extern SharedFilePtr DOOR_STAR_8_MODEL_PTR;
 extern SharedFilePtr DOOR_KEY_HOLE_MODEL_PTR;
-
 extern SharedFilePtr STAR_DOOR_MODEL_PTR;
 
 extern SharedFilePtr STAR_SPHERE_MODEL_PTR;
 extern SharedFilePtr STAR_BASE_MODEL_PTR;
+extern SharedFilePtr POWER_STAR_MODEL_PTR;
+extern SharedFilePtr SILVER_STAR_MODEL_PTR;
+extern SharedFilePtr TRANSPARENT_STAR_MODEL_PTR;
+extern SharedFilePtr BIG_1UP_NUMBER_MODEL_PTR;
