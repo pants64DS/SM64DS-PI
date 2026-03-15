@@ -209,7 +209,7 @@ WATER_RING_MODEL_PTR                                                            
 SHELL_MODEL_PTRS                                                                  = 0x0210da18;
 SILVER_NUMBER_MODEL_PTR                                                           = 0x0210da28;
 SUPER_MUSHROOM_MODEL_PTR                                                          = 0x0210da30;
-BUBBLE_MODEL_PTR                                                                  = 0x0210da38;
+WATER_BOMB_MODEL_PTR                                                              = 0x0210da38;
 MARIO_CAP_MODEL_PTR                                                               = 0x0210da40;
 COIN_YELLOW_POLY4_MODEL_PTR                                                       = 0x0210da48;
 COIN_RED_POLY4_MODEL_PTR                                                          = 0x0210da50;

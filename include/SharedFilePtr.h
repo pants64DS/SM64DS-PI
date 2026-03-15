@@ -77,7 +77,7 @@ extern SharedFilePtr WATER_RING_MODEL_PTR;
 extern SharedFilePtr SHELL_MODEL_PTRS[2];
 extern SharedFilePtr SILVER_NUMBER_MODEL_PTR;
 extern SharedFilePtr SUPER_MUSHROOM_MODEL_PTR;
-extern SharedFilePtr BUBBLE_MODEL_PTR;
+extern SharedFilePtr WATER_BOMB_MODEL_PTR;
 extern SharedFilePtr MARIO_CAP_MODEL_PTR;
 extern SharedFilePtr COIN_YELLOW_POLY4_MODEL_PTR;
 extern SharedFilePtr COIN_RED_POLY4_MODEL_PTR;
