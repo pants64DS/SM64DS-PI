@@ -7,6 +7,16 @@ extern "C" void ChangeArea(s8 newAreaID);
 struct Player : Actor
 {
 	static constexpr u16 staticActorID = 0xbf;
+	
+	enum Characters : u8
+	{
+		CH_MARIO = 0,
+		CH_LUIGI = 1,
+		CH_WARIO = 2,
+		CH_YOSHI = 3,
+
+		NUM_CHARACTERS,
+	};
 
 	enum Animations : u32
 	{

@@ -82,16 +82,6 @@ enum PauseStates
     PAUSE_UNPAUSING,
 };
 
-enum Characters : u8
-{
-	CH_MARIO,
-	CH_LUIGI,
-	CH_WARIO,
-	CH_YOSHI,
-
-	NUM_CHARACTERS,
-};
-
 enum TTC_Speeds : s8
 {
 	SLOW   = 0,
