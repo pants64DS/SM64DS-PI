@@ -191,7 +191,8 @@ namespace Sound
 		u8 unk3e;
 		u8 unk3f;
 
-		static FileRef* PTR_0; //there's one after it, but it's, as far as I know, not referred to exactly.
+		static FileRef* MUSIC_PTR;
+		static FileRef* SOUND_PTR;
 	};
 
 	struct Player //not to be confused with ::Player
@@ -226,8 +227,11 @@ namespace Sound
 	void PlayArchive3(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
 	void PlayArchive2_2D(u32 soundID); // deprecated, use Sound::Play2D
 	void PlayArchive3_2D(u32 soundID); // deprecated, use Sound::Play2D
-	void PlayArchive3_Alt(u32 soundID, const Vector3& camSpacePos); // used for some things like the crazed crate bounce, game crashes otherwise?
-	void PlayArchive2_2D_Alt(u32 soundID);
+	
+	void PlayArchive3_2D_Duplicate(u32 soundID); // deprecated, use Sound::Play2D
+	void PlayArchive2_2D_Duplicate(u32 soundID); // deprecated, use Sound::Play2D
+	void PlayArchive3_Duplicate(u32 soundID, const Vector3& camSpacePos); // used for some things like the crazed crate bounce
+	void PlayArchive3_Duplicate1(u32 soundID, const Vector3& camSpacePos);
 
 	//volume goes up to 0x7f
 	bool PlaySub(u32 musicID, u32 musicVolume, u32 volume, Fix12i timeInv, bool starting); // return value: did it finish?

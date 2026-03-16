@@ -2184,7 +2184,8 @@ _ZN5Sound17InfoSequenceEntry9GetWithIDEj                                        
 _ZN5Sound23InfoInstrumentBankEntry9GetWithIDEj                                    = 0x02050bb0;
 
 _ZN5Sound8SDAT_RAM3PTRE                                                           = 0x020a5bb8;
-_ZN5Sound7FileRef5PTR_0E                                                          = 0x0209b4a0;
+_ZN5Sound7FileRef9MUSIC_PTRE                                                      = 0x0209b4a0;
+_ZN5Sound7FileRef9SOUND_PTRE                                                      = 0x0209b4a4;
 
 _ZN5Sound6Player19SetPlayableSeqCountEii                                          = 0x0204fadc;
 
@@ -2201,10 +2202,12 @@ _ZN5Sound4PlayEjjRK7Vector3                                                     
 _ZN5Sound6Play2DEjj                                                               = 0x02012840;
 _ZN5Sound12PlayArchive0EjRK7Vector3                                               = 0x0201264c;
 _ZN5Sound12PlayArchive3EjRK7Vector3                                               = 0x02012664;
+_ZN5Sound22PlayArchive3_DuplicateEjRK7Vector3                                     = 0x0201267c;
+_ZN5Sound23PlayArchive3_Duplicate1EjRK7Vector3                                    = 0x02012694;
 _ZN5Sound15PlayArchive2_2DEj                                                      = 0x02012754;
 _ZN5Sound15PlayArchive3_2DEj                                                      = 0x02012768;
-_ZN5Sound16PlayArchive3_AltEjRK7Vector3                                           = 0x0201267c;
-_ZN5Sound19PlayArchive2_2D_AltEj                                                  = 0x02012790;
+_ZN5Sound25PlayArchive3_2D_DuplicateEj                                            = 0x0201277c;
+_ZN5Sound25PlayArchive2_2D_DuplicateEj                                            = 0x02012790;
 _ZN5Sound7PlaySubEjjj5Fix12IiEb                                                   = 0x02012be0;
 _ZN5Sound20PlaySmallSecretSoundEP5ActorPt                                         = 0x0200f874;
 _ZN5Sound15PlaySecretSoundEP5ActorPt                                              = 0x0200f8f8;
