@@ -2207,7 +2207,7 @@ _ZN5Sound23PlayArchive3_Duplicate1EjRK7Vector3                                  
 _ZN5Sound15PlayArchive2_2DEj                                                      = 0x02012754;
 _ZN5Sound15PlayArchive3_2DEj                                                      = 0x02012768;
 _ZN5Sound25PlayArchive3_2D_DuplicateEj                                            = 0x0201277c;
-_ZN5Sound25PlayArchive2_2D_DuplicateEj                                            = 0x02012790;
+_ZN5Sound26PlayArchive2_2D_Duplicate1Ej                                           = 0x02012790;
 _ZN5Sound7PlaySubEjjj5Fix12IiEb                                                   = 0x02012be0;
 _ZN5Sound20PlaySmallSecretSoundEP5ActorPt                                         = 0x0200f874;
 _ZN5Sound15PlaySecretSoundEP5ActorPt                                              = 0x0200f8f8;

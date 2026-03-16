@@ -229,7 +229,7 @@ namespace Sound
 	void PlayArchive3_2D(u32 soundID); // deprecated, use Sound::Play2D
 	
 	void PlayArchive3_2D_Duplicate(u32 soundID); // deprecated, use Sound::Play2D
-	void PlayArchive2_2D_Duplicate(u32 soundID); // deprecated, use Sound::Play2D
+	void PlayArchive2_2D_Duplicate1(u32 soundID); // deprecated, use Sound::Play2D
 	void PlayArchive3_Duplicate(u32 soundID, const Vector3& camSpacePos); // used for some things like the crazed crate bounce
 	void PlayArchive3_Duplicate1(u32 soundID, const Vector3& camSpacePos);
 
