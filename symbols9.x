@@ -1068,6 +1068,7 @@ _ZN10SphereClsnD1Ev                                                             
 _ZN10SphereClsn15SetObjAndSphereERK7Vector35Fix12IiEP5Actor                       = 0x02037c00;
 _ZN10SphereClsn10DetectClsnEv                                                     = 0x02038b78;
 _ZN10SphereClsn14SetFloorResultERK10ClsnResult                                    = 0x020378e4;
+_ZN10SphereClsn14GetFloorResultEv                                                 = 0x02037938;
 
 _ZN12WithMeshClsnC1Ev                                                             = 0x02037430;
 _ZN12WithMeshClsnD1Ev                                                             = 0x020373f8;

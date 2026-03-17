@@ -133,6 +133,7 @@ struct SphereClsn : BgCh
 	void SetObjAndSphere(const Vector3& pos, Fix12i radius, Actor* obj);
 	s32 DetectClsn(); // returns MeshColliderBase::SphereResultFlags
 	ClsnResult& SetFloorResult(const ClsnResult& result);
+	ClsnResult& GetFloorResult();
 };
 
 static_assert(sizeof(SphereClsn) == 0x10c);
