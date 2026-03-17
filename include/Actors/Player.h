@@ -1180,3 +1180,4 @@ struct Player : Actor
 
 static_assert(sizeof(Player) == 0x768, "sizeof(Player) is incorrect!");
 static_assert(Player::NUM_ANIMS == 194, "Player::NUM_ANIMS is incorrect!");
+static_assert(Player::NUM_CHARACTERS == 4, "Player::NUM_CHARACTERS is incorrect!");
