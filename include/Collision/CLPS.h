@@ -162,4 +162,12 @@ struct SurfaceInfo
 
 	void CopyNormalTo(Vector3& vec) const;
 	s32 GetSteepnessClass() const { return ::GetSteepnessClass(normal.y); }
+
+	u32 GetBehaviorID() const;
+	u32 GetCamBehavID() const;
+	u32 GetTractionID() const;
+	u32 GetViewID() const;
+	bool IsWater() const;
+	u32 GetTexID() const;
+	u32 GetWindID() const;
 };

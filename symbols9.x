@@ -923,6 +923,13 @@ GLOBAL_FADER                                                                    
 
 _ZNK11SurfaceInfo12CopyNormalToER7Vector3                                         = 0x02037dcc;
 GetSteepnessClass                                                                 = 0x02039794;
+_ZNK11SurfaceInfo13GetBehaviorIDEv                                                = 0x02037e38;
+_ZNK11SurfaceInfo13GetCamBehavIDEv                                                = 0x02037e48;
+_ZNK11SurfaceInfo13GetTractionIDEv                                                = 0x02037e58;
+_ZNK11SurfaceInfo9GetViewIDEv                                                     = 0x02037e68;
+_ZNK11SurfaceInfo7IsWaterEv                                                       = 0x02037e78;
+_ZNK11SurfaceInfo8GetTexIDEv                                                      = 0x02037e84;
+_ZNK11SurfaceInfo9GetWindIDEv                                                     = 0x02037e90;
 
 /* Collision/MeshCollider.h */
 _ZTV16MeshColliderBase                                                            = 0x02099380;
