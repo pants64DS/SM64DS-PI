@@ -359,6 +359,7 @@ HORZ_SPEED_CHAR_MULTIPLIERS                                                     
 CRAZED_CRATE_VERT_SPEEDS                                                          = 0x020ff17c;
 CRAZED_CRATE_HORZ_SPEEDS                                                          = 0x020ff188;
 PUNCH_KICK_SEQUENCE_VOICES                                                        = 0x020ff194;
+STAR_COLLECTION_MESSAGES                                                          = 0x020ff1a0;
 DASH_VOICES                                                                       = 0x020ff1b0;
 CARRY_LIGHT_HORZ_SPEEDS                                                           = 0x020ff1c0;
 CARRY_HEAVY_HORZ_SPEEDS                                                           = 0x020ff1d0;
@@ -1592,6 +1593,7 @@ _ZN6Player24ReturnWithCapToonEffectsEv                                          
 _ZN6Player20CheckSquishedByActorE5Fix12IiES1_RS2_                                 = 0x020c607c;
 _ZN6Player14UpdateSquishedEv                                                      = 0x020c61ac;
 _ZN6Player12Unk_020c6a10Ej                                                        = 0x020c6a10;
+_ZN6Player25ShowStarCollectionMessageEv                                           = 0x020c6e14;
 _ZN6Player12Unk_020c4f40Et                                                        = 0x020c4f40;
 _ZN6Player12Unk_020ca8f8Ev                                                        = 0x020ca8f8;
 _ZN6Player27ResetPlayerClsnAndClimbClsnEv                                         = 0x020caf68;

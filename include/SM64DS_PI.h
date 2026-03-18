@@ -296,6 +296,7 @@ extern Fix12s HORZ_SPEED_CHAR_MULTIPLIERS[4];
 extern Fix12i CRAZED_CRATE_VERT_SPEEDS[3];
 extern Fix12i CRAZED_CRATE_HORZ_SPEEDS[3];
 extern u32 DASH_VOICES[4];
+extern u16 STAR_COLLECTION_MESSAGES[7]; // 1 star, 3 stars, 8 stars, 12 stars, 30 stars, 50 stars, and 80 stars collected
 extern Fix12i CARRY_LIGHT_HORZ_SPEEDS[4];
 extern Fix12i CARRY_HEAVY_HORZ_SPEEDS[4];
 extern Fix12i WATER_RISE_SINK_SPEED_CHAR_MULTIPLIERS[4];
