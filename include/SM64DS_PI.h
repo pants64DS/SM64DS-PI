@@ -75,6 +75,16 @@ enum StarIDs
 	NUM_STAR_IDS,
 };
 
+enum StarMarkerTypes : u8
+{
+	SM_SMALL_POWER_STAR = 0,
+	SM_SILVER_STAR 		= 1,
+	SM_POWER_STAR		= 2,
+	SM_POWER_STAR_TRANS = 3,
+
+	NUM_STAR_MARKER_TYPES,
+};
+
 enum PauseStates
 {
     PAUSE_NOT,
