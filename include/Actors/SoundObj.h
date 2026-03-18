@@ -6,9 +6,9 @@ struct SoundObj : Actor
 	static constexpr u16 staticActorID = 0x167;
 
 	u32 musicID; // 0xd4
-	u32 musicVolume; // 0xd8
+	u32 volume; // 0xd8
 	u16 timeElapsed; // 0xdc
-	u16 musicDuration; // 0xde
+	u16 duration; // 0xde
 	bool starting; // 0xe0
 	u8 padding; // 0xe1
 	u16 padding2; // 0xe2
