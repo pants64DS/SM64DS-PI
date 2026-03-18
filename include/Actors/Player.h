@@ -707,6 +707,7 @@ struct Player : Actor
 	void Unk_020c6a10(u32 arg0);
 	bool ShowStarCollectionMessage();
 	bool Unk_020c4f40(u16 newUnk6a6);
+	bool InStateNoControl();
 	s32 Unk_020ca8f8();
 	void ResetPlayerClsnAndClimbClsn();
 	bool Unk_020c9e5c(u8 arg0);
