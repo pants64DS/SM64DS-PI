@@ -2218,7 +2218,7 @@ _ZN5Sound23PlayArchive3_Duplicate1EjRK7Vector3                                  
 _ZN5Sound15PlayArchive2_2DEj                                                      = 0x02012754;
 _ZN5Sound15PlayArchive3_2DEj                                                      = 0x02012768;
 _ZN5Sound25PlayArchive3_2D_DuplicateEj                                            = 0x0201277c;
-_ZN5Sound26PlayArchive2_2D_Duplicate1Ej                                           = 0x02012790;
+_ZN5Sound25PlayArchive2_2D_DuplicateEj                                            = 0x02012790;
 _ZN5Sound7PlaySubEjjj5Fix12IiEb                                                   = 0x02012be0;
 _ZN5Sound20PlaySmallSecretSoundEP5ActorPt                                         = 0x0200f874;
 _ZN5Sound15PlaySecretSoundEP5ActorPt                                              = 0x0200f8f8;
@@ -2239,6 +2239,7 @@ _ZN5Sound8EndMusicEjj                                                           
 _ZN5Sound10PauseMusicEv                                                           = 0x02012f90;
 _ZN5Sound12UnpauseMusicEv                                                         = 0x02012ee4;
 _ZN5Sound17ChangeMusicVolumeEj5Fix12IiE                                           = 0x02012d2c;
+_ZN5Sound12Unk_02012d2cEj5Fix12IiE                                                = 0x02048a18;
 _ZN5Sound13Func_02048eb4Ev                                                        = 0x02048eb4;
 _ZN5Sound13Func_02048ec4Ev                                                        = 0x02048ec4;
 _ZN5Sound13Func_02048ee4Ev                                                        = 0x02048ee4;

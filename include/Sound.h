@@ -229,7 +229,7 @@ namespace Sound
 	void PlayArchive3_2D(u32 soundID); // deprecated, use Sound::Play2D
 	
 	void PlayArchive3_2D_Duplicate(u32 soundID); // deprecated, use Sound::Play2D
-	void PlayArchive2_2D_Duplicate1(u32 soundID); // deprecated, use Sound::Play2D
+	void PlayArchive2_2D_Duplicate(u32 soundID); // deprecated, use Sound::Play2D
 	void PlayArchive3_Duplicate(u32 soundID, const Vector3& camSpacePos); // used for some things like the crazed crate bounce
 	void PlayArchive3_Duplicate1(u32 soundID, const Vector3& camSpacePos);
 
@@ -257,6 +257,7 @@ namespace Sound
 
 	bool ChangeMusicVolume(u32 newVolume, Fix12i changeSpeed);
 
+	void Unk_02012d2c(u32 soundID, Fix12i arg1); // Does nothing but return
 	void Func_02048eb4();
 	void Func_02048ec4();
 	void Func_02048ee4();
