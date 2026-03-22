@@ -9,7 +9,7 @@ struct Number : Actor
 	u32 unkActorUniqueID;
 	Vector3 spawnPos;
 	Fix12i unk148;
-	u16 unk14c;
+	u16 delay;
 	u8 numTimesBounced;
 	u8 unk14f;
 };

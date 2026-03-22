@@ -173,7 +173,7 @@ struct Actor : ActorDerived // internal name: dActor
 	s16 GetGroundTilt(const Vector3& normal, s16 angY);
 
 	void SpawnCoins(const Vector3& coinPos, u32 numCoins, Fix12i prevSpeed, s16 baseAng);
-	Number* SpawnNumber(const Vector3& pos, u32 number, bool isSilver, u16 unk14c, Actor* unkActor = nullptr);
+	Number* SpawnNumber(const Vector3& pos, u32 number, bool isSilver, u16 delay, Actor* unkActor = nullptr);
 	void SpawnFireball(const Vector3& pos, const Vector3_16* rot, Fix12i horzSpeed, Fix12i unk35c, u32 param1);
 
 	Actor* FindEgg(CylinderClsn& cylClsn);

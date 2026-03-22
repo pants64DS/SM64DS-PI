@@ -29,7 +29,7 @@ struct StarMarker : Actor
 
 	enum Flags2 : u8
 	{
-		F2_NO_COLLISION 		 = 1 << 0,
+		F2_INTANGIBLE 		 	 = 1 << 0,
 		F2_VISIBLE 				 = 1 << 1,
 		F2_RED_COIN_STAR_SPAWNED = 1 << 2,
 		F2_VS_PENDING_ACTIVATION = 1 << 3,
