@@ -68,7 +68,7 @@ struct Enemy : Actor
 	bool IsGoingOffCliff(WithMeshClsn& wmClsn, Fix12i maxFallDist, s16 unkAngle, bool setRaycastFlag2, bool arg5, Fix12i raycastOffsetY);
 	void KillByAttack(Actor& attacker); // called with an additional parameter (WithMeshClsn&) in the vanilla game, but that one is never used
 	void SpawnCoin();
-	void UpdateWMClsn(WithMeshClsn& wmClsn, u32 arg2);
+	void UpdateWMClsn(WithMeshClsn& wmClsn, u32 type); // 0 - UpdateContinuous, 1 - UpdateContinuousNoLava, 2 - UpdateDiscreteNoLava, 3 - UpdateDiscreteNoLava_2
 
 	// Death functions
 	bool DeathBySquash(WithMeshClsn& wmClsn);
