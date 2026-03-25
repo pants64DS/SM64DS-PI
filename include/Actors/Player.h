@@ -710,7 +710,7 @@ struct Player : Actor
 	bool InStateNoControl();
 	s32 Unk_020ca8f8();
 	void ResetPlayerClsnAndClimbClsn();
-	bool CanInterruptNoControl(u8 stateState);
+	bool CanInterruptNoControl(u8 interruptedState);
 	bool Unk_020ca488(); // calls Unk_020c9e5c(0xb);
 	bool Unk_020ca150(u8 arg0);
 	u32 GetBodyModelID(u32 character, bool checkMetalStateInsteadOfMetalModel) const;
