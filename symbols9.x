@@ -1598,7 +1598,7 @@ _ZN6Player12Unk_020c4f40Et                                                      
 _ZN6Player16InStateNoControlEv                                                    = 0x020ca0f4;
 _ZN6Player12Unk_020ca8f8Ev                                                        = 0x020ca8f8;
 _ZN6Player27ResetPlayerClsnAndClimbClsnEv                                         = 0x020caf68;
-_ZN6Player12Unk_020c9e5cEh                                                        = 0x020c9e5c;
+_ZN6Player21CanInterruptNoControlEh                                               = 0x020c9e5c;
 _ZN6Player12Unk_020ca488Ev                                                        = 0x020ca488;
 _ZN6Player12Unk_020ca150Eh                                                        = 0x020ca150;
 _ZN6Player28HandleReturnLevelAndEntranceEv                                        = 0x020c94a4;
