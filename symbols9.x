@@ -2538,8 +2538,7 @@ _ZTV5Stage                                                                      
 
 _ZN5Stage9spawnDataE                                                              = 0x0209213c;
 
-_ZN5StageC1Ev                                                                     = 0x0202e088;
-_ZN5StageC2Ev                                                                     = 0x0202e088;
+_ZN5StageC3Ev                                                                     = 0x0202e088;
 _ZN5Stage13InitResourcesEv                                                        = 0x0202cc0c;
 _ZN5Stage19BeforeInitResourcesEv                                                  = 0x0202ddc8;
 _ZN5Stage16CleanupResourcesEv                                                     = 0x0202c9a8;
