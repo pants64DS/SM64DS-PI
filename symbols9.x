@@ -1459,6 +1459,22 @@ _ZN3HUD15RenderLifeCountEv                                                      
 
 _ZN3HUD15CalculateDigitsEt                                                        = 0x020fbdac;
 
+/* Actors/IceBlock.h */
+_ZTV8IceBlock                                                                     = 0x02128cbc;
+_ZN8IceBlock9spawnDataE                                                           = 0x02128ca0;
+_ZN8IceBlockC3Ev                                                                  = 0x021280a0;
+_ZN8IceBlockD0Ev                                                                  = 0x02127b80;
+_ZN8IceBlockD1Ev                                                                  = 0x02127b34;
+_ZN8IceBlockD2Ev                                                                  = 0x02127b34;
+_ZN8IceBlock13InitResourcesEv                                                     = 0x02127ff0;
+_ZN8IceBlock16CleanupResourcesEv                                                  = 0x02127d98;
+_ZN8IceBlock8BehaviorEv                                                           = 0x02127e1c;
+_ZN8IceBlock6RenderEv                                                             = 0x02127ddc;
+_ZN8IceBlock15OnHitByMegaCharER6Player                                            = 0x02127ccc;
+_ZN8IceBlock4KillEv                                                               = 0x02127cf4;
+
+_ZN8IceBlock25SpawnPowerStarIfNecessaryEv                                         = 0x02127be0;
+
 /* Actors/Minimap.h */
 _ZTV7Minimap                                                                      = 0x0210c1b8;
 _ZN7Minimap9spawnDataE                                                            = 0x0210c160;
