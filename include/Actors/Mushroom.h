@@ -99,5 +99,5 @@ static_assert(sizeof(Mushroom) == 0x398, "sizeof(Mushroom) is incorrect!");
 static_assert(sizeof(OneUpMushroom) == 0x398, "sizeof(OneUpMushroom) is incorrect!");
 static_assert(sizeof(SuperMushroom) == 0x398, "sizeof(SuperMushroom) is incorrect!");
 
-extern bool MUSHROOM_CYL_CLSN_ENABLED_ON_INIT[NUM_BEHAVIORS];
-extern bool MUSHROOM_NO_BEHAVIOR_IF_OFF_SCREEN[NUM_BEHAVIORS];
+extern bool MUSHROOM_CYL_CLSN_ENABLED_ON_INIT[14];
+extern bool MUSHROOM_NO_BEHAVIOR_IF_OFF_SCREEN[14];
