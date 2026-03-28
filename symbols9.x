@@ -1525,7 +1525,10 @@ _ZN8Mushroom23Bh_HiddenTagChasePlayerEv                                         
 _ZN8Mushroom25Bh_JumpThenSpinAroundWalkEv                                         = 0x020af7cc;
 _ZN8Mushroom21Bh_CoinTagAvoidPlayerEv                                             = 0x020afa50;
 _ZN8Mushroom21Bh_CoinTagChasePlayerEv                                             = 0x020af908;
-_ZN8Mushroom16Bh_WalkPermanentEv                                                  = 0x020af724;
+_ZN8Mushroom8Bh_BounceEv                                                          = 0x020af724;
+
+MUSHROOM_CYL_CLSN_ENABLED_ON_INIT                                                 = 0x020ff040;
+MUSHROOM_NO_BEHAVIOR_IF_OFF_SCREEN                                                = 0x020ff050;
 
 /* Actors/Player.h */
 _ZN6Player9ANIM_PTRSE                                                             = 0x020ff480;

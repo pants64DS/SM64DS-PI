@@ -2,12 +2,32 @@
 
 struct Mushroom : Enemy // internal name: da1up_c
 {
+	enum Behaviors
+	{ 
+		BH_SPIN_AROUND_WALK,
+		BH_SPIN_AROUND_AVOID_PLAYER,
+		BH_SLIDE,
+		BH_STATIC,
+		BH_JUMP_ON_APPROACH,
+		BH_WAIT_FOR_TAGS_AVOID_PLAYER,
+		BH_SPAWN_TWO_COIN_TAG_AVOID_PLAYER, // used in THI - Huge. The Coin Tags spawn with a X offset 500._f  away on either side, the Mushroom itself spawns with a Y offset of 50._f
+		BH_HIDDEN_TAG_AVOID_PLAYER,
+		BH_WAIT_FOR_TAGS_CHASE_PLAYER,
+		BH_HIDDEN_TAG_CHASE_PLAYER,
+		BH_JUMP_THEN_SPIN_AROUND_WALK,
+		BH_COIN_TAG_AVOID_PLAYER,
+		BH_COIN_TAG_CHASE_PLAYER,
+		BH_BOUNCE, // static unless in the air or on a slope
+
+		NUM_BEHAVIORS
+	};
+
 	MovingCylinderClsn cylClsn;
 	WithMeshClsn wmClsn;
 	Model model;
 	ShadowModel shadowModel;
 	Vector3 originalPos;
-    u32 behaviorType;
+    Behaviors behaviorType;
     u32 behaviorState;
     u16 disappearTimer;
     bool isVisible;
@@ -52,7 +72,7 @@ struct Mushroom : Enemy // internal name: da1up_c
 	void Bh_JumpThenSpinAroundWalk();
 	void Bh_CoinTagAvoidPlayer();
 	void Bh_CoinTagChasePlayer();
-	void Bh_WalkPermanent();
+	void Bh_Bounce();
 };
 
 struct OneUpMushroom : Mushroom
@@ -78,3 +98,6 @@ struct SuperMushroom : Mushroom
 static_assert(sizeof(Mushroom) == 0x398, "sizeof(Mushroom) is incorrect!");
 static_assert(sizeof(OneUpMushroom) == 0x398, "sizeof(OneUpMushroom) is incorrect!");
 static_assert(sizeof(SuperMushroom) == 0x398, "sizeof(SuperMushroom) is incorrect!");
+
+extern bool MUSHROOM_CYL_CLSN_ENABLED_ON_INIT[NUM_BEHAVIORS];
+extern bool MUSHROOM_NO_BEHAVIOR_IF_OFF_SCREEN[NUM_BEHAVIORS];
