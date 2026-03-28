@@ -1559,7 +1559,22 @@ _ZN6Number16CleanupResourcesEv                                                  
 _ZN6Number8BehaviorEv                                                             = 0x020f0a60;
 _ZN6Number6RenderEv                                                               = 0x020f0994;
 
-_ZN6Number15InitFromSpawnerEP5Actor                                               = 0x020f0918;
+_ZN6Number11LinkToActorEP5Actor                                                   = 0x020f0918;
+
+/* Actors/OneUpLogo.h */
+
+_ZTVOneUpLogo                                                                     = 0x0210b1a4;
+_ZN9OneUpLogo9spawnDataE                                                          = 0x0210b188;
+_ZN9OneUpLogoC3Ev                                                                 = 0x020f1170;
+_ZN9OneUpLogoD0Ev                                                                 = 0x020f0e08;
+_ZN9OneUpLogoD1Ev                                                                 = 0x020f0dd0;
+_ZN9OneUpLogoD2Ev                                                                 = 0x020f0dd0;
+_ZN9OneUpLogo13InitResourcesEv                                                    = 0x020f107c;
+_ZN9OneUpLogo16CleanupResourcesEv                                                 = 0x020f0e78;
+_ZN9OneUpLogo8BehaviorEv                                                          = 0x020f0f08;
+_ZN9OneUpLogo6RenderEv                                                            = 0x020f0ea8;
+
+_ZN9OneUpLogo11LinkToActorEP5Actor                                                = 0x020f0e54;
 
 /* Actors/Player.h */
 _ZN6Player9ANIM_PTRSE                                                             = 0x020ff480;

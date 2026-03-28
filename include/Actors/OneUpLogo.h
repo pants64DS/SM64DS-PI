@@ -1,8 +1,8 @@
 #pragma once
 
-struct Number : Actor // internal name: daObjNumber_c
+struct OneUpLogo : Actor // internal name: daObjOneUpLogo_c
 {
-	static constexpr u16 staticActorID = 0x14a;
+	static constexpr u16 staticActorID = 0x14b;
 
 	Model model;
 	TextureSequence textureSequence;
@@ -14,14 +14,14 @@ struct Number : Actor // internal name: daObjNumber_c
 	u8 padding;
 
 	static SpawnInfo spawnData;
-	
+    
 	virtual s32 InitResources() override;
 	virtual s32 CleanupResources() override;
 	virtual s32 Behavior() override;
 	virtual s32 Render() override;
-	virtual ~Number() override;
+	virtual ~OneUpLogo() override;
 
 	void LinkToActor(Actor* actor);
 };
 
-static_assert(sizeof(Number) == 0x150, "sizeof(Number) is incorrect!");
+static_assert(sizeof(OneUpLogo) == 0x150, "sizeof(OneUpLogo) is incorrect!");

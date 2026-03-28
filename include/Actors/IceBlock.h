@@ -12,7 +12,8 @@ struct IceBlock : Platform // internal name: dObjIceBlock_c
     u32 waterDropletsParticleID;
     PowerStar* containedStar;
 
-    IceBlock();
+    static SpawnInfo spawnData;
+
 	virtual s32 InitResources() override;
 	virtual s32 CleanupResources() override;
 	virtual s32 Behavior() override;

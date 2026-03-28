@@ -20,6 +20,7 @@ struct Number;
 #include "Actors/Minimap.h"
 #include "Actors/Player.h"
 #include "Actors/Number.h"
+#include "Actors/OneUpLogo.h"
 #include "Actors/StarMarker.h"
 #include "Actors/Door.h"
 #include "Actors/SoundObj.h"

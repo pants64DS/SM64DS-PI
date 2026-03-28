@@ -35,7 +35,6 @@ struct Mushroom : Enemy // internal name: da1up_c
     u32 tagCount;
     u32 sparklesParticleID;
 
-	Mushroom();
 	virtual s32 InitResources() override;
 	virtual s32 CleanupResources() override;
 	virtual s32 Behavior() override;
@@ -80,9 +79,6 @@ struct OneUpMushroom : Mushroom
 	static constexpr u16 staticActorID = 0x114;
 
 	static SpawnInfo spawnData;
-
-	OneUpMushroom();
-	virtual ~OneUpMushroom() override;
 };
 
 struct SuperMushroom : Mushroom
@@ -90,9 +86,6 @@ struct SuperMushroom : Mushroom
 	static constexpr u16 staticActorID = 0x115;
 
 	static SpawnInfo spawnData;
-
-	SuperMushroom();
-	virtual ~SuperMushroom() override;
 };
 
 static_assert(sizeof(Mushroom) == 0x398, "sizeof(Mushroom) is incorrect!");
