@@ -1435,6 +1435,17 @@ _ZN6Camera6SetFOVEs                                                             
 GLOBAL_CLIPPER                                                                    = 0x0209F43C;
 UNK_0208715C                                                                      = 0x0208715C;
 
+/* Actors/EnemySpawner.h */
+_ZTV12EnemySpawner                                                                = 0x0210b340;
+_ZN12EnemySpawner9spawnDataE                                                      = 0x0210b35c;
+_ZN12EnemySpawnerC3Ev                                                             = 0x020f1924;
+_ZN12EnemySpawnerD0Ev                                                             = 0x020f1694;
+_ZN12EnemySpawnerD1Ev                                                             = 0x020f1670;
+_ZN12EnemySpawnerD2Ev                                                             = 0x020f1670;
+_ZN12EnemySpawner13InitResourcesEv                                                = 0x020f1838;
+_ZN12EnemySpawner16CleanupResourcesEv                                             = 0x020f1814;
+_ZN12EnemySpawner8BehaviorEv                                                      = 0x020f16ec;
+
 /* Actors/HUD.h */
 _ZTV3HUD                                                                          = 0x0210c2c0;
 _ZN3HUD9spawnDataE                                                                = 0x0210c210;

@@ -16,6 +16,7 @@ struct Number;
 #include "Actor/Platform.h"
 #include "Actor/PathLift.h"
 #include "Actors/Camera.h"
+#include "Actors/EnemySpawner.h"
 #include "Actors/HUD.h"
 #include "Actors/Minimap.h"
 #include "Actors/Player.h"
