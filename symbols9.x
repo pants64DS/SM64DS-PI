@@ -235,11 +235,15 @@ DOOR_STAR_8_MODEL_PTR                                                           
 DOOR_KEY_HOLE_MODEL_PTR                                                           = 0x0214877c;
 STAR_DOOR_MODEL_PTR                                                               = 0x02148934;
 
+STAR_SWIM_GET_ANIM_PTR                                                            = 0x02110924;
 STAR_SPHERE_MODEL_PTR                                                             = 0x0211092c;
+STAR_OPEN_ANIM_PTR                                                                = 0x02110934;
 STAR_BASE_MODEL_PTR                                                               = 0x0211093c;
+STAR_GET_ANIM_PTR                                                                 = 0x02110944;
 POWER_STAR_MODEL_PTR                                                              = 0x0211094c;
 SILVER_STAR_MODEL_PTR                                                             = 0x02110954;
 TRANSPARENT_STAR_MODEL_PTR                                                        = 0x0211095c;
+STAR_WAIT_ANIM_PTR                                                                = 0x02110964;
 BIG_1UP_NUMBER_MODEL_PTR                                                          = 0x02110aa4;
 
 /* SM64DS_PI.h */
@@ -2138,21 +2142,96 @@ _ZN6Player16St_PoleJump_MainEv                                                  
 _ZN6Player21St_HeadstandJump_InitEv                                               = 0x020e16a4;
 _ZN6Player21St_HeadstandJump_MainEv                                               = 0x020e13c0;
 
-/* Actors/PowerStar.h */
-_ZN9PowerStar16InitBouncingStarEP6Playerbb                                        = 0x020e7218;
-_ZN9PowerStar13AddStarMarkerEv                                                    = 0x020e8ca0;
-
-POWER_STAR_CYL_CLSN_OFFSET                                                        = 0x0210aa0c;
-
 /* Actors/StarMarker.h */
+
 _ZN10StarMarker13InitResourcesEv                                                  = 0x020eb204;
 _ZN10StarMarker16CleanupResourcesEv                                               = 0x020eabcc;
 _ZN10StarMarker8BehaviorEv                                                        = 0x020ead90;
 _ZN10StarMarker7RenderEv                                                          = 0x020eacb8;
 _ZN10StarMarker16OnPendingDestroyEv                                               = 0x020eab8c;
-_ZN10StarMarker27LinkSilverStarAndStarMarkerEP9PowerStar                          = 0x020e71d4;
+_ZN10StarMarker8LinkStarEP4Star                                                   = 0x020e71d4;
 _ZN10StarMarker27SpawnRedCoinStarIfNecessaryEv                                    = 0x020e72d8;
 _ZN10StarMarker17ShatterStarSphereEv                                              = 0x020e7d84;
+
+/* Actors/Star.h */
+
+_ZN9PowerStarC3Ev                                                                 = 0x020ebf30;
+_ZN9PowerStar9spawnDataE                                                          = 0x0210aa40;
+
+_ZN10SilverStarC3Ev                                                               = 0x020ebed4;
+_ZN10SilverStar9spawnDataE                                                        = 0x0210aa5c;
+
+_ZN4Star                                                                          = 0x0210ab34;
+_ZN4StarD0Ev                                                                      = 0x020e6c90;
+_ZN4StarD1Ev                                                                      = 0x020e6c40;
+_ZN4StarD2Ev                                                                      = 0x020e6c40;
+_ZN4Star13InitResourcesEv                                                         = 0x020eb63c;
+_ZN4Star16CleanupResourcesEv                                                      = 0x020eac18;
+_ZN4Star8BehaviorEv                                                               = 0x020eb05c;
+_ZN4Star6RenderEv                                                                 = 0x020eacf4;
+_ZN4Star13OnYoshiTryEatEv                                                         = 0x020e8ee8;
+_ZN4Star13OnTurnIntoEggER6Player                                                  = 0x020e8edc;
+
+_ZN4Star21PlayStarCollectJingleEj                                                 = 0x020e6fbc;
+_ZN4Star20DeactivateSwitchStarEv                                                  = 0x020e6d88;
+_ZN4Star23InitializeWhiteDoorStarEv                                               = 0x020e6df8;
+_ZN4Star30InitializeStarDoorCutsceneStarEv                                        = 0x020e6edc;
+_ZN4Star17SearchForIceBlockEv                                                     = 0x020e700c;
+_ZN4Star26UpdateWhiteDoorStarCollectER6Player                                     = 0x020e7090;
+_ZN4Star16UpdateSwitchStarEb                                                      = 0x020e7104;
+_ZN4Star17HandleDroppedStarER6Playerbb                                            = 0x020e7218;
+_ZN4Star23GetCollectNoControlTypeEv                                               = 0x020e73ac;
+_ZN4Star19RespawnAtStarMarkerEv                                                   = 0x020e7454;
+_ZN4Star27LinkDroppedStarToStarMarkerEv                                           = 0x020e7554;
+_ZN4Star17UpdateSpawnCameraEv                                                     = 0x020e763c;
+_ZN4Star20SetSpawnCameraLookatER6Camera                                           = 0x020e7934;
+_ZN4Star13SetStarCameraER6Camera                                                  = 0x020e7c90;
+_ZN4Star9SetFloorYEv                                                              = 0x020e7d08;
+_ZN4Star20SetAppearJingleTimerEv                                                  = 0x020e7e14;
+_ZN4Star16PlayAppearJingleEv                                                      = 0x020e7e24;
+_ZN4Star23KillSoundObjIfNecessaryEv                                               = 0x020e7e58;
+_ZN4Star12Unk_020e7eb4Ev                                                          = 0x020e7eb4;
+_ZN4Star25UpdateSilverStarParticlesEv                                             = 0x020e7eb8;
+_ZN4Star23UpdateBouncingParticlesEv                                               = 0x020e7f2c;
+_ZN4Star29UpdateStarDoorUnlockParticlesEv                                         = 0x020e7fcc;
+_ZN4Star22UpdateCollectParticlesEv                                                = 0x020e8098;
+_ZN4Star20UpdateSpawnParticlesEv                                                  = 0x020e81e0;
+_ZN4Star14GetRootBonePosER7Vector3RS_                                             = 0x020e8244;
+_ZN4Star10DropShadowEv                                                            = 0x020e8398;
+_ZN4Star20UpdateModelTransformEv                                                  = 0x020e84ec;
+_ZN4Star18KillIfFinishedAnimEv                                                    = 0x020e8618;
+_ZN4Star12UpdateBounceEv                                                          = 0x020e88a8;
+_ZN4Star16UpdateWaterStateEv                                                      = 0x020e86ec;
+_ZN4Star7RespawnEv                                                                = 0x020e8abc;
+_ZN4Star16CheckOutOfBoundsEv                                                      = 0x020e8c34;
+_ZN4Star13AddStarMarkerEv                                                         = 0x020e8ca0;
+_ZN4Star16TryAddStarMarkerEv                                                      = 0x020e8dd8;
+_ZN4Star17UpdateTurnIntoEggER6Player                                              = 0x020e8e80;
+_ZN4Star7CollectER6Player                                                         = 0x020e8ef0;
+_ZN4Star10HandleClsnEv                                                            = 0x020e930c;
+_ZN4Star15SetMoveDefaultsEv                                                       = 0x020e9448;
+_ZN4Star10StopMovingEv                                                            = 0x020e9464;
+_ZN4Star10LaunchHomeER7Vector35Fix12IiE                                           = 0x020e947c;
+_ZN4Star14LinkStarMarkerEv                                                        = 0x020e9590;
+_ZN4Star17CheckStayInCourseEv                                                     = 0x020e9630;
+_ZN4Star21GetStarCollectMusicIDEv                                                 = 0x020ea3a4;
+
+_ZN4Star17SpawnLaunchOrJumpEv                                                     = 0x020ea9d0;
+_ZN4Star18St_LaunchAfterJumpEv                                                    = 0x020ea90c;
+_ZN4Star9St_LaunchEv                                                              = 0x020ea824;
+_ZN4Star13St_LandAtHomeEv                                                         = 0x020ea7ac;
+_ZN4Star7St_WaitEv                                                                = 0x020ea420;
+_ZN4Star26St_AboveHeadThenCollectingEv                                            = 0x020ea100;
+_ZN4Star18St_CollectingStartEv                                                    = 0x020ea06c;
+_ZN4Star13St_CollectingEv                                                         = 0x020e9d18;
+_ZN4Star9St_BounceEv                                                              = 0x020e99e8;
+_ZN4Star13St_VsStarWaitEv                                                         = 0x020e9840;
+_ZN4Star16St_JustCollectedEv                                                      = 0x020ea410;
+_ZN4Star7St_TalkEv                                                                = 0x020e9af4;
+_ZN4Star19St_StarDoorCutsceneEv                                                   = 0x020e9804;
+_ZN4Star30St_CollectingSilverStarOnShellEv                                        = 0x020e96a0;
+
+STAR_CYL_CLSN_OFFSET                                                              = 0x0210aa0c;
 
 /* Actors/Bowser.h */
 _ZN6Bowser18CheckSpikeBombClsnEv                                                  = 0x02113d20;

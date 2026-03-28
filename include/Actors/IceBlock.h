@@ -10,7 +10,7 @@ struct IceBlock : Platform // internal name: dObjIceBlock_c
     Fix12i meltScale;
     u32 steamParticleID;
     u32 waterDropletsParticleID;
-    PowerStar* containedStar;
+    Star* containedStar;
 
     static SpawnInfo spawnData;
 

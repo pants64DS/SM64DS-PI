@@ -1,6 +1,6 @@
 #pragma once
 
-struct StarMarker : Actor
+struct StarMarker : Actor // internal name: daStarBase_c
 {
 	static constexpr u16 staticActorID = 0xb4;
 
@@ -14,7 +14,7 @@ struct StarMarker : Actor
 		TYPE_STAR_SPHERE_STAR_INSIDE   = 5,
 		TYPE_STAR_SPHERE_SWITCH_STAR   = 6,
 
-		NUM_TYPES = 6,
+		NUM_TYPES,
 	};
 
 	enum ModelTypes : u8
@@ -50,7 +50,7 @@ struct StarMarker : Actor
 	u8 silverStarState; // 0x1da
 	u8 flags2; // 0x1db
 
-	void LinkSilverStarAndStarMarker(PowerStar* silverStar);
+	void LinkStar(Star* star);
 	void SpawnRedCoinStarIfNecessary();
 	void ShatterStarSphere();
 };
