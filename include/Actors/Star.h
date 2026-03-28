@@ -24,7 +24,7 @@ struct Star : Enemy // internal name: daStar_c
 
 	using State = void(Star::*)();
 
-	enum Types : u8
+	enum Types
 	{
 		TYPE_STATIONARY    	  = 0,
 		TYPE_BOUNCING 	   	  = 1,
