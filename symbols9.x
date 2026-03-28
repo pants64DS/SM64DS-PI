@@ -1306,6 +1306,7 @@ _ZN5Actor10FindWithIDEj                                                         
 /* Actor/Enemy.h */
 _ZN5EnemyC2Ev                                                                     = 0x020aed98;
 _ZN5EnemyD0Ev                                                                     = 0x020aed3c;
+_ZN5EnemyD1Ev                                                                     = 0x020aed18;
 _ZN5EnemyD2Ev                                                                     = 0x020aed74;
 _ZN5Enemy26UpdateKillByInvincibleCharER12WithMeshClsnR5Modelj                     = 0x020ad660;
 _ZN5Enemy26UpdateKillByInvincibleCharER12WithMeshClsnR9ModelAnimj                 = 0x020ad838;

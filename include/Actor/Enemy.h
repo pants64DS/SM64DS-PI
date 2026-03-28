@@ -1,6 +1,6 @@
 #pragma once
 
-struct Enemy : Actor
+struct Enemy : Actor // internal name: dEnemyBase_c
 {
 	enum CoinType
 	{
