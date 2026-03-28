@@ -1546,6 +1546,21 @@ _ZN8Mushroom8Bh_BounceEv                                                        
 MUSHROOM_CYL_CLSN_ENABLED_ON_INIT                                                 = 0x020ff040;
 MUSHROOM_NO_BEHAVIOR_IF_OFF_SCREEN                                                = 0x020ff050;
 
+/* Actors/Number.h */
+
+_ZN6Number                                                                        = 0x0210b0e4;
+_ZN6Number9spawnDataE                                                             = 0x0210b0c8;
+_ZN6NumberC3Ev                                                                    = 0x020f0d90;
+_ZN6NumberD0Ev                                                                    = 0x020aee88;
+_ZN6NumberD1Ev                                                                    = 0x020f0894;
+_ZN6NumberD2Ev                                                                    = 0x020f0894;
+_ZN6Number13InitResourcesEv                                                       = 0x020f0bd4;
+_ZN6Number16CleanupResourcesEv                                                    = 0x020f093c;
+_ZN6Number8BehaviorEv                                                             = 0x020f0a60;
+_ZN6Number6RenderEv                                                               = 0x020f0994;
+
+_ZN6Number15InitFromSpawnerEP5Actor                                               = 0x020f0918;
+
 /* Actors/Player.h */
 _ZN6Player9ANIM_PTRSE                                                             = 0x020ff480;
 _ZN6Player13ST_LEDGE_HANGE                                                        = 0x0210ffec;
