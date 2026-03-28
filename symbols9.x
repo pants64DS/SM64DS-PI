@@ -1502,7 +1502,7 @@ _ZN13OneUpMushroom9spawnDataE                                                   
 _ZN13SuperMushroomC3Ev                                                            = 0x020b0530;
 _ZN13SuperMushroom9spawnDataE                                                     = 0x021083a4;
 
-_ZN8Mushroom                                                                      = 0x021083c0;
+_ZTV8Mushroom                                                                     = 0x021083c0;
 _ZN8MushroomD0Ev                                                                  = 0x020aee88;
 _ZN8MushroomD1Ev                                                                  = 0x020aee40;
 _ZN8MushroomD2Ev                                                                  = 0x020aee40;
@@ -1541,14 +1541,14 @@ _ZN8Mushroom23Bh_HiddenTagChasePlayerEv                                         
 _ZN8Mushroom25Bh_JumpThenSpinAroundWalkEv                                         = 0x020af7cc;
 _ZN8Mushroom21Bh_CoinTagAvoidPlayerEv                                             = 0x020afa50;
 _ZN8Mushroom21Bh_CoinTagChasePlayerEv                                             = 0x020af908;
-_ZN8Mushroom8Bh_BounceEv                                                          = 0x020af724;
+_ZN8Mushroom9Bh_BounceEv                                                          = 0x020af724;
 
 MUSHROOM_CYL_CLSN_ENABLED_ON_INIT                                                 = 0x020ff040;
 MUSHROOM_NO_BEHAVIOR_IF_OFF_SCREEN                                                = 0x020ff050;
 
 /* Actors/Number.h */
 
-_ZN6Number                                                                        = 0x0210b0e4;
+_ZTVNumber                                                                        = 0x0210b0e4;
 _ZN6Number9spawnDataE                                                             = 0x0210b0c8;
 _ZN6NumberC3Ev                                                                    = 0x020f0d90;
 _ZN6NumberD0Ev                                                                    = 0x020aee88;
