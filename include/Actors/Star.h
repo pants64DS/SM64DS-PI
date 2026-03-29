@@ -2,7 +2,7 @@
 
 struct Star : Enemy // internal name: daStar_c
 {
-	enum States
+	enum States : u32
 	{ 
 		ST_SPAWN_LAUNCH_OR_JUMP,
 		ST_LAUNCH_AFTER_JUMP,
@@ -24,7 +24,7 @@ struct Star : Enemy // internal name: daStar_c
 
 	using State = void(Star::*)();
 
-	enum Types
+	enum Types : u32
 	{
 		TYPE_STATIONARY    	  = 0,
 		TYPE_BOUNCING 	   	  = 1,
