@@ -353,44 +353,6 @@ HEALTH_ARR                                                                      
 NUM_LIVES                                                                         = 0x0209f2f4;
 RENDERED_HEALTH                                                                   = 0x0211117c;
 
-STUCK_IN_GROUND_LEAVE_FRAMES                                                      = 0x020ff0ec;
-DIVE_VOICES                                                                       = 0x020ff100;
-SLIDE_KICK_VOICES                                                                 = 0x020ff130;
-JUMP_SPEED_CHAR_MULTIPLIERS                                                       = 0x020ff140;
-SWIM_SPEED_CHAR_MULTIPLIERS                                                       = 0x020ff158;
-ON_WALL_ANIMS                                                                     = 0x020ff164;
-HORZ_SPEED_CHAR_MULTIPLIERS                                                       = 0x020ff170;
-CRAZED_CRATE_VERT_SPEEDS                                                          = 0x020ff17c;
-CRAZED_CRATE_HORZ_SPEEDS                                                          = 0x020ff188;
-PUNCH_KICK_SEQUENCE_VOICES                                                        = 0x020ff194;
-STAR_COLLECTION_MESSAGES                                                          = 0x020ff1a0;
-DASH_VOICES                                                                       = 0x020ff1b0;
-CARRY_LIGHT_HORZ_SPEEDS                                                           = 0x020ff1c0;
-CARRY_HEAVY_HORZ_SPEEDS                                                           = 0x020ff1d0;
-WATER_RISE_SINK_SPEED_CHAR_MULTIPLIERS                                            = 0x020ff1e0;
-PLAYER_SCALE_STEPS                                                                = 0x020ff230;
-HOLD_HEAVY_ANIMS                                                                  = 0x020ff254;
-PLAYER_KNOCKBACK_SPEEDS                                                           = 0x020ff29c;
-PLAYER_SCALE_VALUES                                                               = 0x020ff2c0;
-PUNCH_KICK_SEQUENCE_DELAYS                                                        = 0x02109dbc;
-HURT_START_GET_UP_FRAMES                                                          = 0x02109dc4;
-FALL_DURING_HURT_START_FRAMES                                                     = 0x02109dcc;
-HURT_WATER_ANIMS                                                                  = 0x02109fe4;
-STUCK_IN_GROUND_INIT_ANIMS                                                        = 0x0210a560;
-STUCK_IN_GROUND_WAIT_ANIMS                                                        = 0x0210a578;
-STUCK_IN_GROUND_END_ANIMS                                                         = 0x0210a584;
-ENDLESS_STAIRS_WARP_OFFSET                                                        = 0x0210a590;
-JUMP_SEQUENCE_SPEEDS                                                              = 0x0210a59c;
-JUMP_SEQUENCE_ANIMS                                                               = 0x0210a5a8;
-JUMP_LAND_ANIMS                                                                   = 0x0210a5b4;
-PUNCH_KICK_SEQUENCE_ANIMS                                                         = 0x0210a5c0;
-PUNCH_KICK_HITBOX_FRAMES                                                          = 0x0210a5cc;
-PUNCH_KICK_ACTIVE_FRAMES                                                          = 0x0210a5dc;
-CEILING_GRATE_ANIMS                                                               = 0x0210a60c;
-HURT_ANIMS                                                                        = 0x0210a6d4;
-FALL_DURING_HURT_ANIMS                                                            = 0x0210a6ec;
-PLAYER_CYLCLSN_OFFSET                                                             = 0x0210f92c;
-
 NEXT_HAT_CHARACTER                                                                = 0x02092114;
 UNK_YOSHI_EGG_RELATED                                                             = 0x0209f254;
 LAST_ENTRANCE_ID                                                                  = 0x0209f264;
@@ -476,7 +438,6 @@ ROOT_ACTOR_BASE                                                                 
 FIRST_BEHAVIOR_LIST_NODE                                                          = 0x020a4b78;
 FIRST_RENDER_LIST_NODE                                                            = 0x020a4b98;
 
-DAT_0209cef0                                                                      = 0x0209cef0;
 DAT_02092778                                                                      = 0x02092778;
 
 DAT_0209f1d0                                                                      = 0x0209f1d0;
@@ -791,6 +752,7 @@ _ZN15ModelComponents11UpdateBonesEP8BCA_Filei                                   
 _ZN15ModelComponents21UpdateVertsUsingBonesEv                                     = 0x0204504c;
 _ZN15ModelComponents6RenderEP9Matrix4x3P7Vector3                                  = 0x020443c8;
 
+commonModelDataInitialized                                                        = 0x0209cef0;
 numCommonModelData                                                                = 0x0209cef8;
 commonModelDataArr                                                                = 0x0209cefc;
 CleanCommonModelDataArr                                                           = 0x02016df8;
@@ -2153,6 +2115,45 @@ _ZN6Player16St_PoleJump_InitEv                                                  
 _ZN6Player16St_PoleJump_MainEv                                                    = 0x020e1714;
 _ZN6Player21St_HeadstandJump_InitEv                                               = 0x020e16a4;
 _ZN6Player21St_HeadstandJump_MainEv                                               = 0x020e13c0;
+
+STUCK_IN_GROUND_LEAVE_ANIM_FRAME                                                  = 0x020ff0ec;
+DIVE_VOICE_ID                                                                     = 0x020ff100;
+OPEN_DOOR_ANIM_ID                                                                 = 0x020ff118;
+SLIDE_KICK_VOICE_ID                                                               = 0x020ff130;
+JUMP_SPEED_MULTIPLIER                                                             = 0x020ff140;
+SWIM_SPEED_MULTIPLIER                                                             = 0x020ff158;
+ON_WALL_ANIM_ID                                                                   = 0x020ff164;
+HORZ_SPEED_MULTIPLIER                                                             = 0x020ff170;
+CRAZED_CRATE_VERT_SPEED                                                           = 0x020ff17c;
+CRAZED_CRATE_HORZ_SPEED                                                           = 0x020ff188;
+PUNCH_KICK_SEQUENCE_VOICE                                                         = 0x020ff194;
+STAR_COLLECTION_MESSAGES                                                          = 0x020ff1a0;
+DASH_VOICE                                                                        = 0x020ff1b0;
+CARRY_LIGHT_HORZ_SPEED                                                            = 0x020ff1c0;
+CARRY_HEAVY_HORZ_SPEED                                                            = 0x020ff1d0;
+WATER_RISE_SINK_SPEED_MULTIPLIER                                                  = 0x020ff1e0;
+PLAYER_SCALE_STEP                                                                 = 0x020ff230;
+HOLD_HEAVY_ANIM_ID                                                                = 0x020ff254;
+PVP_KNOCKBACK_SPEED                                                               = 0x020ff29c;
+PLAYER_SCALE_VALUES                                                               = 0x020ff2c0;
+PUNCH_KICK_SEQUENCE_DELAY                                                         = 0x02109dbc;
+HURT_START_GET_UP_ANIM_FRAME                                                      = 0x02109dc4;
+FALL_DURING_HURT_ANIM_START_FRAME                                                 = 0x02109dcc;
+SWIM_DAMAGE_ANIM_ID                                                               = 0x02109fe4;
+STUCK_IN_GROUND_INIT_ANIM_ID                                                      = 0x0210a560;
+STUCK_IN_GROUND_WAIT_ANIM_ID                                                      = 0x0210a578;
+STUCK_IN_GROUND_END_ANIM_ID                                                       = 0x0210a584;
+ENDLESS_STAIRS_WARP_OFFSET                                                        = 0x0210a590;
+JUMP_SEQUENCE_SPEED                                                               = 0x0210a59c;
+JUMP_SEQUENCE_ANIM_ID                                                             = 0x0210a5a8;
+JUMP_LAND_ANIM_ID                                                                 = 0x0210a5b4;
+PUNCH_KICK_SEQUENCE_ANIM_ID                                                       = 0x0210a5c0;
+PUNCH_KICK_HITBOX_FRAME                                                           = 0x0210a5cc;
+PUNCH_KICK_ACTIVE_FRAME                                                           = 0x0210a5dc;
+CEILING_GRATE_ANIM_ID                                                             = 0x0210a60c;
+HURT_ANIM_ID                                                                      = 0x0210a6d4;
+FALL_DURING_HURT_ANIM_ID                                                          = 0x0210a6ec;
+PLAYER_CYLCLSN_OFFSET                                                             = 0x0210f92c;
 
 /* Actors/StarMarker.h */
 

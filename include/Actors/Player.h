@@ -4,7 +4,7 @@
 
 extern "C" void ChangeArea(s8 newAreaID);
 
-struct Player : Actor
+struct Player : Actor // internal name:: daPly_c
 {
 	static constexpr u16 staticActorID = 0xbf;
 
@@ -237,56 +237,6 @@ struct Player : Actor
 		NUM_ANIMS,
 	};
 
-	enum TalkStates : s8
-	{
-		TK_NOT         = -1,
-		TK_START       =  0,
-		TK_TALKING     =  1, // +0x6e3 == anything but 3, 5, or 7
-		TK_POST_CHOICE =  2, // +0x6e3 == 3; After selecting a dialog option
-		TK_UNK3        =  3  // +0x6e3 == 5 or 7
-	};
-
-	enum HurtStates
-	{
-		HT_NOT     = -1,
-		HT_START   =  0,
-		HT_TALKING =  1,
-		HT_UNK2    =  2,
-		HT_UNK3    =  3,
-		HT_UNK4    =  4,
-		HT_UNK5    =  5,
-		HT_UNK6    =  6,
-		HT_UNK7    =  7,
-	};
-
-	enum SwimStates : s8
-	{
-		SW_INIT  		  = 0,
-		SW_WAIT 		  = 1,
-		SW_STROKE_START   = 2,
-		SW_STROKE_HOLD    = 3,
-		SW_RECOVER 		  = 4,
-		SW_ATTACK_START   = 5,
-		SW_ATTACK_ACTIVE  = 6,
-		SW_SHELL_GRAB     = 7,
-		SW_SHELL_CARRY    = 8,
-		SW_SHELL_THROW    = 9,
-	};
-
-	enum DeathStates : s8
-	{
-		DH_UNK0   	   =  0,
-		DH_DEATH_PLANE =  1,
-		DH_BURN 	   =  2,
-		DH_QUICKSAND   =  3,
-		DH_ELECTROCUTE =  4,
-		DH_TOXIC_GAS   =  5,
-		DH_WHIRLPOOL   =  6,
-		DH_DROWN   	   =  7,
-		DH_WATER       =  8,
-		DH_UNK9    	   =  9,
-	};
-
 	enum ClimbStates : s8
 	{
 		CL_HOLD_INIT 	  	 = 0,
@@ -306,13 +256,44 @@ struct Player : Actor
 		CR_CRAWL_TO_CROUCH = 5,
 	};
 
-	enum ScaleStates : u8
+	enum DeathStates : s8
 	{
-		SC_JUMPED_ON   =  0,
-		SC_SQUISHED    =  1,
-		SC_MEGA_GROW   =  2,
-		SC_MEGA_SHRINK =  3,
+		DH_UNK0   	   =  0,
+		DH_DEATH_PLANE =  1,
+		DH_BURN 	   =  2,
+		DH_QUICKSAND   =  3,
+		DH_ELECTROCUTE =  4,
+		DH_TOXIC_GAS   =  5,
+		DH_WHIRLPOOL   =  6,
+		DH_DROWN   	   =  7,
+		DH_WATER       =  8,
+		DH_UNK9    	   =  9,
 	};
+
+	enum NoControlStates : u8
+	{
+		NC_REGULAR_STAR_GET    =  0,
+		NC_STAR_GET 		   =  1,
+		NC_VS_SILVER_STAR_GET  =  2,
+		NC_KEY_GET 			   =  3,
+		NC_UNK4 			   =  4,
+		NC_UNK5 			   =  5,
+		NC_EXIT 			   =  6,
+		NC_OPEN_DOOR		   =  7,
+		NC_COLLECT_NEW_CAP	   =  8,
+		NC_ENTER_BBH_CAGE	   =  9,
+		NC_OPEN_STAR_DOOR	   =  10,
+		NC_UNLOCK_KEY_DOOR	   =  11,
+		NC_UNK12	   		   =  12,
+		NC_SUPER_MUSHROOM_GROW =  13,
+		NC_UNLOCK_STAR_DOOR	   =  14,
+		NC_PUT_ON_CAP	   	   =  15,
+		NC_UNLOCK_CHARACTER	   =  16,
+		NC_WHITE_DOOR_STAR_GET =  17,
+		NC_UNK18	  		   =  18,
+		NC_UNK19	  		   =  19, // might be more
+	};
+
 
 	enum OnWallStates : s8
 	{
@@ -321,11 +302,42 @@ struct Player : Actor
 		OW_PUSH  = 2,
 	};
 
+	enum ScaleStates : u8
+	{
+		SC_JUMPED_ON   =  0,
+		SC_SQUISHED    =  1,
+		SC_MEGA_GROW   =  2,
+		SC_MEGA_SHRINK =  3,
+	};
+
 	enum StuckInGroundStates : u8
 	{
 		SG_INIT = 0,
 		SG_MAIN = 1,
 		SG_END  = 2,
+	};
+
+	enum SwimStates : s8
+	{
+		SW_INIT  		  = 0,
+		SW_WAIT 		  = 1,
+		SW_STROKE_START   = 2,
+		SW_STROKE_HOLD    = 3,
+		SW_RECOVER 		  = 4,
+		SW_ATTACK_START   = 5,
+		SW_ATTACK_ACTIVE  = 6,
+		SW_SHELL_GRAB     = 7,
+		SW_SHELL_CARRY    = 8,
+		SW_SHELL_THROW    = 9,
+	};
+
+	enum TalkStates : s8
+	{
+		TK_NOT         = -1,
+		TK_START       =  0,
+		TK_TALKING     =  1, // +0x6e3 == anything but 3, 5, or 7
+		TK_POST_CHOICE =  2, // +0x6e3 == 3; After selecting a dialog option
+		TK_UNK3        =  3  // +0x6e3 == 5 or 7
 	};
 
 	enum ClsnStateFlags
@@ -1183,3 +1195,43 @@ struct Player : Actor
 static_assert(sizeof(Player) == 0x768, "sizeof(Player) is incorrect!");
 static_assert(Player::NUM_ANIMS == 194, "Player::NUM_ANIMS is incorrect!");
 static_assert(Player::NUM_CHARACTERS == 4, "Player::NUM_CHARACTERS is incorrect!");
+
+extern u8 CHAR_SEQ_ID_OFFSET[Player::NUM_CHARACTERS + 1]; // 5 is for Metal Wario
+extern u8 STUCK_IN_GROUND_LEAVE_ANIM_FRAME[3];
+extern u32 DIVE_VOICE_ID[2];
+extern u32 OPEN_DOOR_ANIM_ID[2];
+extern u32 SLIDE_KICK_VOICE_ID[2];
+extern Fix12s JUMP_SPEED_MULTIPLIER[Player::NUM_CHARACTERS];
+extern Fix12s SWIM_SPEED_MULTIPLIER[Player::NUM_CHARACTERS];
+extern u32 ON_WALL_ANIM_ID[3];
+extern Fix12s HORZ_SPEED_MULTIPLIER[Player::NUM_CHARACTERS];
+extern Fix12i CRAZED_CRATE_VERT_SPEED[3];
+extern Fix12i CRAZED_CRATE_HORZ_SPEED[3];
+extern u32 DASH_VOICE_ID[4];
+extern u16 STAR_COLLECTION_MESSAGES[7]; // 1 star, 3 stars, 8 stars, 12 stars, 30 stars, 50 stars, and 80 stars collected
+extern Fix12i CARRY_LIGHT_HORZ_SPEED[Player::NUM_CHARACTERS];
+extern Fix12i CARRY_HEAVY_HORZ_SPEED[Player::NUM_CHARACTERS];
+extern Fix12i WATER_RISE_SINK_SPEED_MULTIPLIER[Player::NUM_CHARACTERS];
+extern u32 PUNCH_KICK_SEQUENCE_VOICE_ID[3];
+extern Fix12i PLAYER_SCALE_STEP[4];
+extern u32 HOLD_HEAVY_ANIM_ID[6];
+extern Fix12s PVP_KNOCKBACK_SPEED[Player::NUM_CHARACTERS * 4 + 1];
+extern Fix12i PLAYER_SCALE_VALUES[12];
+extern u16 PUNCH_KICK_SEQUENCE_DELAY[3];
+extern u8 HURT_START_GET_UP_ANIM_FRAME[6];
+extern u8 FALL_DURING_HURT_ANIM_START_FRAME[2];
+extern u32 SWIM_DAMAGE_ANIM_ID[2];
+extern u32 STUCK_IN_GROUND_INIT_ANIM_ID[3];
+extern u32 STUCK_IN_GROUND_WAIT_ANIM_ID[3];
+extern u32 STUCK_IN_GROUND_END_ANIM_ID[3];
+extern Vector3 ENDLESS_STAIRS_WARP_OFFSET;
+extern Fix12i JUMP_SEQUENCE_SPEED[3];
+extern u32 JUMP_SEQUENCE_ANIM_ID[3];
+extern u32 JUMP_LAND_ANIM_ID[3];
+extern u32 PUNCH_KICK_SEQUENCE_ANIM_ID[3];
+extern u16 PUNCH_KICK_HITBOX_FRAME[8];
+extern u16 PUNCH_KICK_ACTIVE_FRAME[6];
+extern u32 CEILING_GRATE_ANIM_ID[4];
+extern u32 HURT_ANIM_ID[6];
+extern u32 FALL_DURING_HURT_ANIM_ID[2];
+extern Vector3 PLAYER_CYLCLSN_OFFSET;
