@@ -254,7 +254,7 @@ extern s8 LEVEL_OF_LAST_COLLECTED_STAR;
 extern s8 STAR_ID;
 extern s8 NEXT_STAR_ID;
 extern s8 CHECKPOINT_STAR_ID;
-extern bool NEW_STAR_COLLECTED;
+extern volatile bool NEW_STAR_COLLECTED;
 extern s8 CUR_MINIMAP_ID;
 extern u8 STAR_OBTAINED;
 extern u8 STAR_OBTAINED_COPY;
