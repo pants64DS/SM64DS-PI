@@ -413,7 +413,6 @@ extern ActorBase* ROOT_ACTOR_BASE;
 extern ActorBase::ProcessingListNode* FIRST_BEHAVIOR_LIST_NODE;
 extern ActorBase::ProcessingListNode* FIRST_RENDER_LIST_NODE;
 
-extern bool DAT_0209cef0; // set to false in CleanCommonModelDataArr, set to true in Stage::InitResources
 extern bool DAT_02092778; // no stars besides the first one spawn in VS mode if this is false before starting
 
 // used in DebugLevelSelect

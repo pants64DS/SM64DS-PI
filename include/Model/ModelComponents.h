@@ -123,6 +123,7 @@ struct CommonModelData
 
 extern "C"
 {
+	extern bool commonModelDataInitialized; // set to false in CleanCommonModelDataArr, set to true in Stage::InitResources
 	extern u32 numCommonModelData;
 	extern CommonModelData commonModelDataArr[];
 
