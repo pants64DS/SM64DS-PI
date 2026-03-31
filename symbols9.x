@@ -1308,7 +1308,7 @@ _ZN7CapIcon9UpdateAllEv                                                         
 _ZN8CapEnemyC2Ev                                                                  = 0x02006554;
 _ZN8CapEnemyD0Ev                                                                  = 0x020aedf4;
 _ZN8CapEnemyD2Ev                                                                  = 0x0200651c;
-_ZN8CapEnemy12Unk_02005d94Ev                                                      = 0x02005d94;
+_ZN8CapEnemy18HideCapIfNotNeededEv                                                = 0x02005d94;
 _ZN8CapEnemy18IsCapSameAsCPlayerEv                                                = 0x02005e28;
 _ZN8CapEnemy21DestroyIfCapNotNeededEv                                             = 0x02005f0c;
 _ZN8CapEnemy11GetCapStateEv                                                       = 0x02005fa0;

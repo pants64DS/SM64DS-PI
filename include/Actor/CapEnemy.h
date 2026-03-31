@@ -29,7 +29,7 @@ struct CapEnemy : Enemy
 	CapEnemy();
 	virtual ~CapEnemy() override;
 	
-	void Unk_02005d94();
+	void HideCapIfNotNeeded();
 	bool IsCapSameAsCPlayer();
 	bool DestroyIfCapNotNeeded(); //returns true if the cap is needed (player is different character than cap or 0x0209f2d8 has a 0)
 	s32 GetCapState(); //returns 2 if obj+0x111 = 0, else 0 if dead or capID == player character, else 1
