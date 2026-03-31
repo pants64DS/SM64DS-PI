@@ -1921,7 +1921,7 @@ _ZN6Player25CheckKickOrSweepKickActorER12WithMeshClsnR5Actor                    
 _ZN6Player15CheckPunchActorER12WithMeshClsnR5Actor                                = 0x020ef070;
 _ZN6Player18CheckOnWallOnActorER12WithMeshClsnR5Actor                             = 0x020ef228;
 _ZN6Player23CheckGroundPoundOnActorER12WithMeshClsnR5Actor                        = 0x020ef2a4;
-_ZN6Player12Unk_020f030cEj                                                        = 0x020f030c;
+_ZN6Player24GetTractionIDDecelFactorEj                                            = 0x020f030c;
 _ZN6Player14OnSlopedGroundEj5Fix12IiE                                             = 0x020f035c;
 _ZN6Player18CleanupAllPowerupsEv                                                  = 0x020bda48;
 _ZN6Player20CleanupSuperMushroomEv                                                = 0x020bdd2c;

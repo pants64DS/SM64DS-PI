@@ -954,8 +954,8 @@ struct Player : Actor // internal name:: daPly_c
 	static bool CheckPunchActor(WithMeshClsn& wmClsn, Actor& puncher);
 	static bool CheckGroundPoundOnActor(WithMeshClsn& wmClsn, Actor& groundPounder);
 	static bool CheckOnWallOnActor(WithMeshClsn& wmClsn, Actor& actor);
-	Fix12i Unk_020f030c(u32 floorTraction);
-	static bool OnSlopedGround(u32 floorTraction, Fix12i floorNormalY);
+	static Fix12i GetTractionIDDecelFactor(u32 tractionID);
+	static bool OnSlopedGround(u32 tractionID, Fix12i floorNormalY);
 
 	u16 GetBreakFreeBonus();
 	
