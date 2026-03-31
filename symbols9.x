@@ -2430,7 +2430,7 @@ _ZN5Sound8EndMusicEjj                                                           
 _ZN5Sound10PauseMusicEv                                                           = 0x02012f90;
 _ZN5Sound12UnpauseMusicEv                                                         = 0x02012ee4;
 _ZN5Sound17ChangeMusicVolumeEj5Fix12IiE                                           = 0x02012d2c;
-_ZN5Sound12Unk_02012d2cEj5Fix12IiE                                                = 0x02048a18;
+_ZN5Sound12Unk_02048a18Ej5Fix12IiE                                                = 0x02048a18;
 _ZN5Sound13Func_02048eb4Ev                                                        = 0x02048eb4;
 _ZN5Sound13Func_02048ec4Ev                                                        = 0x02048ec4;
 _ZN5Sound13Func_02048ee4Ev                                                        = 0x02048ee4;

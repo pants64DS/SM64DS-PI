@@ -257,7 +257,7 @@ namespace Sound
 
 	bool ChangeMusicVolume(u32 newVolume, Fix12i changeSpeed);
 
-	void Unk_02012d2c(u32 soundID, Fix12i arg1); // Does nothing but return
+	void Unk_02048a18(u32 soundID, Fix12i arg1); // Does nothing but return
 	void Func_02048eb4();
 	void Func_02048ec4();
 	void Func_02048ee4();
