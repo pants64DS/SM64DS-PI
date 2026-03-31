@@ -18,7 +18,7 @@ struct Enemy : Actor // internal name: dEnemyBase_c
 		DF_KICKED     = 3,
 		DF_BURNED     = 4,
 		DF_DIVED      = 5,
-		DF_UNK_6      = 6,
+		DF_EXPLODED   = 6,
 		DF_HIT_REGURG = 7,
 		DF_GIANT_CHAR = 8 //this is definitely the end of the list.
 	};
