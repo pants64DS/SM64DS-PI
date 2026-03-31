@@ -1040,6 +1040,7 @@ _ZN11RaycastLine4Line3SetERK7Vector3S3_                                         
 _ZN10SphereClsnC1Ev                                                               = 0x02037d18;
 _ZN10SphereClsnD1Ev                                                               = 0x02037cb0;
 _ZN10SphereClsn15SetObjAndSphereERK7Vector35Fix12IiEP5Actor                       = 0x02037c00;
+_ZN10SphereClsn11SetDefaultsEv                                                    = 0x02037b5c;
 _ZN10SphereClsn10DetectClsnEv                                                     = 0x02038b78;
 _ZN10SphereClsn14SetFloorResultERK10ClsnResult                                    = 0x020378e4;
 _ZN10SphereClsn14GetFloorResultEv                                                 = 0x02037938;
@@ -1061,7 +1062,7 @@ _ZN12WithMeshClsn19ClearAllGroundFlagsEv                                        
 _ZN12WithMeshClsn19StartDetectingWaterEv                                          = 0x02035840;
 _ZN12WithMeshClsn18StopDetectingWaterEv                                           = 0x02035820;
 _ZN12WithMeshClsn21SetActorPosAndPrevPosER7Vector3                                = 0x02035860;
-_ZN12WithMeshClsn12Unk_0203589cEv                                                 = 0x0203589c;
+_ZN12WithMeshClsn21SetSphereClsnDefaultsEv                                        = 0x0203589c;
 _ZNK12WithMeshClsn12TouchesWaterEv                                                = 0x02035610;
 _ZNK12WithMeshClsn14GetResultFlag1Ev                                              = 0x02035620;
 _ZNK12WithMeshClsn14GetFloorResultEv                                              = 0x0203566c;

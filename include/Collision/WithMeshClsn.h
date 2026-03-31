@@ -131,6 +131,7 @@ struct SphereClsn : BgCh
 	~SphereClsn();
 
 	void SetObjAndSphere(const Vector3& pos, Fix12i radius, Actor* obj);
+	void SetDefaults();
 	s32 DetectClsn(); // returns MeshColliderBase::SphereResultFlags
 	ClsnResult& SetFloorResult(const ClsnResult& result);
 	ClsnResult& GetFloorResult();
@@ -194,7 +195,7 @@ struct WithMeshClsn
 	void StartDetectingWater();
 	void StopDetectingWater();
 	void SetActorPosAndPrevPos(Vector3& newPos);
-	void Unk_0203589c();
+	void SetSphereClsnDefaults();
 	s32  TouchesWater() const;
 	s32 GetResultFlag1() const;
 	ClsnResult& GetFloorResult() const;
