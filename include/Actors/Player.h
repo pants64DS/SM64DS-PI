@@ -778,6 +778,7 @@ struct Player : Actor // internal name:: daPly_c
 	void SpinBounce(Fix12i bounceInitVel);
 	void HandleYoshiFlutterJump();
 	void HandleLuigiFlutterJump();
+	bool IsSpinning();
 	void HandleVariableJumpHeight();
 	bool ChangeState(Player::State& state);
 	bool JumpIntoBooCage(Vector3& cagePos);

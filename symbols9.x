@@ -1731,6 +1731,7 @@ _ZN6Player26DropSilverOrVSStarIfHasAnyEv                                        
 _ZN6Player10SpinBounceE5Fix12IiE                                                  = 0x020e1020;
 _ZN6Player22HandleYoshiFlutterJumpEv                                              = 0x020e1c20;
 _ZN6Player22HandleLuigiFlutterJumpEv                                              = 0x020e1e70;
+_ZN6Player10IsSpinningEv                                                          = 0x020e10a8;
 _ZN6Player24HandleVariableJumpHeightEv                                            = 0x020e200c;
 _ZN6Player11ChangeStateERNS_5StateE                                               = 0x020e30a0;
 _ZN6Player15JumpIntoBooCageER7Vector3                                             = 0x020ca2ac;
