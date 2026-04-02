@@ -1274,7 +1274,7 @@ _ZN5EnemyD2Ev                                                                   
 _ZN5Enemy26UpdateKillByInvincibleCharER12WithMeshClsnR5Modelj                     = 0x020ad660;
 _ZN5Enemy26UpdateKillByInvincibleCharER12WithMeshClsnR9ModelAnimj                 = 0x020ad838;
 _ZN5Enemy20KillByInvincibleCharERK10Vector3_16R6Player                            = 0x020ada40;
-_ZN5Enemy22SpawnMegaCharParticlesER5ActorPc                                       = 0x020adb40;
+_ZN5Enemy22SpawnMegaCharParticlesER5ActorP12CylinderClsn                          = 0x020adb40;
 _ZN5Enemy27SpawnParticlesIfHitOtherObjER12CylinderClsn                            = 0x020addc0;
 _ZN5Enemy14UpdateYoshiEatER12WithMeshClsn                                         = 0x020ade78;
 _ZN5Enemy24AngleAwayFromWallOrCliffER12WithMeshClsnRs                             = 0x020ae244;

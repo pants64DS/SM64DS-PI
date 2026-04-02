@@ -60,12 +60,12 @@ struct Enemy : Actor // internal name: dEnemyBase_c
 	u32 UpdateKillByInvincibleChar(WithMeshClsn& wmClsn, Model& model, u32 flags); // like below but takes a Model& instead of ModelAnim&
 	u32 UpdateKillByInvincibleChar(WithMeshClsn& wmClsn, ModelAnim& rigMdl, u32 flags); //returns 0 with 0 side effects if N/A.
 	void KillByInvincibleChar(const Vector3_16& newRotation, Player& player);
-	void SpawnMegaCharParticles(Actor& attacker, char* arg2);
+	void SpawnMegaCharParticles(Actor& attacker, CylinderClsn* cylClsn);
 	bool SpawnParticlesIfHitOtherObj(CylinderClsn& cylClsn); //returns whether there was a collision with an object that isn't a coin
 	u32 UpdateYoshiEat(WithMeshClsn& wmClsn);
 	bool AngleAwayFromWallOrCliff(WithMeshClsn& wmClsn, s16& ang); // returns whether the angle was redirected (if hitting wall, reflect angle; if at cliff, set angle to the opposite one)
 	bool UpdateDeath(WithMeshClsn& wmClsn); //returns whether the object is actually dying and the death function returned true
-	bool IsGoingOffCliff(WithMeshClsn& wmClsn, Fix12i maxFallDist, s16 unkAngle, bool setRaycastFlag2, bool arg5, Fix12i raycastOffsetY);
+	bool IsGoingOffCliff(WithMeshClsn& wmClsn, Fix12i maxFallDist, s16 maxSlopeAngle, bool detectWater, bool checkMaxSlopeAngle, Fix12i raycastOffsetY);
 	void KillByAttack(Actor& attacker); // called with an additional parameter (WithMeshClsn&) in the vanilla game, but that one is never used
 	void SpawnCoin();
 	void UpdateWMClsn(WithMeshClsn& wmClsn, u32 type); // 0 - UpdateContinuous, 1 - UpdateContinuousNoLava, 2 - UpdateDiscreteNoLava, 3 - UpdateDiscreteNoLava_2
