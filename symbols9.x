@@ -2122,6 +2122,7 @@ _ZN6Player21St_HeadstandJump_InitEv                                             
 _ZN6Player21St_HeadstandJump_MainEv                                               = 0x020e13c0;
 
 STUCK_IN_GROUND_LEAVE_ANIM_FRAME                                                  = 0x020ff0ec;
+ATTACK_KNOCKBACK                                                                  = 0x020ff01c;
 DIVE_VOICE_ID                                                                     = 0x020ff100;
 OPEN_DOOR_ANIM_ID                                                                 = 0x020ff118;
 SLIDE_KICK_VOICE_ID                                                               = 0x020ff130;

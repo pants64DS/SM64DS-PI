@@ -1198,6 +1198,7 @@ static_assert(Player::NUM_ANIMS == 194, "Player::NUM_ANIMS is incorrect!");
 static_assert(Player::NUM_CHARACTERS == 4, "Player::NUM_CHARACTERS is incorrect!");
 
 extern u8 CHAR_SEQ_ID_OFFSET[Player::NUM_CHARACTERS + 1]; // 5 is for Metal Wario
+extern Fix12s ATTACK_KNOCKBACK[Player::NUM_CHARACTERS + 1]; // 5 is for Metal Wario
 extern u8 STUCK_IN_GROUND_LEAVE_ANIM_FRAME[3];
 extern u32 DIVE_VOICE_ID[2];
 extern u32 OPEN_DOOR_ANIM_ID[2];
@@ -1216,7 +1217,7 @@ extern Fix12i WATER_RISE_SINK_SPEED_MULTIPLIER[Player::NUM_CHARACTERS];
 extern u32 PUNCH_KICK_SEQUENCE_VOICE_ID[3];
 extern Fix12i PLAYER_SCALE_STEP[4];
 extern u32 HOLD_HEAVY_ANIM_ID[6];
-extern Fix12s PVP_KNOCKBACK_SPEED[Player::NUM_CHARACTERS * 4 + 1];
+extern Fix12s PVP_KNOCKBACK_SPEED[Player::NUM_CHARACTERS * 4 + 1]; // 5 is for Metal Wario
 extern Fix12i PLAYER_SCALE_VALUES[12];
 extern u16 PUNCH_KICK_SEQUENCE_DELAY[3];
 extern u8 HURT_START_GET_UP_ANIM_FRAME[6];
