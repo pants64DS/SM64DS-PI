@@ -70,7 +70,7 @@ struct Enemy : Actor // internal name: dEnemyBase_c
 	void SpawnCoin();
 	void UpdateWMClsn(WithMeshClsn& wmClsn, u32 type); // 0 - UpdateContinuous, 1 - UpdateContinuousNoLava, 2 - UpdateDiscreteNoLava, 3 - UpdateDiscreteNoLava_2
 	void KillKnockbackVertBias(); // called by KillByKick, KillByBurn and KillByExplode
-	void KillKnockbackVertBias(); // called by KillByPunch and KillByDive
+	void KillKnockbackHorzBias(); // called by KillByPunch and KillByDive
 
 
 	// Death functions

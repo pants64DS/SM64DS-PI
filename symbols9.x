@@ -2290,6 +2290,8 @@ _ZN4Coin24Bh_IntangibleAbovePlayerEv                                            
 
 _ZN4Coin27Spawn100CoinStarIfNecessaryEP6Player                                    = 0x020b18f0;
 
+COIN_ACTOR_IDS                                                                    = 0x020ff014;
+
 /* Actors/SpikeBomb.h */
 _ZN9SpikeBomb7RecoverEv                                                           = 0x021186d8;
 

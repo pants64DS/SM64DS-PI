@@ -106,3 +106,5 @@ struct Coin : Actor
 };
 
 static_assert(sizeof(Coin) == 0x3b4, "Size of Coin is incorrect.");
+
+extern u16 COIN_ACTOR_IDS[Coin::NUM_TYPES];
