@@ -57,7 +57,7 @@ struct Actor : ActorDerived // internal name: dActor
 		YE_SWALLOW               = 4,
 		YE_GAIN_FIRE_BREATH      = 5,
 		YE_KEEP_AND_CAN_MAKE_EGG = 6,
-		YE_UNK_7                 = 7,
+		YE_NO_SWALLOW         	 = 7,
 	};
 
 	ListNode listNode;      // 0x50
