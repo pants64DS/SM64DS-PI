@@ -1282,7 +1282,8 @@ _ZN5Enemy11UpdateDeathER12WithMeshClsn                                          
 _ZN5Enemy15IsGoingOffCliffER12WithMeshClsn5Fix12IiEsbbS3_                         = 0x020ae2b8;
 _ZN5Enemy9SpawnCoinEv                                                             = 0x020aeabc;
 _ZN5Enemy12UpdateWMClsnER12WithMeshClsnj                                          = 0x020aebf8;
-_ZN5Enemy13KillKnockbackEv                                                        = 0x020ae8b8;
+_ZN5Enemy21KillKnockbackVertBiasEv                                                = 0x020ae8b8;
+_ZN5Enemy21KillKnockbackHorzBiasEv                                                = 0x020ae968;
 
 _ZN5Enemy13DeathBySquashER12WithMeshClsn                                          = 0x020ae64c;
 _ZN5Enemy18DeathByOtherAttackER12WithMeshClsn                                     = 0x020ae608;

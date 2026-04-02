@@ -69,7 +69,9 @@ struct Enemy : Actor // internal name: dEnemyBase_c
 	void KillByAttack(Actor& attacker); // called with an additional parameter (WithMeshClsn&) in the vanilla game, but that one is never used
 	void SpawnCoin();
 	void UpdateWMClsn(WithMeshClsn& wmClsn, u32 type); // 0 - UpdateContinuous, 1 - UpdateContinuousNoLava, 2 - UpdateDiscreteNoLava, 3 - UpdateDiscreteNoLava_2
-	void KillKnockback(); // called by KillByKick, KillByBurn and KillByExplode
+	void KillKnockbackVertBias(); // called by KillByKick, KillByBurn and KillByExplode
+	void KillKnockbackVertBias(); // called by KillByPunch and KillByDive
+
 
 	// Death functions
 	bool DeathBySquash(WithMeshClsn& wmClsn);
