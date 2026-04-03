@@ -1199,8 +1199,8 @@ _ZN5Actor13OnYoshiTryEatEv                                                      
 _ZN5Actor13OnTurnIntoEggER6Player                                                 = 0x02010154;
 _ZN5Actor9Virtual50Ev                                                             = 0x0201014c;
 _ZN5Actor15OnGroundPoundedER6Player                                               = 0x02010148;
-_ZN5Actor11OnAttacked1ER6Player                                                   = 0x02010144;
-_ZN5Actor11OnAttacked2ER6Player                                                   = 0x02010140;
+_ZN5Actor15OnAgainstPlayerER6Player                                               = 0x02010144;
+_ZN5Actor9OnPunchedER6Player                                                      = 0x02010140;
 _ZN5Actor8OnKickedER6Player                                                       = 0x0201013c;
 _ZN5Actor8OnPushedER6Player                                                       = 0x02010138;
 _ZN5Actor24OnHitByCannonBlastedCharER6Player                                      = 0x02010134;

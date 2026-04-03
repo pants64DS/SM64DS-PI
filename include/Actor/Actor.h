@@ -97,8 +97,8 @@ struct Actor : ActorDerived // internal name: dActor
 	virtual void OnTurnIntoEgg(Player& player);
 	virtual bool Virtual50();
 	virtual void OnGroundPounded(Player& groundPounder);
-	virtual void OnAttacked1(Player& attacker);
-	virtual void OnAttacked2(Player& attacker);
+	virtual void OnAgainstPlayer(Player& player);
+	virtual void OnPunched(Player& puncher);
 	virtual void OnKicked(Player& kicker);
 	virtual void OnPushed(Player& pusher);
 	virtual void OnHitByCannonBlastedChar(Player& blaster);
