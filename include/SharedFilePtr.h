@@ -87,6 +87,7 @@ extern SharedFilePtr YOSHI_CUBE_EGG_MODEL_PTR;
 
 extern SharedFilePtr* COIN_POLY4_MODEL_PTRS[3];
 extern SharedFilePtr* COIN_POLY32_MODEL_PTRS[3];
+extern SharedFilePtr* YOSHI_EGG_MODEL_PTRS[2];
 
 extern SharedFilePtr BOWSER_KEY_MODEL_PTR;
 extern SharedFilePtr* KEY_MODEL_PTRS[];

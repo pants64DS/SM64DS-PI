@@ -218,6 +218,7 @@ YOSHI_EGG_MODEL_PTR                                                             
 YOSHI_CUBE_EGG_MODEL_PTR                                                          = 0x0210e3a0;
 COIN_POLY4_MODEL_PTRS                                                             = 0x020ff060;
 COIN_POLY32_MODEL_PTRS                                                            = 0x020ff06c;
+YOSHI_EGG_MODEL_PTRS                                                              = 0x021000a0;
 BOWSER_KEY_MODEL_PTR                                                              = 0x02132c50;
 KEY_MODEL_PTRS                                                                    = 0x02132894;
 
