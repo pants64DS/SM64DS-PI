@@ -110,22 +110,22 @@ struct SphereClsn : BgCh
 		ON_CEILING        = 1 << 5
 	};
 
-	u32* sphVTable;         // 0x38
-	Vector3 pos;            // 0x3c
-	Fix12i radius;          // 0x48
-	Vector3 pushback;       // 0x4c
-	Vector3 pushback0;      // 0x58
-	Vector3 pushback1;      // 0x64
-	u32 resultFlags;        // 0x70
-	ClsnResult floorResult; // 0x74
-	ClsnResult wallResult;  // 0x9c
-	ClsnResult unkResult;   // 0xc4
-	Fix12i unk0ec;          // 0xec
-	u32 unk0f0;             // 0xf0
-	u32 unk0f4;             // 0xf4
-	u32 unk0f8;             // 0xf8
-	Vector3 storedNormal;   // 0xfc
-	Fix12i unk108;          // 0x108
+	u32* sphVTable;           // 0x38
+	Vector3 pos;              // 0x3c
+	Fix12i radius;            // 0x48
+	Vector3 pushback;         // 0x4c
+	Vector3 pushback0;        // 0x58
+	Vector3 pushback1;        // 0x64
+	u32 resultFlags;          // 0x70
+	ClsnResult floorResult;   // 0x74
+	ClsnResult wallResult;    // 0x9c
+	ClsnResult ceilingResult; // 0xc4
+	Fix12i unk0ec;            // 0xec
+	u32 unk0f0;               // 0xf0
+	u32 unk0f4;               // 0xf4
+	u32 unk0f8;               // 0xf8
+	Vector3 storedNormal;     // 0xfc
+	Fix12i unk108;            // 0x108
 
 	SphereClsn();
 	~SphereClsn();
