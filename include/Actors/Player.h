@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Stage.h"
+#include "YoshiEgg.h"
 
 extern "C" void ChangeArea(s8 newAreaID);
 
@@ -268,14 +269,6 @@ struct Player : Actor // internal name:: daPly_c
 		DH_DROWN   	   =  7,
 		DH_WATER       =  8,
 		DH_UNK9    	   =  9,
-	};
-
-	struct EggContents
-	{
-		bool isCubeEgg		: 2 = false;
-		u8	 numYellowCoins	: 4 = 0;
-		bool hasBlueCoin	: 1 = false;
-		bool hasSilverStar	: 1 = false;
 	};
 
 	enum NoControlStates : u8
@@ -637,7 +630,7 @@ struct Player : Actor // internal name:: daPly_c
 	u8 unk701;
 	u8 powerupBlinkToggle; // used when your powerup timer is low. hide powerup if 0, show if 1
 	bool isMega;
-	EggContents eggContents;
+	YoshiEgg::EggContents eggContents;
 	u8 unk705;
 	bool isUnderwater;
 	bool standingInPuddle;
