@@ -1045,12 +1045,14 @@ _ZN10SphereClsn11SetDefaultsEv                                                  
 _ZN10SphereClsn10DetectClsnEv                                                     = 0x02038b78;
 _ZN10SphereClsn14SetFloorResultERK10ClsnResult                                    = 0x020378e4;
 _ZN10SphereClsn14GetFloorResultEv                                                 = 0x02037938;
+_ZN10SphereClsn16GetCeilingResultEv                                               = 0x02037880;
 
 _ZN12WithMeshClsnC1Ev                                                             = 0x02037430;
 _ZN12WithMeshClsnD1Ev                                                             = 0x020373f8;
 _ZNK12WithMeshClsn16ShouldUpdatePosYEv                                            = 0x02035578;
 _ZNK12WithMeshClsn15ShouldUpdatePosEv                                             = 0x02035564;
 _ZNK12WithMeshClsn8IsOnWallEv                                                     = 0x0203562c;
+_ZNK12WithMeshClsn11IsOnCeilingEv                                                 = 0x02035638;
 _ZN12WithMeshClsn15ClearLimMovFlagEv                                              = 0x020356a0;
 _ZN12WithMeshClsn13SetLimMovFlagEv                                                = 0x020356b4;
 _ZNK12WithMeshClsn13GetLimMovFlagEv                                               = 0x02035694;
@@ -1068,6 +1070,7 @@ _ZNK12WithMeshClsn12TouchesWaterEv                                              
 _ZNK12WithMeshClsn14GetResultFlag1Ev                                              = 0x02035620;
 _ZNK12WithMeshClsn14GetFloorResultEv                                              = 0x0203566c;
 _ZNK12WithMeshClsn13GetWallResultEv                                               = 0x0203565c;
+_ZNK12WithMeshClsn16GetCeilingResultEv                                            = 0x0203564c;
 _ZN12WithMeshClsn4InitEP5Actor5Fix12IiES3_P10Vector3_16S5_                        = 0x02037388;
 _ZN12WithMeshClsn16UpdateContinuousEv                                             = 0x020366b4;
 _ZN12WithMeshClsn20UpdateExtraContinousEv                                         = 0x020358ac;

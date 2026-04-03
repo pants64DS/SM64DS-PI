@@ -106,8 +106,8 @@ struct SphereClsn : BgCh
 		UNK_1			  = 1 << 1,
 		ON_GROUND         = 1 << 2,
 		ON_WALL           = 1 << 3,
-		ON_CEILING_CORNER = 1 << 4,
-		ON_CEILING        = 1 << 5
+		ON_CEILING	      = 1 << 4,
+		MOVING_UP         = 1 << 5
 	};
 
 	u32* sphVTable;           // 0x38
@@ -135,6 +135,7 @@ struct SphereClsn : BgCh
 	s32 DetectClsn(); // returns MeshColliderBase::SphereResultFlags
 	ClsnResult& SetFloorResult(const ClsnResult& result);
 	ClsnResult& GetFloorResult();
+	ClsnResult& GetCeilingResult();
 };
 
 static_assert(sizeof(SphereClsn) == 0x10c);
@@ -183,6 +184,7 @@ struct WithMeshClsn
 	s32  ShouldUpdatePosY() const;
 	s32  ShouldUpdatePos() const;
 	s32  IsOnWall() const;
+	s32  IsOnCeiling() const;
 	void ClearLimMovFlag();
 	void SetLimMovFlag();
 	u32  GetLimMovFlag() const;
@@ -200,6 +202,7 @@ struct WithMeshClsn
 	s32 GetResultFlag1() const;
 	ClsnResult& GetFloorResult() const;
 	ClsnResult& GetWallResult() const;
+	ClsnResult& GetCeilingResult() const;
 	void Init(Actor* owner, Fix12i radius, Fix12i vertOffset, Vector3_16* motionDirPtr, Vector3_16* angPtr);
 	
 	void SetVertOffset(Fix12i vertOffset);
