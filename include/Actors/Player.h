@@ -270,6 +270,14 @@ struct Player : Actor // internal name:: daPly_c
 		DH_UNK9    	   =  9,
 	};
 
+	struct EggContents
+	{
+		bool isCubeEgg		: 2 = false;
+		u8	 numYellowCoins	: 4 = 0;
+		bool hasBlueCoin	: 1 = false;
+		bool hasSilverStar	: 1 = false;
+	};
+
 	enum NoControlStates : u8
 	{
 		NC_REGULAR_STAR_GET    =  0,
@@ -344,8 +352,8 @@ struct Player : Actor // internal name:: daPly_c
 	{
 		CS_ON_GROUND  		 = 1 << 0,
 		CS_ON_WALL   		 = 1 << 1,
-		CS_ON_CEILING_CORNER = 1 << 2,
-		CS_ON_CEILING 		 = 1 << 3,
+		CS_ON_CEILING	     = 1 << 2,
+		CS_MOVING_UP 		 = 1 << 3,
 	};
 
 	enum Flags2
@@ -629,7 +637,7 @@ struct Player : Actor // internal name:: daPly_c
 	u8 unk701;
 	u8 powerupBlinkToggle; // used when your powerup timer is low. hide powerup if 0, show if 1
 	bool isMega;
-	u8 unk704;
+	EggContents eggContents;
 	u8 unk705;
 	bool isUnderwater;
 	bool standingInPuddle;
@@ -947,14 +955,14 @@ struct Player : Actor // internal name:: daPly_c
 	u8 GetLandingType();
 	void UpdatePlayerModel();
 	void HandleAttackPlayer(Player& victim, u32 attackerHitFlags);
-	static bool CheckCornerCorrectOnActor(WithMeshClsn& wmClsn, Actor& jumper);
-	static bool CheckMegaPlayerCollisionWithActor(WithMeshClsn& wmClsn, Actor& megaPlayer);
-	static bool CheckShotIntoActor(WithMeshClsn& wmClsn, Actor& shooter);
-	static bool CheckPushActor(WithMeshClsn& wmClsn, Actor& pusher);
-	static bool CheckKickOrSweepKickActor(WithMeshClsn& wmClsn, Actor& kicker);
-	static bool CheckPunchActor(WithMeshClsn& wmClsn, Actor& puncher);
-	static bool CheckGroundPoundOnActor(WithMeshClsn& wmClsn, Actor& groundPounder);
-	static bool CheckOnWallOnActor(WithMeshClsn& wmClsn, Actor& actor);
+	static bool CheckHitActorFromUnderneath(WithMeshClsn& wmClsn, Actor& jumper);
+	static bool CheckHitActorAsMegaChar(WithMeshClsn& wmClsn, Actor& megaPlayer);
+	static bool CheckHitActorWithCannonBlast(WithMeshClsn& wmClsn, Actor& shooter);
+	static bool CheckPushedActor(WithMeshClsn& wmClsn, Actor& pusher);
+	static bool CheckKickedActor(WithMeshClsn& wmClsn, Actor& kicker); // includes kicks and sweep kicks
+	static bool CheckPunchedActor(WithMeshClsn& wmClsn, Actor& puncher);
+	static bool CheckAgainstActor(WithMeshClsn& wmClsn, Actor& actor);
+	static bool CheckGroundPoundedActor(WithMeshClsn& wmClsn, Actor& groundPounder);
 	static Fix12i GetTractionIDDecelFactor(u32 tractionID);
 	static bool OnSlopedGround(u32 tractionID, Fix12i floorNormalY);
 
