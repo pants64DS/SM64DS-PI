@@ -204,6 +204,7 @@ struct SaveData : FileSaveData, MinigameSaveData
 	static bool SaveMinigames(MinigameSaveData* saveData);
 	static s32  SaveDataToCart(char* saveData, u32 saveSize, u32 fileID);
 	static u32  EraseAllSaveData();
+	static bool CopySaveFile(u8 coinRecords, FileSaveData* srcSaveData, u32 destFileID, FileSaveData* destSaveData);
 	static bool EraseSaveFile(u32 saveFileID, char* saveArea);
 	static void SetDefaultValues(FileSaveData* saveData);
 	static void SetDefaultValuesMg(MinigameSaveData* saveData);

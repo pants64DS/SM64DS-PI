@@ -2462,6 +2462,7 @@ _ZN8SaveData8SaveFileEjP12FileSaveData                                          
 _ZN8SaveData13SaveMinigamesEP16MinigameSaveData                                   = 0x02013be0;
 _ZN8SaveData14SaveDataToCartEPcjj                                                 = 0x02042c3c;
 _ZN8SaveData16EraseAllSaveDataEv                                                  = 0x02013e0c;
+_ZN8SaveData12CopySaveFileEhP12FileSaveDatajPS1_                                  = 0x02013c84;
 _ZN8SaveData13EraseSaveFileEjPc                                                   = 0x02013cd4;
 _ZN8SaveData16SetDefaultValuesEP12FileSaveData                                    = 0x02013dc4;
 _ZN8SaveData18SetDefaultValuesMgEP16MinigameSaveData                              = 0x02013c5c;
