@@ -1863,7 +1863,7 @@ _ZN6Player15HandleFootstepsEv                                                   
 _ZN6Player27ApproachHorzSpeedCheckSlopeE5Fix12IiES1_                              = 0x020d4d88;
 _ZN6Player17ClearActorInMouthEv                                                   = 0x020d718c;
 _ZN6Player18SetPunchKickAttackEh                                                  = 0x020d8a50;
-_ZN6Player29IsLedgeHangingOrLedgeGrabbingEv                                       = 0x020d0d2c;
+_ZN6Player20CheckLedgeHangOrGrabEv                                                = 0x020d0d2c;
 _ZN6Player17CheckCeilingAboveEv                                                   = 0x020d1164;
 _ZN6Player19SetCrouchJumpActionEv                                                 = 0x020d1204;
 _ZN6Player21SetCrouchAttackActionEv                                               = 0x020d12b0;
