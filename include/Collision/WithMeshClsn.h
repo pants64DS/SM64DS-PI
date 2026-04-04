@@ -199,7 +199,7 @@ struct WithMeshClsn
 	void SetActorPosAndPrevPos(Vector3& newPos);
 	void SetSphereClsnDefaults();
 	s32  TouchesWater() const;
-	s32 GetResultFlag1() const;
+	s32 DoesCollisionExist() const;
 	ClsnResult& GetFloorResult() const;
 	ClsnResult& GetWallResult() const;
 	ClsnResult& GetCeilingResult() const;

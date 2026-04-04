@@ -1067,7 +1067,7 @@ _ZN12WithMeshClsn18StopDetectingWaterEv                                         
 _ZN12WithMeshClsn21SetActorPosAndPrevPosER7Vector3                                = 0x02035860;
 _ZN12WithMeshClsn21SetSphereClsnDefaultsEv                                        = 0x0203589c;
 _ZNK12WithMeshClsn12TouchesWaterEv                                                = 0x02035610;
-_ZNK12WithMeshClsn14GetResultFlag1Ev                                              = 0x02035620;
+_ZNK12WithMeshClsn18DoesCollisionExistEv                                          = 0x02035620;
 _ZNK12WithMeshClsn14GetFloorResultEv                                              = 0x0203566c;
 _ZNK12WithMeshClsn13GetWallResultEv                                               = 0x0203565c;
 _ZNK12WithMeshClsn16GetCeilingResultEv                                            = 0x0203564c;
