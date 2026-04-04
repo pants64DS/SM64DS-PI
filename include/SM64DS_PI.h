@@ -521,6 +521,7 @@ extern "C"
 	void LoadLevelNoReturn(s8 levelID, u8 entranceID, s8 starID, u8 returnState);
 
 	void SetPlayerGlobals();
+	void StartMinigameMenu(bool returnToRecRoom);
 	void ExitMinigameMenu();
 	void PrepareVsMode();
 	void StartFile(s8 levelID, u8 entranceID);
