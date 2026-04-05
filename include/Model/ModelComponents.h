@@ -23,6 +23,14 @@ struct Material
 		// bits 30-31 aren't used
 	};
 
+	enum PolygonMode
+	{
+		MODULATION,
+		DECAL,
+		TOON_SHADING,
+		SHADOW
+	};
+
 	enum TextureTransformMode
 	{
 		NO_CHANGE,
