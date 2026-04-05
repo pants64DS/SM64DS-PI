@@ -8,11 +8,11 @@ struct YoshiEgg : Enemy	// internal name: Yegg
 	{
 		enum EggType
 		{
-			ET_NORMAL = 0x0,
-			ET_CUBE   = 0x1,
+			ET_CUBE   = 0x0,
+			ET_NORMAL = 0x1,
 		};
 
-		u8   eggType		: 2 = ET_NORMAL;
+		u8   eggType		: 2 = ET_CUBE;
 		u8	 numYellowCoins	: 4 = 0;
 		bool hasBlueCoin	: 1 = false;
 		bool hasSilverStar	: 1 = false;
@@ -22,6 +22,7 @@ struct YoshiEgg : Enemy	// internal name: Yegg
 	// WithMeshClsn wmClsn; // 0x144
 	// ModelAnim modelAnim; // 0x300
 	// ShadowModel shadow; // 0x364
+	// Matrix4x3 shadowMat; // 0x38c
 
 	// members not documented
 };
