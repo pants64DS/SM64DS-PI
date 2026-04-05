@@ -704,6 +704,8 @@ struct Player : Actor // internal name:: daPly_c
 	void SetRealCharacter(u32 character);
 	void TurnOffToonShading(u32 character);
 	void HandleToonState();
+	void LoadCharGroup();
+	void LoadCharBGMGroup();
 	void InitPlayerCylClsn();
 	
 	bool IsInState(const State& state);
@@ -761,9 +763,11 @@ struct Player : Actor // internal name:: daPly_c
 	bool TryLavaBurn();
 	void Burn();
 	void Shock(u32 damage);
+	bool SpawnEggIfInYoshiMouth();
 	bool CheckSpitOutPlayer();
 	bool TrySpitPlayerFromMouth();
 	bool IsInYoshisMouth();
+	void SpawnEgg();
 	void RegisterEggCoinCount(u32 numCoins, bool includeSilverStar, bool includeBlueCoin);
 	void SpawnAttackParticles(Vector3& particlePos);
 	//speed is multiplied by constant at 0x020ff128+charID*2 and divided by 50 (? could be 25, could be 100).
@@ -1200,6 +1204,8 @@ static_assert(Player::NUM_CHARACTERS == 4, "Player::NUM_CHARACTERS is incorrect!
 
 extern u8 CHAR_SEQ_ID_OFFSET[Player::NUM_CHARACTERS + 1]; // 5 is for Metal Wario
 extern Fix12s ATTACK_KNOCKBACK[Player::NUM_CHARACTERS + 1]; // 5 is for Metal Wario
+extern s8 CHAR_GROUP_ID[Player::NUM_CHARACTERS];
+extern s8 CHAR_BGM_GROUP_ID[Player::NUM_CHARACTERS];
 extern u8 STUCK_IN_GROUND_LEAVE_ANIM_FRAME[3];
 extern u32 DIVE_VOICE_ID[2];
 extern u32 OPEN_DOOR_ANIM_ID[2];

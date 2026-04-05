@@ -1659,6 +1659,8 @@ _ZN6Player16CleanupResourcesEv                                                  
 _ZN6Player8BehaviorEv                                                             = 0x020e4d24;
 _ZN6Player6RenderEv                                                               = 0x020e3a08;
 _ZN6Player16OnPendingDestroyEv                                                    = 0x020e3a04;
+_ZN6Player13LoadCharGroupEv                                                       = 0x020e6330;
+_ZN6Player16LoadCharBGMGroupEv                                                    = 0x020e6350;
 _ZN6Player17InitPlayerCylClsnEv                                                   = 0x020e63a4;
 _ZN6Player13OnYoshiTryEatEv                                                       = 0x020e69b8;
 _ZN6Player14ClearEggPtrArrEv                                                      = 0x020bdc18;
@@ -1723,9 +1725,11 @@ _ZN6Player8CanPauseEv                                                           
 _ZN6Player11TryLavaBurnEv                                                         = 0x020d5338;
 _ZN6Player4BurnEv                                                                 = 0x020d57d8;
 _ZN6Player5ShockEj                                                                = 0x020d5a1c;
+_ZN6Player22SpawnEggIfInYoshiMouthEv                                              = 0x020d5ab4;
 _ZN6Player18CheckSpitOutPlayerEv                                                  = 0x020d5c6c;
 _ZN6Player22TrySpitPlayerFromMouthEv                                              = 0x020d5cec;
 _ZN6Player15IsInYoshisMouthEv                                                     = 0x020d600c;
+_ZN6Player8SpawnEggEv                                                             = 0x020d6368;
 _ZN6Player20RegisterEggCoinCountEjbb                                              = 0x020d6708;
 _ZN6Player20SpawnAttackParticlesER7Vector3                                        = 0x020d8d10;
 _ZN6Player4HurtERK7Vector3j5Fix12IiEbjb                                           = 0x020d8e70;
@@ -2130,6 +2134,8 @@ _ZN6Player21St_HeadstandJump_MainEv                                             
 
 STUCK_IN_GROUND_LEAVE_ANIM_FRAME                                                  = 0x020ff0ec;
 ATTACK_KNOCKBACK                                                                  = 0x020ff01c;
+CHAR_GROUP_ID                                                                     = 0x020ff0f0;
+CHAR_GROUP_BGM_ID                                                                 = 0x020ff0f4;
 DIVE_VOICE_ID                                                                     = 0x020ff100;
 OPEN_DOOR_ANIM_ID                                                                 = 0x020ff118;
 SLIDE_KICK_VOICE_ID                                                               = 0x020ff130;
