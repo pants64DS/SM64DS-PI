@@ -1700,9 +1700,9 @@ _ZN6Player12GetBodyModelEv                                                      
 _ZN6Player24HandleArmsCarryTransformEv                                            = 0x020e4990;
 _ZN6Player7SetAnimEji5Fix12IiEj                                                   = 0x020bef2c;
 _ZN6Player27ShowIntroMessageIfNecessaryEv                                         = 0x020c4188;
-_ZN6Player11ShowMessageER9ActorBasejPK7Vector3jj                                  = 0x020c4ec0;
-_ZN6Player12ShowMessage2ER9ActorBasejPK7Vector3jj                                 = 0x020c4c60;
-_ZN6Player9StartTalkER9ActorBaseb                                                 = 0x020c4fa0;
+_ZN6Player11ShowMessageER5ActorjPK7Vector3jj                                      = 0x020c4ec0;
+_ZN6Player12ShowMessage2ER5ActorjPK7Vector3jj                                     = 0x020c4c60;
+_ZN6Player9StartTalkER5Actorb                                                     = 0x020c4fa0;
 _ZN6Player12Unk_020c5244Ev                                                        = 0x020c5244;
 _ZN6Player12GetTalkStateEv                                                        = 0x020c524c;
 _ZN6Player26PlayStuckInGroundParticlesEv                                          = 0x020c5444;

@@ -497,7 +497,7 @@ struct Player : Actor // internal name:: daPly_c
 	Actor* carrier;
 	Actor* actorInMouth;
 	union { Actor* unk364; SoundObj* firstCapJingle; };
-	ActorBase* speaker;
+	Actor* speaker;
 	Actor* squisher;
 	State* currState;
 	State* prevState;
@@ -757,9 +757,9 @@ struct Player : Actor // internal name:: daPly_c
 	void SetAnim(u32 animID, s32 flags, Fix12i animSpeed = 1._f, u32 startFrame = 0);
 	void UpdateAnim();
 	bool ShowIntroMessageIfNecessary();
-	bool ShowMessage(ActorBase& speaker, u32 msgIndex, const Vector3* lookAt, u32 arg3, u32 arg4);
-	bool ShowMessage2(ActorBase& speaker, u32 msgIndex, const Vector3* lookAt, u32 arg3, u32 arg4);
-	bool StartTalk(ActorBase& speaker, bool noButtonNeeded); //true iff the talk actually started.
+	bool ShowMessage(Actor& speaker, u32 msgIndex, const Vector3* lookAt, u32 arg3, u32 arg4);
+	bool ShowMessage2(Actor& speaker, u32 msgIndex, const Vector3* lookAt, u32 arg3, u32 arg4);
+	bool StartTalk(Actor& speaker, bool noButtonNeeded); //true iff the talk actually started.
 	bool Unk_020c5244(); // always returns false
 	s32 GetTalkState();
 	void PlayStuckInGroundParticles();
