@@ -2282,7 +2282,7 @@ _ZN4Star14LinkStarMarkerEv                                                      
 _ZN4Star17CheckStayInCourseEv                                                     = 0x020e9630;
 _ZN4Star21GetStarCollectMusicIDEv                                                 = 0x020ea3a4;
 
-_ZN4Star17SpawnLaunchOrJumpEv                                                     = 0x020ea9d0;
+_ZN4Star20St_SpawnLaunchOrJumpEv                                                  = 0x020ea9d0;
 _ZN4Star18St_LaunchAfterJumpEv                                                    = 0x020ea90c;
 _ZN4Star9St_LaunchEv                                                              = 0x020ea824;
 _ZN4Star13St_LandAtHomeEv                                                         = 0x020ea7ac;

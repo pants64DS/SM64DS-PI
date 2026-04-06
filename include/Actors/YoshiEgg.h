@@ -1,6 +1,6 @@
 #pragma once
 
-struct YoshiEgg : Enemy	// internal name: Yegg
+struct YoshiEgg : Enemy	// internal name: daYegg_c
 {
 	static constexpr u16 staticActorID = 0x9;
 
