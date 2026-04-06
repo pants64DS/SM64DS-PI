@@ -244,7 +244,7 @@ struct Player : Actor // internal name:: daPly_c
 		CL_HOLD_MAIN	  	 = 1,
 		CL_HEADSTAND_INIT 	 = 2,
 		CL_HEADSTAND_MAIN 	 = 3,
-		CL_HEADSTAND_TO_HOLD = 4,
+		CL_HEADSTAND_TO_HOLD = 4
 	};
 
 	enum CrouchStates : s8
@@ -254,7 +254,7 @@ struct Player : Actor // internal name:: daPly_c
 		CR_CROUCH_END 	   = 2,
 		CR_CRAWL_INIT 	   = 3,
 		CR_CRAWL_MAIN 	   = 4,
-		CR_CRAWL_TO_CROUCH = 5,
+		CR_CRAWL_TO_CROUCH = 5
 	};
 
 	enum DeathStates : s8
@@ -268,7 +268,26 @@ struct Player : Actor // internal name:: daPly_c
 		DH_WHIRLPOOL   =  6,
 		DH_DROWN   	   =  7,
 		DH_WATER       =  8,
-		DH_UNK9    	   =  9,
+		DH_UNK9    	   =  9
+	};
+
+	enum IntroTypes : u8
+	{
+		IT_NONE			 = 0,
+		IT_WING_FEATHERS = 1,
+		IT_BALLOON_MARIO = 2,
+		IT_VANISH_LUIGI  = 3,
+		IT_METAL_WARIO   = 4,
+		IT_FIRE_YOSHI    = 5,
+		IT_MARIO_CAP	 = 6,
+		IT_BOB		     = 7,
+		IT_WF			 = 8,
+		IT_CCM 			 = 9,
+		IT_LLL		     = 10,
+		IT_BitDW		 = 11,
+		IT_QS		     = 12,
+
+		NUM_INTRO_TYPES
 	};
 
 	enum NoControlStates : u8
@@ -295,12 +314,11 @@ struct Player : Actor // internal name:: daPly_c
 		NC_UNK19	  		   =  19, // might be more
 	};
 
-
 	enum OnWallStates : s8
 	{
 		OW_LEFT  = 0,
 		OW_RIGHT = 1,
-		OW_PUSH  = 2,
+		OW_PUSH  = 2
 	};
 
 	enum ScaleStates : u8
@@ -308,14 +326,14 @@ struct Player : Actor // internal name:: daPly_c
 		SC_JUMPED_ON   =  0,
 		SC_SQUISHED    =  1,
 		SC_MEGA_GROW   =  2,
-		SC_MEGA_SHRINK =  3,
+		SC_MEGA_SHRINK =  3
 	};
 
 	enum StuckInGroundStates : u8
 	{
 		SG_INIT = 0,
 		SG_MAIN = 1,
-		SG_END  = 2,
+		SG_END  = 2
 	};
 
 	enum SwimStates : s8
@@ -329,7 +347,7 @@ struct Player : Actor // internal name:: daPly_c
 		SW_ATTACK_ACTIVE  = 6,
 		SW_SHELL_GRAB     = 7,
 		SW_SHELL_CARRY    = 8,
-		SW_SHELL_THROW    = 9,
+		SW_SHELL_THROW    = 9
 	};
 
 	enum TalkStates : s8
@@ -346,7 +364,7 @@ struct Player : Actor // internal name:: daPly_c
 		CS_ON_GROUND  		 = 1 << 0,
 		CS_ON_WALL   		 = 1 << 1,
 		CS_ON_CEILING	     = 1 << 2,
-		CS_MOVING_UP 		 = 1 << 3,
+		CS_MOVING_UP 		 = 1 << 3
 	};
 
 	enum Flags2
@@ -478,7 +496,7 @@ struct Player : Actor // internal name:: daPly_c
 	Actor* actorInHands;
 	Actor* carrier;
 	Actor* actorInMouth;
-	Actor* unk364;
+	union { Actor* unk364; SoundObj* firstCapJingle; };
 	ActorBase* speaker;
 	Actor* squisher;
 	State* currState;
@@ -655,9 +673,10 @@ struct Player : Actor // internal name:: daPly_c
 	bool quickSandJump;
 	u8 unk71c;
 	u8 unk71d;
-	u8 unk71e;
-	u8 unk71f;
-	u16 unk720;
+	u8 introType;
+	u8 introState;
+	u8 introMessageDelay;
+	u8 unk721;
 	bool unk722;
 	bool unk723;
 	u8 unk724;
@@ -737,6 +756,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool HandleArmsCarryTransform();
 	void SetAnim(u32 animID, s32 flags, Fix12i animSpeed = 1._f, u32 startFrame = 0);
 	void UpdateAnim();
+	bool ShowIntroMessageIfNecessary();
 	bool ShowMessage(ActorBase& speaker, u32 msgIndex, const Vector3* lookAt, u32 arg3, u32 arg4);
 	bool ShowMessage2(ActorBase& speaker, u32 msgIndex, const Vector3* lookAt, u32 arg3, u32 arg4);
 	bool StartTalk(ActorBase& speaker, bool noButtonNeeded); //true iff the talk actually started.
@@ -817,6 +837,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool ApproachHorzSpeedCheckSlope(Fix12i dest, Fix12i step);
 
 	void Unk_020bf13c();
+	static void RenderMirrorPlayer(Model& model, const Vector3* scale, u32 opacity);
 	bool UpdateBeingHeld(); // returns whether being held
 	Fix12i ScaleHorzSpeedByMag(Fix12i baseSpeed, Fix12i minSpeed);
 	Fix12i ScaleVertAccelByChar(Fix12i baseAccel);
@@ -857,7 +878,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool CheckBonkOrWallSlide();
 	void UpdateFloorCollision();
 	void PlayJumpLandSound();
-	void IntroducePowerup(u8 powerupType);
+	void SetIntroFlagAndType(u8 type);
 	bool FaceLookAtPos();
 	void RiseToWaterSurface();
 	void HandleSwimCam();
@@ -1224,7 +1245,8 @@ extern Fix12i WATER_RISE_SINK_SPEED_MULTIPLIER[Player::NUM_CHARACTERS];
 extern u32 PUNCH_KICK_SEQUENCE_VOICE_ID[3];
 extern Fix12i PLAYER_SCALE_STEP[4];
 extern u32 HOLD_HEAVY_ANIM_ID[6];
-extern Fix12s PVP_KNOCKBACK_SPEED[Player::NUM_CHARACTERS * 4 + 1]; // 5 is for Metal Wario
+extern u16 INTRO_MESSAGE_IDS[Player::NUM_INTRO_TYPES - 1];
+extern Fix12s CHAR_PVP_KNOCKBACK[Player::NUM_CHARACTERS * 4 + 1]; // 5 is for Metal Wario
 extern Fix12i PLAYER_SCALE_VALUES[12];
 extern u16 PUNCH_KICK_SEQUENCE_DELAY[3];
 extern u8 HURT_START_GET_UP_ANIM_FRAME[6];

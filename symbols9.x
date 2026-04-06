@@ -1672,6 +1672,7 @@ _ZN6Player15HandleToonStateEv                                                   
 _ZN6Player9IsInStateERKNS_5StateE                                                 = 0x020e308c;
 _ZN6Player16WasPreviousStateERKNS_5StateE                                         = 0x020e3078;
 _ZN6Player17WarioLandCamShakeEv                                                   = 0x020e301c;
+_ZN6Player18RenderMirrorPlayerER5ModelPK7Vector3j                                 = 0x020e3e00;
 _ZN6Player15UpdateBeingHeldEv                                                     = 0x020e3f90;
 _ZN6Player8IsDivingEv                                                             = 0x020dd240;
 _ZN6Player16IsInsideOfCannonEv                                                    = 0x020df288;
@@ -1698,6 +1699,7 @@ _ZN6Player20UpdateModelTransformEv                                              
 _ZN6Player12GetBodyModelEv                                                        = 0x020e496c;
 _ZN6Player24HandleArmsCarryTransformEv                                            = 0x020e4990;
 _ZN6Player7SetAnimEji5Fix12IiEj                                                   = 0x020bef2c;
+_ZN6Player27ShowIntroMessageIfNecessaryEv                                         = 0x020c4188;
 _ZN6Player11ShowMessageER9ActorBasejPK7Vector3jj                                  = 0x020c4ec0;
 _ZN6Player12ShowMessage2ER9ActorBasejPK7Vector3jj                                 = 0x020c4c60;
 _ZN6Player9StartTalkER9ActorBaseb                                                 = 0x020c4fa0;
@@ -1835,7 +1837,7 @@ _ZN6Player10ShouldBonkEs                                                        
 _ZN6Player20CheckBonkOrWallSlideEv                                                = 0x020c2138;
 _ZN6Player20UpdateFloorCollisionEv                                                = 0x020c2db8;
 _ZN6Player17PlayJumpLandSoundEv                                                   = 0x020c2f64;
-_ZN6Player16IntroducePowerupEh                                                    = 0x020c43c4;
+_ZN6Player19SetIntroFlagAndTypeEh                                                 = 0x020c43c4;
 _ZN6Player13FaceLookAtPosEv                                                       = 0x020c47f4;
 _ZN6Player18RiseToWaterSurfaceEv                                                  = 0x020c9718;
 _ZN6Player22MakePlayerInvulnerableEv                                              = 0x020c9e40;
@@ -2153,7 +2155,8 @@ CARRY_HEAVY_HORZ_SPEED                                                          
 WATER_RISE_SINK_SPEED_MULTIPLIER                                                  = 0x020ff1e0;
 PLAYER_SCALE_STEP                                                                 = 0x020ff230;
 HOLD_HEAVY_ANIM_ID                                                                = 0x020ff254;
-PVP_KNOCKBACK_SPEED                                                               = 0x020ff29c;
+INTRO_MESSAGE_IDS                                                                 = 0x020ff26c;
+CHAR_PVP_KNOCKBACK                                                                = 0x020ff29c;
 PLAYER_SCALE_VALUES                                                               = 0x020ff2c0;
 PUNCH_KICK_SEQUENCE_DELAY                                                         = 0x02109dbc;
 HURT_START_GET_UP_ANIM_FRAME                                                      = 0x02109dc4;
