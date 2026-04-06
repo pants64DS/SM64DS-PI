@@ -4,8 +4,9 @@
 
 struct Player;
 struct CylinderClsn;
-struct ShadowModel;
 struct Number;
+struct ShadowModel;
+struct SoundObj;
 
 #include "Actor/ActorBase.h"
 #include "Actor/ActorDerived.h"
