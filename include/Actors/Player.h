@@ -675,7 +675,7 @@ struct Player : Actor // internal name:: daPly_c
 	u8 unk71d;
 	u8 introType;
 	u8 introState;
-	u8 introMessageDelay;
+	u8 introMessageTimer;
 	u8 unk721;
 	bool unk722;
 	bool unk723;
