@@ -2177,6 +2177,37 @@ HURT_ANIM_ID                                                                    
 FALL_DURING_HURT_ANIM_ID                                                          = 0x0210a6ec;
 PLAYER_CYLCLSN_OFFSET                                                             = 0x0210f92c;
 
+/* Actors/PowerFlower.h */
+
+_ZN11PowerFlower6statesE                                                          = 0x021097bc;
+
+_ZTV11PowerFlower                                                                 = 0x021097f8;
+_ZN11PowerFlower9spawnDataE                                                       = 0x021097a0;
+_ZN11PowerFlowerC3Ev                                                              = 0x020b9e0c;
+_ZN11PowerFlowerD0Ev                                                              = 0x020b91a0;
+_ZN11PowerFlowerD1Ev                                                              = 0x020b9148;
+_ZN11PowerFlowerD2Ev                                                              = 0x020b9148;
+_ZN11PowerFlower13InitResourcesEv                                                 = 0x020b9c00;
+_ZN11PowerFlower16CleanupResourcesEv                                              = 0x020b9a7c;
+_ZN11PowerFlower8BehaviorEv                                                       = 0x020b9b70;
+_ZN11PowerFlower6RenderEv                                                         = 0x020b9aac;
+_ZN11PowerFlower13OnYoshiTryEatEv                                                 = 0x020b9e04;
+
+_ZN11PowerFlower11ChangeStateEj                                                   = 0x020b9704;
+_ZN11PowerFlower9CallStateEv                                                      = 0x020b9750;  
+_ZN11PowerFlower12CheckCollectEv                                                  = 0x020b979c;
+_ZN11PowerFlower10DropShadowEv                                                    = 0x020b993c;
+_ZN11PowerFlower20UpdateModelTransformEv                                          = 0x020b9a1c;
+
+_ZN11PowerFlower13St_Close_InitEv                                                 = 0x020b96c0;
+_ZN11PowerFlower13St_Close_MainEv                                                 = 0x020b94c4;
+
+_ZN11PowerFlower12St_Open_InitEv                                                  = 0x020b9450;
+_ZN11PowerFlower12St_Open_MainEv                                                  = 0x020b92c4;
+
+_ZN11PowerFlower17St_Open_Wait_InitEv                                             = 0x020b92c4;
+_ZN11PowerFlower17St_Open_Wait_MainEv                                             = 0x020b91fc;
+
 /* Actors/StarMarker.h */
 
 _ZN10StarMarker13InitResourcesEv                                                  = 0x020eb204;

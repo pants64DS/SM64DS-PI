@@ -31,3 +31,4 @@ struct SoundObj;
 #include "Actors/YoshiEgg.h"
 #include "Actors/IceBlock.h"
 #include "Actors/Mushroom.h"
+#include "Actors/PowerFlower.h"
