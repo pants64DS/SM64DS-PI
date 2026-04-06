@@ -1391,7 +1391,7 @@ _ZN6Camera16SetBowserSpinCamEj                                                  
 _ZN6Camera10LookAtExitER5Actor                                                    = 0x0200d184;
 _ZN6Camera14GoBehindPlayerEj                                                      = 0x0200d304;
 _ZN6Camera26CallKuppaScriptInstructionEPcss                                       = 0x02008550;
-_ZN6Camera15SetFixedTalkCamEjRK7Vector3                                           = 0x0200d3f8;
+_ZN6Camera15SetFixedTalkCamEjPK7Vector3                                           = 0x0200d3f8;
 _ZN6Camera11SetSlideCamEj                                                         = 0x0200d544;
 _ZN6Camera15SetHeadstandCamEj                                                     = 0x0200d580;
 _ZN6Camera16SetClimbCamNoDefEj                                                    = 0x0200d5c0;

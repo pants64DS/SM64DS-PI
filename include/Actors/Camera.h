@@ -192,7 +192,7 @@ struct Camera : View // internal name: dCamera
 	void LookAtExit(Actor& exit);
 	void GoBehindPlayer(u32 playerID);
 	s32 CallKuppaScriptInstruction(char* instruction, s16 minFrame, s16 maxFrame);
-	void SetFixedTalkCam(u32 playerID, const Vector3& lookAtPos);
+	void SetFixedTalkCam(u32 playerID, const Vector3* newUnk11c);
 	void SetSlideCam(u32 playerID);
 	void SetHeadstandCam(u32 playerID);
 	void SetClimbCamNoDef(u32 playerID);
