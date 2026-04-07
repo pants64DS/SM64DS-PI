@@ -2299,6 +2299,21 @@ _ZN4Star30St_CollectingSilverStarOnShellEv                                      
 
 STAR_CYL_CLSN_OFFSET                                                              = 0x0210aa0c;
 
+/* Actors/WingFeather.h */
+
+_ZTV11WingFeather                                                                 = 0x021088a0;
+_ZN11WingFeather9spawnDataE                                                       = 0x02108884;
+_ZN11WingFeatherC3Ev                                                              = 0x020b3248;
+_ZN11WingFeatherD0Ev                                                              = 0x020b2bf0;
+_ZN11WingFeatherD1Ev                                                              = 0x020b2ba0;
+_ZN11WingFeatherD2Ev                                                              = 0x020b2ba0;
+_ZN11WingFeather13InitResourcesEv                                                 = 0x020b311c;
+_ZN11WingFeather16CleanupResourcesEv                                              = 0x020b2e30;
+_ZN11WingFeather8BehaviorEv                                                       = 0x020b2e9c;
+_ZN11WingFeather6RenderEv                                                         = 0x020b2e54;
+
+_ZN11WingFeather20UpdateModelTransformEv                                          = 0x020b2c44;
+
 /* Actors/Bowser.h */
 _ZN6Bowser18CheckSpikeBombClsnEv                                                  = 0x02113d20;
 
