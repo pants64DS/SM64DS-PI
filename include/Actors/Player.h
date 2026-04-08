@@ -513,7 +513,7 @@ struct Player : Actor // internal name:: daPly_c
 	u32 unk574;
 	char* unk578;
 	char* unk57c;
-	Vector3_16 unk580;
+	Vector3_16 savedHeadBoneRot; // might be unused?
 	u16 unk586;
 	Actor** eggPtrArr;
 	u32 unk58c;
@@ -668,7 +668,8 @@ struct Player : Actor // internal name:: daPly_c
 	u8 cameraZoomLevel;
 	bool isIntangibleToMesh;
 	u8 unk717;
-	u16 unkFlags;
+	u8 unkFlags;
+	u8 unk719;
 	bool justLostCap;
 	bool quickSandJump;
 	u8 unk71c;
@@ -691,18 +692,12 @@ struct Player : Actor // internal name:: daPly_c
 	s16 toonStateAndFlag; //8 possible states, 0x8000 is the invincible-and-can't-collect-caps flag
 	s16 unk73e;
 	s16 toonIntensity;
-	u8 unk742;
+	u8 boneRotOffsetState;
 	u8 unk743;
 	Vector3 lookAtPos;
-	u32 unk750;
-	u32 unk754;
-	u32 unk758;
-	s16 unk75c;
-	s16 spineAngleOffsY; // is added to bodyModels[GetBodyModelID(param1 & 0xff, false)]->data.bones[8].rot.y
-	s16 spineAngleOffsZ; // is added to bodyModels[GetBodyModelID(param1 & 0xff, false)]->data.bones[8].rot.z
-	s16 unk762;
-	s16 unk764;
-	s16 unk766;
+	Vector3 savedLookAtPos;
+	Vector3_16 spineBoneRotOffset; // is added to bodyModels[GetBodyModelID(param1 & 0xff, false)]->data.bones[8].rot
+	Vector3_16 headBoneRotOffset; // is added to bodyModels[GetBodyModelID(param1 & 0xff, false)]->data.bones[15].rot
 	
 	static SharedFilePtr* ANIM_PTRS[s32{NUM_ANIMS} * NUM_CHARACTERS];
 	static_assert(s32{NUM_ANIMS} * NUM_CHARACTERS == 0x308);
