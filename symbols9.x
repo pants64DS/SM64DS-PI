@@ -800,6 +800,7 @@ _ZN9ModelAnimD0Ev                                                               
 _ZN9ModelAnimD1Ev                                                                 = 0x0201691c;
 _ZN9ModelAnimD2Ev                                                                 = 0x0201689C;
 _ZN9ModelAnim11UpdateVertsEv                                                      = 0x0201686c;
+_ZN9ModelAnim11UpdateBonesEv                                                      = 0x020167a4;
 _ZN9ModelAnim9Virtual10ER9Matrix4x3                                               = 0x0201682c;
 _ZN9ModelAnim6RenderEPK7Vector3                                                   = 0x020167f8;
 _ZN9ModelAnim9Virtual18EjPK7Vector3                                               = 0x020167C4;

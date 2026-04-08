@@ -52,6 +52,7 @@ struct ModelAnim : Model, Animation	// internal: ModelAnm
 	ModelAnim();
 	virtual ~ModelAnim() override;
 	virtual void UpdateVerts() override;
+	virtual void UpdateBones(); override; // Calls ModelComponents::UpdateBones(file, (currFrame << 4) >> 16)
 	virtual void Virtual10(Matrix4x3& arg0) override;
 	virtual void Render(const Vector3* scale = nullptr) override; // Calls UpdateVerts and then Model::Render
 	virtual void Virtual18(u32 arg0, const Vector3* scale); // Calls Virtual10 and then Model::Render
