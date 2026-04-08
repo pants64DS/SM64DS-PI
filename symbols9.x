@@ -1721,6 +1721,7 @@ _ZN6Player21CanInterruptNoControlEh                                             
 _ZN6Player12Unk_020ca488Ev                                                        = 0x020ca488;
 _ZN6Player12Unk_020ca150Eh                                                        = 0x020ca150;
 _ZN6Player28HandleReturnLevelAndEntranceEv                                        = 0x020c94a4;
+_ZN6Player11LoadVsAnimsEv                                                         = 0x020bec2c;
 _ZNK6Player14GetBodyModelIDEjb                                                    = 0x020becc8;
 _ZNK6Player14GetHeadModelIDEjb                                                    = 0x020becf4;
 _ZN6Player12RenderPlayerEv                                                        = 0x020e444c;

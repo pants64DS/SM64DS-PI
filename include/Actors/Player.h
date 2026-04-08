@@ -747,6 +747,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool CanInterruptNoControl(u8 interruptedState);
 	bool Unk_020ca488(); // calls Unk_020c9e5c(0xb);
 	bool Unk_020ca150(u8 arg0);
+	void LoadVsAnims();
 	u32 GetBodyModelID(u32 character, bool checkMetalStateInsteadOfMetalModel) const;
 	u32 GetHeadModelID(u32 character, bool checkMetalStateInsteadOfMetalModel) const;
 	void RenderPlayer();
@@ -777,6 +778,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool FallIfSwimHealing();
 	void HandleClimbYaw();
 	bool IsOnShell(); // if not on shell, reset shell ptr
+	bool SetLevelEnterState(u8 entranceMode);
 	bool IsEnteringLevel(); // entering entrance, not entering exit
 	bool IsBeingShotOutOfCannon();
 	bool CanPause();
@@ -1001,7 +1003,7 @@ struct Player : Actor // internal name:: daPly_c
 
 	bool InitKoopaShell();
 	void InitSuperMushroom();
-	void InitWingFeathers(bool shouldIntroduceWings);
+	void InitWingFeathers(bool playIntro);
 	void InitBalloonMario();
 	void InitVanishLuigi();
 	void InitMetalWario();
