@@ -54,24 +54,6 @@ struct Camera : View // internal name: dCamera
 	static constexpr u16 staticActorID = 0x14c;
 
 	static constexpr u32 cameraDefTable = 0x02086FCC;
-	static constexpr u32 settingBehaviourTableBase = 0x0209B008;
-	/*
-	0: Default
-	1: Bottom camera, close (swimming on surface)
-	2: Bottom camera, far (diving)
-	3: Fly (feather, cannon shoot)
-	4: Top view (owl)
-	6: Air-driven (wind, Balloon Mario)
-	7: Climbing
-	8: Fixed back sliding
-	9: First person
-	B: Enter cannon
-	C: Cannon view
-	D: Talking
-	E: Door enter
-	F: Painting zoom
-	11: Front zoom (character introduction)
-	*/
 
 	enum Flags
 	{
@@ -101,7 +83,27 @@ struct Camera : View // internal name: dCamera
 	{
 		bool (Camera::* OnUpdate)();            // Nested call by Camera::Behaviour()
 		bool (Camera::* OnPlayerChangeState)(); // Nested call by Player::ChangeState()
-	};
+	}
+	static
+		ST_DEFAULT,
+		ST_SWIM,
+		ST_SURFACE_SWIM,
+		ST_FLY, // feather, cannon shot
+		ST_TOP_VIEW, // owl, tornado
+		ST_SPIN,
+		ST_DRIFT, // wind, balloon mario
+		ST_CLIMB,
+		ST_SLIDE,
+		ST_ZOOM_IN,
+		ST_VS_SILVER_STAR_GET,
+		ST_CANNON_ENTER,
+		ST_CANNON_AIM,
+		ST_TALK,
+		ST_DOOR_ENTER,
+		ST_PAINTING_ZOOM_IN,
+		ST_TALK_ZOOM_OUT,
+		ST_CHARACTER_INTRO,
+		ST_BOWSER_SPIN;
 
 	Vector3 lookAt;
 	Vector3 pos;            // 0x8c
@@ -177,32 +179,40 @@ struct Camera : View // internal name: dCamera
 	virtual void OnPendingDestroy() override;
 
 	void SaveCameraStateBeforeTalk(); // Saves the current camera state
+	s32 CallKuppaScriptInstruction(char* instruction, s16 minFrame, s16 maxFrame);
 	void SetFlag_3();
-	void SetFirstPerson(u32 playerID);
-	bool TryZoomOut(u32 playerID);
-	void SetCameraDef(u8 type);
+	void ClearZoomOutFlag(u8 playerID);
+	bool TryZoomOut(u8 playerID);
+	void SetCameraDef(u32 type);
 	void SetLookAt(const Vector3& lookAt);
 	void SetPos(const Vector3& pos);
 	void SetCamFromNearestViewObj();
 	void SetDefaults();
 	bool IsUnderwater() const;
 	void SetHurtZShakeAngle();
-	s32 ChangeState(State* newState);
-	void SetBowserSpinCam(u32 playerID);
-	void LookAtExit(Actor& exit);
-	void GoBehindPlayer(u32 playerID);
-	s32 CallKuppaScriptInstruction(char* instruction, s16 minFrame, s16 maxFrame);
-	void SetFixedTalkCam(u32 playerID, const Vector3* newUnk11c);
-	void SetSlideCam(u32 playerID);
-	void SetHeadstandCam(u32 playerID);
-	void SetClimbCamNoDef(u32 playerID);
-	void SetClimbCamWithDef(u32 playerID);
-	void SetSpinTwirlCam(u32 playerID);
-	void SetSurfaceSwimCam(u32 playerID);
-	void SetSwimCam(u32 playerID);
-	void SetTalkCam(u32 playerID);
-	void SetCeilingHangCam(u32 playerID, u32 clpsCamBehavID);
-	void SetNormalCam(u32 playerID);
+	s32 ChangeState(Camera::State& newState);
+	void SetBowserSpinCam(u8 playerID);
+	void SetCharacterIntroCam(u8 playerID);
+	void SetPaintingZoomInCam(Actor& exit);
+	void SetDoorEnterCam(u8 playerID);
+	void SetCannonAimCam(u8 playerID);
+	void SetCannonEnterCam(u8 playerID);
+	void SetTalkCam(u8 playerID, Vector3* newUnk11c);
+	void SetVsSilverStarGetCam(u8 playerID);
+	void SetSlideCam(u8 playerID);
+	void SetHeadstandCam(u8 playerID);
+	void SetClimbCam(u8 playerID);
+	void SetZoomedInClimbCam(u8 playerID);
+	void SetDriftCam(u8 playerID);
+	void SetSpinCam(u8 playerID);
+	void SetTopViewCam(u8 playerID);
+	void SetFlyCam(u8 playerID);
+	void SetSurfaceSwimCam(u8 playerID);
+	void SetSwimCam(u8 playerID);
+	void SetTalkZoomOutCam(u8 playerID);
+	void SetZoomInCam(u8 playerID);
+	void SetCeilingHangCam(u8 playerID, u32 clpsCamBehavID);
+	void SetDefaultCam(u8 playerID);
 	void CameraShakeAt(const Vector3& source, Fix12i magnitude);
 	void SetFOV(s16 fov);
 
