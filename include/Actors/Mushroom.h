@@ -22,12 +22,9 @@ struct Mushroom : Enemy // internal name: da1up_c
 		NUM_BEHAVIORS
 	};
 
-	using BehaviorFunc = void(Mushroom::*)();
-
 	struct Behavior
 	{
-		BehaviorFunc func;
-		u32 unk04 = 0;
+		void(Mushroom::* func)();
 	};
 
 	static Behavior behaviors[NUM_BEHAVIORS];

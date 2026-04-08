@@ -16,9 +16,7 @@ struct PowerFlower : Actor	// internal name: daObjPowerUpItem_c
 	struct State
 	{
 		void(PowerFlower::* init)();
-		u32 unk04 = 0;
 		void(PowerFlower::* main)();
-		u32 unk0c = 0;
 		char* stateName = nullptr;
 	};
 

@@ -22,12 +22,9 @@ struct Star : Enemy // internal name: daStar_c
 		NUM_STATES
 	};
 
-	using StateFunc = void(Star::*)();
-
 	struct State
 	{
-		StateFunc func;
-		u32 unk04 = 0;
+		void(Star::* func)();
 	};
 
 	enum Types : u32

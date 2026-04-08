@@ -1518,6 +1518,8 @@ _ZN13OneUpMushroom9spawnDataE                                                   
 _ZN13SuperMushroomC3Ev                                                            = 0x020b0530;
 _ZN13SuperMushroom9spawnDataE                                                     = 0x021083a4;
 
+_ZN8Mushroom9behaviorsE                                                           = 0x0210dc00;
+
 _ZTV8Mushroom                                                                     = 0x021083c0;
 _ZN8MushroomD0Ev                                                                  = 0x020aee88;
 _ZN8MushroomD1Ev                                                                  = 0x020aee40;
@@ -2257,6 +2259,8 @@ _ZN9PowerStar9spawnDataE                                                        
 
 _ZN10SilverStarC3Ev                                                               = 0x020ebed4;
 _ZN10SilverStar9spawnDataE                                                        = 0x0210aa5c;
+
+_ZN4Star6statesE                                                                  = 0x021109d8;
 
 _ZN4Star                                                                          = 0x0210ab34;
 _ZN4StarD0Ev                                                                      = 0x020e6c90;
