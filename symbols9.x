@@ -814,7 +814,7 @@ _ZN10ModelAnim2D1Ev                                                             
 _ZN10ModelAnim24CopyERKS_R8BCA_Filej                                              = 0x02016254;
 _ZN10ModelAnim213Func_0201628CEj                                                  = 0x0201628c;
 _ZN10ModelAnim213Func_020162A4Ej                                                  = 0x020162a4;
-_ZN10ModelAnim213Func_020162C4ER8BCA_Filei5Fix12IiEt                              = 0x020162C4;
+_ZN10ModelAnim27SetAnimER8BCA_Filei5Fix12IiEt                                     = 0x020162C4;
 
 _ZTV11ShadowModel                                                                 = 0x0208e860;
 _ZN11ShadowModelC1Ev                                                              = 0x02016068;
