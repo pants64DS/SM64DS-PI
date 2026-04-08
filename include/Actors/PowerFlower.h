@@ -4,7 +4,7 @@ struct PowerFlower : Actor	// internal name: daObjPowerUpItem_c
 {
 	static constexpr u16 staticActorID = 0x132;
 
-	enum States : u32
+	enum States
 	{
 		ST_CLOSE,
 		ST_OPEN,
@@ -39,7 +39,7 @@ struct PowerFlower : Actor	// internal name: daObjPowerUpItem_c
     MovingCylinderClsn cylClsn; // 0x1cc
     WithMeshClsn wmClsn; // 0x200
 	Fix12i floorY; // 0x3bc
-	States currStateID;  // 0x3c0
+	u32 currStateID;  // 0x3c0
 	u32 particleID; // 0x3c4
 	s16 openPhase; // 0x3c8
 	u8 disappearTimer; // 0x3ca

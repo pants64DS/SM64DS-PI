@@ -2,7 +2,7 @@
 
 struct Star : Enemy // internal name: daStar_c
 {
-	enum States : u32
+	enum States
 	{ 
 		ST_SPAWN_LAUNCH_OR_JUMP,
 		ST_LAUNCH_AFTER_JUMP,
@@ -22,7 +22,13 @@ struct Star : Enemy // internal name: daStar_c
 		NUM_STATES
 	};
 
-	using State = void(Star::*)();
+	using StateFunc = void(Star::*)();
+
+	struct State
+	{
+		StateFunc func;
+		u32 unk04 = 0;
+	};
 
 	enum Types : u32
 	{
@@ -63,6 +69,8 @@ struct Star : Enemy // internal name: daStar_c
 		u16  padding            	 : 3 = 0;
 	};
 
+	static State states[NUM_STATES];
+
 	MovingCylinderClsnWithPos cylClsn;
 	WithMeshClsn wmClsn;
 	ModelAnim modelAnim1;
@@ -74,8 +82,8 @@ struct Star : Enemy // internal name: daStar_c
 	u32 starMarkerUniqueID;
 	Player* collector;
 	u32 type;
-	States state;
-	States spawnState;
+	u32 currState;
+	u32 spawnState;
 	Vector3 backupPos;
 	Vector3 respawnPos;
 	Vector3 prevCameraLookAt;
