@@ -81,8 +81,8 @@ struct Camera : View // internal name: dCamera
 
 	struct State // Executes view specific camera behaviour
 	{
-		bool(Camera::* OnUpdate)();            // Nested call by Camera::Behaviour()
 		bool(Camera::* OnPlayerChangeState)(); // Nested call by Player::ChangeState()
+		bool(Camera::* OnUpdate)();            // Nested call by Camera::Behaviour()
 	}
 	static
 		ST_DEFAULT,
@@ -151,7 +151,7 @@ struct Camera : View // internal name: dCamera
 	s16 angZ;
 	s16 fov;
 	s16 angY; // ?
-	s16 unk17e;
+	s16 angX;
 	s16 eightDirAngleY;
 	s16 eightDirStartAngle;
 	s16 eightDirDeltaAngle;
