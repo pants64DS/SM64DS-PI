@@ -38,7 +38,7 @@ struct CLPS
 	{
 		CA_NO_CHANGE          = 0x0,
 		CA_GO_BEHIND          = 0x1,
-		CA_ZOOM_OUT_GO_BEHIND = 0x2,
+		CA_TOP_VIEW			  = 0x2,
 		CA_GO_BEHIND_3        = 0x3,
 		CA_GO_BEHIND_4        = 0x4,
 		CA_UNK_5              = 0x5,
@@ -47,7 +47,7 @@ struct CLPS
 		CA_GO_BEHIND_8        = 0x8,
 		CA_EIGHT_DIRECTIONS   = 0x9,
 		CA_NO_ROTATING        = 0xa,
-		CA_ZOOM_REALLY_FAR_IN = 0xb,
+		CA_CLOSE_UP 		  = 0xb,
 		CA_GO_BEHIND_C        = 0xc,
 		CA_GO_BEHIND_D        = 0xd,
 		CA_GO_BEHIND_E        = 0xe,
