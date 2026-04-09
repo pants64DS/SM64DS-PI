@@ -928,7 +928,7 @@ struct Player : Actor // internal name:: daPly_c
 	void InitSlideKickHitbox();
 	void UpdateAirWithoutTurn(Fix12i horzAccelInput, Fix12i horzAccelNeutral);
 	bool CheckYoshiMakeEgg();
-	bool CheckYoshiSwallow();
+	bool UpdateYoshiTrySwallow();
 	void HandleYoshiAttack();
 	bool CheckHitPlayer(Player& victim);
 	bool HandlePlayerInteraction();

@@ -1957,7 +1957,7 @@ _ZN6Player21UpdateStateFromGroundEb                                             
 _ZN6Player31HandleWalkAndRunCheckTurnAroundEv                                     = 0x020d3b9c;
 _ZN6Player11StopBrakingEv                                                         = 0x020d4540;
 _ZN6Player17CheckYoshiMakeEggEv                                                   = 0x020d674c;
-_ZN6Player17CheckYoshiSwallowEv                                                   = 0x020d6790;
+_ZN6Player21UpdateYoshiTrySwallowEv                                               = 0x020d6790;
 _ZN6Player17HandleYoshiAttackEv                                                   = 0x020d8158;
 _ZN6Player14CheckHitPlayerERS_                                                    = 0x020d853c;
 _ZN6Player23HandlePlayerInteractionEv                                             = 0x020d869c;
