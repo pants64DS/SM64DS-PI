@@ -219,6 +219,45 @@ struct Camera : View // internal name: dCamera
 	// Func_0200D954
 	// Func_0200D8C8
 	// All funcs between Camera() and ~Camera() should belong to this object, but I couldn't prove it since they're never really called.
+
+	bool St_Default_OnPlayerChangeState();
+	bool St_Default_OnUpdate();
+	bool St_Swim_OnPlayerChangeState();
+	bool St_Swim_OnUpdate();
+	bool St_SurfaceSwim_OnPlayerChangeState();
+	bool St_SurfaceSwim_OnUpdate();
+	bool St_Fly_OnPlayerChangeState();
+	bool St_Fly_OnUpdate();
+	bool St_TopView_OnPlayerChangeState();
+	bool St_TopView_OnUpdate();
+	bool St_Spin_OnPlayerChangeState();
+	bool St_Spin_OnUpdate();
+	bool St_Drift_OnPlayerChangeState();
+	bool St_Drift_OnUpdate();
+	bool St_Climb_OnPlayerChangeState();
+	bool St_Climb_OnUpdate();
+	bool St_Slide_OnPlayerChangeState();
+	bool St_Slide_OnUpdate();
+	bool St_ZoomIn_OnPlayerChangeState();
+	bool St_ZoomIn_OnUpdate();
+	bool St_VsSilverStarGet_OnPlayerChangeState();
+	bool St_VsSilverStarGet_OnUpdate();
+	bool St_CannonEnter_OnPlayerChangeState();
+	bool St_CannonEnter_OnUpdate();
+	bool St_CannonAim_OnPlayerChangeState();
+	bool St_CannonAim_OnUpdate();
+	bool St_Talk_OnPlayerChangeState();
+	bool St_Talk_OnUpdate();
+	bool St_DoorEnter_OnPlayerChangeState();
+	bool St_DoorEnter_OnUpdate();
+	bool St_PaintingZoomIn_OnPlayerChangeState();
+	bool St_PaintingZoomIn_OnUpdate();
+	bool St_TalkZoomOut_OnPlayerChangeState();
+	bool St_TalkZoomOut_OnUpdate();
+	bool St_CharacterIntro_OnPlayerChangeState();
+	bool St_CharacterIntro_OnUpdate();
+	bool St_BowserSpin_OnPlayerChangeState();
+	bool St_BowserSpin_OnUpdate();
 };
 
 extern Clipper GLOBAL_CLIPPER;

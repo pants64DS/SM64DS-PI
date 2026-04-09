@@ -1433,6 +1433,45 @@ _ZN6Camera13SetDefaultCamEh                                                     
 _ZN6Camera13CameraShakeAtERK7Vector35Fix12IiE                                     = 0x0200d8c8;
 _ZN6Camera6SetFOVEs                                                               = 0x0200d954;
 
+_ZN6Camera30St_Default_OnPlayerChangeStateEv                                      = 0x0200af0c;
+_ZN6Camera19St_Default_OnUpdateEv                                                 = 0x02009e70;
+_ZN6Camera27St_Swim_OnPlayerChangeStateEv                                         = 0x02009e50;
+_ZN6Camera16St_Swim_OnUpdateEv                                                    = 0x02009e70;
+_ZN6Camera34St_SurfaceSwim_OnPlayerChangeStateEv                                  = 0x02009e30;
+_ZN6Camera23St_SurfaceSwim_OnUpdateEv                                             = 0x02009e70;
+_ZN6Camera26St_Fly_OnPlayerChangeStateEv                                          = 0x02009e10;
+_ZN6Camera15St_Fly_OnUpdateEv                                                     = 0x02009e70;
+_ZN6Camera30St_TopView_OnPlayerChangeStateEv                                      = 0x02009df0; 
+_ZN6Camera19St_TopView_OnUpdateEv                                                 = 0x02009e70;
+_ZN6Camera27St_Spin_OnPlayerChangeStateEv                                         = 0x02009dd0;
+_ZN6Camera16St_Spin_OnUpdateEv                                                    = 0x02009e70;
+_ZN6Camera28St_Drift_OnPlayerChangeStateEv                                        = 0x02009db0;
+_ZN6Camera17St_Drift_OnUpdateEv                                                   = 0x02009e70;
+_ZN6Camera28St_Climb_OnPlayerChangeStateEv                                        = 0x02009d90;
+_ZN6Camera17St_Climb_OnUpdateEv                                                   = 0x02009e70;
+_ZN6Camera28St_Slide_OnPlayerChangeStateEv                                        = 0x02009d70;
+_ZN6Camera17St_Slide_OnUpdateEv                                                   = 0x02009e70;
+_ZN6Camera29St_ZoomIn_OnPlayerChangeStateEv                                       = 0x02009d30;
+_ZN6Camera18St_ZoomIn_OnUpdateEv                                                  = 0x02009aa8;
+_ZN6Camera38St_VsSilverStarGet_OnPlayerChangeStateEv                              = 0x0200d508;
+_ZN6Camera27St_VsSilverStarGet_OnUpdateEv                                         = 0x0200987c;
+_ZN6Camera34St_CannonEnter_OnPlayerChangeStateEv                                  = 0x0200985c;
+_ZN6Camera23St_CannonEnter_OnUpdateEv                                             = 0x02009e70;
+_ZN6Camera32St_CannonAim_OnPlayerChangeStateEv                                    = 0x020097ec;
+_ZN6Camera21St_CannonAim_OnUpdateEv                                               = 0x020095e4;
+_ZN6Camera27St_Talk_OnPlayerChangeStateEv                                         = 0x02005324;
+_ZN6Camera16St_Talk_OnUpdateEv                                                    = 0x02005110;
+_ZN6Camera32St_DoorEnter_OnPlayerChangeStateEv                                    = 0x020050dc;
+_ZN6Camera21St_DoorEnter_OnUpdateEv                                               = 0x02005098;
+_ZN6Camera37St_PaintingZoomIn_OnPlayerChangeStateEv                               = 0x020095c4;
+_ZN6Camera26St_PaintingZoomIn_OnUpdateEv                                          = 0x02009540;
+_ZN6Camera34St_TalkZoomOut_OnPlayerChangeStateEv                                  = 0x02009a8c;
+_ZN6Camera23St_TalkZoomOut_OnUpdateEv                                             = 0x020098e0;
+_ZN6Camera37St_CharacterIntro_OnPlayerChangeStateEv                               = 0x020094e4; 
+_ZN6Camera26St_CharacterIntro_OnUpdateEv                                          = 0x020094c0;
+_ZN6Camera33St_BowserSpin_OnPlayerChangeStateEv                                   = 0x02005060;
+_ZN6Camera22St_BowserSpin_OnUpdateEv                                              = 0x02005000;
+
 GLOBAL_CLIPPER                                                                    = 0x0209F43C;
 UNK_0208715C                                                                      = 0x0208715C;
 
