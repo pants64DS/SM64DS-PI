@@ -43,7 +43,7 @@ struct CLPS
 		CA_GO_BEHIND_4        = 0x4,
 		CA_UNK_5              = 0x5,
 		CA_NORMAL             = 0x6,
-		CA_GO_BEHIND_7        = 0x7,
+		CA_GO_BEHIND_FOR_BOSS = 0x7,
 		CA_GO_BEHIND_8        = 0x8,
 		CA_EIGHT_DIRECTIONS   = 0x9,
 		CA_NO_ROTATING        = 0xa,
