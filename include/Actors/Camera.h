@@ -70,7 +70,7 @@ struct Camera : View // internal name: dCamera
 		UNK_10             = 1 << 10,
 		UNK_11             = 1 << 11,
 		ARROWS_ALLOWED     = 1 << 12,
-		SLEEP_COLD_ZOOM_IN = 1 << 13,
+		LONG_IDLE_ZOOM_IN  = 1 << 13,
 		TALK               = 1 << 14,
 		ZOOM_OUT_FROM_TALK = 1 << 15,
 		CEILING_HANG_ABOVE = 1 << 16,
@@ -144,7 +144,7 @@ struct Camera : View // internal name: dCamera
 	u32 unk15c;
 	u32 unk160;
 	u32 unk164;
-	u32 unk168;
+	Fix12i longIdleFovScale;
 	u32 unk16c;
 	u32 unk170;
 	u32 unk174;
