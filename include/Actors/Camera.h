@@ -53,8 +53,6 @@ struct Camera : View // internal name: dCamera
 {
 	static constexpr u16 staticActorID = 0x14c;
 
-	static constexpr u32 cameraDefTable = 0x02086FCC;
-
 	enum Flags
 	{
 		UNDERWATER         = 1 << 0,
@@ -78,6 +76,42 @@ struct Camera : View // internal name: dCamera
 
 		ZOOMED_IN          = 1 << 19
 	};
+
+	static CameraDef
+		CD_SURFACE_SWIM,
+		CD_SWIM,
+		CD_TOP_VIEW,
+		CD_SPIN,
+		CD_DRIFT,
+		CD_ZOOMED_IN_CLIMB,
+		CD_FLY,
+		CD_CLIMB,
+		CD_HEADSTAND,
+		CD_TRACK_BEHIND_NO_ZOOM_OUT,
+		CD_DEFAULT,
+		CD_CLPS_NORMAL,
+		CD_VIEW_OUTSIDE_CYLINDER,
+		CD_VIEW_INSIDE_CYLINDER,
+		CD_CLPS_NO_ROTATE,
+		CD_CLPS_CLOSE_UP,
+		CD_SLIDE,
+		CD_CLPS_GO_BEHIND_FOR_BOSS,
+		CD_ZOOM_IN,
+		CD_VS_SILVER_STAR_GET,
+		CD_VS_SILVER_STAR_GET_END,
+		CD_CLPS_TOP_VIEW,
+		CD_CLPS_EIGHT_DIRECTIONS,
+		CD_CANNON_ENTER,
+		CD_CANNON_AIM,
+		CD_TALK,
+		CD_VIEW_ROTATION_ONLY,
+		CD_VIEW_SPIRAL_STAIRS,
+		CD_VIEW_PATH_FOLLOW,
+		CD_PAINTING_ZOOM_IN,
+		CD_DOOR_ENTER,
+		CD_CHARACTER_INTRO,
+		CD_BOWSER_SPIN,
+		CD_BOWSER_SPIN_ROTATE;
 
 	struct State // Executes view specific camera behaviour
 	{
