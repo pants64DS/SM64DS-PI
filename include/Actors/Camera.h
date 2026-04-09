@@ -118,8 +118,8 @@ struct Camera : View // internal name: dCamera
 	Fix12i aspectRatio;     // Aspect ratio, default = 1.33 (4:3)
 	Fix12i unk0fc;          // Clipper related (near+far)
 	Fix12i unk100;          // Clipper related
-	u32 unk104;             // Clipper related
-	u32 unk108;             // Clipper related
+	Fix12i fovInvSin;             // Clipper related
+	Fix12i fovInvCos;             // Clipper related
 	u8 viewportLeft;        // Viewport x for left border
 	u8 viewportBottom;      // Viewport y for bottom border
 	u8 viewportRight;       // Viewport x for right border
@@ -180,6 +180,8 @@ struct Camera : View // internal name: dCamera
 
 	void SaveCameraStateBeforeTalk(); // Saves the current camera state
 	s32 CallKuppaScriptInstruction(char* instruction, s16 minFrame, s16 maxFrame);
+	Fix12i ScaleByFOVInvCos(Fix12i y);
+	Fix12i ScaleByFOVInvSin(Fix12i z);
 	void SetFlag_3();
 	void ClearZoomOutFlag(u8 playerID);
 	bool TryZoomOut(u8 playerID);

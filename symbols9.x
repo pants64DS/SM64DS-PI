@@ -1398,6 +1398,8 @@ _ZN6Camera16OnPendingDestroyEv                                                  
 _ZN6Camera25SaveCameraStateBeforeTalkEv                                           = 0x0200CC5C;
 _ZN6Camera9SetFlag_3Ev                                                            = 0x0200d048;
 _ZN6Camera26CallKuppaScriptInstructionEPcss                                       = 0x02008550;
+_ZN6Camera16ScaleByFOVInvCosE5Fix12IiE                                            = 0x020093d4;
+_ZN6Camera16ScaleByFOVInvSinE5Fix12IiE                                            = 0x020093f4;
 _ZN6Camera16ClearZoomOutFlagEh                                                    = 0x0200d064;
 _ZN6Camera10TryZoomOutEh                                                          = 0x0200d0ac;
 _ZN6Camera12SetCameraDefEj                                                        = 0x0200cb58;
