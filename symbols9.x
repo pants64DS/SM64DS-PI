@@ -1403,7 +1403,7 @@ _ZN6Camera10TryZoomOutEh                                                        
 _ZN6Camera12SetCameraDefEj                                                        = 0x0200cb58;
 _ZN6Camera9SetLookAtERK7Vector3                                                   = 0x0200ccc8;
 _ZN6Camera6SetPosERK7Vector3                                                      = 0x0200ccac;
-_ZN6Camera24SetCamFromNearestViewObjEv                                            = 0x0200cce4;
+_ZN6Camera13SetCamToOwnerEv                                                       = 0x0200cce4;
 _ZN6Camera11SetDefaultsEv                                                         = 0x0200cf40;
 _ZNK6Camera12IsUnderwaterEv                                                       = 0x0200d890;
 _ZN6Camera18SetHurtZShakeAngleEv                                                  = 0x0200d89c;

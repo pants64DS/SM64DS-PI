@@ -186,7 +186,7 @@ struct Camera : View // internal name: dCamera
 	void SetCameraDef(u32 type);
 	void SetLookAt(const Vector3& lookAt);
 	void SetPos(const Vector3& pos);
-	void SetCamFromNearestViewObj();
+	void SetCamToOwner();
 	void SetDefaults();
 	bool IsUnderwater() const;
 	void SetHurtZShakeAngle();
@@ -214,7 +214,7 @@ struct Camera : View // internal name: dCamera
 	void SetCeilingHangCam(u8 playerID, u32 clpsCamBehavID);
 	void SetDefaultCam(u8 playerID);
 	void CameraShakeAt(const Vector3& source, Fix12i magnitude);
-	void SetFOV(s16 fov);
+	void SetFOV(s16 newFov);
 
 	// Func_0200D954
 	// Func_0200D8C8
