@@ -664,7 +664,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool unk711;
 	bool isInAirIsh; // 0x712
 	bool isTangible;
-	bool unk714;
+	bool useMouthFullHead;
 	u8 cameraZoomLevel;
 	bool isIntangibleToMesh;
 	u8 unk717;
