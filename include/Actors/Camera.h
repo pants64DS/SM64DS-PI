@@ -3,11 +3,11 @@
 struct CameraDef
 {
 	s32 unk00; // something to do with going behind the player...
-	s32 unk04;
+	Fix12i unk04;
 	s32 camVertAngIsh;
 	u32 unk0c;
-	s32 vertOffset;
-	s32 offsetIsh; // ???
+	Fix12i yOffset;
+	Fix12i zOffset;
 	u32 jumpWithPlayerIsh;
 	s32 dist0; // ???
 	s32 dist1;
