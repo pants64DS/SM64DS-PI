@@ -523,8 +523,8 @@ struct Player : Actor // internal name:: daPly_c
 	u32 unk56c;
 	u32 unk570;
 	u32 unk574;
-	char* unk578;
-	char* unk57c;
+	Vector3* yoshiPosPtrArr; // VS related maybe?
+	MovementFlags* yoshiMoveFlagsArr; // VS related maybe?
 	Vector3_16 savedHeadBoneRot; // might be unused?
 	u16 unk586;
 	Actor** eggPtrArr;
@@ -607,7 +607,7 @@ struct Player : Actor // internal name:: daPly_c
 	s16 unk6d6;
 	u8 playerID; // always 0 in single player mode
 	u8 realChar; // probably
-	u8 unk6da;
+	u8 capParam; // is written to in Player::InitResources, otherwise unused
 	u8 renderedChar;
 	u8 prevHatChar; // 0x6DC
 	u8 currHatChar; // 0x6DD
