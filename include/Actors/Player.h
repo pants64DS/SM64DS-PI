@@ -657,7 +657,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool usesBalloonModel;  // 0x6fe
 	bool isWingMario;       // 0x6ff
 	bool usesWingModel;     // 0x700
-	u8 unk701;
+	bool usesNoCapHeadModel;
 	u8 powerupBlinkToggle; // used when your powerup timer is low. hide powerup if 0, show if 1
 	bool isMega;
 	YoshiEgg::EggContents eggContents;
@@ -676,7 +676,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool unk711;
 	bool isInAirIsh; // 0x712
 	bool isTangible;
-	bool useMouthFullHead;
+	bool usesMouthFullHeadModel;
 	u8 cameraZoomLevel;
 	bool isIntangibleToMesh;
 	u8 unk717;
