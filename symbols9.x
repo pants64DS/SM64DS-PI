@@ -458,8 +458,6 @@ GetCourseID                                                                     
 GetLevelPart                                                                      = 0x02013548;
 NumStars                                                                          = 0x0201367c;
 
-LoadKeyModels                                                                     = 0x02131114;
-UnloadKeyModels                                                                   = 0x021310cc;
 UnloadBlueCoinModel                                                               = 0x0200fe70;
 LoadBlueCoinModel                                                                 = 0x0200fe9c;
 UnloadSilverStarAndNumber                                                         = 0x020e717c;
@@ -1567,6 +1565,10 @@ _ZN8IceBlock15OnHitByMegaCharER6Player                                          
 _ZN8IceBlock4KillEv                                                               = 0x02127cf4;
 
 _ZN8IceBlock25SpawnPowerStarIfNecessaryEv                                         = 0x02127be0;
+
+/* Actors/KeyBase.h */
+_ZN7KeyBase15UnloadKeyModelsEh                                                    = 0x021310cc;
+_ZN7KeyBase13LoadKeyModelsEh                                                      = 0x02131114;
 
 /* Actors/Minimap.h */
 _ZTV7Minimap                                                                      = 0x0210c1b8;

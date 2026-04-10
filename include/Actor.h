@@ -33,3 +33,4 @@ struct SoundObj;
 #include "Actors/Mushroom.h"
 #include "Actors/PowerFlower.h"
 #include "Actors/WingFeather.h"
+#include "Actors/KeyBase.h"

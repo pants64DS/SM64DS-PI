@@ -439,8 +439,6 @@ extern "C"
 	s8 GetLevelPart(s8 levelID);
 	u8 NumStars();
 
-	void LoadKeyModels(u32 keyID);
-	void UnloadKeyModels(u32 keyID);
 	void UnloadBlueCoinModel();
 	void LoadBlueCoinModel();
 	void UnloadSilverStarAndNumber();
