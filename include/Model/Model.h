@@ -63,17 +63,17 @@ struct ModelAnim : Model, Animation	// internal: ModelAnm
 
 struct ModelAnim2 : ModelAnim // internal: ModelAnm2
 {
-	u32 unk64;
+	BCA_File* otherFile;
 	Animation otherAnim;
 
 	ModelAnim2();
 	virtual ~ModelAnim2() override;
 
 	// 2 funcs missing before
-	void Copy(const ModelAnim2& anim, BCA_File& newFile, u32 newUnk64); // copies anim to *this, otherAnim is set to anim's Animation base class
-	void Func_0201628C(u32 arg0);
-	void Func_020162A4(u32 arg0);
-	void SetAnim(BCA_File& animFile, s32 animFlags, Fix12i speed = 1._f, u16 startFrame = 0); // always calls on otherAnim
+	void Copy(const ModelAnim2& anim, BCA_File* newFile, BCA_File* newOtherFile); // copies anim to *this, otherAnim is set to anim's Animation base class
+	void DisableOtherAnimFromBone(s32 boneID);
+	void EnableOtherAnimFromBone(s32 boneID);
+	void SetOtherAnim(BCA_File& animFile, s32 animFlags, Fix12i speed = 1._f, u16 startFrame = 0); // always calls on otherAnim
 };
 
 struct ShadowModel : ModelBase // internal: ShadowModel; done

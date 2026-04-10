@@ -810,10 +810,10 @@ _ZTV10ModelAnim2                                                                
 _ZN10ModelAnim2C1Ev                                                               = 0x020163A0;
 _ZN10ModelAnim2D0Ev                                                               = 0x02016320;
 _ZN10ModelAnim2D1Ev                                                               = 0x02016364;
-_ZN10ModelAnim24CopyERKS_R8BCA_Filej                                              = 0x02016254;
-_ZN10ModelAnim213Func_0201628CEj                                                  = 0x0201628c;
-_ZN10ModelAnim213Func_020162A4Ej                                                  = 0x020162a4;
-_ZN10ModelAnim27SetAnimER8BCA_Filei5Fix12IiEt                                     = 0x020162C4;
+_ZN10ModelAnim24CopyERKS_P8BCA_FileS3_                                            = 0x02016254;
+_ZN10ModelAnim224DisableOtherAnimFromBoneEi                                       = 0x0201628c;
+_ZN10ModelAnim223EnableOtherAnimFromBoneEi                                        = 0x020162a4;
+_ZN10ModelAnim212SetOtherAnimER8BCA_Filei5Fix12IiEt                               = 0x020162C4;
 
 _ZTV11ShadowModel                                                                 = 0x0208e860;
 _ZN11ShadowModelC1Ev                                                              = 0x02016068;
