@@ -523,8 +523,8 @@ struct Player : Actor // internal name:: daPly_c
 	u32 unk56c;
 	u32 unk570;
 	u32 unk574;
-	Vector3* yoshiPosPtrArr; // VS related maybe?
-	MovementFlags* yoshiMoveFlagsArr; // VS related maybe?
+	Vector3* yoshiEggPtrArr;
+	MovementFlags* yoshiMoveFlagsArr;
 	Vector3_16 savedHeadBoneRot; // might be unused?
 	u16 unk586;
 	Actor** eggPtrArr;
