@@ -482,6 +482,13 @@ struct Player : Actor // internal name:: daPly_c
 		ST_POLE_JUMP,
 		ST_HEADSTAND_JUMP;
 
+	struct EggMoveFlags
+	{
+		u8   normHorzSpeed : 6; // normalized to 16 - 32
+		bool isInAir  	   : 1;
+		bool isMoving  	   : 1;
+	};
+
 	u32 unk0d4;
 	u32 unk0d8;
 	ModelAnim2* bodyModels[5]; //the fifth one is the Metal Wario model
@@ -523,8 +530,8 @@ struct Player : Actor // internal name:: daPly_c
 	u32 unk56c;
 	u32 unk570;
 	u32 unk574;
-	Vector3* yoshiEggPtrArr;
-	MovementFlags* yoshiMoveFlagsArr;
+	Vector3* eggPosPtrArr;
+	EggMoveFlags* eggMoveFlagsArr;
 	Vector3_16 savedHeadBoneRot; // might be unused?
 	u16 unk586;
 	Actor** eggPtrArr;
