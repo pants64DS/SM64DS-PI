@@ -384,6 +384,18 @@ struct Player : Actor // internal name:: daPly_c
 		F2_START_FLOWER_POWER = 1 << 12
 	};
 
+	enum LoadedFileFlags
+	{
+		LF_SILVER_STAR_MODEL = 1 << 0, // obj_star_silver.bmd, s_number.bmd
+		LF_MARIO_CAP_MODEL   = 1 << 1, // mario_cap.bmd
+		LF_LUIGI_CAP_MODEL   = 1 << 2, // luigi_cap.bmd
+		LF_WARIO_CAP_MODEL   = 1 << 3, // wario_cap.bmd
+		LF_KEY_MODELS    	 = 1 << 4, // koopa_key.bmd / mario_key.bmd / luigi_key.bmd / wario_key.bmd / mip_key.bmd / obj_star.bmd
+		LF_POWERUP_MODELS    = 1 << 5, // wario_metal_model.bmd, b_mario_all.bmd, wing_model.bmd
+		LF_HAT_CHAR_ANIMS    = 1 << 6, // ANIM_PTRS[currHatChar]
+		LF_UNK7              = 1 << 7, // unused?
+	};
+
 	struct State
 	{
 		bool(Player::* init)();
@@ -668,7 +680,7 @@ struct Player : Actor // internal name:: daPly_c
 	u8 cameraZoomLevel;
 	bool isIntangibleToMesh;
 	u8 unk717;
-	u8 unkFlags;
+	LoadedFileFlags loadedFileFlags;
 	u8 returnKeyType; // when returning from a boss level upon collecting a key
 	bool justLostCap;
 	bool quickSandJump;
