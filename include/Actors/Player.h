@@ -384,7 +384,7 @@ struct Player : Actor // internal name:: daPly_c
 		F2_START_FLOWER_POWER = 1 << 12
 	};
 
-	enum LoadedFileFlags
+	enum LoadedFileFlags : u8
 	{
 		LF_SILVER_STAR_MODEL = 1 << 0, // obj_star_silver.bmd, s_number.bmd
 		LF_MARIO_CAP_MODEL   = 1 << 1, // mario_cap.bmd
