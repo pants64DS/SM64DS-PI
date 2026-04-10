@@ -1806,7 +1806,7 @@ _ZNK6Player14GetHeadModelIDEjb                                                  
 _ZN6Player12RenderPlayerEv                                                        = 0x020e444c;
 _ZN6Player20UpdateModelTransformEv                                                = 0x020e4768;
 _ZN6Player12GetBodyModelEv                                                        = 0x020e496c;
-_ZN6Player24HandleArmsCarryTransformEv                                            = 0x020e4990;
+_ZN6Player20UpdateCarryTransformEv                                                = 0x020e4990;
 _ZN6Player7SetAnimEji5Fix12IiEj                                                   = 0x020bef2c;
 _ZN6Player27ShowIntroMessageIfNecessaryEv                                         = 0x020c4188;
 _ZN6Player11ShowMessageER5ActorjPK7Vector3jj                                      = 0x020c4ec0;

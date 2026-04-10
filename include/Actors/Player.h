@@ -761,7 +761,7 @@ struct Player : Actor // internal name:: daPly_c
 	void UpdateModelTransform();
 	void HandleReturnLevelAndEntrance();
 	ModelAnim2* GetBodyModel();
-	bool HandleArmsCarryTransform();
+	bool UpdateCarryTransform();
 	void SetAnim(u32 animID, s32 flags, Fix12i animSpeed = 1._f, u32 startFrame = 0);
 	void UpdateAnim();
 	bool ShowIntroMessageIfNecessary();
