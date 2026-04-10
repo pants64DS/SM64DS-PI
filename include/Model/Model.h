@@ -58,7 +58,7 @@ struct ModelAnim : Model, Animation	// internal: ModelAnm
 	virtual void Virtual18(u32 arg0, const Vector3* scale); // Calls Virtual10 and then Model::Render
 
 	void SetAnim(BCA_File& animFile, s32 flags, Fix12i speed = 1._f, u32 startFrame = 0);
-	void Copy(const ModelAnim& anim, BCA_File& newFile); // if newFile != nullptr, it gets copied instead of anim->file
+	void Copy(const ModelAnim& anim, BCA_File* newFile); // if newFile != nullptr, it gets copied instead of anim->file
 };
 
 struct ModelAnim2 : ModelAnim // internal: ModelAnm2

@@ -803,7 +803,7 @@ _ZN9ModelAnim9Virtual10ER9Matrix4x3                                             
 _ZN9ModelAnim6RenderEPK7Vector3                                                   = 0x020167f8;
 _ZN9ModelAnim9Virtual18EjPK7Vector3                                               = 0x020167C4;
 _ZN9ModelAnim7SetAnimER8BCA_Filei5Fix12IiEj                                       = 0x02016748;
-_ZN9ModelAnim4CopyERKS_Pc                                                         = 0x02016714;
+_ZN9ModelAnim4CopyERKS_P8BCA_File                                                 = 0x02016714;
 
 _ZTV10ModelAnim2                                                                  = 0x0208e9ac;
 /*_ZTV9Animation_ModelAnim2Thunk                                                  = 0x0208e9d0;*/
