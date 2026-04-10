@@ -530,8 +530,8 @@ struct Player : Actor // internal name:: daPly_c
 	u32 unk56c;
 	u32 unk570;
 	u32 unk574;
-	Vector3* eggPosPtrArr;
-	EggMoveFlags* eggMoveFlagsArr;
+	Vector3* eggPosArrPtr;
+	EggMoveFlags* eggMoveFlagsArrPtr;
 	Vector3_16 savedHeadBoneRot; // might be unused?
 	u16 unk586;
 	Actor** eggPtrArr;
