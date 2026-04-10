@@ -1981,6 +1981,7 @@ _ZN6Player17HandleRunningDustEv                                                 
 _ZN6Player15HandleFootstepsEv                                                     = 0x020d4c30;
 _ZN6Player27ApproachHorzSpeedCheckSlopeE5Fix12IiES1_                              = 0x020d4d88;
 _ZN6Player17ClearActorInMouthEv                                                   = 0x020d718c;
+_ZN6Player11PlayEatAnimEv                                                         = 0x020d71a0;
 _ZN6Player18SetPunchKickAttackEh                                                  = 0x020d8a50;
 _ZN6Player20CheckLedgeHangOrGrabEv                                                = 0x020d0d2c;
 _ZN6Player17CheckCeilingAboveEv                                                   = 0x020d1164;
@@ -2288,6 +2289,7 @@ PUNCH_KICK_SEQUENCE_ACTIVE_FRAME                                                
 CEILING_GRATE_ANIM_IDS                                                            = 0x0210a60c;
 HURT_ANIM_IDS                                                                     = 0x0210a6d4;
 FALL_DURING_HURT_ANIM_IDS                                                         = 0x0210a6ec;
+LEVEL_ENTER_ANIM_IDS                                                              = 0x0210a7e8;
 PLAYER_CYLCLSN_OFFSET                                                             = 0x0210f92c;
 
 /* Actors/PowerFlower.h */

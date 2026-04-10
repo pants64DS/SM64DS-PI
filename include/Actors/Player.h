@@ -669,7 +669,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool isIntangibleToMesh;
 	u8 unk717;
 	u8 unkFlags;
-	u8 unk719;
+	u8 returnKeyType; // when returning from a boss level upon collecting a key
 	bool justLostCap;
 	bool quickSandJump;
 	u8 unk71c;
@@ -907,6 +907,7 @@ struct Player : Actor // internal name:: daPly_c
 	void AdjustLedgeHangPosAndFall();
 	void SetPunchKickAttack(u8 punchKickNumber);
 	void ClearActorInMouth();
+	void PlayEatAnim();
 	bool CheckLedgeHangOrGrab();
 	bool CheckCeilingAbove();
 	bool SetCrouchJumpAction();
@@ -1265,4 +1266,5 @@ extern u16 PUNCH_KICK_SEQUENCE_ACTIVE_FRAME[6];
 extern u32 CEILING_GRATE_ANIM_IDS[4];
 extern u32 HURT_ANIM_IDS[6];
 extern u32 FALL_DURING_HURT_ANIM_IDS[2];
+extern u32 LEVEL_ENTER_ANIM_IDS[19];
 extern Vector3 PLAYER_CYLCLSN_OFFSET;
