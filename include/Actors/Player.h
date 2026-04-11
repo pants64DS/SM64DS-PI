@@ -496,7 +496,7 @@ struct Player : Actor // internal name:: daPly_c
 	Model* headModels[NUM_CHARACTERS]; //Yoshi's is a ModelAnim
 	Model* headNoCapModels[NUM_CHARACTERS]; //Yoshi's is the mouth-is-full model
 	ModelAnim wings;
-	u32 unk1d8;
+	Model* yoshiBubbleModel;
 	TextureSequence texSeq1dc;
 	TextureSequence texSeq1f0;
 	TextureSequence texSeq204;
@@ -694,7 +694,7 @@ struct Player : Actor // internal name:: daPly_c
 	u8 introType;
 	u8 introState;
 	u8 introMessageTimer;
-	u8 unk721;
+	u8 yoshiBubbleState;
 	bool unk722;
 	bool unk723;
 	u8 unk724;
