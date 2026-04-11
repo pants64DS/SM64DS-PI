@@ -1990,6 +1990,8 @@ _ZN6Player21SetCrouchAttackActionEv                                             
 _ZN6Player22HandleCarryMoveEffectsEj                                              = 0x020d1f78;
 _ZN6Player19ChangeStateFromWaitE5Fix12IiE                                         = 0x020d22ec;
 _ZN6Player14CancelWaitAnimEv                                                      = 0x020d2da0;
+_ZN6Player14PopYoshiBubbleEv                                                      = 0x020d2e74;
+_ZN6Player22UpdateYoshiBubbleScaleEv                                              = 0x020d2f24;
 _ZN6Player14HandleWaitAnimEv                                                      = 0x020d2fdc;
 _ZN6Player13CheckTeleportEv                                                       = 0x020d245c;
 _ZN6Player19FlipHorzSpeedAndYawEv                                                 = 0x020d3498;

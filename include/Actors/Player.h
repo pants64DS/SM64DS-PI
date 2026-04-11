@@ -527,9 +527,7 @@ struct Player : Actor // internal name:: daPly_c
 	Vector3 unk548; //mirrors the player's position?
 	Vector3 floorNormal;
 	Vector3 wallNormal;
-	u32 unk56c;
-	u32 unk570;
-	u32 unk574;
+	Vector3 yoshiBubbleScale;
 	Vector3* eggPosArrPtr;
 	EggMoveFlags* eggMoveFlagsArrPtr;
 	Vector3_16 savedHeadBoneRot; // might be unused?
@@ -934,6 +932,8 @@ struct Player : Actor // internal name:: daPly_c
 	void HandleCarryMoveEffects(u32 moveAnimID);
 	bool ChangeStateFromWait(Fix12i minMagForWalk);
 	u8 CancelWaitAnim();
+	void PopYoshiBubble();
+	void UpdateYoshiBubbleScale();
 	bool HandleWaitAnim();
 	bool CheckTeleport();
 	void FlipHorzSpeedAndYaw();
