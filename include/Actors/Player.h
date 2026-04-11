@@ -764,7 +764,7 @@ struct Player : Actor // internal name:: daPly_c
 	u32 GetHeadModelID(u32 character, bool checkMetalStateInsteadOfMetalModel) const;
 	void RenderPlayer();
 	void UpdateModelTransform();
-	void HandleReturnLevelAndEntrance();
+	bool UpdateStarExit();
 	ModelAnim2* GetBodyModel();
 	bool UpdateCarryTransform();
 	void SetAnim(u32 animID, s32 flags, Fix12i animSpeed = 1._f, u32 startFrame = 0);
