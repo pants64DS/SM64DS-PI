@@ -2658,10 +2658,13 @@ _ZN8SaveData31SetNumGlowingRabbitsAndWhiteKeyEv                                 
 _ZN8SaveData22NumGlowingRabbitsFoundEv                                            = 0x02013984;
 _ZN8SaveData17SetCharacterIntroEi                                                 = 0x02013910;
 
-_ZN8SaveData21CheckFloor1ToadHasCapEv                                             = 0x02013a44;
-_ZN8SaveData13PlayerLoseCapEv                                                     = 0x02013ad4;
-_ZN8SaveData16CanPlayerHaveCapEv                                                  = 0x02013b5c;
-_ZN8SaveData16HasPlayerLostCapEv                                                  = 0x02013b18;
+_ZN8SaveData18ClearCapOnToadFlagEv                                                = 0x020139b8;
+_ZN8SaveData16SetCapOnToadFlagEv                                                  = 0x02013a00;
+_ZN8SaveData18CheckCapOnToadFlagEv                                                = 0x02013a44;
+_ZN8SaveData22ClearPlayerLostCapFlagEv                                            = 0x02013a88;
+_ZN8SaveData20SetPlayerLostCapFlagEv                                              = 0x02013ad4;
+_ZN8SaveData22CheckPlayerLostCapFlagEv                                            = 0x02013b18;
+_ZN8SaveData16CanPlayerLoseCapEv                                                  = 0x02013b5c;
 
 SAVE_DATA                                                                         = 0x0209caa0;
 

@@ -41,9 +41,9 @@ struct FileSaveData
 		MARIO_CAP_LOST             = 1u << 24,
 		LUIGI_CAP_LOST             = 1u << 25,
 		WARIO_CAP_LOST             = 1u << 26,
-		MARIO_CAP_ON_FLOOR1_TOAD   = 1u << 27,
-		LUIGI_CAP_ON_FLOOR1_TOAD   = 1u << 28,
-		WARIO_CAP_ON_FLOOR1_TOAD   = 1u << 29,
+		MARIO_CAP_ON_TOAD   	   = 1u << 27,
+		LUIGI_CAP_ON_TOAD   	   = 1u << 28,
+		WARIO_CAP_ON_TOAD 		   = 1u << 29,
 		MINIGAMES_ACTIVATED        = 1u << 30, // talked to minigame toad
 		RED_SWITCH_ACTIVATED       = 1u << 31, // if not set, the shine in main hall is rendered
 	};
@@ -223,10 +223,15 @@ struct SaveData : FileSaveData, MinigameSaveData
 	static u32  NumGlowingRabbitsFound();
 	static void SetCharacterIntro(s32 keyID);
 
-	static bool CheckFloor1ToadHasCap();
-	static void PlayerLoseCap();
-	static s32  CanPlayerHaveCap();
-	static s32  HasPlayerLostCap();
+	static void ClearCapOnToadFlag();
+	static void SetCapOnToadFlag();
+	static bool CheckCapOnToadFlag();
+
+	static void ClearPlayerLostCapFlag();
+	static void SetPlayerLostCapFlag();
+	static bool CheckPlayerLostCapFlag();
+	
+	static bool CanPlayerLoseCap();
 };
 
 extern SaveData SAVE_DATA;
