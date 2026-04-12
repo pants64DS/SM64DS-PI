@@ -19,7 +19,7 @@ struct IceBlock : Platform // internal name: dObjIceBlock_c
 	virtual s32 Behavior() override;
 	virtual s32 Render() override;
     virtual ~IceBlock() override;
-    virtual void OnHitByMegaChar(Player& megaChar) override;
+    virtual void OnHitByMegaChar(Actor& attacker) override;
     virtual void Kill() override;
 
     void SpawnPowerStarIfNecessary();

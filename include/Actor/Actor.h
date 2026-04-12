@@ -96,14 +96,14 @@ struct Actor : ActorDerived // internal name: dActor
 	virtual u32 OnYoshiTryEat();
 	virtual void OnTurnIntoEgg(Player& player);
 	virtual bool Virtual50();
-	virtual void OnGroundPounded(Player& groundPounder);
-	virtual void OnAgainstPlayer(Player& player);
-	virtual void OnPunched(Player& puncher);
-	virtual void OnKicked(Player& kicker);
-	virtual void OnPushed(Player& pusher);
-	virtual void OnHitByCannonBlastedChar(Player& blaster);
-	virtual void OnHitByMegaChar(Player& megaChar);
-	virtual void OnHitFromUnderneath(Player& hitter);
+	virtual void OnGroundPounded(Actor& attacker);
+	virtual void OnHitFromSide(Actor& attacker);
+	virtual void OnPunched(Actor& attacker);
+	virtual void OnKicked(Actor& attacker);
+	virtual void OnPushed(Actor& attacker);
+	virtual void OnHitByCannonBlastedChar(Actor& attacker);
+	virtual void OnHitByMegaChar(Actor& attacker);
+	virtual void OnHitFromUnderneath(Actor& attacker);
 	virtual Fix12i OnAimedAtWithEgg();
 	virtual Vector3 OnAimedAtWithEggReturnVec();
 

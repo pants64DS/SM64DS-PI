@@ -1199,14 +1199,14 @@ _ZN5Actor11AfterRenderEj                                                        
 _ZN5Actor13OnYoshiTryEatEv                                                        = 0x02010160;
 _ZN5Actor13OnTurnIntoEggER6Player                                                 = 0x02010154;
 _ZN5Actor9Virtual50Ev                                                             = 0x0201014c;
-_ZN5Actor15OnGroundPoundedER6Player                                               = 0x02010148;
-_ZN5Actor15OnAgainstPlayerER6Player                                               = 0x02010144;
-_ZN5Actor9OnPunchedER6Player                                                      = 0x02010140;
-_ZN5Actor8OnKickedER6Player                                                       = 0x0201013c;
-_ZN5Actor8OnPushedER6Player                                                       = 0x02010138;
-_ZN5Actor24OnHitByCannonBlastedCharER6Player                                      = 0x02010134;
-_ZN5Actor15OnHitByMegaCharER6Player                                               = 0x02010130;
-_ZN5Actor19OnHitFromUnderneathER6Player                                           = 0x0201012c;
+_ZN5Actor15OnGroundPoundedERS_                                                    = 0x02010148;
+_ZN5Actor13OnHitFromSideERS_                                                      = 0x02010144;
+_ZN5Actor9OnPunchedERS_                                                           = 0x02010140;
+_ZN5Actor8OnKickedERS_                                                            = 0x0201013c;
+_ZN5Actor8OnPushedERS_                                                            = 0x02010138;
+_ZN5Actor24OnHitByCannonBlastedCharERS_                                           = 0x02010134;
+_ZN5Actor15OnHitByMegaCharERS_                                                    = 0x02010130;
+_ZN5Actor19OnHitFromUnderneathERS_                                                = 0x0201012c;
 _ZN5Actor16OnAimedAtWithEggEv                                                     = 0x02010124;
 _ZN5Actor25OnAimedAtWithEggReturnVecEv                                            = 0x020100dc;
 _ZN5Actor22IsTooFarAwayFromPlayerE5Fix12IiE                                       = 0x0200f70c;
@@ -1561,7 +1561,7 @@ _ZN8IceBlock13InitResourcesEv                                                   
 _ZN8IceBlock16CleanupResourcesEv                                                  = 0x02127d98;
 _ZN8IceBlock8BehaviorEv                                                           = 0x02127e1c;
 _ZN8IceBlock6RenderEv                                                             = 0x02127ddc;
-_ZN8IceBlock15OnHitByMegaCharER6Player                                            = 0x02127ccc;
+_ZN8IceBlock15OnHitByMegaCharER5Actor                                             = 0x02127ccc;
 _ZN8IceBlock4KillEv                                                               = 0x02127cf4;
 
 _ZN8IceBlock25SpawnPowerStarIfNecessaryEv                                         = 0x02127be0;
@@ -2058,7 +2058,7 @@ _ZN6Player28CheckHitActorWithCannonBlastER12WithMeshClsnR5Actor                 
 _ZN6Player16CheckPushedActorER12WithMeshClsnR5Actor                               = 0x020eee3c;
 _ZN6Player16CheckKickedActorER12WithMeshClsnR5Actor                               = 0x020eeeb8;
 _ZN6Player17CheckPunchedActorER12WithMeshClsnR5Actor                              = 0x020ef070;
-_ZN6Player17CheckAgainstActorER12WithMeshClsnR5Actor                              = 0x020ef228;
+_ZN6Player21CheckHitActorFromSideER12WithMeshClsnR5Actor                          = 0x020ef228;
 _ZN6Player23CheckGroundPoundedActorER12WithMeshClsnR5Actor                        = 0x020ef2a4;
 _ZN6Player24GetTractionIDDecelFactorEj                                            = 0x020f030c;
 _ZN6Player14OnSlopedGroundEj5Fix12IiE                                             = 0x020f035c;

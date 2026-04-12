@@ -1006,14 +1006,14 @@ struct Player : Actor // internal name:: daPly_c
 	u8 GetLandingType();
 	void UpdatePlayerModel();
 	void HandleAttackPlayer(Player& victim, u32 attackerHitFlags);
-	static bool CheckHitActorFromUnderneath(WithMeshClsn& wmClsn, Actor& jumper);
-	static bool CheckHitActorAsMegaChar(WithMeshClsn& wmClsn, Actor& megaPlayer);
-	static bool CheckHitActorWithCannonBlast(WithMeshClsn& wmClsn, Actor& shooter);
-	static bool CheckPushedActor(WithMeshClsn& wmClsn, Actor& pusher);
-	static bool CheckKickedActor(WithMeshClsn& wmClsn, Actor& kicker); // includes kicks and sweep kicks
-	static bool CheckPunchedActor(WithMeshClsn& wmClsn, Actor& puncher);
-	static bool CheckAgainstActor(WithMeshClsn& wmClsn, Actor& actor);
-	static bool CheckGroundPoundedActor(WithMeshClsn& wmClsn, Actor& groundPounder);
+	static bool CheckHitActorFromUnderneath(WithMeshClsn& wmClsn, Actor& attacker);
+	static bool CheckHitActorAsMegaChar(WithMeshClsn& wmClsn, Actor& attacker);
+	static bool CheckHitActorWithCannonBlast(WithMeshClsn& wmClsn, Actor& attacker);
+	static bool CheckPushedActor(WithMeshClsn& wmClsn, Actor& attacker);
+	static bool CheckKickedActor(WithMeshClsn& wmClsn, Actor& attacker); // includes kicks and sweep kicks
+	static bool CheckPunchedActor(WithMeshClsn& wmClsn, Actor& attacker);
+	static bool CheckHitActorFromSide(WithMeshClsn& wmClsn, Actor& attacker);
+	static bool CheckGroundPoundedActor(WithMeshClsn& wmClsn, Actor& attacker);
 	static Fix12i GetTractionIDDecelFactor(u32 tractionID);
 	static bool OnSlopedGround(u32 tractionID, Fix12i floorNormalY);
 
