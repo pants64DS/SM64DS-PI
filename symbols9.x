@@ -1754,6 +1754,10 @@ _ZN6Player12ST_HEADSTANDE                                                       
 _ZN6Player12ST_POLE_JUMPE                                                         = 0x0211070c;
 _ZN6Player17ST_HEADSTAND_JUMPE                                                    = 0x02110724;
 
+_ZN6Player8JS_FUNCSE                                                              = 0x0211073c;
+_ZN6Player8LU_FUNCSE                                                              = 0x0211075c;
+_ZN6Player8NI_FUNCSE                                                              = 0x02110884;
+
 KS_PLAYER_FUNCTIONS                                                               = 0x02110794;
 
 _ZTV6Player                                                                       = 0x0210a834;
@@ -1767,10 +1771,16 @@ _ZN6Player16CleanupResourcesEv                                                  
 _ZN6Player8BehaviorEv                                                             = 0x020e4d24;
 _ZN6Player6RenderEv                                                               = 0x020e3a08;
 _ZN6Player16OnPendingDestroyEv                                                    = 0x020e3a04;
+_ZN6Player13OnYoshiTryEatEv                                                       = 0x020e69b8;
+
+_ZN6Player13LoadResourcesEv                                                       = 0x020e5948;
 _ZN6Player13LoadCharGroupEv                                                       = 0x020e6330;
 _ZN6Player16LoadCharBGMGroupEv                                                    = 0x020e6350;
 _ZN6Player17InitPlayerCylClsnEv                                                   = 0x020e63a4;
-_ZN6Player13OnYoshiTryEatEv                                                       = 0x020e69b8;
+_ZN6Player18ResetBoneRotOffsetEv                                                  = 0x020e6780;
+_ZN6Player12Unk_020e6b3cER5Model                                                  = 0x020e6b3c;
+_ZN6Player19RestoreMaterialRefsER5ModelPc                                         = 0x020e6b74;
+_ZN6Player18BackupMaterialRefsER5Model                                            = 0x020e6bb0;
 _ZN6Player14ClearEggPtrArrEv                                                      = 0x020bdc18;
 _ZN6Player16IncMegaKillCountEv                                                    = 0x020bdc58;
 _ZN6Player18SetNewHatCharacterEjjb                                                = 0x020be0f8;
@@ -2016,7 +2026,7 @@ _ZN6Player21InitSecondPunchHitboxEv                                             
 _ZN6Player20InitFirstPunchHitboxEv                                                = 0x020dbf4c;
 _ZN6Player14InitGrabHitboxEv                                                      = 0x020dc020;
 _ZN6Player10InitHitboxERK7Vector35Fix12IiES4_jj                                   = 0x020dc174;
-_ZN6Player20UpdateAirWithoutTurnE5Fix12IiES1_                                     = 0x020e28d4;
+_ZN6Player20UpdateAirWithoutTurnE5Fix12IiES1_                                         = 0x020e28d4;
 _ZN6Player13HandleRunLeanEs                                                       = 0x020d413c;
 _ZN6Player10TryToBrakeEv                                                          = 0x020d454c;
 _ZN6Player9GetThrownE5Fix12IiES1_s                                                = 0x020db54c;
@@ -2247,6 +2257,32 @@ _ZN6Player16St_PoleJump_MainEv                                                  
 _ZN6Player21St_HeadstandJump_InitEv                                               = 0x020e16a4;
 _ZN6Player21St_HeadstandJump_MainEv                                               = 0x020e13c0;
 
+_ZN6Player8Js_MarioEv                                                             = 0x020e200c;
+_ZN6Player8Js_LuigiEv                                                             = 0x020e1e70;
+_ZN6Player8Js_WarioEv                                                             = 0x020e200c;
+_ZN6Player8Js_YoshiEv                                                             = 0x020e1c20;
+
+_ZN6Player17Ni_RegularStarGetEv                                                   = 0x020c9de4;
+_ZN6Player10Ni_StarGetEv                                                          = 0x020c9de4;
+_ZN6Player18Ni_VsSilverStarGetEv                                                  = 0x020c9de4;
+_ZN6Player9Ni_KeyGetEv                                                            = 0x020c9de4;
+_ZN6Player7Ni_Unk4Ev                                                              = 0x020c9d68;
+_ZN6Player7Ni_Unk5Ev                                                              = 0x020c9d1c;
+_ZN6Player7Ni_ExitEv                                                              = 0x020c9cc0;
+_ZN6Player11Ni_OpenDoorEv                                                         = 0x020c9c4c;
+_ZN6Player16Ni_CollectNewCapEv                                                    = 0x020c9c00;
+_ZN6Player15Ni_EnterBBHCageEv                                                     = 0x020c9b7c;
+_ZN6Player15Ni_OpenStarGateEv                                                     = 0x020c9b5c;
+_ZN6Player16Ni_UnlockKeyDoorEv                                                    = 0x020c9ac0;
+_ZN6Player8Ni_Unk12Ev                                                             = 0x020c9b10;
+_ZN6Player20Ni_SuperMushroomGrowEv                                                = 0x020c9a04;
+_ZN6Player17Ni_UnlockStarDoorEv                                                   = 0x020c9998;
+_ZN6Player11Ni_PutOnCapEv                                                         = 0x020c990c;
+_ZN6Player18Ni_UnlockCharacterEv                                                  = 0x020c98a4;
+_ZN6Player19Ni_WhiteDoorStarGetEv                                                 = 0x020c9840;
+_ZN6Player8Ni_Unk18Ev                                                             = 0x020c97f8;
+_ZN6Player8Ni_Unk19Ev                                                             = 0x020c97e0;
+
 CHAR_SEQ_ID_OFFSET                                                                = 0x02075250;
 CHAR_ATTACK_KNOCKBACK                                                             = 0x020ff01c;
 STUCK_IN_GROUND_LEAVE_ANIM_FRAMES                                                 = 0x020ff0ec;
@@ -2289,6 +2325,9 @@ PUNCH_KICK_SEQUENCE_ANIM_ID                                                     
 PUNCH_KICK_SEQUENCE_HITBOX_FRAME                                                  = 0x0210a5cc;
 PUNCH_KICK_SEQUENCE_ACTIVE_FRAME                                                  = 0x0210a5dc;
 CEILING_GRATE_ANIM_IDS                                                            = 0x0210a60c;
+BODY_MODEL_PTRS                                                                   = 0x0210a68c;
+HEAD_MODEL_PTRS                                                                   = 0x0210a69c;
+HEAD_NO_CAP_MODEL_PTRS                                                            = 0x0210a6ac;
 HURT_ANIM_IDS                                                                     = 0x0210a6d4;
 FALL_DURING_HURT_ANIM_IDS                                                         = 0x0210a6ec;
 LEVEL_ENTER_ANIM_IDS                                                              = 0x0210a7e8;

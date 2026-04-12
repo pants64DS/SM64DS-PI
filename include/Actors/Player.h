@@ -302,7 +302,7 @@ struct Player : Actor // internal name:: daPly_c
 		NC_OPEN_DOOR		   =  7,
 		NC_COLLECT_NEW_CAP	   =  8,
 		NC_ENTER_BBH_CAGE	   =  9,
-		NC_OPEN_STAR_DOOR	   =  10,
+		NC_OPEN_STAR_GATE	   =  10,
 		NC_UNLOCK_KEY_DOOR	   =  11,
 		NC_UNK12	   		   =  12,
 		NC_SUPER_MUSHROOM_GROW =  13,
@@ -311,7 +311,9 @@ struct Player : Actor // internal name:: daPly_c
 		NC_UNLOCK_CHARACTER	   =  16,
 		NC_WHITE_DOOR_STAR_GET =  17,
 		NC_UNK18	  		   =  18,
-		NC_UNK19	  		   =  19, // might be more
+		NC_UNK19	  		   =  19,
+
+		NUM_NO_CONTROL_STATES
 	};
 
 	enum OnWallStates : s8
@@ -482,6 +484,15 @@ struct Player : Actor // internal name:: daPly_c
 		ST_POLE_JUMP,
 		ST_HEADSTAND_JUMP;
 
+	using JumpSustainFunc = void (Player::*)();
+	static JumpSustainFunc JS_FUNCS[NUM_CHARACTERS];
+
+	using LevelEnterUpdateFunc = void (Player::*)();
+	static LevelEnterUpdateFunc LU_FUNCS[7];
+
+	using NoControlInitFunc = void (Player::*)();
+	static NoControlInitFunc NI_FUNCS[NUM_NO_CONTROL_STATES];
+
 	struct EggMoveFlags
 	{
 		u8   normHorzSpeed : 6; // normalized to 16 - 32
@@ -505,9 +516,9 @@ struct Player : Actor // internal name:: daPly_c
 	MaterialChanger matChg240;
 	TextureSequence texSeq254;
 	TextureSequence texSeq268;
-	char* unk27c[4];
-	char* unk28c[4];
-	char* unk29c[4];
+	char* bodyMaterialRefsPtr[4];
+	char* headMaterialRefsPtr[4];
+	char* headNoCapMaterialRefsPtr[4];
 	ShadowModel shadow;
 	MovingCylinderClsnWithPos cylClsn;
 	MovingCylinderClsnWithPos cylClsn2;
@@ -672,7 +683,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool isBeingHurt;
 	bool isInvulnerable;
 	u8 noControlState; // 0x70a
-	u8 unk70b;
+	bool doorExitNoControl;
 	u8 currGroundedState;
 	bool isLongFalling;
 	u8 onSlopedSurface;
@@ -686,7 +697,7 @@ struct Player : Actor // internal name:: daPly_c
 	bool isIntangibleToMesh;
 	u8 unk717;
 	LoadedFileFlags loadedFileFlags;
-	u8 returnKeyType; // when returning from a boss level upon collecting a key
+	u8 returnKeyType; // when returning from a boss stage upon collecting a key
 	bool justLostCap;
 	bool quickSandJump;
 	u8 unk71c;
@@ -710,7 +721,7 @@ struct Player : Actor // internal name:: daPly_c
 	s16 unk73e;
 	s16 toonIntensity;
 	u8 boneRotOffsetState;
-	u8 unk743;
+	u8 lookAtState;
 	Vector3 lookAtPos;
 	Vector3 savedLookAtPos;
 	Vector3_16 spineBoneRotOffset; // is added to bodyModels[GetBodyModelID(param1 & 0xff, false)]->data.bones[8].rot
@@ -729,12 +740,17 @@ struct Player : Actor // internal name:: daPly_c
 	virtual ~Player() override;
 	virtual u32 OnYoshiTryEat() override;
 	
+	void ResetBoneRotOffset();
+	static void Unk_020e6b3c(Model& model);
+	static void RestoreMaterialRefs(Model& model, char* refs);
+	static char* BackupMaterialRefs(Model& model);
 	void ClearEggPtrArr();
 	void IncMegaKillCount();
 	void SetNewHatCharacter(u32 character, u32 arg1, bool makeSfx);
 	void SetRealCharacter(u32 character);
 	void TurnOffToonShading(u32 character);
 	void HandleToonState();
+	void LoadResources();
 	void LoadCharGroup();
 	void LoadCharBGMGroup();
 	void InitPlayerCylClsn();
@@ -946,7 +962,7 @@ struct Player : Actor // internal name:: daPly_c
 	void UpdateAirFromSlide();
 	void InitDiveHitbox();
 	void InitSlideKickHitbox();
-	void UpdateAirWithoutTurn(Fix12i horzAccelInput, Fix12i horzAccelNeutral);
+	void UpdateMidairMove(Fix12i horzAccelInput, Fix12i horzAccelNeutral);
 	bool CheckYoshiMakeEgg();
 	bool UpdateYoshiTrySwallow();
 	void HandleYoshiAttack();
@@ -1221,6 +1237,33 @@ struct Player : Actor // internal name:: daPly_c
 	bool St_HeadstandJump_Init();
 	bool St_HeadstandJump_Main();
 
+	void Js_Mario();
+	void Js_Luigi();
+	void Js_Wario();
+	void Js_Yoshi();
+
+	void Ni_RegularStarGet();
+	void Ni_StarGet();
+	void Ni_VsSilverStarGet();
+	void Ni_KeyGet();
+	void Ni_Unk4();
+	void Ni_Unk5();
+	void Ni_Exit();
+	void Ni_OpenDoor();
+	void Ni_CollectNewCap();
+	void Ni_EnterBBHCage();
+	void Ni_OpenStarGate();
+	void Ni_UnlockKeyDoor();
+	void Ni_Unk12();
+	void Ni_SuperMushroomGrow();
+	void Ni_UnlockStarDoor();
+	void Ni_PutOnCap();
+	void Ni_UnlockCharacter();
+	void Ni_WhiteDoorStarGet();
+	void Ni_Unk18();
+	void Ni_Unk19();
+
+
 	template<class ID>
 	bool CustomStateFunc();
 
@@ -1283,6 +1326,9 @@ extern u32 PUNCH_KICK_SEQUENCE_ANIM_ID[3];
 extern u16 PUNCH_KICK_SEQUENCE_HITBOX_FRAME[8];
 extern u16 PUNCH_KICK_SEQUENCE_ACTIVE_FRAME[6];
 extern u32 CEILING_GRATE_ANIM_IDS[4];
+extern SharedFilePtr* BODY_MODEL_PTRS[Player::NUM_CHARACTERS];
+extern SharedFilePtr* HEAD_MODEL_PTRS[Player::NUM_CHARACTERS];
+extern SharedFilePtr* HEAD_NO_CAP_MODEL_PTRS[Player::NUM_CHARACTERS];
 extern u32 HURT_ANIM_IDS[6];
 extern u32 FALL_DURING_HURT_ANIM_IDS[2];
 extern u32 LEVEL_ENTER_ANIM_IDS[19];
