@@ -18,6 +18,7 @@ extern "C"
 
 	Fix12i Vec3_HorzDist(const Vector3& v0, const Vector3& v1) __attribute__((pure));
 	Fix12i Vec3_HorzLen(const Vector3& v0) __attribute__((pure));
+	Fix12i Vec3_DistSquared(const Vector3& v0, const Vector3& v1) __attribute__((pure));
 	Fix12i Vec3_Dist(const Vector3& v0, const Vector3& v1) __attribute__((pure));
 	bool Vec3_NotEqual(const Vector3& v0, const Vector3& v1) __attribute__((pure));
 	bool Vec3_Equal(const Vector3& v0, const Vector3& v1) __attribute__((pure));
@@ -345,6 +346,7 @@ struct Vector3
 	Vector3& operator<<= (s32 shift)        &     { Vec3_LslInPlace(*this, shift); return *this; }
 	Vector3& operator>>= (s32 shift)        &     { Vec3_AsrInPlace(*this, shift); return *this; }
 	Fix12i   Dist        (const Vector3& v) const { return Vec3_Dist(*this, v); }
+	Fix12i   DistSquared (const Vector3& v) const { return Vec3_DistSquared(*this, v); }
 	Fix12i   HorzDist    (const Vector3& v) const { return Vec3_HorzDist(*this, v); }
 	Fix12i   Len         ()                 const { return LenVec3(*this); }
 	Fix12i   HorzLen     ()                 const { return Vec3_HorzLen(*this); }

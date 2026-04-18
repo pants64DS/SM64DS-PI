@@ -137,6 +137,7 @@ Quaternion_Normalize                                                            
 
 Vec3_HorzDist                                                                     = 0x0203cf40;
 Vec3_HorzLen                                                                      = 0x0203cf78;
+Vec3_DistSquared                                                                  = 0x0203cf94;
 Vec3_Dist                                                                         = 0x0203cfdc;
 Vec3_NotEqual                                                                     = 0x0203d024;
 Vec3_Equal                                                                        = 0x0203d064;
