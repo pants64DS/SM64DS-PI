@@ -198,9 +198,11 @@ using Fix12l = Fix12<s64>;
 
 consteval Fix12i operator""_f (u64 val) { return Fix12i(val, as_raw); }
 consteval Fix12s operator""_fs(u64 val) { return Fix12s(val, as_raw); }
+consteval Fix12l operator""_fl(u64 val) { return Fix12l(val, as_raw); }
 
 consteval Fix12i operator""_f (long double val) { return Fix12i(val); }
 consteval Fix12s operator""_fs(long double val) { return Fix12s(val); }
+consteval Fix12l operator""_fl(long double val) { return Fix12l(val); }
 
 extern const Fix12s SINE_TABLE[0x2000];
 extern const Fix12s ATAN_TABLE[0x400];
@@ -238,12 +240,20 @@ inline const ostream& operator<<(const ostream& os, Fix12<T> fix)
 {
 	if (fix >= Fix12<T>(0, as_raw))
 	{
-		os.set_buffer("0x%r0%_f");
+		if constexpr (sizeof(T) <= 4)
+			os.set_buffer("0x%r0%_f");
+		else
+			os.set_buffer("0x%r1%%r0%_fl");
+
 		os.flush(fix.val);
 	}
 	else
 	{
-		os.set_buffer("-0x%r0%_f");
+		if constexpr (sizeof(T) <= 4)
+			os.set_buffer("-0x%r0%_f");
+		else
+			os.set_buffer("-0x%r1%%r0%_fl");
+
 		os.flush(-fix.val);
 	}
 
