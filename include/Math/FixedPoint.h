@@ -10,7 +10,7 @@
 struct AsRaw {} constexpr as_raw;
 
 template<class T> // a valid underlying representation of a fixed-point number
-concept FixUR = std::is_integral_v<T> && std::is_signed_v<T> && sizeof(T) <= sizeof(s32);
+concept FixUR = std::is_integral_v<T> && std::is_signed_v<T>;
 
 template<FixUR T, s32 q, template<FixUR> class CRTP>
 struct Fix
@@ -194,6 +194,7 @@ struct Fix12 : Fix<T, 12, Fix12>
 
 using Fix12i = Fix12<s32>;
 using Fix12s = Fix12<s16>;
+using Fix12l = Fix12<s64>;
 
 consteval Fix12i operator""_f (u64 val) { return Fix12i(val, as_raw); }
 consteval Fix12s operator""_fs(u64 val) { return Fix12s(val, as_raw); }
