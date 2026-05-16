@@ -1646,7 +1646,7 @@ MUSHROOM_NO_BEHAVIOR_IF_OFF_SCREEN                                              
 
 /* Actors/Number.h */
 
-_ZTVNumber                                                                        = 0x0210b0e4;
+_ZTV6Number                                                                       = 0x0210b0e4;
 _ZN6Number9spawnDataE                                                             = 0x0210b0c8;
 _ZN6NumberC3Ev                                                                    = 0x020f0d90;
 _ZN6NumberD0Ev                                                                    = 0x020aee88;
@@ -1661,7 +1661,7 @@ _ZN6Number11LinkToActorEP5Actor                                                 
 
 /* Actors/OneUpLogo.h */
 
-_ZTVOneUpLogo                                                                     = 0x0210b1a4;
+_ZTV9OneUpLogo                                                                    = 0x0210b1a4;
 _ZN9OneUpLogo9spawnDataE                                                          = 0x0210b188;
 _ZN9OneUpLogoC3Ev                                                                 = 0x020f1170;
 _ZN9OneUpLogoD0Ev                                                                 = 0x020f0e08;
