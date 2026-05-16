@@ -1512,7 +1512,7 @@ GLOBAL_CLIPPER                                                                  
 UNK_0208715C                                                                      = 0x0208715C;
 
 /* Actors/EnemySpawner.h */
-_ZTV12EnemySpawner                                                                = 0x0210b340;
+_ZTV12EnemySpawner                                                                = 0x0210b35c;
 _ZN12EnemySpawner9spawnDataE                                                      = 0x0210b35c;
 _ZN12EnemySpawnerC3Ev                                                             = 0x020f1924;
 _ZN12EnemySpawnerD0Ev                                                             = 0x020f1694;
