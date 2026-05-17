@@ -30,7 +30,7 @@ struct SoundObj;
 #include "Actors/StarCamera.h"
 #include "Actors/YoshiEgg.h"
 #include "Actors/IceBlock.h"
-#include "Actors/Mushroom.h"
+#include "Actors/OneUpMushroom.h"
 #include "Actors/PowerFlower.h"
 #include "Actors/WingFeather.h"
 #include "Actors/KeyBase.h"
