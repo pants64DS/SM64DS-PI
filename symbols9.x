@@ -1590,15 +1590,12 @@ _ZN7Minimap21FixTHIPaintingRoomPosER7Vector3                                    
 _ZN7Minimap15GetPosOnMinimapER7Vector3S1_5Fix12IiEsS1_                            = 0x020fb85c;
 _ZN7Minimap20GetPosFromMinimapPosER7Vector3S1_5Fix12IiEsS1_                       = 0x020fb804;
 
-/* Actors/Mushroom.h */
-
+/* Actors/OneUpMushroom.h */
 _ZN13OneUpMushroomC3Ev                                                            = 0x020b0580;
 _ZN13OneUpMushroom22oneUpMushroomSpawnDataE                                       = 0x02108388;
 
 _ZN13SuperMushroomC3Ev                                                            = 0x020b0530;
 _ZN13OneUpMushroom22superMushroomSpawnDataE                                       = 0x021083a4;
-
-_ZN13OneUpMushroom9behaviorsE                                                     = 0x0210dc00;
 
 _ZTV13OneUpMushroom                                                               = 0x021083c0;
 _ZN13OneUpMushroomD0Ev                                                            = 0x020aee88;
@@ -1612,19 +1609,19 @@ _ZN13OneUpMushroom16OnPendingDestroyEv                                          
 _ZN13OneUpMushroom13OnYoshiTryEatEv                                               = 0x020af3a0;
 _ZN13OneUpMushroom13OnTurnIntoEggER6Player                                        = 0x020af2b0;
 
-_ZN13OneUpMushroom22UpdateSparkleParticlesEv                                      = 0x020aeee4;
-_ZN13OneUpMushroom28SetYoshiTongueVulnerableFlagEv                                = 0x020aefa4;
-_ZN13OneUpMushroom4MoveEv                                                         = 0x020aefb8;
-_ZN13OneUpMushroom11ChasePlayerEv                                                 = 0x020af0c0;
-_ZN13OneUpMushroom18GetCollidingPlayerEv                                          = 0x020af1dc;
-_ZN13OneUpMushroom22UpdateVisibilityByPlayerRangeEj                               = 0x020af218;
-_ZN13OneUpMushroom19FlickerAndDisappearEs                                         = 0x020af248;
-_ZN13OneUpMushroom12CheckCollectEv                                                = 0x020af3a8;
-_ZN13OneUpMushroom10SpinAroundEv                                                  = 0x020af474;
-_ZN13OneUpMushroom20UpdateModelTransformEv                                        = 0x020af4ec;
-_ZN13OneUpMushroom10CollectTagEhR6Player                                          = 0x020af684;
-_ZN13OneUpMushroom11SlidingMoveEv                                                 = 0x020afc68;
 _ZN13OneUpMushroom11AvoidPlayerEh                                                 = 0x020afde4;
+_ZN13OneUpMushroom11SlidingMoveEv                                                 = 0x020afc68;
+_ZN13OneUpMushroom10CollectTagEhR6Player                                          = 0x020af684;
+_ZN13OneUpMushroom20UpdateModelTransformEv                                        = 0x020af4ec;
+_ZN13OneUpMushroom10SpinAroundEv                                                  = 0x020af474;
+_ZN13OneUpMushroom12CheckCollectEv                                                = 0x020af3a8;
+_ZN13OneUpMushroom19FlickerAndDisappearEs                                         = 0x020af248;
+_ZN13OneUpMushroom22UpdateVisibilityByPlayerRangeEj                               = 0x020af218;
+_ZN13OneUpMushroom18GetCollidingPlayerEv                                          = 0x020af1dc;
+_ZN13OneUpMushroom11ChasePlayerEv                                                 = 0x020af0c0;
+_ZN13OneUpMushroom4MoveEv                                                         = 0x020aefb8;
+_ZN13OneUpMushroom28SetYoshiTongueVulnerableFlagEv                                = 0x020aefa4;
+_ZN13OneUpMushroom22UpdateSparkleParticlesEv                                      = 0x020aeee4;
 
 _ZN13OneUpMushroom20State_SpinAroundWalkEv                                        = 0x020aff10;
 _ZN13OneUpMushroom27State_SpinAroundAvoidPlayerEv                                 = 0x020afe4c;
@@ -1641,8 +1638,9 @@ _ZN13OneUpMushroom24State_CoinTagAvoidPlayerEv                                  
 _ZN13OneUpMushroom24State_CoinTagChasePlayerEv                                    = 0x020af908;
 _ZN13OneUpMushroom12State_BounceEv                                                = 0x020af724;
 
-_ZN13OneUpMushroom30COLLIDER_ENABLED_ON_INIT_TABLEE                               = 0x020ff040;
 _ZN13OneUpMushroom31NO_BEHAVIOR_IF_OFF_SCREEN_TABLEE                              = 0x020ff050;
+_ZN13OneUpMushroom30COLLIDER_ENABLED_ON_INIT_TABLEE                               = 0x020ff040;
+_ZN13OneUpMushroom9behaviorsE                                                     = 0x0210dc00;
 
 /* Actors/Number.h */
 
