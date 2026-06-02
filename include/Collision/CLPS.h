@@ -160,14 +160,28 @@ struct SurfaceInfo
 	CLPS clps;
 	Vector3 normal;
 
-	void CopyNormalTo(Vector3& vec) const;
+	// actually a member of MeshCollider::
 	s32 GetSteepnessClass() const { return ::GetSteepnessClass(normal.y); }
 
-	u32 GetBehaviorID() const;
-	u32 GetCamBehavID() const;
-	u32 GetTractionID() const;
-	u32 GetViewID() const;
-	bool IsWater() const;
-	u32 GetTexID() const;
-	u32 GetWindID() const;
+	// actually a constructor
+	void Init();
+
+    void Set(u32 clps, u32 windID, const Vector3& normal);
+    void CopyFrom(const SurfaceInfo& other);
+    
+    static void InitCLPS(CLPS& clps);
+
+    CLPS::_TextureID  GetTexture() const;
+    bool              CheckWater() const;
+    u32               GetViewID() const;
+    CLPS::_TractionID GetTraction() const;
+    CLPS::_CamBehavID GetCamBehavior() const;
+    CLPS::_BehaviorID GetBehavior() const;
+    bool              CheckCamIgnore() const;
+    bool              CheckToxic() const;
+    bool              CheckCamOnly() const;
+    u32               GetWindID() const;
+
+    void           CopyNormalTo(Vector3& dst);
+    const Vector3& GetNormal() const;
 };
