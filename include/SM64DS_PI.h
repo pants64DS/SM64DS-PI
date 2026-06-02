@@ -56,14 +56,14 @@ enum Events : u32
 
 enum Gamemodes : u8
 {
-    GAMEMODE_ADVENTURE,
-    GAMEMODE_VS,
-    GAMEMODE_ENDING,
+	GAMEMODE_ADVENTURE,
+	GAMEMODE_VS,
+	GAMEMODE_ENDING,
 };
 
 enum StarIDs
 {
-    STAR_100_COINS = 0,
+	STAR_100_COINS = 0,
 	STAR_1		   = 1,
 	STAR_2		   = 2,
 	STAR_3		   = 3,
@@ -87,9 +87,9 @@ enum StarMarkerTypes : u8
 
 enum PauseStates
 {
-    PAUSE_NOT,
-    PAUSE_PAUSED,
-    PAUSE_UNPAUSING,
+	PAUSE_NOT,
+	PAUSE_PAUSED,
+	PAUSE_UNPAUSING,
 };
 
 enum TTC_Speeds : s8

@@ -10,7 +10,7 @@ struct Animation // internal: FrameCtrl; done
 	{
 		LOOP = 0x00000000,
 		NO_LOOP = 0x40000000
-    };
+	};
 
 	//vtable
 	Fix12i numFramesAndFlags;

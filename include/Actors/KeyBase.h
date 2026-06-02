@@ -17,8 +17,8 @@ struct KeyBase : Enemy // internal name: daObjKey_c
 
 	// members not documented
 
-    static void LoadKeyModels(u8 keyType);
-    static void UnloadKeyModels(u8 keyType);
+	static void LoadKeyModels(u8 keyType);
+	static void UnloadKeyModels(u8 keyType);
 };
 
 struct Key : KeyBase

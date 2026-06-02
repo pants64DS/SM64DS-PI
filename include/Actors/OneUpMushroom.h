@@ -34,13 +34,13 @@ struct OneUpMushroom : Enemy // internal name: da1up_c
 	Model model;
 	ShadowModel shadowModel;
 	Vector3 originalPos;
-    States behaviorType;
-    u32 stateState;
-    u16 disappearTimer;
-    bool isVisible;
-    bool isBlinkOn;
-    u32 tagCount;
-    u32 sparklesEmitterID;
+	States behaviorType;
+	u32 stateState;
+	u16 disappearTimer;
+	bool isVisible;
+	bool isBlinkOn;
+	u32 tagCount;
+	u32 sparklesEmitterID;
 
 	virtual s32 InitResources() override;
 	virtual s32 CleanupResources() override;

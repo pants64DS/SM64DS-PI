@@ -14,7 +14,7 @@ struct OneUpLogo : Actor // internal name: daObjOneUpLogo_c
 	u8 padding;
 
 	static SpawnInfo spawnData;
-    
+	
 	virtual s32 InitResources() override;
 	virtual s32 CleanupResources() override;
 	virtual s32 Behavior() override;

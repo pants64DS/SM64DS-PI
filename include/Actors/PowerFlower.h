@@ -34,8 +34,8 @@ struct PowerFlower : Actor	// internal name: daObjPowerUpItem_c
 	Model openModel; // 0x124
 	ShadowModel shadowModel; // 0x174
 	Matrix4x3 shadowMat; // 0x19c
-    MovingCylinderClsn cylClsn; // 0x1cc
-    WithMeshClsn wmClsn; // 0x200
+	MovingCylinderClsn cylClsn; // 0x1cc
+	WithMeshClsn wmClsn; // 0x200
 	Fix12i floorY; // 0x3bc
 	u32 currStateID;  // 0x3c0
 	u32 particleID; // 0x3c4

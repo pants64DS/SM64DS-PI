@@ -5,8 +5,8 @@ struct WingFeather : Actor	// internal name: daFeather_c
 	static constexpr u16 staticActorID = 0x159;
 
 	Model model; // 0xd4
-    MovingCylinderClsn cylClsn; // 0x124
-    WithMeshClsn wmClsn; // 0x158
+	MovingCylinderClsn cylClsn; // 0x124
+	WithMeshClsn wmClsn; // 0x158
 	ShadowModel shadowModel; // 0x314
 	Matrix4x3 shadowMat; // 0x33c
 	u32 unk36c; // 0x36c unused

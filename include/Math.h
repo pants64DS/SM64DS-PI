@@ -12,7 +12,7 @@ inline bool NotBetween(u8 x, u8 x1, u8 x2) { return x < x1 || x2 < x; }  // alte
 template <typename T>
 [[gnu::always_inline]] inline T Abs(T val)
 {
-    return val >= 0 ? val : -val;
+	return val >= 0 ? val : -val;
 }
 
 consteval s32 operator""_deg(long double val) { return val * 32768.L / 180.L; }
@@ -76,7 +76,7 @@ inline Fix12i SmoothStep(Fix12i t)
 template<class T, T zero = static_cast<T>(0)>
 constexpr s32 Sgn(T val)
 {
-    return (val > zero) - (val < zero);
+	return (val > zero) - (val < zero);
 }
 
 [[gnu::always_inline]]
