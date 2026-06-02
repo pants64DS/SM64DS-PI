@@ -91,6 +91,8 @@ struct CLPS
 	u32  padding         :  5 = 0;
 	u32  windID          :  8 = 0xff;
 	u32  padding2        : 24 = 0;
+
+	void Init();
 };
 
 struct CLPS_Header
@@ -166,22 +168,21 @@ struct SurfaceInfo
 	// actually a constructor
 	void Init();
 
-    void Set(u32 clps, u32 windID, const Vector3& normal);
-    void CopyFrom(const SurfaceInfo& other);
-    
-    static void InitCLPS(CLPS& clps);
+	void Set(u32 clps, u32 windID, const Vector3& normal);
+	void CopyFrom(const SurfaceInfo& other);
 
-    CLPS::_TextureID  GetTexture() const;
-    bool              CheckWater() const;
-    u32               GetViewID() const;
-    CLPS::_TractionID GetTraction() const;
-    CLPS::_CamBehavID GetCamBehavior() const;
-    CLPS::_BehaviorID GetBehavior() const;
-    bool              CheckCamIgnore() const;
-    bool              CheckToxic() const;
-    bool              CheckCamOnly() const;
-    u32               GetWindID() const;
+	u32 GetTextureID() const;
+	u32 GetViewID() const;
+	u32 GetTractionID() const;
+	u32 GetCamBehavID() const;
+	u32 GetBehaviorID() const;
+	u32 GetWindID() const;
 
-    void           CopyNormalTo(Vector3& dst);
-    const Vector3& GetNormal() const;
+	bool IsWater() const;
+	bool IsCamIgnored() const;
+	bool IsToxic() const;
+	bool IsCamOnly() const;
+
+	void CopyNormalTo(Vector3& dest) const;
+	const Vector3& GetNormal() const;
 };

@@ -891,20 +891,20 @@ GLOBAL_FADER                                                                    
 GetSteepnessClass                                                                 = 0x02039794;
 
 _ZN11SurfaceInfo4InitEv                                                           = 0x02037eec;
-_ZN11SurfaceInfo3SetEjjERK7Vector3                                                = 0x02037eb0;
-_ZN11SurfaceInfo8InitCLPSER4CLPS                                                  = 0x02037e9c;
+_ZN11SurfaceInfo3SetEjjRK7Vector3                                                 = 0x02037eb0;
+_ZN4CLPS4InitEv                                                                   = 0x02037e9c;
 _ZNK11SurfaceInfo9GetWindIDEv                                                     = 0x02037e90;
-_ZNK11SurfaceInfo7GetTextureEv                                                    = 0x02037e84;
-_ZNK11SurfaceInfo10CheckWaterEv                                                   = 0x02037e78;
+_ZNK11SurfaceInfo12GetTextureIDEv                                                 = 0x02037e84;
+_ZNK11SurfaceInfo7IsWaterEv                                                       = 0x02037e78;
 _ZNK11SurfaceInfo9GetViewIDEv                                                     = 0x02037e68;
-_ZNK11SurfaceInfo11GetTractionEv                                                  = 0x02037e58;
-_ZNK11SurfaceInfo14GetCamBehaviorEv                                               = 0x02037e48;
-_ZNK11SurfaceInfo11GetBehaviorEv                                                  = 0x02037e38;
-_ZNK11SurfaceInfo19CheckCamIgnoreEv                                               = 0x02037e2c;
-_ZNK11SurfaceInfo10CheckToxicEv                                                   = 0x02037e20;
-_ZNK11SurfaceInfo12CheckCamOnlyEv                                                 = 0x02037e14;
+_ZNK11SurfaceInfo13GetTractionIDEv                                                = 0x02037e58;
+_ZNK11SurfaceInfo13GetCamBehavIDEv                                                = 0x02037e48;
+_ZNK11SurfaceInfo13GetBehaviorIDEv                                                = 0x02037e38;
+_ZNK11SurfaceInfo12IsCamIgnoredEv                                                 = 0x02037e2c;
+_ZNK11SurfaceInfo7IsToxicEv                                                       = 0x02037e20;
+_ZNK11SurfaceInfo9IsCamOnlyEv                                                     = 0x02037e14;
 _ZN11SurfaceInfo8CopyFromERKS_                                                    = 0x02037de8;
-_ZN11SurfaceInfo12CopyNormalToER7Vector3                                          = 0x02037dcc;
+_ZNK11SurfaceInfo12CopyNormalToER7Vector3                                         = 0x02037dcc;
 _ZNK11SurfaceInfo9GetNormalEv                                                     = 0x02037dc4;
 
 /* Collision/MeshCollider.h */
