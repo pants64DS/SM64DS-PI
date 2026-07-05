@@ -197,6 +197,7 @@ namespace G2
 namespace G2S
 {
 	char* GetBG0CharPtr();
+	char* GetBG1CharPtr();
 	char* GetBG3CharPtr();
 	char* GetBG0ScrPtr();
 	char* GetBG1ScrPtr();

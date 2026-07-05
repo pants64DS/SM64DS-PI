@@ -550,6 +550,7 @@ extern "C"
 	void DecompressLZ16(void* source, void* dest); // source is a pointer to a LZ16 compressed file
 	void Deallocate(void* something); // doesn't deallocate something if it's nullptr
 
+	void Disable3dEngines(); // swaps buffers first
 	void Enable3dEngines(); // swaps buffers first
 	void Initialise3dGraphics(s32 clearAlpha);
 	void InitialiseVramGlobals();

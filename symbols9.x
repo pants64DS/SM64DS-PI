@@ -570,6 +570,7 @@ GetOwnerLanguage                                                                
 DecompressLZ16                                                                    = 0x0205a754;
 Deallocate                                                                        = 0x02018144;
 
+Disable3dEngines                                                                  = 0x02019028;
 Enable3dEngines                                                                   = 0x02019070;
 Initialise3dGraphics                                                              = 0x0200f558;
 InitialiseVramGlobals                                                             = 0x02045d20;
@@ -3280,6 +3281,7 @@ _ZN2G213GetBG2CharPtrEv                                                         
 _ZN2G212GetBG2ScrPtrEv                                                            = 0x020550bc;
 
 _ZN3G2S13GetBG0CharPtrEv                                                          = 0x02054edc;
+_ZN3G2S13GetBG1CharPtrEv                                                          = 0x02054e88;
 _ZN3G2S13GetBG3CharPtrEv                                                          = 0x02054d38;
 _ZN3G2S12GetBG0ScrPtrEv                                                           = 0x0205519c;
 _ZN3G2S12GetBG1ScrPtrEv                                                           = 0x02055148;
