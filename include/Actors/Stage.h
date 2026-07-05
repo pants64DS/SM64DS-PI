@@ -118,7 +118,6 @@ struct Stage : Scene
 
 	static void RenderVsModeCountdown();
 	static void RenderVsModeNewStar();
-	static void RenderBouncingArrows();
 	static void RenderNumber(u8 number, s32 x, s32 y, bool main, s32 palette);
 
 	static void UpdateMenuButtons(bool unselectAll);

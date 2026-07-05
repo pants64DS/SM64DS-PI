@@ -64,6 +64,7 @@ namespace OAM
 	u8 GetObjWidth(s32 shape, s32 size);
 	u8 GetObjHeight(s32 shape, s32 size);
 	void LoadAffineParams(OamAttr* data, s32* affineSet, Matrix2x2* affineMtx);
+	void RenderBouncingArrows();
 
 	// indexing: [shape][size] (shape 4 is prohibited)
 	extern u8 objWidth[3][4];

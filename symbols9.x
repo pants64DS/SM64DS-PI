@@ -2951,7 +2951,6 @@ _ZN5Stage13UpdateMessageEv                                                      
 
 _ZN5Stage21RenderVsModeCountdownEv                                                = 0x0202a168;
 _ZN5Stage19RenderVsModeNewStarEv                                                  = 0x02029ef8;
-_ZN5Stage20RenderBouncingArrowsEv                                                 = 0x02023be0;
 _ZN5Stage12RenderNumberEhiibi                                                     = 0x020250d0;
 
 _ZN5Stage17UpdateMenuButtonsEb                                                    = 0x02026148;
@@ -3031,6 +3030,7 @@ _ZN3OAM6RenderEbP7OamAttriiii5Fix12IiES3_ii                                     
 _ZN3OAM11GetObjWidthEii                                                           = 0x02020980;
 _ZN3OAM12GetObjHeightEii                                                          = 0x0202096c;
 _ZN3OAM16LoadAffineParamsEP7OamAttrPiP9Matrix2x2                                  = 0x02020884;
+_ZN3OAM20RenderBouncingArrowsEv                                                   = 0x02023be0;
 
 _ZN3OAM9objHeightE                                                                = 0x020755ac;
 _ZN3OAM8objWidthE                                                                 = 0x020755a0;
