@@ -56,6 +56,7 @@ struct Message
 	static void DisplayOptionsMenuText(u16 firstButtonMsgID);
 	static void DisplaySaveMenuText(u16 firstButtonMsgID);
 	static void DisplayDontSaveText(u16 firstButtonMsgID);
+	static void DisplayGameOverText(u32 msgID);
 
 	static void DisplayCourseNameForStarSelect(u32 courseID);
 	static void DisplayStarNameForStarSelect(u32 starID);

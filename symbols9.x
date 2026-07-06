@@ -1120,6 +1120,7 @@ _ZN7Message25DisplayControllerModeTextEt                                        
 _ZN7Message22DisplayOptionsMenuTextEt                                             = 0x0201d018;
 _ZN7Message19DisplaySaveMenuTextEt                                                = 0x0201e314;
 _ZN7Message19DisplayDontSaveTextEt                                                = 0x0201e12c;
+_ZN7Message19DisplayGameOverTextEj                                                = 0x0201cebc;
 _ZN7Message30DisplayCourseNameForStarSelectEj                                     = 0x0201e81c;
 _ZN7Message28DisplayStarNameForStarSelectEj                                       = 0x0201e6bc;
 _ZN7Message12UpdateWindowEv                                                       = 0x0201bbc8;
