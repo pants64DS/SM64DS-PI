@@ -492,11 +492,11 @@ extern "C"
 	bool IsCannonOpenInCurLevel();
 
 	void CollectStar(s8 courseID, s32 starID);
-	bool IsStarCollected(s8 courseID, s32 starID);
+	int IsStarCollected(s8 courseID, s32 starID);
 	void CollectStarInLevel(s8 levelID, s32 starID);
-	bool IsStarCollectedInLevel(s8 levelID, s32 starID);
+	int IsStarCollectedInLevel(s8 levelID, s32 starID);
 	void CollectStarInCurLevel(s32 starID);
-	bool IsStarCollectedInCurLevel(s32 starID);
+	int IsStarCollectedInCurLevel(s32 starID);
 
 	s8 NumRedCoins();
 	void GiveRedCoins(u8 playerID, s8 amount);
