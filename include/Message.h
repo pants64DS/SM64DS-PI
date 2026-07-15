@@ -96,7 +96,8 @@ extern Message* MSG_ARR_PTR;
 extern INF1_Header* MSG_FILE_PTR;
 extern MESG_File* VS_MSG_FILE_PTR;
 extern MsgIDCharEntry MSG_ID_CHAR_MAP[0x62];
-extern u16 UTF16_TO_FONT_TABLE[0x100];
+extern u16 FONT_TO_UTF16_TABLE_1[0x100];
+extern u16 FONT_TO_UTF16_TABLE_2[0x100];
 extern u8 TALK_FONT_CHAR_WIDTHS[0x100];
 
 extern u8 MESSAGE_RESULT;

@@ -1145,7 +1145,8 @@ MSG_ARR_PTR                                                                     
 MSG_FILE_PTR                                                                      = 0x0209d70c;
 VS_MSG_FILE_PTR                                                                   = 0x0209fd14;
 MSG_ID_CHAR_MAP                                                                   = 0x0208eeec;
-UTF16_TO_FONT_TABLE                                                               = 0x02075d14;
+FONT_TO_UTF16_TABLE_1                                                             = 0x02075b14;
+FONT_TO_UTF16_TABLE_2                                                             = 0x02075d14;
 TALK_FONT_CHAR_WIDTHS                                                             = 0x0208f074;
 
 MESSAGE_RESULT                                                                    = 0x0209d684;
