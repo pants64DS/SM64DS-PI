@@ -188,9 +188,12 @@ namespace G3i
 
 namespace G2
 {
+	char* GetBG0CharPtr();
+	char* GetBG1CharPtr();
+	char* GetBG2CharPtr();
+
 	char* GetBG0ScrPtr();
 	char* GetBG1ScrPtr();
-	char* GetBG2CharPtr();
 	char* GetBG2ScrPtr();
 }
 

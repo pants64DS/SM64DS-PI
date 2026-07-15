@@ -3276,9 +3276,11 @@ _ZN3G3X11SetFogTableEPv                                                         
 _ZN3G3i13PerspectiveW_E5Fix12IiES1_S1_S1_S1_S1_bP9Matrix4x3                       = 0x02055bfc;
 _ZN3G3i7LookAt_EPK7Vector3S2_S2_bP9Matrix4x3                                      = 0x02055a64;
 
+_ZN2G213GetBG0CharPtrEv                                                           = 0x02054efc;
+_ZN2G213GetBG1CharPtrEv                                                           = 0x02054ea8;
+_ZN2G213GetBG2CharPtrEv                                                           = 0x02054e30;
 _ZN2G212GetBG0ScrPtrEv                                                            = 0x020551bc;
 _ZN2G212GetBG1ScrPtrEv                                                            = 0x02055168;
-_ZN2G213GetBG2CharPtrEv                                                           = 0x02054e30;
 _ZN2G212GetBG2ScrPtrEv                                                            = 0x020550bc;
 
 _ZN3G2S13GetBG0CharPtrEv                                                          = 0x02054edc;
