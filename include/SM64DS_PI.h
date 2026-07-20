@@ -574,6 +574,21 @@ extern "C"
 	void ShowCrashScreen();
 }
 
+inline s16 ReadUnalignedShort(const u8* from)
+{
+	return ReadUnalignedShort(reinterpret_cast<const char*>(from));
+}
+
+inline u16 ReadUnalignedUshort(const u8* from)
+{
+	return ReadUnalignedUshort(reinterpret_cast<const char*>(from));
+}
+
+inline s32 ReadUnalignedInt(const u8* from)
+{
+	return ReadUnalignedInt(reinterpret_cast<const char*>(from));
+}
+
 [[gnu::always_inline]]
 inline void BREAK()
 {
