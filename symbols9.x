@@ -2667,7 +2667,7 @@ _ZN5Sound16LoadInitialGroupEi                                                   
 _ZN5Sound21UnsetPlayerVoiceGroupEv                                                = 0x02011fe8;
 _ZN5Sound21ResetPlayerVoiceGroupEv                                                = 0x02011f30;
 
-_ZN5Sound9CalcPitchEjiRK7Vector35Fix12IiE                                         = 0x02048a18;
+_ZN5Sound8GetPitchEjiRK7Vector35Fix12IiE                                          = 0x02048a18;
 _ZN5Sound24SetSoundDistancesDefaultEv                                             = 0x02048eb4;
 _ZN5Sound28SetSoundDistancesChiefChillyEv                                         = 0x02048ec4;
 _ZN5Sound25SetSoundDistancesGoombossEv                                            = 0x02048ee4;
