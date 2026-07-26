@@ -217,10 +217,10 @@ namespace Sound
 	u32 PlaySoundEmitter3D(u32 uniqueID, u32 archiveID, u32 soundID, const Vector3& pos, Fix12i speed, u16 fadeFrames = 0);
 	u32 PlaySoundEmitter3D(u32 uniqueID, u32 archiveID, u32 soundID, u32 arg3, s32 pitch, const Vector3& pos, u16 fadeFrames = 0);
 	
-	u32 PlayVoiceSeEmitter3D(u32 soundEmitterID, u8 characterID, u32 soundID, const Vector3& pos, u16 fadeFrames = 0);
+	u32 PlayCharVoiceEmitter3D(u32 soundEmitterID, u8 characterID, u32 soundID, const Vector3& pos, u16 fadeFrames = 0);
 
 	[[gnu::always_inline]]
-	u32 PlayLong(u32 uniqueID, u32 archiveID, u32 soundID, const Vector3& pos, u16 fadeFrames = 0)
+	inline u32 PlayLong(u32 uniqueID, u32 archiveID, u32 soundID, const Vector3& pos, u16 fadeFrames = 0)
 	{
 		return PlaySoundEmitter(uniqueID, archiveID, soundID, pos, fadeFrames); 
 	}
@@ -233,24 +233,23 @@ namespace Sound
 	// Hb: a lot of the following are implemented quite similarly, as such the "duplicates" will be suffixed with "_" followed by their general usage
 
 	// arc 0
-	void PlayPlayerSe(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
+	void PlayPlayerSound(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
 
 	// arc 1
-	void PlayVoiceSe(u8 characterID, u32 soundID); // deprecated, use Sound::Play2D
-	void PlayVoiceSe(u8 characterID, u32 soundID, const Vector3& pos); // deprecated, use Sound::Play
+	void PlayCharVoice(u8 characterID, u32 soundID); // deprecated, use Sound::Play2D
+	void PlayCharVoice(u8 characterID, u32 soundID, const Vector3& pos); // deprecated, use Sound::Play
 
 	// arc 2
-	void PlaySystemSe(u32 soundID); // deprecated, use Sound::Play2D
-	void PlaySystemSe_Mg(u32 soundID); // deprecated, use Sound::Play2D
-	void PlaySystemSe_Mg(u32 soundID, s32 pan); // deprecated, use Sound::Play2D
+	void PlaySystemSound(u32 soundID); // deprecated, use Sound::Play2D
+	void PlaySystemSound_Mg(u32 soundID); // deprecated, use Sound::Play2D
+	void PlaySystemSound_Mg(u32 soundID, s32 pan); // deprecated, use Sound::Play2D
 	
 	// arc 3
-	void PlaySceneSe(u32 soundID); // deprecated, use Sound::Play2D
-	void PlaySceneSe(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
-	void PlaySceneSe_1up(u32 soundID); // deprecated, use Sound::Play2D
-	void PlaySceneSe_Boss(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
-	void PlaySceneSe_Specific(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
-
+	void PlaySceneSound(u32 soundID); // deprecated, use Sound::Play2D
+	void PlaySceneSound(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
+	void PlaySceneSound_1up(u32 soundID); // deprecated, use Sound::Play2D
+	void PlaySceneSound_Boss(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
+	void PlaySceneSound_Specific(u32 soundID, const Vector3& camSpacePos); // deprecated, use Sound::Play
 
 	void LoadGroupAndSetBank(s32 groupID, s32 bankID);
 	void LoadInitialGroup(s32 groupID);
@@ -282,7 +281,7 @@ namespace Sound
 	bool PlaySecretSound(Actor* actor, u16* timer); // returns whether finished playing sound
 
 	// Hb: we should move the following to a "Sound3D" namespace or whatever we end up calling it, they don't belong to the Sound:: namespace
-	s32 GetPitch(u32 soundID, s32 pitch, const Vector3& pos, fx32 speed); // direct return
+	s32 GetPitch(u32 soundID, s32 pitch, const Vector3& pos, Fix12i speed); // direct return
 	void SetSoundDistancesDefault();
 	void SetSoundDistancesChiefChilly();
 	void SetSoundDistancesGoomboss();
