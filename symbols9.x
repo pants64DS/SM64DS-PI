@@ -2631,47 +2631,49 @@ _ZN5Sound6Player19SetPlayableSeqCountEii                                        
 
 _ZN5Sound7PLAYERSE                                                                = 0x020a4d6c;
 
-_ZN5Sound8PlayLongEjjjRK7Vector3j                                                 = 0x02012328;
-_ZN5Sound10PlayLong2DEjjjj                                                        = 0x020124c4;
-_ZN5Sound17PlayLongCharVoiceEjjjRK7Vector3j                                       = 0x02012120;
-_ZN5Sound13PlayCharVoiceEjjRK7Vector3                                             = 0x02012154;
-_ZN5Sound17PlayLongWithPitchEjjjjiRK7Vector3j                                     = 0x02012194;
-_ZN5Sound25PlayLongStopIfSpeedTooLowEjjjRK7Vector35Fix12IiEj                      = 0x0201226c;
-_ZN5Sound13PlayFootstepsEjjRK7Vector35Fix12IiE                                    = 0x0201251c;
-_ZN5Sound4PlayEjjRK7Vector3                                                       = 0x02012590;
+_ZN5Sound10StartMusicEi                                                           = 0x0201320c;
+_ZN5Sound9StopMusicEj                                                             = 0x02013050;
+_ZN5Sound10PauseMusicEv                                                           = 0x02012f90;
+_ZN5Sound12UnpauseMusicEv                                                         = 0x02012ee4;
+_ZN5Sound9FadeMusicEj5Fix12IiE                                                    = 0x02012d2c;
+_ZN5Sound12PlaySubMusicEjjj5Fix12IiEb                                             = 0x02012be0;
+_ZN5Sound16StartBattleMusicEj                                                     = 0x02012bbc;
+_ZN5Sound15StopBattleMusicEv                                                      = 0x02012af8;
+_ZN5Sound19StartCharacterMusicEjj                                                 = 0x02012a68;
+_ZN5Sound18StopCharacterMusicEjj                                                  = 0x02012998;
+_ZN5Sound14StartRaceMusicEj                                                       = 0x02012940;
+_ZN5Sound13StopRaceMusicEv                                                        = 0x020128c4;
 _ZN5Sound6Play2DEjj                                                               = 0x02012840;
-_ZN5Sound12PlayArchive0EjRK7Vector3                                               = 0x0201264c;
-_ZN5Sound12PlayArchive3EjRK7Vector3                                               = 0x02012664;
-_ZN5Sound22PlayArchive3_DuplicateEjRK7Vector3                                     = 0x0201267c;
-_ZN5Sound23PlayArchive3_Duplicate1EjRK7Vector3                                    = 0x02012694;
-_ZN5Sound15PlayArchive2_2DEj                                                      = 0x02012754;
-_ZN5Sound15PlayArchive3_2DEj                                                      = 0x02012768;
-_ZN5Sound25PlayArchive3_2D_DuplicateEj                                            = 0x0201277c;
-_ZN5Sound25PlayArchive2_2D_DuplicateEj                                            = 0x02012790;
-_ZN5Sound7PlaySubEjjj5Fix12IiEb                                                   = 0x02012be0;
-_ZN5Sound20PlaySmallSecretSoundEP5ActorPt                                         = 0x0200f874;
-_ZN5Sound15PlaySecretSoundEP5ActorPt                                              = 0x0200f8f8;
-
+_ZN5Sound12PlaySystemSeEj                                                         = 0x02012790;
+_ZN5Sound11PlaySceneSeEj                                                          = 0x0201277c;
+_ZN5Sound15PlaySceneSe_1upEj                                                      = 0x02012768;
+_ZN5Sound15PlaySystemSe_MgEj                                                      = 0x02012754;
+_ZN5Sound15PlaySystemSe_MgEji                                                     = 0x02012718;
+_ZN5Sound20PlaySceneSe_SpecificEjRK7Vector3                                       = 0x02012694;
+_ZN5Sound16PlaySceneSe_BossEjRK7Vector3                                           = 0x0201267c;
+_ZN5Sound11PlaySceneSeEjRK7Vector3                                                = 0x02012664;
+_ZN5Sound12PlayPlayerSeEjRK7Vector3                                               = 0x0201264c;
+_ZN5Sound4PlayEjjRK7Vector3                                                       = 0x02012590;
+_ZN5Sound17PlayMovingDopplerEjjRK7Vector35Fix12IiE                                = 0x0201251c;
+_ZN5Sound16PlaySoundEmitterEjjjt                                                  = 0x020124c4;
+_ZN5Sound16PlaySoundEmitterEjjjRK7Vector3t                                        = 0x02012328;
+_ZN5Sound18PlaySoundEmitter3DEjjjRK7Vector35Fix12IiEt                             = 0x0201226c;
+_ZN5Sound18PlaySoundEmitter3DEjjjjiRK7Vector3t                                    = 0x02012194;
+_ZN5Sound11PlayVoiceSeEhj                                                         = 0x02012174;
+_ZN5Sound11PlayVoiceSeEhjRK7Vector3                                               = 0x02012154;
+_ZN5Sound20PlayVoiceSeEmitter3DEjjjRK7Vector3t                                    = 0x02012120;
 _ZN5Sound19LoadGroupAndSetBankEii                                                 = 0x0201200c;
 _ZN5Sound16LoadInitialGroupEi                                                     = 0x02011ffc;
 _ZN5Sound21UnsetPlayerVoiceGroupEv                                                = 0x02011fe8;
 _ZN5Sound21ResetPlayerVoiceGroupEv                                                = 0x02011f30;
 
-_ZN5Sound22LoadAndSetMusic_Layer1Ei                                               = 0x0201320c;
-_ZN5Sound22StopLoadedMusic_Layer1Ej                                               = 0x02013050;
-_ZN5Sound22LoadAndSetMusic_Layer2Ej                                               = 0x02012940;
-_ZN5Sound22StopLoadedMusic_Layer2Ev                                               = 0x020128c4;
-_ZN5Sound22LoadAndSetMusic_Layer3Ej                                               = 0x02012bbc;
-_ZN5Sound22StopLoadedMusic_Layer3Ev                                               = 0x02012af8;
-_ZN5Sound8SetMusicEjj                                                             = 0x02012a68;
-_ZN5Sound8EndMusicEjj                                                             = 0x02012998;
-_ZN5Sound10PauseMusicEv                                                           = 0x02012f90;
-_ZN5Sound12UnpauseMusicEv                                                         = 0x02012ee4;
-_ZN5Sound17ChangeMusicVolumeEj5Fix12IiE                                           = 0x02012d2c;
-_ZN5Sound12Unk_02048a18Ej5Fix12IiE                                                = 0x02048a18;
-_ZN5Sound13Func_02048eb4Ev                                                        = 0x02048eb4;
-_ZN5Sound13Func_02048ec4Ev                                                        = 0x02048ec4;
-_ZN5Sound13Func_02048ee4Ev                                                        = 0x02048ee4;
+_ZN5Sound9CalcPitchEjiRK7Vector35Fix12IiE                                         = 0x02048a18;
+_ZN5Sound24SetSoundDistancesDefaultEv                                             = 0x02048eb4;
+_ZN5Sound28SetSoundDistancesChiefChillyEv                                         = 0x02048ec4;
+_ZN5Sound25SetSoundDistancesGoombossEv                                            = 0x02048ee4;
+
+_ZN5Sound15PlaySecretSoundEP5ActorPt                                              = 0x0200f8f8;
+_ZN5Sound20PlaySmallSecretSoundEP5ActorPt                                         = 0x0200f874;
 
 /* are these part of the same struct? */
 MUSIC_ID_LSL_12                                                                   = 0x0209b430;
