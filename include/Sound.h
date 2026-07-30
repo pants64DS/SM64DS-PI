@@ -293,3 +293,14 @@ extern s32 MESSAGE_SOUND_VOLUME_LSL_12;
 extern s32 SUB_MUSIC_ID;
 extern s32 JRB_SOUND_SPECIFICS; // copied to SOUND_SPECIFICS if (JRB_SOUND_SPECIFICS > 0 && JRB_SOUND_SPECIFICS != SOUND_SPECIFICS)
 extern s32 SOUND_SPECIFICS;
+
+using NNSSndHandle = void*;
+
+extern "C"
+{
+	bool NNS_SndArcPlayerStartSeqArc(NNSSndHandle* handle, int seqArcNo, int index);
+	void NNS_SndPlayerSetVolume     (NNSSndHandle* handle, int volume);
+	void NNS_SndPlayerSetTrackPitch (NNSSndHandle* handle, u16 trackBitMask, int pitch);
+	void NNS_SndHandleReleaseSeq    (NNSSndHandle* handle);
+	void NNS_SndPlayerStopSeq       (NNSSndHandle* handle, int fadeFrame);
+}

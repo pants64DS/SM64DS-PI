@@ -2629,6 +2629,12 @@ _ZN5Sound7FileRef9SOUND_PTRE                                                    
 
 _ZN5Sound6Player19SetPlayableSeqCountEii                                          = 0x0204fadc;
 
+NNS_SndPlayerSetTrackPitch                                                        = 0x0204f7fc;
+NNS_SndPlayerSetVolume                                                            = 0x0204f924;
+NNS_SndHandleReleaseSeq                                                           = 0x0204f934;
+NNS_SndPlayerStopSeq                                                              = 0x0204fa2c;
+NNS_SndArcPlayerStartSeqArc                                                       = 0x02051f1c;
+
 _ZN5Sound7PLAYERSE                                                                = 0x020a4d6c;
 
 _ZN5Sound10StartMusicEi                                                           = 0x0201320c;
