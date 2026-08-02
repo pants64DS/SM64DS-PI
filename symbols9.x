@@ -44,6 +44,7 @@ _Z11SoftwareDivii                                                               
 _Z11SoftwareDivjj                                                                 = 0x01ffadf0;
 _Z11SoftwareDivxx                                                                 = 0x01ffaa34;
 _Z11SoftwareDivyy                                                                 = 0x01ffa9dc;
+_Z11SoftwareModyy                                                                 = 0x01ffa9e8;
 _Z11HardwareDivii                                                                 = 0x02052f4c;
 _Z11HardwareModii                                                                 = 0x02052ef4;
 _Z14HardwareDivQ125Fix12IiES0_                                                    = 0x02053258;
